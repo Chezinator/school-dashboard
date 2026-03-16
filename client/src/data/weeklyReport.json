@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "familyName": "Stanfield",
+    "schoolName": "Lake Whitney Elementary",
+    "schoolAddress": "Winter Garden, FL 34787",
+    "weekOf": "2026-03-23",
+    "weekLabel": "March 23 – 27, 2026",
+    "lastUpdated": "2026-03-22T18:00:00Z"
+  },
+  "kids": [
+    {
+      "id": "bronson",
+      "name": "Bronson",
+      "grade": "4th Grade",
+      "teacher": "Ms. Cuccinello",
+      "avatar": "B",
+      "color": "#5BA4A4"
+    },
+    {
+      "id": "kaia",
+      "name": "Kaia",
+      "grade": "2nd Grade",
+      "teacher": "Ms. Smith",
+      "avatar": "K",
+      "color": "#E8725A"
+    }
+  ],
+  "actionItems": [
+    {
+      "id": 1,
+      "title": "Prepare Bronson for BEST Writing Assessment",
+      "description": "State test on March 31 — 120-minute computer-based exam. Ensure good sleep, healthy breakfast, and no electronics the night before.",
+      "dueDate": "2026-03-31",
+      "urgent": true,
+      "kidId": "bronson",
+      "category": "test-prep"
+    },
+    {
+      "id": 2,
+      "title": "No New Newsletters Over Spring Break",
+      "description": "No newsletters were sent during Spring Break. Expect fresh ones arriving this Sunday.",
+      "dueDate": null,
+      "urgent": false,
+      "kidId": null,
+      "category": "info"
+    }
+  ],
+  "importantDates": [
+    {
+      "date": "2026-03-23",
+      "title": "Begin 4th Grading Period",
+      "type": "school",
+      "kidId": null
+    },
+    {
+      "date": "2026-03-31",
+      "title": "Bronson — BEST Writing Assessment",
+      "description": "4th Grade State Test, 120-min computer-based, no electronics allowed",
+      "type": "test",
+      "kidId": "bronson"
+    },
+    {
+      "date": "2026-03-30",
+      "endDate": "2026-04-03",
+      "title": "PTO Teacher Appreciation Week",
+      "type": "event",
+      "kidId": null
+    }
+  ],
+  "lunchMenu": [
+    {
+      "day": "Monday",
+      "date": "2026-03-23",
+      "entrees": ["Meatball Pizza Sub", "PBJ Sandwich Box"],
+      "sides": ["Steamed Broccoli", "Carrot Dippers with Ranch"],
+      "fruits": ["Apple Cherry Juice", "Apple Juice", "Fresh Apple Slices"]
+    },
+    {
+      "day": "Tuesday",
+      "date": "2026-03-24",
+      "entrees": ["Lemongrass Chicken", "Hummus Cup Platter"],
+      "sides": ["Brown Rice", "Mandarin Carrot Slaw", "Salsa Dipping Cup", "Tropical Trio Slushie"],
+      "fruits": ["Strawberry Cup"]
+    },
+    {
+      "day": "Wednesday",
+      "date": "2026-03-25",
+      "entrees": ["Breaded Drumsticks", "Egg, Cheese & Flatbread Box"],
+      "sides": ["Garlic Bread Stick", "Steamed Corn", "Garden Side Salad"],
+      "fruits": ["Fresh Apple Slices"]
+    },
+    {
+      "day": "Thursday",
+      "date": "2026-03-26",
+      "entrees": ["Chicken Corn Dog", "Turkey Hot Dog", "Beef Hot Dog", "Chicken Fajita Salad w/ Flatbread"],
+      "sides": ["Vegetarian Baked Beans", "Coleslaw"],
+      "fruits": ["Apple Cherry Juice", "Apple Juice"]
+    },
+    {
+      "day": "Friday",
+      "date": "2026-03-27",
+      "entrees": ["6\" Personal Cheese Pizza", "Turkey & American Sub"],
+      "sides": ["Marinara Dipping Sauce", "Cucumber Dippers with Ranch"],
+      "fruits": ["Fresh Apple Slices"]
+    }
+  ],
+  "weather": [
+    {
+      "day": "Monday",
+      "date": "2026-03-23",
+      "high": 85,
+      "low": 63,
+      "condition": "Sunny",
+      "icon": "sun",
+      "dressSuggestion": "Light, breathable clothes. Sunscreen recommended."
+    },
+    {
+      "day": "Tuesday",
+      "date": "2026-03-24",
+      "high": 80,
+      "low": 64,
+      "condition": "Partly Cloudy",
+      "icon": "cloud-sun",
+      "dressSuggestion": "Light layers. Comfortable for outdoor activities."
+    },
+    {
+      "day": "Wednesday",
+      "date": "2026-03-25",
+      "high": 80,
+      "low": 65,
+      "condition": "Partly Cloudy",
+      "icon": "cloud-sun",
+      "dressSuggestion": "Light layers. Comfortable for outdoor activities."
+    },
+    {
+      "day": "Thursday",
+      "date": "2026-03-26",
+      "high": 83,
+      "low": 64,
+      "condition": "Partly Cloudy",
+      "icon": "cloud-sun",
+      "dressSuggestion": "Light clothes with a light jacket for the morning."
+    },
+    {
+      "day": "Friday",
+      "date": "2026-03-27",
+      "high": 79,
+      "low": 59,
+      "condition": "Partly Cloudy",
+      "icon": "cloud-sun",
+      "dressSuggestion": "Slightly cooler morning — bring a light sweater."
+    }
+  ],
+  "teacherComms": [
+    {
+      "kidId": "bronson",
+      "teacher": "Ms. Cuccinello",
+      "messages": [
+        {
+          "date": "2026-03-22",
+          "subject": "Spring Break Wrap-Up & BEST Writing Prep",
+          "summary": "Welcome back from Spring Break! This week we begin the 4th grading period. Please help Bronson prepare for the BEST Writing Assessment on Tuesday, March 31. It is a 120-minute computer-based state test. Students should get a good night's sleep, eat a healthy breakfast, and avoid electronics the night before. No new newsletters were sent over break — expect a fresh one this Sunday."
+        }
+      ]
+    },
+    {
+      "kidId": "kaia",
+      "teacher": "Ms. Smith",
+      "messages": [
+        {
+          "date": "2026-03-22",
+          "subject": "Welcome Back & Week Ahead",
+          "summary": "Welcome back from Spring Break! We're starting the 4th grading period this week. No new newsletters were sent during the break — look for a fresh update this coming Sunday. This week we'll be reviewing reading comprehension and starting a new math unit on measurement."
+        }
+      ]
+    }
+  ],
+  "homework": [
+    {
+      "kidId": "bronson",
+      "assignments": [
+        {
+          "subject": "Writing",
+          "title": "BEST Writing Practice Essay",
+          "description": "Practice persuasive writing prompt — 45 minutes timed",
+          "dueDate": "2026-03-25",
+          "status": "pending"
+        },
+        {
+          "subject": "Math",
+          "title": "Chapter 9 Review Worksheet",
+          "description": "Fractions and decimals review — pages 142-143",
+          "dueDate": "2026-03-26",
+          "status": "pending"
+        },
+        {
+          "subject": "Reading",
+          "title": "Reading Log — 20 min/night",
+          "description": "Read independently and log pages in reading journal",
+          "dueDate": "2026-03-27",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "kidId": "kaia",
+      "assignments": [
+        {
+          "subject": "Reading",
+          "title": "Sight Words Practice",
+          "description": "Review Unit 7 sight words — practice spelling each 3 times",
+          "dueDate": "2026-03-25",
+          "status": "pending"
+        },
+        {
+          "subject": "Math",
+          "title": "Measurement Worksheet",
+          "description": "Introduction to inches and centimeters — worksheet packet",
+          "dueDate": "2026-03-26",
+          "status": "pending"
+        },
+        {
+          "subject": "Reading",
+          "title": "Reading Log — 15 min/night",
+          "description": "Read independently and have a parent sign the log",
+          "dueDate": "2026-03-27",
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}
