@@ -129,10 +129,12 @@ function DashboardContent() {
         {/* Footer with Last Updated timestamp */}
         <footer className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
           <div className="border-t border-border/50 pt-6">
-            <p className="text-sm text-muted-foreground flex items-center justify-center gap-1.5">
-              Made with <Heart className="w-3.5 h-3.5 text-coral fill-coral" /> for the {meta.familyName} Family
-            </p>
-            <p className="text-xs text-muted-foreground/60 mt-1">
+            <div className="flex items-center justify-center gap-2 mb-1">
+              <span className="font-display text-base text-foreground/70">SchoolBase</span>
+              <span className="text-muted-foreground/40 text-sm">·</span>
+              <span className="text-sm text-muted-foreground">{meta.familyName} Family</span>
+            </div>
+            <p className="text-xs text-muted-foreground/60">
               {meta.schoolName} · {meta.schoolAddress}
             </p>
             <div className="flex items-center justify-center gap-1.5 mt-2">
@@ -141,6 +143,9 @@ function DashboardContent() {
                 Last updated: {lastUpdatedFormatted}
               </p>
             </div>
+            <p className="text-xs text-muted-foreground/30 mt-2 flex items-center justify-center gap-1">
+              Made with <Heart className="w-3 h-3 text-coral/50 fill-coral/50" /> for the family
+            </p>
           </div>
         </footer>
       </div>
