@@ -2,6 +2,7 @@
  * Home — Stanfield Family School Dashboard
  * Sunrise Command Center design: warm editorial layout with priority-ordered sections.
  * Mobile-first single column, expanding to 2-column on desktop.
+ * School & District Communications is full-width at the very bottom.
  */
 import { motion } from "framer-motion";
 import HeroHeader from "@/components/HeroHeader";
@@ -75,10 +76,6 @@ export default function Home() {
               <motion.div custom={3} initial="hidden" animate="visible" variants={fadeInUp}>
                 <Homework />
               </motion.div>
-
-              <motion.div custom={4} initial="hidden" animate="visible" variants={fadeInUp}>
-                <SchoolDistrictComms />
-              </motion.div>
             </div>
 
             {/* Right column — Reference content */}
@@ -96,6 +93,17 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
+
+          {/* School & District Communications — full-width at the very bottom */}
+          <motion.div
+            custom={5}
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+            className="mt-6"
+          >
+            <SchoolDistrictComms />
+          </motion.div>
         </main>
 
         {/* Footer */}
