@@ -5,11 +5,13 @@
  * background is less busy. Dark overlay fades from left (heavier) to right (lighter).
  */
 import { MapPin, GraduationCap } from "lucide-react";
-import data from "@/data/weeklyReport.json";
+import { useWeek } from "@/contexts/WeekContext";
 
 const FAMILY_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/family-photo_c81abf91.jpg";
 
 export default function HeroHeader() {
+  const { meta, week } = useWeek();
+
   return (
     <header className="relative overflow-hidden rounded-b-3xl" style={{ minHeight: "280px" }}>
       {/* Family photo — anchored right so all four faces are visible */}
@@ -41,7 +43,7 @@ export default function HeroHeader() {
           </div>
 
           <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-3 drop-shadow-lg">
-            {data.meta.familyName} Family
+            {meta.familyName} Family
             <br />
             <span className="text-amber-200">School Dashboard</span>
           </h1>
@@ -49,15 +51,15 @@ export default function HeroHeader() {
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-white/90 text-sm drop-shadow-md">
             <span className="flex items-center gap-1.5">
               <MapPin className="w-3.5 h-3.5 shrink-0" />
-              {data.meta.schoolName}
+              {meta.schoolName}
             </span>
             <span className="hidden sm:inline text-white/40">|</span>
-            <span>{data.meta.schoolAddress}</span>
+            <span>{meta.schoolAddress}</span>
           </div>
 
           <div className="mt-4 inline-flex items-center gap-2 bg-black/35 backdrop-blur-sm rounded-full px-4 py-2 text-white text-sm border border-white/25">
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0" />
-            Week of {data.meta.weekLabel}
+            Week of {week.weekLabel}
           </div>
         </div>
       </div>

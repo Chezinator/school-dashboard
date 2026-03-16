@@ -2,13 +2,14 @@
  * KidProfiles — Compact profile badges for each child.
  * Teal for Bronson, coral for Kaia.
  */
-import { User } from "lucide-react";
-import data from "@/data/weeklyReport.json";
+import { useWeek } from "@/contexts/WeekContext";
 
 export default function KidProfiles() {
+  const { kids } = useWeek();
+
   return (
     <div className="grid grid-cols-2 gap-3 sm:gap-4">
-      {data.kids.map((kid) => (
+      {kids.map((kid) => (
         <div
           key={kid.id}
           className="bg-white rounded-2xl p-4 shadow-sm border border-border/50 flex items-center gap-3 transition-all hover:shadow-md"

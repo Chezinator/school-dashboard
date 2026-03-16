@@ -3,7 +3,7 @@
  * Amber accent for date-related items.
  */
 import { CalendarDays, Star, BookOpen, PartyPopper } from "lucide-react";
-import data from "@/data/weeklyReport.json";
+import { useWeek } from "@/contexts/WeekContext";
 
 function formatDate(dateStr: string) {
   const d = new Date(dateStr + "T00:00:00");
@@ -50,7 +50,8 @@ function getTypeLabel(type: string) {
 }
 
 export default function ImportantDates() {
-  const dates = data.importantDates;
+  const { week, kids } = useWeek();
+  const dates = week.importantDates;
   if (!dates.length) return null;
 
   return (
@@ -66,7 +67,7 @@ export default function ImportantDates() {
         {dates.map((item, idx) => {
           const label = getTypeLabel(item.type);
           const kidName = item.kidId
-            ? data.kids.find((k) => k.id === item.kidId)?.name
+            ? kids.find((k) => k.id === item.kidId)?.name
             : null;
 
           return (
@@ -87,7 +88,7 @@ export default function ImportantDates() {
                       <span
                         className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium text-white"
                         style={{
-                          backgroundColor: data.kids.find((k) => k.id === item.kidId)?.color || "#888",
+                          backgroundColor: kids.find((k) => k.id === item.kidId)?.color || "#888",
                         }}
                       >
                         {kidName}

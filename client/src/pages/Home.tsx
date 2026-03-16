@@ -3,6 +3,7 @@
  * Sunrise Command Center design: warm editorial layout with priority-ordered sections.
  * Mobile-first single column, expanding to 2-column on desktop.
  * School & District Communications is full-width at the very bottom.
+ * WeekProvider wraps everything for multi-week archive support.
  */
 import { motion } from "framer-motion";
 import HeroHeader from "@/components/HeroHeader";
@@ -14,8 +15,9 @@ import WeatherForecast from "@/components/WeatherForecast";
 import TeacherComms from "@/components/TeacherComms";
 import Homework from "@/components/Homework";
 import SchoolDistrictComms from "@/components/SchoolDistrictComms";
-import data from "@/data/weeklyReport.json";
-import { Heart } from "lucide-react";
+import WeekSwitcher from "@/components/WeekSwitcher";
+import { WeekProvider, useWeek } from "@/contexts/WeekContext";
+import { Heart, RefreshCw } from "lucide-react";
 
 const SCHOOL_PATTERN = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/school-pattern-dFvoYAsAoeZXSaxJKdi4wu.webp";
 
@@ -32,7 +34,9 @@ const fadeInUp = {
   }),
 };
 
-export default function Home() {
+function DashboardContent() {
+  const { meta, lastUpdatedFormatted, isLatest } = useWeek();
+
   return (
     <div
       className="min-h-screen bg-background"
@@ -50,6 +54,22 @@ export default function Home() {
 
         {/* Main Content */}
         <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+          {/* Week Switcher — only shows when there are multiple weeks */}
+          <WeekSwitcher />
+
+          {/* Archive banner when viewing past weeks */}
+          {!isLatest && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-4 px-4 py-3 rounded-xl bg-amber-50 border border-amber-200 text-center"
+            >
+              <p className="text-sm text-amber-800 font-medium">
+                You are viewing an archived week. Data shown is from the selected week.
+              </p>
+            </motion.div>
+          )}
+
           {/* Kid Profiles */}
           <motion.div
             custom={0}
@@ -106,26 +126,32 @@ export default function Home() {
           </motion.div>
         </main>
 
-        {/* Footer */}
+        {/* Footer with Last Updated timestamp */}
         <footer className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
           <div className="border-t border-border/50 pt-6">
             <p className="text-sm text-muted-foreground flex items-center justify-center gap-1.5">
-              Made with <Heart className="w-3.5 h-3.5 text-coral fill-coral" /> for the {data.meta.familyName} Family
+              Made with <Heart className="w-3.5 h-3.5 text-coral fill-coral" /> for the {meta.familyName} Family
             </p>
             <p className="text-xs text-muted-foreground/60 mt-1">
-              {data.meta.schoolName} · {data.meta.schoolAddress}
+              {meta.schoolName} · {meta.schoolAddress}
             </p>
-            <p className="text-xs text-muted-foreground/40 mt-1">
-              Last updated: {new Date(data.meta.lastUpdated).toLocaleDateString("en-US", {
-                weekday: "long",
-                month: "long",
-                day: "numeric",
-                year: "numeric",
-              })}
-            </p>
+            <div className="flex items-center justify-center gap-1.5 mt-2">
+              <RefreshCw className="w-3 h-3 text-muted-foreground/50" />
+              <p className="text-xs text-muted-foreground/50">
+                Last updated: {lastUpdatedFormatted}
+              </p>
+            </div>
           </div>
         </footer>
       </div>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <WeekProvider>
+      <DashboardContent />
+    </WeekProvider>
   );
 }

@@ -3,10 +3,11 @@
  * Teal accent for informational content.
  */
 import { MessageSquare, Mail } from "lucide-react";
-import data from "@/data/weeklyReport.json";
+import { useWeek } from "@/contexts/WeekContext";
 
 export default function TeacherComms() {
-  const comms = data.teacherComms;
+  const { week, kids } = useWeek();
+  const comms = week.teacherComms;
   if (!comms.length) return null;
 
   return (
@@ -20,7 +21,7 @@ export default function TeacherComms() {
 
       <div className="space-y-4">
         {comms.map((comm) => {
-          const kid = data.kids.find((k) => k.id === comm.kidId);
+          const kid = kids.find((k) => k.id === comm.kidId);
           return (
             <div
               key={comm.kidId}

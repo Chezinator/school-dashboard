@@ -15,9 +15,7 @@ import {
   ChevronDown,
   ChevronUp,
 } from "lucide-react";
-import data from "@/data/weeklyReport.json";
-
-type CommItem = (typeof data.schoolDistrictComms)[number];
+import { useWeek } from "@/contexts/WeekContext";
 
 function formatDate(dateStr: string) {
   const d = new Date(dateStr + "T00:00:00");
@@ -93,7 +91,8 @@ function getPriorityBorder(priority: string) {
 }
 
 export default function SchoolDistrictComms() {
-  const comms = data.schoolDistrictComms;
+  const { week } = useWeek();
+  const comms = week.schoolDistrictComms;
   const [showAll, setShowAll] = useState(false);
   const [filter, setFilter] = useState<"all" | "district" | "school">("all");
 

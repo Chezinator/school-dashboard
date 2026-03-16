@@ -3,13 +3,7 @@
  * Priority section at the top of the dashboard.
  */
 import { AlertTriangle, Info, Calendar } from "lucide-react";
-import data from "@/data/weeklyReport.json";
-
-function getKidName(kidId: string | null) {
-  if (!kidId) return null;
-  const kid = data.kids.find((k) => k.id === kidId);
-  return kid ? kid.name : null;
-}
+import { useWeek } from "@/contexts/WeekContext";
 
 function formatDate(dateStr: string | null) {
   if (!dateStr) return null;
@@ -18,7 +12,15 @@ function formatDate(dateStr: string | null) {
 }
 
 export default function ActionItems() {
-  const items = data.actionItems;
+  const { week, kids } = useWeek();
+  const items = week.actionItems;
+
+  function getKidName(kidId: string | null) {
+    if (!kidId) return null;
+    const kid = kids.find((k) => k.id === kidId);
+    return kid ? kid.name : null;
+  }
+
   if (!items.length) return null;
 
   return (
@@ -73,7 +75,7 @@ export default function ActionItems() {
                     <span
                       className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium text-white"
                       style={{
-                        backgroundColor: data.kids.find((k) => k.id === item.kidId)?.color || "#888",
+                        backgroundColor: kids.find((k) => k.id === item.kidId)?.color || "#888",
                       }}
                     >
                       {getKidName(item.kidId)}

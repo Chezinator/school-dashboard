@@ -3,7 +3,7 @@
  * Uses the watercolor weather background as a decorative accent.
  */
 import { Sun, CloudSun, Cloud, CloudRain, Thermometer, Shirt } from "lucide-react";
-import data from "@/data/weeklyReport.json";
+import { useWeek } from "@/contexts/WeekContext";
 
 const WEATHER_BG = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/weather-bg-Wf8qWXHbDHfDCp3nX5GTqw.webp";
 
@@ -16,6 +16,7 @@ function getWeatherIcon(icon: string) {
     case "cloud":
       return <Cloud className="w-7 h-7 text-gray-400" />;
     case "rain":
+    case "cloud-rain":
       return <CloudRain className="w-7 h-7 text-blue-400" />;
     default:
       return <Sun className="w-7 h-7 text-amber-500" />;
@@ -30,7 +31,8 @@ function getTempColor(temp: number) {
 }
 
 export default function WeatherForecast() {
-  const weather = data.weather;
+  const { week } = useWeek();
+  const weather = week.weather;
 
   return (
     <section>
@@ -51,7 +53,7 @@ export default function WeatherForecast() {
         <div className="absolute inset-0 bg-gradient-to-r from-white/60 to-transparent flex items-center px-5">
           <div>
             <p className="text-sm font-medium text-gray-700">Winter Garden, FL</p>
-            <p className="text-xs text-gray-500">Week of {data.meta.weekLabel}</p>
+            <p className="text-xs text-gray-500">Week of {week.weekLabel}</p>
           </div>
         </div>
       </div>

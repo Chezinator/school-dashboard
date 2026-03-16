@@ -4,7 +4,7 @@
  */
 import { useState } from "react";
 import { BookOpen, Calendar, CheckCircle2, Circle } from "lucide-react";
-import data from "@/data/weeklyReport.json";
+import { useWeek } from "@/contexts/WeekContext";
 
 function formatDate(dateStr: string) {
   const d = new Date(dateStr + "T00:00:00");
@@ -21,14 +21,17 @@ function getSubjectColor(subject: string) {
       return { bg: "bg-teal-light", text: "text-teal", border: "border-teal/20" };
     case "science":
       return { bg: "bg-green-50", text: "text-green-600", border: "border-green-200" };
+    case "phonics":
+      return { bg: "bg-purple-50", text: "text-purple-600", border: "border-purple-200" };
     default:
       return { bg: "bg-gray-50", text: "text-gray-600", border: "border-gray-200" };
   }
 }
 
 export default function Homework() {
-  const homework = data.homework;
-  const [activeKid, setActiveKid] = useState(data.kids[0].id);
+  const { week, kids } = useWeek();
+  const homework = week.homework;
+  const [activeKid, setActiveKid] = useState(kids[0].id);
 
   const currentHomework = homework.find((h) => h.kidId === activeKid);
 
@@ -43,7 +46,7 @@ export default function Homework() {
 
       {/* Kid tabs */}
       <div className="flex gap-2 mb-4">
-        {data.kids.map((kid) => (
+        {kids.map((kid) => (
           <button
             key={kid.id}
             onClick={() => setActiveKid(kid.id)}

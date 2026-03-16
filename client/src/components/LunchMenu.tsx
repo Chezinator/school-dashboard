@@ -4,12 +4,13 @@
  */
 import { useState } from "react";
 import { UtensilsCrossed, ChevronLeft, ChevronRight, Apple, Salad, ChefHat } from "lucide-react";
-import data from "@/data/weeklyReport.json";
+import { useWeek } from "@/contexts/WeekContext";
 
 const LUNCH_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/lunch-illustration-cjPG4cxWrbbobaTeQPY39X.webp";
 
 export default function LunchMenu() {
-  const menu = data.lunchMenu;
+  const { week } = useWeek();
+  const menu = week.lunchMenu;
   const [activeDay, setActiveDay] = useState(0);
 
   const goNext = () => setActiveDay((prev) => Math.min(prev + 1, menu.length - 1));
