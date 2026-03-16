@@ -12,6 +12,7 @@ import LunchMenu from "@/components/LunchMenu";
 import WeatherForecast from "@/components/WeatherForecast";
 import TeacherComms from "@/components/TeacherComms";
 import Homework from "@/components/Homework";
+import SchoolDistrictComms from "@/components/SchoolDistrictComms";
 import data from "@/data/weeklyReport.json";
 import { Heart } from "lucide-react";
 
@@ -73,6 +74,10 @@ export default function Home() {
 
               <motion.div custom={3} initial="hidden" animate="visible" variants={fadeInUp}>
                 <Homework />
+              </motion.div>
+
+              <motion.div custom={4} initial="hidden" animate="visible" variants={fadeInUp}>
+                <SchoolDistrictComms />
               </motion.div>
             </div>
 

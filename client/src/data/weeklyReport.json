@@ -175,6 +175,96 @@
       ]
     }
   ],
+  "schoolDistrictComms": [
+    {
+      "id": 1,
+      "source": "OCPS District",
+      "sourceType": "district",
+      "date": "2026-03-12",
+      "subject": "Wishing You a Safe and Restful Spring Break",
+      "from": "Superintendent Dr. Maria Vazquez",
+      "summary": "Thank you for the important role you play each day in supporting your child's education. As we begin spring break, I want to wish you and your family a safe, happy, and relaxing week. When students return to school on Monday, March 23, we will begin the final nine weeks of the school year. This is an exciting time filled with important learning experiences, milestones, and celebrations.",
+      "priority": "high",
+      "category": "announcement"
+    },
+    {
+      "id": 2,
+      "source": "Lake Whitney Elementary",
+      "sourceType": "school",
+      "date": "2026-03-11",
+      "subject": "Field Day Recap & Reminders",
+      "from": "Danette Havard, Administration",
+      "summary": "Field Day was held on March 12 with fun activities, inflatables, and a DJ. Only pre-registered volunteers were permitted on campus for security. Thank you to all parents who signed up to help make it a success!",
+      "priority": "normal",
+      "category": "event"
+    },
+    {
+      "id": 3,
+      "source": "Lake Whitney Elementary",
+      "sourceType": "school",
+      "date": "2026-03-03",
+      "subject": "15th Annual DEF Silent Auction & Gala — April 18",
+      "from": "Danette Havard, Dolphin Education Fund",
+      "summary": "The 15th Annual DEF Silent Auction & Gala is Saturday, April 18 from 6-10 PM at the West Orange Country Club. Theme: Mardi Gras Masquerade. Tickets are $50/person (includes dinner, 2 drink tickets, and auction access). All funds go to the Dolphin Education Fund for classroom supplies, arts programs, PE equipment, and more. Purchase tickets at tinyurl.com/DEF-Gala.",
+      "priority": "normal",
+      "category": "fundraiser"
+    },
+    {
+      "id": 4,
+      "source": "OCPS District",
+      "sourceType": "district",
+      "date": "2026-03-04",
+      "subject": "Give Education Day — Take the $1 Pledge",
+      "from": "Foundation for Orange County Public Schools",
+      "summary": "The Foundation for OCPS is asking families to take the $1 Pledge at foundationforocps.org/giveeducation. Funds support literacy enrichment, STEM and arts access, college and career readiness, scholarships, and professional development for teachers.",
+      "priority": "normal",
+      "category": "fundraiser"
+    },
+    {
+      "id": 5,
+      "source": "OCPS District",
+      "sourceType": "district",
+      "date": "2026-03-02",
+      "subject": "Mondays with Maria — Weekly Superintendent Update",
+      "from": "Superintendent Dr. Maria Vazquez",
+      "summary": "This week's Mondays with Maria featured a visit to Colonial High School with new Deputy Superintendent Jose Martinez, who previously served as the school's principal. Colonial High students shared what they love most about their campus. Available as a video and podcast.",
+      "priority": "low",
+      "category": "newsletter"
+    },
+    {
+      "id": 6,
+      "source": "Lake Whitney Elementary",
+      "sourceType": "school",
+      "date": "2026-03-01",
+      "subject": "Dolphin Digest — Week of March 2, 2026",
+      "from": "Lake Whitney Principal",
+      "summary": "The principal's weekly update highlighted an incredibly busy and rewarding week including All-County Music performances and neon dance activities. Students continue to shine in everything they do. The newsletter also covered upcoming events and school community updates.",
+      "priority": "normal",
+      "category": "newsletter"
+    },
+    {
+      "id": 7,
+      "source": "Lake Whitney Elementary",
+      "sourceType": "school",
+      "date": "2026-02-27",
+      "subject": "Yearbook Price Increase — Order Before March 1",
+      "from": "Danette Havard, Administration",
+      "summary": "Yearbook prices increased after March 1, 2026. Families were encouraged to order before the deadline to get the lower price. Yearbooks capture all the memories from this school year.",
+      "priority": "normal",
+      "category": "reminder"
+    },
+    {
+      "id": 8,
+      "source": "OCPS District",
+      "sourceType": "district",
+      "date": "2026-02-27",
+      "subject": "INFORM: OCPS — District 4 News: Black History Month 2026",
+      "from": "OCPS District 4 Communications",
+      "summary": "The District 4 newsletter covered Black History Month recognition events and second semester updates across Orange County Public Schools. The newsletter highlighted community celebrations and student achievements throughout the district.",
+      "priority": "low",
+      "category": "newsletter"
+    }
+  ],
   "homework": [
     {
       "kidId": "bronson",
