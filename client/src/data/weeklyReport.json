@@ -5,7 +5,7 @@
     "schoolAddress": "Winter Garden, FL 34787",
     "weekOf": "2026-03-23",
     "weekLabel": "March 23 – 27, 2026",
-    "lastUpdated": "2026-03-22T18:00:00Z"
+    "lastUpdated": "2026-03-16T12:30:00Z"
   },
   "kids": [
     {
@@ -29,7 +29,7 @@
     {
       "id": 1,
       "title": "Prepare Bronson for BEST Writing Assessment",
-      "description": "State test on March 31 — 120-minute computer-based exam. Ensure good sleep, healthy breakfast, and no electronics the night before.",
+      "description": "State test on Tuesday, March 31 — 120-minute computer-based exam. Ensure good sleep, healthy breakfast, and no electronics the night before. Practice persuasive writing this week.",
       "dueDate": "2026-03-31",
       "urgent": true,
       "kidId": "bronson",
@@ -37,9 +37,36 @@
     },
     {
       "id": 2,
-      "title": "No New Newsletters Over Spring Break",
-      "description": "No newsletters were sent during Spring Break. Expect fresh ones arriving this Sunday.",
+      "title": "Check Canvas & Skyward for Missing Work",
+      "description": "Per Ms. Cuccinello's March 9-13 newsletter, all work was due Thursday March 13. Check Canvas and Skyward for any incomplete assignments before the 4th grading period begins.",
+      "dueDate": "2026-03-23",
+      "urgent": true,
+      "kidId": "bronson",
+      "category": "reminder"
+    },
+    {
+      "id": 3,
+      "title": "Rain Gear Needed Wed–Fri",
+      "description": "Afternoon and morning showers expected Wednesday through Friday (34-44% chance). Pack rain jackets and umbrellas for school drop-off and pickup.",
       "dueDate": null,
+      "urgent": false,
+      "kidId": null,
+      "category": "reminder"
+    },
+    {
+      "id": 4,
+      "title": "PTO Teacher Appreciation Week Starts March 30",
+      "description": "Teacher Appreciation Week begins next Monday. Start planning gifts or notes for Ms. Cuccinello and Ms. Smith.",
+      "dueDate": "2026-03-30",
+      "urgent": false,
+      "kidId": null,
+      "category": "event"
+    },
+    {
+      "id": 5,
+      "title": "Expect Fresh Newsletters This Sunday",
+      "description": "No newsletters were sent during Spring Break. Both Ms. Cuccinello and Ms. Smith typically send weekly updates on Sunday evenings.",
+      "dueDate": "2026-03-22",
       "urgent": false,
       "kidId": null,
       "category": "info"
@@ -49,13 +76,14 @@
     {
       "date": "2026-03-23",
       "title": "Begin 4th Grading Period",
+      "description": "School resumes after Spring Break — final nine weeks of the school year",
       "type": "school",
       "kidId": null
     },
     {
       "date": "2026-03-31",
       "title": "Bronson — BEST Writing Assessment",
-      "description": "4th Grade State Test, 120-min computer-based, no electronics allowed",
+      "description": "4th Grade State Test, 120-min computer-based, no electronics allowed. Good sleep and healthy breakfast essential.",
       "type": "test",
       "kidId": "bronson"
     },
@@ -65,6 +93,13 @@
       "title": "PTO Teacher Appreciation Week",
       "type": "event",
       "kidId": null
+    },
+    {
+      "date": "2026-04-18",
+      "title": "DEF Silent Auction & Gala",
+      "description": "15th Annual Gala at West Orange Country Club, 6-10 PM. Mardi Gras Masquerade theme. Tickets $50/person at tinyurl.com/DEF-Gala.",
+      "type": "event",
+      "kidId": null
     }
   ],
   "lunchMenu": [
@@ -72,14 +107,14 @@
       "day": "Monday",
       "date": "2026-03-23",
       "entrees": ["Meatball Pizza Sub", "PBJ Sandwich Box"],
-      "sides": ["Steamed Broccoli", "Carrot Dippers with Ranch"],
+      "sides": ["Fresh Steamed Broccoli", "Carrot Dippers with Ranch Dressing"],
       "fruits": ["Apple Cherry Juice", "Apple Juice", "Fresh Apple Slices"]
     },
     {
       "day": "Tuesday",
       "date": "2026-03-24",
       "entrees": ["Lemongrass Chicken", "Hummus Cup Platter"],
-      "sides": ["Brown Rice", "Mandarin Carrot Slaw", "Salsa Dipping Cup", "Tropical Trio Slushie"],
+      "sides": ["Brown Rice", "Mandarin Carrot Slaw", "Salsa Dipping Cup", "Tropical Trio Juice Slushie"],
       "fruits": ["Strawberry Cup"]
     },
     {
@@ -92,7 +127,7 @@
     {
       "day": "Thursday",
       "date": "2026-03-26",
-      "entrees": ["Chicken Corn Dog", "Turkey Hot Dog", "Beef Hot Dog", "Chicken Fajita Salad w/ Flatbread"],
+      "entrees": ["Chicken Corn Dog", "Butterball Turkey Hot Dog on WG Bun", "Eisenberg Beef Hot Dog on WG Bun", "Chicken Fajita Salad w/ Flatbread"],
       "sides": ["Vegetarian Baked Beans", "Coleslaw"],
       "fruits": ["Apple Cherry Juice", "Apple Juice"]
     },
@@ -100,7 +135,7 @@
       "day": "Friday",
       "date": "2026-03-27",
       "entrees": ["6\" Personal Cheese Pizza", "Turkey & American Sub"],
-      "sides": ["Marinara Dipping Sauce", "Cucumber Dippers with Ranch"],
+      "sides": ["Marinara Dipping Sauce Cup", "Cucumber Dippers with Ranch Dressing"],
       "fruits": ["Fresh Apple Slices"]
     }
   ],
@@ -109,46 +144,46 @@
       "day": "Monday",
       "date": "2026-03-23",
       "high": 85,
-      "low": 63,
+      "low": 61,
       "condition": "Sunny",
       "icon": "sun",
-      "dressSuggestion": "Light, breathable clothes. Sunscreen recommended."
+      "dressSuggestion": "Light, breathable clothing — shorts and t-shirt weather. Don't forget sunscreen!"
     },
     {
       "day": "Tuesday",
       "date": "2026-03-24",
-      "high": 80,
-      "low": 64,
+      "high": 84,
+      "low": 63,
       "condition": "Partly Cloudy",
       "icon": "cloud-sun",
-      "dressSuggestion": "Light layers. Comfortable for outdoor activities."
+      "dressSuggestion": "Light layers. Comfortable for shorts and a light top. Sunglasses recommended."
     },
     {
       "day": "Wednesday",
       "date": "2026-03-25",
-      "high": 80,
-      "low": 65,
-      "condition": "Partly Cloudy",
-      "icon": "cloud-sun",
-      "dressSuggestion": "Light layers. Comfortable for outdoor activities."
+      "high": 82,
+      "low": 64,
+      "condition": "PM Showers",
+      "icon": "cloud-rain",
+      "dressSuggestion": "Pack a light rain jacket or umbrella for afternoon pickup. Light clothing otherwise."
     },
     {
       "day": "Thursday",
       "date": "2026-03-26",
-      "high": 83,
-      "low": 64,
-      "condition": "Partly Cloudy",
-      "icon": "cloud-sun",
-      "dressSuggestion": "Light clothes with a light jacket for the morning."
+      "high": 82,
+      "low": 65,
+      "condition": "PM Showers",
+      "icon": "cloud-rain",
+      "dressSuggestion": "Rain jacket and umbrella recommended. Avoid open-toed shoes. Light layers."
     },
     {
       "day": "Friday",
       "date": "2026-03-27",
-      "high": 79,
-      "low": 59,
-      "condition": "Partly Cloudy",
-      "icon": "cloud-sun",
-      "dressSuggestion": "Slightly cooler morning — bring a light sweater."
+      "high": 84,
+      "low": 58,
+      "condition": "AM Showers",
+      "icon": "cloud-rain",
+      "dressSuggestion": "Morning rain likely — bring umbrella for drop-off. Should clear up by afternoon."
     }
   ],
   "teacherComms": [
@@ -157,9 +192,14 @@
       "teacher": "Ms. Cuccinello",
       "messages": [
         {
-          "date": "2026-03-22",
-          "subject": "Spring Break Wrap-Up & BEST Writing Prep",
-          "summary": "Welcome back from Spring Break! This week we begin the 4th grading period. Please help Bronson prepare for the BEST Writing Assessment on Tuesday, March 31. It is a 120-minute computer-based state test. Students should get a good night's sleep, eat a healthy breakfast, and avoid electronics the night before. No new newsletters were sent over break — expect a fresh one this Sunday."
+          "date": "2026-03-09",
+          "subject": "Week of March 9-13 Newsletter & BEST Writing Prep",
+          "summary": "Last newsletter before Spring Break covered the week of March 9-13. Key highlights: All work was due Thursday March 13 — check Canvas and Skyward for any missing assignments. Field Day was held March 12. Spring Break runs March 14-22. School resumes March 23 with the 4th Grading Period. The BEST Writing Assessment is March 31 (120-min computer-based state test). Blooket review links were shared for Math (Extend Thinking Numbers to 1000), Science (Human Body Parts), and Social Studies."
+        },
+        {
+          "date": "2026-03-11",
+          "subject": "BEST Writing Assessment Preparation",
+          "summary": "Reminder about the 4th Grade BEST Writing Assessment on Tuesday, March 31. This is a 120-minute computer-based state test. Students should get good sleep, eat a healthy breakfast, and avoid electronics the night before. No personal electronics allowed during testing."
         }
       ]
     },
@@ -168,9 +208,14 @@
       "teacher": "Ms. Smith",
       "messages": [
         {
-          "date": "2026-03-22",
-          "subject": "Welcome Back & Week Ahead",
-          "summary": "Welcome back from Spring Break! We're starting the 4th grading period this week. No new newsletters were sent during the break — look for a fresh update this coming Sunday. This week we'll be reviewing reading comprehension and starting a new math unit on measurement."
+          "date": "2026-03-08",
+          "subject": "Week of March 9-13 Newsletter",
+          "summary": "Last newsletter before Spring Break. Phonics focus: Diphthongs (ou, ow, oi, oy, au, aw). ELA: Assessing similes, idioms, alliteration, rhyme schemes & themes in poems; context clues and word relationships. Math: Compare Numbers Using Place Value. Science: Human body parts and basic functions. Social Studies: Native American Cultures quiz. Assessments scheduled throughout the week. Homework: Math pages 467-468 (Mon), 469-470 (Tue), Performance Task pages 475-476 (Wed). Wednesdays are School Spirit days."
+        },
+        {
+          "date": "2026-03-08",
+          "subject": "Blooket Review Games Shared",
+          "summary": "Ms. Smith shared Blooket review links for students to practice at home: Math (Numbers to 1000), Science (Human Body Parts), and Social Studies review game. Poetry vocabulary was also shared (poem, line, stanza, break, poet). These are great for review during Spring Break."
         }
       ]
     }
@@ -183,7 +228,7 @@
       "date": "2026-03-12",
       "subject": "Wishing You a Safe and Restful Spring Break",
       "from": "Superintendent Dr. Maria Vazquez",
-      "summary": "Thank you for the important role you play each day in supporting your child's education. As we begin spring break, I want to wish you and your family a safe, happy, and relaxing week. When students return to school on Monday, March 23, we will begin the final nine weeks of the school year. This is an exciting time filled with important learning experiences, milestones, and celebrations.",
+      "summary": "Thank you for the important role you play each day in supporting your child's education. As we begin spring break, I want to wish you and your family a safe, happy, and relaxing week. When students return to school on Monday, March 23, we will begin the final nine weeks of the school year — an exciting time filled with important learning experiences, milestones, and celebrations.",
       "priority": "high",
       "category": "announcement"
     },
@@ -272,14 +317,21 @@
         {
           "subject": "Writing",
           "title": "BEST Writing Practice Essay",
-          "description": "Practice persuasive writing prompt — 45 minutes timed",
+          "description": "Practice persuasive writing prompt — 45 minutes timed. Prepare for the March 31 state assessment.",
           "dueDate": "2026-03-25",
           "status": "pending"
         },
         {
           "subject": "Math",
-          "title": "Chapter 9 Review Worksheet",
-          "description": "Fractions and decimals review — pages 142-143",
+          "title": "Blooket Review: Extend Thinking Numbers to 1000",
+          "description": "Complete the Blooket math review game shared by Ms. Cuccinello. Link in ParentSquare.",
+          "dueDate": "2026-03-26",
+          "status": "pending"
+        },
+        {
+          "subject": "Science",
+          "title": "Blooket Review: Human Body Parts",
+          "description": "Complete the Blooket science review game. Study human body parts and their functions.",
           "dueDate": "2026-03-26",
           "status": "pending"
         },
@@ -296,16 +348,23 @@
       "kidId": "kaia",
       "assignments": [
         {
-          "subject": "Reading",
-          "title": "Sight Words Practice",
-          "description": "Review Unit 7 sight words — practice spelling each 3 times",
+          "subject": "Phonics",
+          "title": "Diphthongs Review: ou, ow, oi, oy, au, aw",
+          "description": "Practice diphthong sounds from the last unit before Spring Break. Review worksheet.",
           "dueDate": "2026-03-25",
           "status": "pending"
         },
         {
           "subject": "Math",
-          "title": "Measurement Worksheet",
-          "description": "Introduction to inches and centimeters — worksheet packet",
+          "title": "Blooket Review: Numbers to 1000",
+          "description": "Complete the Blooket math review game shared by Ms. Smith. Practice comparing numbers using place value.",
+          "dueDate": "2026-03-26",
+          "status": "pending"
+        },
+        {
+          "subject": "Science",
+          "title": "Blooket Review: Human Body Parts",
+          "description": "Complete the Blooket science review game. Study human body parts and basic functions.",
           "dueDate": "2026-03-26",
           "status": "pending"
         },
