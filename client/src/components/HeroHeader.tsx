@@ -8,7 +8,7 @@ import { MapPin } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
 
 const FAMILY_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/family-photo_c81abf91.jpg";
-const SCHOOLBASE_ICON = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/schoolbase-icon-family-QLjLJWnh4Lh8yAWte3eymD.png";
+const SCHOOLBASE_ICON = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/schoolbase-icon-v2-7LxVP9zbedTFhsiPyARsmC.png";
 
 export default function HeroHeader() {
   const { meta, week } = useWeek();
