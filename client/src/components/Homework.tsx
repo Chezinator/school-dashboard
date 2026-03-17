@@ -1,10 +1,26 @@
 /**
- * Homework — Assignments per kid with subject, due date, and status.
+ * Homework — Assignments per kid with subject, due date, status, and embedded links.
  * Sage/green accent for homework items.
+ * Supports `link` (single) and `links` (array) on each assignment for embedded action buttons.
  */
 import { useState } from "react";
-import { BookOpen, Calendar, CheckCircle2, Circle } from "lucide-react";
+import { BookOpen, Calendar, CheckCircle2, Circle, ExternalLink } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
+
+interface AssignmentLink {
+  url: string;
+  label: string;
+}
+
+interface Assignment {
+  subject: string;
+  title: string;
+  description: string;
+  dueDate: string;
+  status: string;
+  link?: AssignmentLink;
+  links?: AssignmentLink[];
+}
 
 function formatDate(dateStr: string) {
   const d = new Date(dateStr + "T00:00:00");
@@ -26,6 +42,20 @@ function getSubjectColor(subject: string) {
     default:
       return { bg: "bg-gray-50", text: "text-gray-600", border: "border-gray-200" };
   }
+}
+
+function LinkButton({ link }: { link: AssignmentLink }) {
+  return (
+    <a
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-white text-xs font-medium transition-colors"
+    >
+      <ExternalLink className="w-3 h-3" />
+      {link.label}
+    </a>
+  );
 }
 
 export default function Homework() {
@@ -69,8 +99,14 @@ export default function Homework() {
 
       {/* Assignments */}
       <div className="space-y-3">
-        {currentHomework?.assignments.map((assignment, idx) => {
+        {currentHomework?.assignments.map((assignment: Assignment, idx: number) => {
           const colors = getSubjectColor(assignment.subject);
+          // Collect all links for this assignment
+          const allLinks: AssignmentLink[] = [
+            ...(assignment.link ? [assignment.link] : []),
+            ...(assignment.links ?? []),
+          ];
+
           return (
             <div
               key={idx}
@@ -96,6 +132,15 @@ export default function Homework() {
                     <Calendar className="w-3 h-3 text-amber" />
                     <span className="text-xs text-amber font-medium">Due {formatDate(assignment.dueDate)}</span>
                   </div>
+
+                  {/* Embedded action links */}
+                  {allLinks.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-border/30">
+                      {allLinks.map((lk, li) => (
+                        <LinkButton key={li} link={lk} />
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

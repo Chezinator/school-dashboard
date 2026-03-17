@@ -1,9 +1,15 @@
 /**
  * ImportantDates — Calendar section showing this week's dates and upcoming events.
  * Amber accent for date-related items.
+ * Supports optional `link` on each event for embedded action buttons.
  */
-import { CalendarDays, Star, BookOpen, PartyPopper } from "lucide-react";
+import { CalendarDays, Star, BookOpen, PartyPopper, ExternalLink } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
+
+interface EventLink {
+  url: string;
+  label: string;
+}
 
 function formatDate(dateStr: string) {
   const d = new Date(dateStr + "T00:00:00");
@@ -69,6 +75,7 @@ export default function ImportantDates() {
           const kidName = item.kidId
             ? kids.find((k) => k.id === item.kidId)?.name
             : null;
+          const eventLink = (item as any).link as EventLink | undefined;
 
           return (
             <div
@@ -103,6 +110,21 @@ export default function ImportantDates() {
                     {formatDate(item.date)}
                     {(item as any).endDate && ` — ${formatDate((item as any).endDate)}`}
                   </p>
+
+                  {/* Embedded action link */}
+                  {eventLink && (
+                    <div className="mt-3 pt-3 border-t border-border/30">
+                      <a
+                        href={eventLink.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-xs font-medium transition-colors"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        {eventLink.label}
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

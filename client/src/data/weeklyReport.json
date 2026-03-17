@@ -103,7 +103,11 @@
           "title": "DEF Silent Auction & Gala",
           "description": "15th Annual Gala at West Orange Country Club, 6-10 PM. Mardi Gras Masquerade theme. Tickets $50/person at tinyurl.com/DEF-Gala.",
           "type": "event",
-          "kidId": null
+          "kidId": null,
+          "link": {
+            "url": "https://www.parentsquare.com/feeds/74720724",
+            "label": "View Gala Details"
+          }
         }
       ],
       "lunchMenu": [
@@ -411,14 +415,28 @@
               "title": "Blooket Review: Numbers to 1000",
               "description": "Complete the Blooket math review game shared by Ms. Smith. Practice comparing numbers using place value.",
               "dueDate": "2026-03-26",
-              "status": "pending"
+              "status": "pending",
+              "link": {
+                "url": "https://play.blooket.com/play?hwId=69adadded03413c503a4d263",
+                "label": "Play on Blooket"
+              }
             },
             {
               "subject": "Science",
               "title": "Blooket Review: Human Body Parts",
               "description": "Complete the Blooket science review game. Study human body parts and basic functions.",
               "dueDate": "2026-03-26",
-              "status": "pending"
+              "status": "pending",
+              "links": [
+                {
+                  "url": "https://play.blooket.com/play?hwId=69adaefa142ea32f5e141bb0",
+                  "label": "Blooket: Identifying Body Parts"
+                },
+                {
+                  "url": "https://play.blooket.com/play?hwId=69adaf6d597488fadb09b367",
+                  "label": "Blooket: Body Part Functions"
+                }
+              ]
             },
             {
               "subject": "Reading",
@@ -432,6 +450,54 @@
       ],
       "importantLinks": [
         {
+          "id": "canvas",
+          "title": "Canvas \u2014 Student Portal",
+          "url": "https://ocps.instructure.com/",
+          "description": "Assignments, grades, and course materials for both kids",
+          "category": "Tool",
+          "source": "OCPS",
+          "kid": null,
+          "pinned": true,
+          "gmailUrl": null,
+          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAIAAAAG+WgKAAAEEUlEQVR4nO3d24kcMRRAQa9xFhuE8w/DQWwc6383GCGOHjNUfZp5eg+Ci6bVH9/f3z+g8/P0B+DdSIqYpIhJipikiEmKmKSISYqYpIhJipikiP0aedDn5+/Vn+M/vr7+/PMvz8/zfMyIue+17vOMuO1v8WSVIiYpYpIiJilikiI2NPE9nZ1oRmauEXOvMzLfVZ9n3bNGzH0LqxQxSRGTFDFJEZMUscmJ72nnjDNn5L3W7d+NPOu2vcs5VilikiImKWKSIiYpYtnEt9PcPuCcar7b+cvPs6xSxCRFTFLEJEVMUsRecuIbMffby7NT2HvMgFYpYpIiJilikiImKWLZxHfbtLLz84xMjnPX+t12Zd8IqxQxSRGTFDFJEZMUscmJ7+yJkU87z/Nc9zpz/6u3/S2sUsQkRUxSxCRFTFLEPl7xDuw7Z5xqLpt75dt2TkdYpYhJipikiEmKmKSIDU189+9zVZPRbadlrptt150dapUiJilikiImKWKSIrbw5JZ1s1v168dq6ln3Tef2AefuKlixShGTFDFJEZMUMUkRO3wd3869sJ2/olx3b/edZ7m4AztXkBQxSRGTFDFJEbvu7gzVHt/cDtrIe82dw/mKj5ljlSImKWKSIiYpYpIiNjnxrdsz2rl7eNvvIc9etVc9yypFTFLEJEVMUsQkRWzy5JbKzl8bVu8+5+yZMBUnt3CApIhJipikiEmKWDbx7Txn8v53n7PuasSd1zlapYhJipikiEmKmKSIDf2qc2QW2HkvubN3xBv57nPvPvKY205AfbJKEZMUMUkRkxQxSRHLTm7ZOVPMvfLZ6en+E1eeXMfHFSRFTFLEJEVMUsQWXsdX/Urwtl2ts3eN37m/OfKsJ6sUMUkRkxQxSRGTFLGhiW/Ezqlw54Q1otqtu+3zuI6PK0iKmKSISYqYpIhlE99O1V7hzmeN2DmXPdnj41KSIiYpYpIiJilib3tW55yd18Tdf58Fe3xcQVLEJEVMUsQkRexN9vie1k00I3beDWHk3Xe+jlWKmKSISYqYpIhJitjQWZ3370Y93XZKTPVe675XNe1apYhJipikiEmKmKSITd6d4ey99tad5bLzfnxz5v7n1/29nqxSxCRFTFLEJEVMUsSy+/Gd3R3beY/4nXceXPc6664rtEoRkxQxSRGTFDFJEcsmvp12noJy9h7oTzt369yBnStIipikiEmKmKSIveTEN+Lsrx/X3d98zs5rBq1SxCRFTFLEJEVMUsSyiW/n3tPIu+88z7Pa9Vt3NWL1rBFWKWKSIiYpYpIiJilikxPf2dM75/aeqrshVDPgujlx3ck2I6xSxCRFTFLEJEVMUsRe8n583MwqRUxSxCRFTFLEJEVMUsQkRUxSxCRFTFLEJEXsL3GPHknxMazHAAAAAElFTkSuQmCC"
+        },
+        {
+          "id": "skyward",
+          "title": "Skyward \u2014 Family Access",
+          "url": "https://sis.ocps.net/scripts/wsisa.dll/WService=wsEAplus/fwemnu01.w",
+          "description": "Attendance, grades, and student information system",
+          "category": "Tool",
+          "source": "OCPS",
+          "kid": null,
+          "pinned": true,
+          "gmailUrl": null,
+          "qrCode": "data:image/png;base64,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"
+        },
+        {
+          "id": "parentsquare",
+          "title": "ParentSquare",
+          "url": "https://www.parentsquare.com/",
+          "description": "School communications, announcements, and messaging",
+          "category": "Tool",
+          "source": "Lake Whitney",
+          "kid": null,
+          "pinned": true,
+          "gmailUrl": null,
+          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAIAAAAG+WgKAAAD+0lEQVR4nO3d7WkcMRRA0Ti4CxeR/stIEa7DKWAgEeLqY51zfnt3luQieGhm9Pb19fUDOj9P/wC+G0kRkxQxSRGTFDFJEZMUMUkRkxQxSRGTFLH3kT/6+Pi1+nf8xefn73/+zfMXVp+a++YR1W/eaeQXWqWISYqYpIhJipikiA1NfE/V1PM0MtGsm3rWzXfrrn72/+LJKkVMUsQkRUxSxCRFbHLie5qbDuamlXW7frftJ87Z+X/xZJUiJilikiImKWKSIpZNfGdVM87IXFbd+Xl2P3EdqxQxSRGTFDFJEZMUsZec+Ebmu/ufifuurFLEJEVMUsQkRUxSxLKJb+f+VHU/5LqpsPrUurte17FKEZMUMUkRkxQxSRGbnPjO7o5V79isnvVb93tG3LZTaZUiJilikiImKWKSIvb2P5/Afv87WF7xyT6rFDFJEZMUMUkRkxSxyfP4du5z3fZE3s57SuecfZOMVYqYpIhJipikiEmK2NAeX7WrtfNex7PfMzcr7ZyI133KKkVMUsQkRUxSxCRFbOtdnffv8d1/f2a1E7duX9IqRUxSxCRFTFLEJEVscuLbef5dZedO5dynXnFH78kqRUxSxCRFTFLEJEVs4cRX7c2dnXHWTXMjdv77VNeyShGTFDFJEZMUMUkRW/jmlrnvmfvUursxd7rtFL+532OVIiYpYpIiJilikiK29Ty+23aj5q4+Z25uHfmeSvXNVilikiImKWKSIiYpYkMT384dtHUT1si1dj7vNuf+a1mliEmKmKSISYqYpIhN3tW57lMjzs5lZ/ccR5x9L6hVipikiEmKmKSISYpY9uaWnXtPO89iuO2e0nWnV1TXskoRkxQxSRGTFDFJEVt4Avu6M9Cfvsd5fLfNm3PfbJUiJilikiImKWKSInZ4j+/+M+mebnsv6LpZ0nN8XEFSxCRFTFLEJEVs4R5f5exTaTvvh7z/33CEVYqYpIhJipikiEmK2OS7Ouf+pnJ2Ah2x7i0xI+bORhzhrk4OkBQxSRGTFDFJEVv4rs7K3BkK6/bvKjvPW985I1uliEmKmKSISYqYpIhNnsB+2xw09z07nz0cufrZCbT6ZqsUMUkRkxQxSRGTFLHJie9p58lxZ0+p23kH6W1vCh1hlSImKWKSIiYpYpIilk18O912St3Ip6qrj5h7js8eH5eSFDFJEZMUMUkRe8mJr5po1u3Wzc1Tt813TmDnCpIiJilikiImKWLZ6QyVdSf9jdh5rRHrnjSsPvVklSImKWKSIiYpYpIiNjnx7bRuJ27u7tBXPKX9ad3dqlYpYpIiJilikiImKWJDEx+Ms0oRkxQxSRGTFDFJEZMUMUkRkxQxSRGTFDFJEfsD6bNG0ecZMmsAAAAASUVORK5CYII="
+        },
+        {
+          "id": "mealviewer",
+          "title": "MealViewer \u2014 Lunch Menu",
+          "url": "https://schools.mealviewer.com/school/LakeWhitneyElementary",
+          "description": "Full lunch menu for Lake Whitney Elementary",
+          "category": "Tool",
+          "source": "Lake Whitney",
+          "kid": null,
+          "pinned": true,
+          "gmailUrl": null,
+          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAE9klEQVR4nO3d223cOABA0SRIFyli+y9ji0gdk/9VsCAIPu6Mz/k0bEm2LwhwJJHfX6/XN+j5cfsC4O+kSZQ0iZImUdIkSppESZMoaRIlTaKkSZQ0ifo58k2/fv2z+zr+x+/f//7nK8/rGfmefdczYuSa7x7npJFrNmoSJU2ipEmUNImSJlFDM/SnuVnhiLmZ49ycfdW8fuTIc+caOc4qtf+pUZMoaRIlTaKkSZQ0iZqcoT/NzcLuzgpX3Uee+y1G5uyrPnmYc/d/atQkSppESZMoaRIlTaKWzdBP2jevfxqZNY+4e80nz76KUZMoaRIlTaKkSZQ0iXrLGfrc8+FzR171dPqqa/6M2fcIoyZR0iRKmkRJkyhpErVshn5ynnjyXexVb6bPnWvf++wj7s79jZpESZMoaRIlTaKkSdTkDP3uSuD71oUbmZPeXVv+5Hp3dxk1iZImUdIkSppESZOo76/X6/Y1XPOpz6t/xpPwRk2ipEmUNImSJlHSJGpohj434zt5T3bV9ezbW/zkTH/Eqs8Q9p3dqEmUNImSJlHSJEqaRE3eQ983Zz+5U9jJ+ebd1e3m2G0N/kKaREmTKGkSJU2iNu6HPrfKWe1+/dw1jxznad9vcfK591V/DaMmUdIkSppESZMoaRI1NEM/uTL5yNnnjjNy5Jp9q9s91T4bMWoSJU2ipEmUNImSJlFH76GP/NSqc518yn3kyKucfH983+5vI4yaREmTKGkSJU2ipEnUsrXc981t765Xtur58Lsrt+/be24foyZR0iRKmkRJkyhpErVspbinfXdX5851cp32uSO/4ycG++b1Rk2ipEmUNImSJlHSJGrjfuir7mt/5fvjq86+73ueVn1aYtQkSppESZMoaRIlTaKOztD3zb7vPgk/p78C/Ih9fx+jJlHSJEqaREmTKGkSNblS3KrZ5d2dxPt3zE/O4k/eeXcPnTcmTaKkSZQ0iZImUZMz9H1z232ru696Znvu7CPu7hm3778zx6hJlDSJkiZR0iRKmkQNPeV+cl528rnufee6+4z9ybfOn6wUx4eTJlHSJEqaREmTqMkZ+sm1099xzbf+X2zuOCd/L6MmUdIkSppESZMoaRI1+ZT7iLlnyO/u073qSfh9e52PnH2Oe+gwRJpESZMoaRIlTaKW3UNfpbbC+d1PDJ7urh03YtWRjZpESZMoaRIlTaKkSdTRe+j9t6FXrVP3dPJZ/ZEjr7LvyEZNoqRJlDSJkiZR0iRq2UpxJ9f9XjXbXfXO+1PtOPt4D50vR5pESZMoaRIlTaKGZug177i79903Bfrr3T0ZNYmSJlHSJEqaREmTqKGn3Gt3aUfUdjfb9/T+vh3k7zJqEiVNoqRJlDSJkiZRk++h310pbsTITPbkSum1GfG+zz085c6HkyZR0iRKmkRJk6hlK8Xd3ZmrtuL6075350fs+9xj37mMmkRJkyhpEiVNoqRJ1Ma13E9adW93bl6/ahf1p894o3zuyEZNoqRJlDSJkiZR0iTqLWfo++7k7luRft9Ocyd3Ujv5HIJRkyhpEiVNoqRJlDSJWjZDv/sM+d2d3Vb91N0d4kacXDPQqEmUNImSJlHSJEqaRC3bD32fk3uijbh79pHredq3kvw+Rk2ipEmUNImSJlHSJOot90PnKzBqEiVNoqRJlDSJkiZR0iRKmkRJkyhpEiVNoqRJ1B9NH+X9ThuQWgAAAABJRU5ErkJggg=="
+        },
+        {
           "id": "lake-whitney-website",
           "title": "Lake Whitney Elementary Website",
           "url": "https://lakewhitneyes.ocps.net/",
@@ -441,50 +507,6 @@
           "kid": null,
           "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cbaa8a9352030b",
           "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAIAAAAG+WgKAAAEBklEQVR4nO3d3akVMRhAURW7sAj7L8MirOP6bkBC2Elmrms9iufncjYDH5lJvn58fHyBzrfbX4DPRlLEJEVMUsQkRUxSxCRFTFLEJEVMUsQkRez7zH/68ePn7u/xD79///rrX8bvs/Z/RjN/6cxnzZj5PqOn/RYjVylikiImKWKSIiYpYlMT32htWplRzVwnv2E1k45m/oq7v8XIVYqYpIhJipikiEmK2OLENzq5zrVmZgrbN0ueXJu7+1u4ShGTFDFJEZMUMUkRyya+k6rpaW0GnLFvRe/5XKWISYqYpIhJipikiL1y4vsc7t6buo+rFDFJEZMUMUkRkxSxbOK7O5vcXVNbW3PcN9/d/S1cpYhJipikiEmKmKSILU58d3eMXHNyz8+n7S96kqsUMUkRkxQxSRGTFLGvbzyBvdqZ5ORZDDPeeA/nyFWKmKSISYqYpIhJitjieXzVfpX7zrbbN82trbutfdbd6XLtd3eVIiYpYpIiJilikiK28XSG6uyDu2cNnLzz86R9s6SrFDFJEZMUMUkRkxSxjc/x7Xsqbd+dlifnxLVX3T1rfoarFDFJEZMUMUkRkxSxqYnv5NxRnX832jeFPf9Zv31rqSNXKWKSIiYpYpIiJiliUzu3nFxB+xz7VY6edrfqqJriXaWISYqYpIhJipikiC1OfPueyDt5x+YbTzy/O9vauYULJEVMUsQkRUxSxBZPZ3j+mtpo31rhyZPcT/4V9urkESRFTFLEJEVMUsSyuzr3nTl+98SEu7vEPO2zTHxcIClikiImKWKSIra4c8vo5Jl9M6/a5+73OXnfqef4eARJEZMUMUkRkxSxxRPYR/tOqdv3PjNOrvqNnrbCaI2PCyRFTFLEJEVMUsQWn+Mb7Vvjm/G0c+vu3r86Y9/Zf65SxCRFTFLEJEVMUsQWT2Df5+TsVk09+77zvqnQeXy8hqSISYqYpIhJitjGnVvW3qd657v7oty9F3SGuzp5DUkRkxQxSRGTFLFs55aT77Nvnjp55+eMk7vfVFyliEmKmKSISYqYpIhlO7fsc/JkgWou27eit281s5oKXaWISYqYpIhJipikiC0+x3d3Lezkyte+zzq56nfyVa5SxCRFTFLEJEVMUsSynVvu3rVYvfPapz/tXtCZ99m3J4yrFDFJEZMUMUkRkxSxx+3VOWNmWrl7il81T919Is8aH48gKWKSIiYpYpIi9sqJb1TNgGv/5+4zemvvvPYqa3xcIClikiImKWKSIpZNfCfXnionT2eoXuU8Pv47kiImKWKSIiYpYosT393dO984qe074WLfb+GuTh5BUsQkRUxSxCRFbOoEdpjnKkVMUsQkRUxSxCRFTFLEJEVMUsQkRUxSxCRF7A/SNC9jij8JuwAAAABJRU5ErkJggg=="
-        },
-        {
-          "id": "parentsquare-field-day-signup",
-          "title": "Field Day Volunteer Sign-Up",
-          "url": "https://www.parentsquare.com/feeds/73777567",
-          "description": "Sign up to volunteer at a station for Field Day. Must be ADDitions approved.",
-          "category": "Event",
-          "source": "Lake Whitney",
-          "kid": null,
-          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cb62d704bd6961",
-          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAFBklEQVR4nO3d263cNgBAwThwFy4i/ZeRIlzHpgAaAUPwcXwz8+2VtNcHBLiSyG+fz+cP6Pnz9QXAr0mTKGkSJU2ipEmUNImSJlHSJEqaREmTKGkS9X3mH/348dfp6/gXP3/+veU447e4eeRdf8OZI898r/7/qVGTKGkSJU2ipEmUNImamqGPds1tR2szx5lZam1uu2sWv+t71f5PjZpESZMoaRIlTaKkSdTiDH20a3a5dq61WerafHxtZt1/EmDmXDN2XY9RkyhpEiVNoqRJlDSJ2jZDf2vX3fC1Wfy5c92cj9cYNYmSJlHSJEqaREmTqC8yQx/tehZ9133kXc/P7/pVoc+oSZQ0iZImUdIkSppEbZuhv50V7nry/Nzz6ruu5+Y1v/0/NWoSJU2ipEmUNImSJlGLM/S3K4GvOTf/3bUy267363ettveWUZMoaRIlTaKkSZQ0ifr2+XxeX8N/dm419TW1/c485Q4HSZMoaRIlTaKkSdTUDP3mft+jmyuu167n3DPt/d8HjJpESZMoaRIlTaKkSdTUU+7ndu6e8fbp669xP3rNrmf+Z448MmoSJU2ipEmUNImSJlFTM/S370efM3OFN+817/rd49x99pvr1Bk1iZImUdIkSppESZOobU+5z3xqdHNd9LUjv31afsbbJ+pnjrPGqEmUNImSJlHSJEqaRC2uFHdzbbS3z5nven5g7Vy71HaIm2HUJEqaREmTKGkSJU2irq7lXrsXP3OuXTPQt59a8/ZXF6MmUdIkSppESZMoaRJ1cC33m7Pvm29w73Lu7vPo5rrx7qHzxUmTKGkSJU2ipEnUtrXcb64hdm4mu+bcbxE3n7GfuZ7RubMbNYmSJlHSJEqaREmTqKtPuY9+x3vfo5tPwvd3Wh+t/TWMmkRJkyhpEiVNoqRJ1OJua6Obe369Pc7MkXf9hnDzyKObs/iRUZMoaRIlTaKkSZQ0iZqaoZ/z9j30mePc3G3t3Kpra9/r3KdmGDWJkiZR0iRKmkRJk6jFleLWvL1D/fZt8ZlznZuz194CmGHUJEqaREmTKGkSJU2iHr+HPjo31+7vq77rU7tYyx1+QZpESZMoaRIlTaK27bY286kZN+//7rqnf/PIN73dC96oSZQ0iZImUdIkSppEXX0P/eYb5TNnX5s5ntujvLYq+7nV7WYYNYmSJlHSJEqaREmTqG0z9JuzuZv39G/uSH7zCm/O4t1D50uRJlHSJEqaREmTqIP30M/t5T3j5tz/7XrvN/+Go3O/jRg1iZImUdIkSppESZOo3EpxM97ubL52PWt+x33edz1jYNQkSppESZMoaRIlTaKm7qHX9uq6uSv36Nyu5efOPnOcm+/XzzBqEiVNoqRJlDSJkiZRi0+5n9vza9d7zbWn5Xfdaz63Z/qMm7/VGDWJkiZR0iRKmkRJk6jHK8XdvLO8Nv9dO9fN77VrXbg1534bMWoSJU2ipEmUNImSJlFXd1s7Z22eeHM9t5lPvX1bfObIN89u1CRKmkRJkyhpEiVNor7IDH107t7u6Nya5+d+edh1d/7cDvJGTaKkSZQ0iZImUdIkatsM/dyb6TPnuvkG98z1jHZd4c3V1G/uBT8yahIlTaKkSZQ0iZImUYsz9Leru9+8R7zm7Yx47Vu8/TVgZNQkSppESZMoaRIlTaJ+y/3Q+T8wahIlTaKkSZQ0iZImUdIkSppESZMoaRIlTaKkSdQ/el74ls2U5UgAAAAASUVORK5CYII="
-        },
-        {
-          "id": "blooket-math",
-          "title": "Blooket: Extend Thinking \u2014 Numbers to 1,000",
-          "url": "https://play.blooket.com/play?hwId=69adadded03413c503a4d263",
-          "description": "Math homework review game assigned by Ms. Smith (2nd grade)",
-          "category": "Homework",
-          "source": "Ms. Smith",
-          "kid": "kaia",
-          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cce7bc6292056f",
-          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAFDklEQVR4nO3d0Y3bOABAwcshXaSI9F9GikgdTgE8XAiCpJ69M99rSbt+IMClRH17vV7/QM+/T18A/DdpEiVNoqRJlDSJkiZR0iRKmkRJkyhpEiVNor7P/NCPHz9PX8f/+P37119/ZrzCXZ9aO/LMudbsusL+d2rUJEqaREmTKGkSJU2ipmboo7VZ6oybM8eZ32JmRnzu7DPn2jVnr32nRk2ipEmUNImSJlHSJGpxhj5am4XdXI/eNdud+dSu61k7zq659s3vdGTUJEqaREmTKGkSJU2its3Qa26udM+cfe0459a1+4yaREmTKGkSJU2ipEnUx87Q19x8WnzXp0bnVtVvMmoSJU2ipEmUNImSJlHbZujPzgFv3md+7vnxtZ9ZO/uMZ79ToyZR0iRKmkRJkyhpErU4Q392J/AZu3ZLm/lN1/aE33WcZ586P8eoSZQ0iZImUdIkSppETc3Q3/Ee6VH//WI3d2Xvf6dGTaKkSZQ0iZImUdIk6tvr9frrD+1aI15z861ka9dzbr/30a519me/rxlGTaKkSZQ0iZImUdIk6g2eQ7+5jnxuD/Zzbza/Ode+uXOdUZMoaRIlTaKkSZQ0iZpaQ59RW5Ptz21v3me+dvZdf8O139SoSZQ0iZImUdIkSppE5d629uw95DNHPremf+6u+3fcTc6oSZQ0iZImUdIkSppETc3Qz937PXOumePs2il97XrWPnVzXn/ujoJda/EjoyZR0iRKmkRJkyhpEpXby/3crHntODf3l7v5pvVdZz+3qm7UJEqaREmTKGkSJU2irq6h79qH/OYsfsbNPeFnjjPa9dfwHDpIkyppEiVNoqRJ1OLb1s65uSf8mmevcNf/RmacW4ufYdQkSppESZMoaRIlTaIW93I/t6o+49md0nfdCdA/8gzPofPlSJMoaRIlTaKkSdS2Gfoun7FCfe7Nbjffmf7svvpGTaKkSZQ0iZImUdIk6uE19Jkj9z37u988u+fQQZpUSZMoaRIlTaIWZ+gz+vunjfor3c++sW4Xd7nzxqRJlDSJkiZR0iRqcS/30dqO6zPnuvmestGud5Cde4P8s87tCWDUJEqaREmTKGkSJU2ipmboo3Mr3c/esz1znJlrXntv+Du+D33m7HaK46NIkyhpEiVNoqRJ1OIMfbRrrflZN9/Yvnb20c0rHHkOnS9HmkRJkyhpEiVNorbN0Ee7Zrszc8CbT15/xhvQZq5n5shr3441dN6YNImSJlHSJEqaRG2boe+aqZ2bNT97X/fMp3Yd+dydCTd3ADBqEiVNoqRJlDSJkiZRB/dyP+fm+8dHN99IPnP20a692p5d5TdqEiVNoqRJlDSJkiZR2/ZyP2dtZ7aZ48zYtRZ/bq1516fO7RvvOXQ+ijSJkiZR0iRKmkRt28t9l3N3y9+ck4523S1/cy1+dO4/ISOjJlHSJEqaREmTKGkSdfU59NG5HcVvPsF98476GTf3zD93171RkyhpEiVNoqRJlDSJOriX+003n7M+t0/7uesZ7brr/tzc36hJlDSJkiZR0iRKmkR9yAx9dHM39V1z5JtPlN+8X32NUZMoaRIlTaKkSZQ0ido2Q785m3t2Z7ZzZz+3A97NOwE8h86HkyZR0iRKmkRJk6ipt63V9nJ/9i1gtSfud51913x815zdqEmUNImSJlHSJEqaRL3l+9D5CoyaREmTKGkSJU2ipEmUNImSJlHSJEqaREmTKGkS9QeRxtuB28H5ogAAAABJRU5ErkJggg=="
-        },
-        {
-          "id": "blooket-science-body-parts",
-          "title": "Blooket: Identifying Human Body Parts",
-          "url": "https://play.blooket.com/play?hwId=69adaefa142ea32f5e141bb0",
-          "description": "Science homework review game assigned by Ms. Smith (2nd grade)",
-          "category": "Homework",
-          "source": "Ms. Smith",
-          "kid": "kaia",
-          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cce7bc6292056f",
-          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAFCUlEQVR4nO3d7Y0kNRRAURaRxQZB/mEQxMbRBFAILMvPdWc45/f0x3RfWXK7yv7x+Xx+g57f334D8M+kSZQ0iZImUdIkSppESZMoaRIlTaKkSZQ0ifpj5Y9+/vxz+n38i1+//hp65uf/9Xytlb/Ze609p95h/zs1ahIlTaKkSZQ0iZImUUsz9Kebs+ZTz/N8zyv/xcqMeOVRp+b1c78q1L5ToyZR0iRKmkRJkyhpErU5Q3/am4XNrUefmlnvPWrFqU/s1Cr/083v9MmoSZQ0iZImUdIkSppEHZuh18xdVT736nOr2F+RUZMoaRIlTaKkSZQ0ifq2M/S9teab8/qVK9j3zK2q32TUJEqaREmTKGkSJU2ijs3Q350Dzt1Rvvdap66o73+qc4yaREmTKGkSJU2ipEnU5gz93Z3AV5zaLW3lP725Oj+3U1ztOzVqEiVNoqRJlDSJkiZRSzP0r3iN9FP/fLGnuVX1/ndq1CRKmkRJkyhpEiVNojbPQ59bI35aOblsboX61POcOu+sdj77k73c+eakSZQ0iZImUdIk6tga+tzs8tTJ5itOzX/nznp797eRvdfa+1SNmkRJkyhpEiVNoqRJ1I/P5/Off/TuHPDmzmyn1HaBm/ttZO68eKMmUdIkSppESZMoaRJ1bA29tkY8d7/2zSvYTz3P3DUGc4yaREmTKGkSJU2ipEnU1b3c59ZkT+24vvKoFafm2v2r5ed+MTBqEiVNoqRJlDSJkiZRg+ehv7vWfOqZ52ayc+fB3TyRbW5V3ahJlDSJkiZR0iRKmkQN7uU+9zfvzrVPefe69z3uQwdpUiVNoqRJlDSJOrZTXP8+69o97zevBNjz7j3vRk2ipEmUNImSJlHSJGpphv5081Tud+eJe6918zeE/q8T7kPnW5EmUdIkSppESZOoYzP0FXNnkL17LtjNK+rf3QVu7jN8MmoSJU2ipEmUNImSJlGbV7nfvK57xbv3mL97ltnNV3cfOkiTKmkSJU2ipEnU4H3oN9dtV57nlP55Zze/rz2ucucLkyZR0iRKmkRJk6hjp609nTq96+Zsd8XeeWd7z/z07v7zT3N3Lhg1iZImUdIkSppESZOozRl6f6X75mvN/YawctLc3N5xK496OvUOjZpESZMoaRIlTaKkSdTVNfS9tea989D33Dyx/eaudHOfofvQ+d+RJlHSJEqaREmTqGMz9L056bvXq++Zm9vu/e/vnnw39w6NmkRJkyhpEiVNoqRJ1LG93Gv7ws2dtH7z1VfeT3/PNzN0vhVpEiVNoqRJlDSJWlpDn7tme+95Ts1A92aOp64EuHnn/lf8NcCoSZQ0iZImUdIkSppELc3Q373O/NQ91Kfm/qeuKj812z31qJs76a0wahIlTaKkSZQ0iZImUcf2cj/l1Bz51I7iN6/Dn1t5X3k/K+au3n8yahIlTaKkSZQ0iZImUcd2inv3tLWbK8Irbp6AtvI8N0+Hf3IfOt+KNImSJlHSJEqaRA2etnbTqRXquVX1uZ3ratf8n2LUJEqaREmTKGkSJU2ivskMfc+7J5LvPfPco57evQ7BqEmUNImSJlHSJEqaRF09D/3ma82dvX5qZ/ub72du7j93f4FRkyhpEiVNoqRJlDSJ2jwP/aa5K9jnVp+f5u6431P7VJ+MmkRJkyhpEiVNoqRJ1NIMHe4zahIlTaKkSZQ0iZImUdIkSppESZMoaRIlTaKkSdTf/hcf4RakqNEAAAAASUVORK5CYII="
-        },
-        {
-          "id": "blooket-science-body-functions",
-          "title": "Blooket: Functions of Human Body Parts",
-          "url": "https://play.blooket.com/play?hwId=69adaf6d597488fadb09b367",
-          "description": "Science homework review game assigned by Ms. Smith (2nd grade)",
-          "category": "Homework",
-          "source": "Ms. Smith",
-          "kid": "kaia",
-          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cce7bc6292056f",
-          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAE/0lEQVR4nO3d240TMQBAUUB0QRH0XwZFUEcoYBBYlh93s+d872aS3StLjmfsr6/X6wv0fLv9BuDvpEmUNImSJlHSJEqaREmTKGkSJU2ipEmUNIn6PvJDP3783P0+/uH371+bXvn5uZ7XGvmZuWuNGLnW3Dvs/0+NmkRJkyhpEiVNoqRJ1NAM/enkrHnV6zzf88inGJmzz1k1+171rULtf2rUJEqaREmTKGkSJU2iJmfoT/vWiEeutWrVeG4+Pnf1ub/Yqvez6lr7rm7UJEqaREmTKGkSJU2ils3Q79o3l6zd077qWn1GTaKkSZQ0iZImUdIk6k1m6CP23a8+cq2nVavqI6+87w72fYyaREmTKGkSJU2ipEnUshn63Tngyavvu6O+5u47NGoSJU2ipEmUNImSJlGTM/T+ndWrdksb+aRze8Kvep1VO8XV/qdGTaKkSZQ0iZImUdIkamiG3l/t7Tu5J97dndtXMWoSJU2ipEmUNImSJlFfX6/Xf39o1RrxnNr677793kfsW2dfxV7uvDlpEiVNoqRJlDSJWraGvup071W/dXLNeuTqq856uzvXXnVC3Mhf1ahJlDSJkiZR0iRKmkTlnkM/uQ/53LPhq6x6Lv7udyMjO9LP/QeNmkRJkyhpEiVNoqRJ1NAMfdUstbZGPGLVHHlE/7S1k/8LoyZR0iRKmkRJkyhpErXsLveTe6fPObnD+dxv7bszf983IfvaMGoSJU2ipEmUNImSJlFDO8XNWbWS+x6z3X1Ppo+onchmhs4HJk2ipEmUNImSJlGTd7mfnLfum9ffvfd77pnufa8z4uQ+9kZNoqRJlDSJkiZR0iRq8rS1fe6e071vx/VV76d2H8K+z27UJEqaREmTKGkSJU2iJu9yr610312dP7nj+slXHuE5dD4daRIlTaKkSZQ0iVo2Qx9xcvX5ad/92HfvMTg5+z757IBRkyhpEiVNoqRJlDSJOrqGXptLrnqd2mefs2/nOs+h81akSZQ0iZImUdIkatlz6CfntnNq15q7+qpPcffceXe584FJkyhpEiVNoqRJ1OR56P0V6pGfmZtHz+2dPnc6fN++JxeMmkRJkyhpEiVNoqRJ1AfYy33f/uond2abc/eu+7u/ZdQkSppESZMoaRIlTaKG1tCf9t3FffLbgJGrz83ZT66G332HnkPn05EmUdIkSppESZOoyTX02tlhc06eZTbyW6ucfAp+3+52Rk2ipEmUNImSJlHSJGpyDf1p1ZPg77GX+8mT3U7u+XbyuwijJlHSJEqaREmTKGkSNXna2l0nV5/3Pc8+935GrNqr7e7nMmoSJU2ipEmUNImSJlFDa+h3nw0feYZ635r1vvn4qj3h5/47q2bxIzyHzluRJlHSJEqaREmTqKM7xY3Yt5vcvufin+7OvkfcPbF9hFGTKGkSJU2ipEmUNIk6+hz608l1231z5Lvz6LlPuorT1vh0pEmUNImSJlHSJGrZDP2ufavPJ5/gvrvK/3T32wmjJlHSJEqaREmTKGkS9SYz9Dn77vTed/WnffurnzzV/cmoSZQ0iZImUdIkSppELZuhn5zN3b33++QnXfVtQO1E+xFGTaKkSZQ0iZImUdIkanKGfnd3930noO073Xvu6ndPfzv5V30yahIlTaKkSZQ0iZImUR/yPHQ+A6MmUdIkSppESZMoaRIlTaKkSZQ0iZImUdIkSppE/QFiqveqVDFvGgAAAABJRU5ErkJggg=="
         },
         {
           "id": "ocps-mondays-with-maria",
