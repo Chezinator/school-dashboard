@@ -15,6 +15,7 @@ import WeatherForecast from "@/components/WeatherForecast";
 import TeacherComms from "@/components/TeacherComms";
 import Homework from "@/components/Homework";
 import SchoolDistrictComms from "@/components/SchoolDistrictComms";
+import ImportantLinks from "@/components/ImportantLinks";
 import WeekSwitcher from "@/components/WeekSwitcher";
 import { WeekProvider, useWeek } from "@/contexts/WeekContext";
 import { Heart, RefreshCw } from "lucide-react";
@@ -114,7 +115,7 @@ function DashboardContent() {
             </div>
           </div>
 
-          {/* School & District Communications — full-width at the very bottom */}
+          {/* School & District Communications — full-width */}
           <motion.div
             custom={5}
             initial="hidden"
@@ -123,6 +124,17 @@ function DashboardContent() {
             className="mt-6"
           >
             <SchoolDistrictComms />
+          </motion.div>
+
+          {/* Important Links & QR Codes — full-width at the very bottom */}
+          <motion.div
+            custom={6}
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+            className="mt-6"
+          >
+            <ImportantLinks />
           </motion.div>
         </main>
 

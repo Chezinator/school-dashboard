@@ -27,13 +27,13 @@
   "weeks": [
     {
       "weekOf": "2026-03-23",
-      "weekLabel": "March 23 – 27, 2026",
+      "weekLabel": "March 23 \u2013 27, 2026",
       "lastUpdated": "2026-03-16T18:00:00Z",
       "actionItems": [
         {
           "id": 1,
           "title": "Prepare Bronson for BEST Writing Assessment",
-          "description": "State test on Tuesday, March 31 — 120-minute computer-based exam. Ensure good sleep, healthy breakfast, and no electronics the night before. Practice persuasive writing this week.",
+          "description": "State test on Tuesday, March 31 \u2014 120-minute computer-based exam. Ensure good sleep, healthy breakfast, and no electronics the night before. Practice persuasive writing this week.",
           "dueDate": "2026-03-31",
           "urgent": true,
           "kidId": "bronson",
@@ -50,7 +50,7 @@
         },
         {
           "id": 3,
-          "title": "Rain Gear Needed Wed–Fri",
+          "title": "Rain Gear Needed Wed\u2013Fri",
           "description": "Afternoon and morning showers expected Wednesday through Friday (34-44% chance). Pack rain jackets and umbrellas for school drop-off and pickup.",
           "dueDate": null,
           "urgent": false,
@@ -80,13 +80,13 @@
         {
           "date": "2026-03-23",
           "title": "Begin 4th Grading Period",
-          "description": "School resumes after Spring Break — final nine weeks of the school year",
+          "description": "School resumes after Spring Break \u2014 final nine weeks of the school year",
           "type": "school",
           "kidId": null
         },
         {
           "date": "2026-03-31",
-          "title": "Bronson — BEST Writing Assessment",
+          "title": "Bronson \u2014 BEST Writing Assessment",
           "description": "4th Grade State Test, 120-min computer-based, no electronics allowed. Good sleep and healthy breakfast essential.",
           "type": "test",
           "kidId": "bronson"
@@ -110,37 +110,85 @@
         {
           "day": "Monday",
           "date": "2026-03-23",
-          "entrees": ["Meatball Pizza Sub", "PBJ Sandwich Box"],
-          "sides": ["Fresh Steamed Broccoli", "Carrot Dippers with Ranch Dressing"],
-          "fruits": ["Apple Cherry Juice", "Apple Juice", "Fresh Apple Slices"]
+          "entrees": [
+            "Meatball Pizza Sub",
+            "PBJ Sandwich Box"
+          ],
+          "sides": [
+            "Fresh Steamed Broccoli",
+            "Carrot Dippers with Ranch Dressing"
+          ],
+          "fruits": [
+            "Apple Cherry Juice",
+            "Apple Juice",
+            "Fresh Apple Slices"
+          ]
         },
         {
           "day": "Tuesday",
           "date": "2026-03-24",
-          "entrees": ["Lemongrass Chicken", "Hummus Cup Platter"],
-          "sides": ["Brown Rice", "Mandarin Carrot Slaw", "Salsa Dipping Cup", "Tropical Trio Juice Slushie"],
-          "fruits": ["Strawberry Cup"]
+          "entrees": [
+            "Lemongrass Chicken",
+            "Hummus Cup Platter"
+          ],
+          "sides": [
+            "Brown Rice",
+            "Mandarin Carrot Slaw",
+            "Salsa Dipping Cup",
+            "Tropical Trio Juice Slushie"
+          ],
+          "fruits": [
+            "Strawberry Cup"
+          ]
         },
         {
           "day": "Wednesday",
           "date": "2026-03-25",
-          "entrees": ["Breaded Drumsticks", "Egg, Cheese & Flatbread Box"],
-          "sides": ["Garlic Bread Stick", "Steamed Corn", "Garden Side Salad"],
-          "fruits": ["Fresh Apple Slices"]
+          "entrees": [
+            "Breaded Drumsticks",
+            "Egg, Cheese & Flatbread Box"
+          ],
+          "sides": [
+            "Garlic Bread Stick",
+            "Steamed Corn",
+            "Garden Side Salad"
+          ],
+          "fruits": [
+            "Fresh Apple Slices"
+          ]
         },
         {
           "day": "Thursday",
           "date": "2026-03-26",
-          "entrees": ["Chicken Corn Dog", "Butterball Turkey Hot Dog on WG Bun", "Eisenberg Beef Hot Dog on WG Bun", "Chicken Fajita Salad w/ Flatbread"],
-          "sides": ["Vegetarian Baked Beans", "Coleslaw"],
-          "fruits": ["Apple Cherry Juice", "Apple Juice"]
+          "entrees": [
+            "Chicken Corn Dog",
+            "Butterball Turkey Hot Dog on WG Bun",
+            "Eisenberg Beef Hot Dog on WG Bun",
+            "Chicken Fajita Salad w/ Flatbread"
+          ],
+          "sides": [
+            "Vegetarian Baked Beans",
+            "Coleslaw"
+          ],
+          "fruits": [
+            "Apple Cherry Juice",
+            "Apple Juice"
+          ]
         },
         {
           "day": "Friday",
           "date": "2026-03-27",
-          "entrees": ["6\" Personal Cheese Pizza", "Turkey & American Sub"],
-          "sides": ["Marinara Dipping Sauce Cup", "Cucumber Dippers with Ranch Dressing"],
-          "fruits": ["Fresh Apple Slices"]
+          "entrees": [
+            "6\" Personal Cheese Pizza",
+            "Turkey & American Sub"
+          ],
+          "sides": [
+            "Marinara Dipping Sauce Cup",
+            "Cucumber Dippers with Ranch Dressing"
+          ],
+          "fruits": [
+            "Fresh Apple Slices"
+          ]
         }
       ],
       "weather": [
@@ -151,7 +199,7 @@
           "low": 61,
           "condition": "Sunny",
           "icon": "sun",
-          "dressSuggestion": "Light, breathable clothing — shorts and t-shirt weather. Don't forget sunscreen!"
+          "dressSuggestion": "Light, breathable clothing \u2014 shorts and t-shirt weather. Don't forget sunscreen!"
         },
         {
           "day": "Tuesday",
@@ -187,7 +235,7 @@
           "low": 58,
           "condition": "AM Showers",
           "icon": "cloud-rain",
-          "dressSuggestion": "Morning rain likely — bring umbrella for drop-off. Should clear up by afternoon."
+          "dressSuggestion": "Morning rain likely \u2014 bring umbrella for drop-off. Should clear up by afternoon."
         }
       ],
       "teacherComms": [
@@ -198,7 +246,7 @@
             {
               "date": "2026-03-09",
               "subject": "Week of March 9-13 Newsletter & BEST Writing Prep",
-              "summary": "Last newsletter before Spring Break covered the week of March 9-13. Key highlights: All work was due Thursday March 13 — check Canvas and Skyward for any missing assignments. Field Day was held March 12. Spring Break runs March 14-22. School resumes March 23 with the 4th Grading Period. The BEST Writing Assessment is March 31 (120-min computer-based state test). Blooket review links were shared for Math (Extend Thinking Numbers to 1000), Science (Human Body Parts), and Social Studies."
+              "summary": "Last newsletter before Spring Break covered the week of March 9-13. Key highlights: All work was due Thursday March 13 \u2014 check Canvas and Skyward for any missing assignments. Field Day was held March 12. Spring Break runs March 14-22. School resumes March 23 with the 4th Grading Period. The BEST Writing Assessment is March 31 (120-min computer-based state test). Blooket review links were shared for Math (Extend Thinking Numbers to 1000), Science (Human Body Parts), and Social Studies."
             },
             {
               "date": "2026-03-11",
@@ -232,7 +280,7 @@
           "date": "2026-03-12",
           "subject": "Wishing You a Safe and Restful Spring Break",
           "from": "Superintendent Dr. Maria Vazquez",
-          "summary": "Thank you for the important role you play each day in supporting your child's education. As we begin spring break, I want to wish you and your family a safe, happy, and relaxing week. When students return to school on Monday, March 23, we will begin the final nine weeks of the school year — an exciting time filled with important learning experiences, milestones, and celebrations.",
+          "summary": "Thank you for the important role you play each day in supporting your child's education. As we begin spring break, I want to wish you and your family a safe, happy, and relaxing week. When students return to school on Monday, March 23, we will begin the final nine weeks of the school year \u2014 an exciting time filled with important learning experiences, milestones, and celebrations.",
           "priority": "high",
           "category": "announcement"
         },
@@ -252,7 +300,7 @@
           "source": "Lake Whitney Elementary",
           "sourceType": "school",
           "date": "2026-03-03",
-          "subject": "15th Annual DEF Silent Auction & Gala — April 18",
+          "subject": "15th Annual DEF Silent Auction & Gala \u2014 April 18",
           "from": "Danette Havard, Dolphin Education Fund",
           "summary": "The 15th Annual DEF Silent Auction & Gala is Saturday, April 18 from 6-10 PM at the West Orange Country Club. Theme: Mardi Gras Masquerade. Tickets are $50/person (includes dinner, 2 drink tickets, and auction access). All funds go to the Dolphin Education Fund for classroom supplies, arts programs, PE equipment, and more. Purchase tickets at tinyurl.com/DEF-Gala.",
           "priority": "normal",
@@ -263,7 +311,7 @@
           "source": "OCPS District",
           "sourceType": "district",
           "date": "2026-03-04",
-          "subject": "Give Education Day — Take the $1 Pledge",
+          "subject": "Give Education Day \u2014 Take the $1 Pledge",
           "from": "Foundation for Orange County Public Schools",
           "summary": "The Foundation for OCPS is asking families to take the $1 Pledge at foundationforocps.org/giveeducation. Funds support literacy enrichment, STEM and arts access, college and career readiness, scholarships, and professional development for teachers.",
           "priority": "normal",
@@ -274,7 +322,7 @@
           "source": "OCPS District",
           "sourceType": "district",
           "date": "2026-03-02",
-          "subject": "Mondays with Maria — Weekly Superintendent Update",
+          "subject": "Mondays with Maria \u2014 Weekly Superintendent Update",
           "from": "Superintendent Dr. Maria Vazquez",
           "summary": "This week's Mondays with Maria featured a visit to Colonial High School with new Deputy Superintendent Jose Martinez, who previously served as the school's principal. Colonial High students shared what they love most about their campus. Available as a video and podcast.",
           "priority": "low",
@@ -285,7 +333,7 @@
           "source": "Lake Whitney Elementary",
           "sourceType": "school",
           "date": "2026-03-01",
-          "subject": "Dolphin Digest — Week of March 2, 2026",
+          "subject": "Dolphin Digest \u2014 Week of March 2, 2026",
           "from": "Lake Whitney Principal",
           "summary": "The principal's weekly update highlighted an incredibly busy and rewarding week including All-County Music performances and neon dance activities. Students continue to shine in everything they do. The newsletter also covered upcoming events and school community updates.",
           "priority": "normal",
@@ -296,7 +344,7 @@
           "source": "Lake Whitney Elementary",
           "sourceType": "school",
           "date": "2026-02-27",
-          "subject": "Yearbook Price Increase — Order Before March 1",
+          "subject": "Yearbook Price Increase \u2014 Order Before March 1",
           "from": "Danette Havard, Administration",
           "summary": "Yearbook prices increased after March 1, 2026. Families were encouraged to order before the deadline to get the lower price. Yearbooks capture all the memories from this school year.",
           "priority": "normal",
@@ -307,7 +355,7 @@
           "source": "OCPS District",
           "sourceType": "district",
           "date": "2026-02-27",
-          "subject": "INFORM: OCPS — District 4 News: Black History Month 2026",
+          "subject": "INFORM: OCPS \u2014 District 4 News: Black History Month 2026",
           "from": "OCPS District 4 Communications",
           "summary": "The District 4 newsletter covered Black History Month recognition events and second semester updates across Orange County Public Schools. The newsletter highlighted community celebrations and student achievements throughout the district.",
           "priority": "low",
@@ -321,7 +369,7 @@
             {
               "subject": "Writing",
               "title": "BEST Writing Practice Essay",
-              "description": "Practice persuasive writing prompt — 45 minutes timed. Prepare for the March 31 state assessment.",
+              "description": "Practice persuasive writing prompt \u2014 45 minutes timed. Prepare for the March 31 state assessment.",
               "dueDate": "2026-03-25",
               "status": "pending"
             },
@@ -341,7 +389,7 @@
             },
             {
               "subject": "Reading",
-              "title": "Reading Log — 20 min/night",
+              "title": "Reading Log \u2014 20 min/night",
               "description": "Read independently and log pages in reading journal",
               "dueDate": "2026-03-27",
               "status": "pending"
@@ -374,12 +422,102 @@
             },
             {
               "subject": "Reading",
-              "title": "Reading Log — 15 min/night",
+              "title": "Reading Log \u2014 15 min/night",
               "description": "Read independently and have a parent sign the log",
               "dueDate": "2026-03-27",
               "status": "pending"
             }
           ]
+        }
+      ],
+      "importantLinks": [
+        {
+          "id": "lake-whitney-website",
+          "title": "Lake Whitney Elementary Website",
+          "url": "https://lakewhitneyes.ocps.net/",
+          "description": "Official school website \u2014 news, calendar, staff directory",
+          "category": "School",
+          "source": "School",
+          "kid": null,
+          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cbaa8a9352030b",
+          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAIAAAAG+WgKAAAEBklEQVR4nO3d3akVMRhAURW7sAj7L8MirOP6bkBC2Elmrms9iufncjYDH5lJvn58fHyBzrfbX4DPRlLEJEVMUsQkRUxSxCRFTFLEJEVMUsQkRez7zH/68ePn7u/xD79///rrX8bvs/Z/RjN/6cxnzZj5PqOn/RYjVylikiImKWKSIiYpYlMT32htWplRzVwnv2E1k45m/oq7v8XIVYqYpIhJipikiEmK2OLENzq5zrVmZgrbN0ueXJu7+1u4ShGTFDFJEZMUMUkRyya+k6rpaW0GnLFvRe/5XKWISYqYpIhJipikiL1y4vsc7t6buo+rFDFJEZMUMUkRkxSxbOK7O5vcXVNbW3PcN9/d/S1cpYhJipikiEmKmKSILU58d3eMXHNyz8+n7S96kqsUMUkRkxQxSRGTFLGvbzyBvdqZ5ORZDDPeeA/nyFWKmKSISYqYpIhJitjieXzVfpX7zrbbN82trbutfdbd6XLtd3eVIiYpYpIiJilikiK28XSG6uyDu2cNnLzz86R9s6SrFDFJEZMUMUkRkxSxjc/x7Xsqbd+dlifnxLVX3T1rfoarFDFJEZMUMUkRkxSxqYnv5NxRnX832jeFPf9Zv31rqSNXKWKSIiYpYpIiJiliUzu3nFxB+xz7VY6edrfqqJriXaWISYqYpIhJipikiC1OfPueyDt5x+YbTzy/O9vauYULJEVMUsQkRUxSxBZPZ3j+mtpo31rhyZPcT/4V9urkESRFTFLEJEVMUsSyuzr3nTl+98SEu7vEPO2zTHxcIClikiImKWKSIra4c8vo5Jl9M6/a5+73OXnfqef4eARJEZMUMUkRkxSxxRPYR/tOqdv3PjNOrvqNnrbCaI2PCyRFTFLEJEVMUsQWn+Mb7Vvjm/G0c+vu3r86Y9/Zf65SxCRFTFLEJEVMUsQWT2Df5+TsVk09+77zvqnQeXy8hqSISYqYpIhJitjGnVvW3qd657v7oty9F3SGuzp5DUkRkxQxSRGTFLFs55aT77Nvnjp55+eMk7vfVFyliEmKmKSISYqYpIhlO7fsc/JkgWou27eit281s5oKXaWISYqYpIhJipikiC0+x3d3Lezkyte+zzq56nfyVa5SxCRFTFLEJEVMUsSynVvu3rVYvfPapz/tXtCZ99m3J4yrFDFJEZMUMUkRkxSxx+3VOWNmWrl7il81T919Is8aH48gKWKSIiYpYpIi9sqJb1TNgGv/5+4zemvvvPYqa3xcIClikiImKWKSIpZNfCfXnionT2eoXuU8Pv47kiImKWKSIiYpYosT393dO984qe074WLfb+GuTh5BUsQkRUxSxCRFbOoEdpjnKkVMUsQkRUxSxCRFTFLEJEVMUsQkRUxSxCRF7A/SNC9jij8JuwAAAABJRU5ErkJggg=="
+        },
+        {
+          "id": "parentsquare-field-day-signup",
+          "title": "Field Day Volunteer Sign-Up",
+          "url": "https://www.parentsquare.com/feeds/73777567",
+          "description": "Sign up to volunteer at a station for Field Day. Must be ADDitions approved.",
+          "category": "Event",
+          "source": "Lake Whitney",
+          "kid": null,
+          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cb62d704bd6961",
+          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAFBklEQVR4nO3d263cNgBAwThwFy4i/ZeRIlzHpgAaAUPwcXwz8+2VtNcHBLiSyG+fz+cP6Pnz9QXAr0mTKGkSJU2ipEmUNImSJlHSJEqaREmTKGkS9X3mH/348dfp6/gXP3/+veU447e4eeRdf8OZI898r/7/qVGTKGkSJU2ipEmUNImamqGPds1tR2szx5lZam1uu2sWv+t71f5PjZpESZMoaRIlTaKkSdTiDH20a3a5dq61WerafHxtZt1/EmDmXDN2XY9RkyhpEiVNoqRJlDSJ2jZDf2vX3fC1Wfy5c92cj9cYNYmSJlHSJEqaREmTqC8yQx/tehZ9133kXc/P7/pVoc+oSZQ0iZImUdIkSppEbZuhv50V7nry/Nzz6ruu5+Y1v/0/NWoSJU2ipEmUNImSJlGLM/S3K4GvOTf/3bUy267363ettveWUZMoaRIlTaKkSZQ0ifr2+XxeX8N/dm419TW1/c485Q4HSZMoaRIlTaKkSdTUDP3mft+jmyuu167n3DPt/d8HjJpESZMoaRIlTaKkSdTUU+7ndu6e8fbp669xP3rNrmf+Z448MmoSJU2ipEmUNImSJlFTM/S370efM3OFN+817/rd49x99pvr1Bk1iZImUdIkSppESZOobU+5z3xqdHNd9LUjv31afsbbJ+pnjrPGqEmUNImSJlHSJEqaRC2uFHdzbbS3z5nven5g7Vy71HaIm2HUJEqaREmTKGkSJU2irq7lXrsXP3OuXTPQt59a8/ZXF6MmUdIkSppESZMoaRJ1cC33m7Pvm29w73Lu7vPo5rrx7qHzxUmTKGkSJU2ipEnUtrXcb64hdm4mu+bcbxE3n7GfuZ7RubMbNYmSJlHSJEqaREmTqKtPuY9+x3vfo5tPwvd3Wh+t/TWMmkRJkyhpEiVNoqRJ1OJua6Obe369Pc7MkXf9hnDzyKObs/iRUZMoaRIlTaKkSZQ0iZqaoZ/z9j30mePc3G3t3Kpra9/r3KdmGDWJkiZR0iRKmkRJk6jFleLWvL1D/fZt8ZlznZuz194CmGHUJEqaREmTKGkSJU2iHr+HPjo31+7vq77rU7tYyx1+QZpESZMoaRIlTaK27bY286kZN+//7rqnf/PIN73dC96oSZQ0iZImUdIkSppEXX0P/eYb5TNnX5s5ntujvLYq+7nV7WYYNYmSJlHSJEqaREmTqG0z9JuzuZv39G/uSH7zCm/O4t1D50uRJlHSJEqaREmTqIP30M/t5T3j5tz/7XrvN/+Go3O/jRg1iZImUdIkSppESZOo3EpxM97ubL52PWt+x33edz1jYNQkSppESZMoaRIlTaKm7qHX9uq6uSv36Nyu5efOPnOcm+/XzzBqEiVNoqRJlDSJkiZRi0+5n9vza9d7zbWn5Xfdaz63Z/qMm7/VGDWJkiZR0iRKmkRJk6jHK8XdvLO8Nv9dO9fN77VrXbg1534bMWoSJU2ipEmUNImSJlFXd1s7Z22eeHM9t5lPvX1bfObIN89u1CRKmkRJkyhpEiVNor7IDH107t7u6Nya5+d+edh1d/7cDvJGTaKkSZQ0iZImUdIkatsM/dyb6TPnuvkG98z1jHZd4c3V1G/uBT8yahIlTaKkSZQ0iZImUYsz9Leru9+8R7zm7Yx47Vu8/TVgZNQkSppESZMoaRIlTaJ+y/3Q+T8wahIlTaKkSZQ0iZImUdIkSppESZMoaRIlTaKkSdQ/el74ls2U5UgAAAAASUVORK5CYII="
+        },
+        {
+          "id": "blooket-math",
+          "title": "Blooket: Extend Thinking \u2014 Numbers to 1,000",
+          "url": "https://play.blooket.com/play?hwId=69adadded03413c503a4d263",
+          "description": "Math homework review game assigned by Ms. Smith (2nd grade)",
+          "category": "Homework",
+          "source": "Ms. Smith",
+          "kid": "kaia",
+          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cce7bc6292056f",
+          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAFDklEQVR4nO3d0Y3bOABAwcshXaSI9F9GikgdTgE8XAiCpJ69M99rSbt+IMClRH17vV7/QM+/T18A/DdpEiVNoqRJlDSJkiZR0iRKmkRJkyhpEiVNor7P/NCPHz9PX8f/+P37119/ZrzCXZ9aO/LMudbsusL+d2rUJEqaREmTKGkSJU2ipmboo7VZ6oybM8eZ32JmRnzu7DPn2jVnr32nRk2ipEmUNImSJlHSJGpxhj5am4XdXI/eNdud+dSu61k7zq659s3vdGTUJEqaREmTKGkSJU2its3Qa26udM+cfe0459a1+4yaREmTKGkSJU2ipEnUx87Q19x8WnzXp0bnVtVvMmoSJU2ipEmUNImSJlHbZujPzgFv3md+7vnxtZ9ZO/uMZ79ToyZR0iRKmkRJkyhpErU4Q392J/AZu3ZLm/lN1/aE33WcZ586P8eoSZQ0iZImUdIkSppETc3Q3/Ee6VH//WI3d2Xvf6dGTaKkSZQ0iZImUdIk6tvr9frrD+1aI15z861ka9dzbr/30a519me/rxlGTaKkSZQ0iZImUdIk6g2eQ7+5jnxuD/Zzbza/Ode+uXOdUZMoaRIlTaKkSZQ0iZpaQ59RW5Ptz21v3me+dvZdf8O139SoSZQ0iZImUdIkSppE5d629uw95DNHPremf+6u+3fcTc6oSZQ0iZImUdIkSppETc3Qz937PXOumePs2il97XrWPnVzXn/ujoJda/EjoyZR0iRKmkRJkyhpEpXby/3crHntODf3l7v5pvVdZz+3qm7UJEqaREmTKGkSJU2irq6h79qH/OYsfsbNPeFnjjPa9dfwHDpIkyppEiVNoqRJ1OLb1s65uSf8mmevcNf/RmacW4ufYdQkSppESZMoaRIlTaIW93I/t6o+49md0nfdCdA/8gzPofPlSJMoaRIlTaKkSdS2Gfoun7FCfe7Nbjffmf7svvpGTaKkSZQ0iZImUdIk6uE19Jkj9z37u988u+fQQZpUSZMoaRIlTaIWZ+gz+vunjfor3c++sW4Xd7nzxqRJlDSJkiZR0iRqcS/30dqO6zPnuvmestGud5Cde4P8s87tCWDUJEqaREmTKGkSJU2ipmboo3Mr3c/esz1znJlrXntv+Du+D33m7HaK46NIkyhpEiVNoqRJ1OIMfbRrrflZN9/Yvnb20c0rHHkOnS9HmkRJkyhpEiVNorbN0Ee7Zrszc8CbT15/xhvQZq5n5shr3441dN6YNImSJlHSJEqaRG2boe+aqZ2bNT97X/fMp3Yd+dydCTd3ADBqEiVNoqRJlDSJkiZRB/dyP+fm+8dHN99IPnP20a692p5d5TdqEiVNoqRJlDSJkiZR2/ZyP2dtZ7aZ48zYtRZ/bq1516fO7RvvOXQ+ijSJkiZR0iRKmkRt28t9l3N3y9+ck4523S1/cy1+dO4/ISOjJlHSJEqaREmTKGkSdfU59NG5HcVvPsF98476GTf3zD93171RkyhpEiVNoqRJlDSJOriX+003n7M+t0/7uesZ7brr/tzc36hJlDSJkiZR0iRKmkR9yAx9dHM39V1z5JtPlN+8X32NUZMoaRIlTaKkSZQ0ido2Q785m3t2Z7ZzZz+3A97NOwE8h86HkyZR0iRKmkRJk6ipt63V9nJ/9i1gtSfud51913x815zdqEmUNImSJlHSJEqaRL3l+9D5CoyaREmTKGkSJU2ipEmUNImSJlHSJEqaREmTKGkS9QeRxtuB28H5ogAAAABJRU5ErkJggg=="
+        },
+        {
+          "id": "blooket-science-body-parts",
+          "title": "Blooket: Identifying Human Body Parts",
+          "url": "https://play.blooket.com/play?hwId=69adaefa142ea32f5e141bb0",
+          "description": "Science homework review game assigned by Ms. Smith (2nd grade)",
+          "category": "Homework",
+          "source": "Ms. Smith",
+          "kid": "kaia",
+          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cce7bc6292056f",
+          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAFCUlEQVR4nO3d7Y0kNRRAURaRxQZB/mEQxMbRBFAILMvPdWc45/f0x3RfWXK7yv7x+Xx+g57f334D8M+kSZQ0iZImUdIkSppESZMoaRIlTaKkSZQ0ifpj5Y9+/vxz+n38i1+//hp65uf/9Xytlb/Ze609p95h/zs1ahIlTaKkSZQ0iZImUUsz9Kebs+ZTz/N8zyv/xcqMeOVRp+b1c78q1L5ToyZR0iRKmkRJkyhpErU5Q3/am4XNrUefmlnvPWrFqU/s1Cr/083v9MmoSZQ0iZImUdIkSppEHZuh18xdVT736nOr2F+RUZMoaRIlTaKkSZQ0ifq2M/S9teab8/qVK9j3zK2q32TUJEqaREmTKGkSJU2ijs3Q350Dzt1Rvvdap66o73+qc4yaREmTKGkSJU2ipEnU5gz93Z3AV5zaLW3lP725Oj+3U1ztOzVqEiVNoqRJlDSJkiZRSzP0r3iN9FP/fLGnuVX1/ndq1CRKmkRJkyhpEiVNojbPQ59bI35aOblsboX61POcOu+sdj77k73c+eakSZQ0iZImUdIk6tga+tzs8tTJ5itOzX/nznp797eRvdfa+1SNmkRJkyhpEiVNoqRJ1I/P5/Off/TuHPDmzmyn1HaBm/ttZO68eKMmUdIkSppESZMoaRJ1bA29tkY8d7/2zSvYTz3P3DUGc4yaREmTKGkSJU2ipEnU1b3c59ZkT+24vvKoFafm2v2r5ed+MTBqEiVNoqRJlDSJkiZRg+ehv7vWfOqZ52ayc+fB3TyRbW5V3ahJlDSJkiZR0iRKmkQN7uU+9zfvzrVPefe69z3uQwdpUiVNoqRJlDSJOrZTXP8+69o97zevBNjz7j3vRk2ipEmUNImSJlHSJGpphv5081Tud+eJe6918zeE/q8T7kPnW5EmUdIkSppESZOoYzP0FXNnkL17LtjNK+rf3QVu7jN8MmoSJU2ipEmUNImSJlGbV7nfvK57xbv3mL97ltnNV3cfOkiTKmkSJU2ipEnU4H3oN9dtV57nlP55Zze/rz2ucucLkyZR0iRKmkRJk6hjp609nTq96+Zsd8XeeWd7z/z07v7zT3N3Lhg1iZImUdIkSppESZOozRl6f6X75mvN/YawctLc3N5xK496OvUOjZpESZMoaRIlTaKkSdTVNfS9tea989D33Dyx/eaudHOfofvQ+d+RJlHSJEqaREmTqGMz9L056bvXq++Zm9vu/e/vnnw39w6NmkRJkyhpEiVNoqRJ1LG93Gv7ws2dtH7z1VfeT3/PNzN0vhVpEiVNoqRJlDSJWlpDn7tme+95Ts1A92aOp64EuHnn/lf8NcCoSZQ0iZImUdIkSppELc3Q373O/NQ91Kfm/qeuKj812z31qJs76a0wahIlTaKkSZQ0iZImUcf2cj/l1Bz51I7iN6/Dn1t5X3k/K+au3n8yahIlTaKkSZQ0iZImUcd2inv3tLWbK8Irbp6AtvI8N0+Hf3IfOt+KNImSJlHSJEqaRA2etnbTqRXquVX1uZ3ratf8n2LUJEqaREmTKGkSJU2ivskMfc+7J5LvPfPco57evQ7BqEmUNImSJlHSJEqaRF09D/3ma82dvX5qZ/ub72du7j93f4FRkyhpEiVNoqRJlDSJ2jwP/aa5K9jnVp+f5u6431P7VJ+MmkRJkyhpEiVNoqRJ1NIMHe4zahIlTaKkSZQ0iZImUdIkSppESZMoaRIlTaKkSdTf/hcf4RakqNEAAAAASUVORK5CYII="
+        },
+        {
+          "id": "blooket-science-body-functions",
+          "title": "Blooket: Functions of Human Body Parts",
+          "url": "https://play.blooket.com/play?hwId=69adaf6d597488fadb09b367",
+          "description": "Science homework review game assigned by Ms. Smith (2nd grade)",
+          "category": "Homework",
+          "source": "Ms. Smith",
+          "kid": "kaia",
+          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cce7bc6292056f",
+          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAE/0lEQVR4nO3d240TMQBAUUB0QRH0XwZFUEcoYBBYlh93s+d872aS3StLjmfsr6/X6wv0fLv9BuDvpEmUNImSJlHSJEqaREmTKGkSJU2ipEmUNIn6PvJDP3783P0+/uH371+bXvn5uZ7XGvmZuWuNGLnW3Dvs/0+NmkRJkyhpEiVNoqRJ1NAM/enkrHnV6zzf88inGJmzz1k1+171rULtf2rUJEqaREmTKGkSJU2iJmfoT/vWiEeutWrVeG4+Pnf1ub/Yqvez6lr7rm7UJEqaREmTKGkSJU2ils3Q79o3l6zd077qWn1GTaKkSZQ0iZImUdIk6k1m6CP23a8+cq2nVavqI6+87w72fYyaREmTKGkSJU2ipEnUshn63Tngyavvu6O+5u47NGoSJU2ipEmUNImSJlGTM/T+ndWrdksb+aRze8Kvep1VO8XV/qdGTaKkSZQ0iZImUdIkamiG3l/t7Tu5J97dndtXMWoSJU2ipEmUNImSJlFfX6/Xf39o1RrxnNr677793kfsW2dfxV7uvDlpEiVNoqRJlDSJWraGvup071W/dXLNeuTqq856uzvXXnVC3Mhf1ahJlDSJkiZR0iRKmkTlnkM/uQ/53LPhq6x6Lv7udyMjO9LP/QeNmkRJkyhpEiVNoqRJ1NAMfdUstbZGPGLVHHlE/7S1k/8LoyZR0iRKmkRJkyhpErXsLveTe6fPObnD+dxv7bszf983IfvaMGoSJU2ipEmUNImSJlFDO8XNWbWS+x6z3X1Ppo+onchmhs4HJk2ipEmUNImSJlGTd7mfnLfum9ffvfd77pnufa8z4uQ+9kZNoqRJlDSJkiZR0iRq8rS1fe6e071vx/VV76d2H8K+z27UJEqaREmTKGkSJU2iJu9yr610312dP7nj+slXHuE5dD4daRIlTaKkSZQ0iVo2Qx9xcvX5ad/92HfvMTg5+z757IBRkyhpEiVNoqRJlDSJOrqGXptLrnqd2mefs2/nOs+h81akSZQ0iZImUdIkatlz6CfntnNq15q7+qpPcffceXe584FJkyhpEiVNoqRJ1OR56P0V6pGfmZtHz+2dPnc6fN++JxeMmkRJkyhpEiVNoqRJ1AfYy33f/uond2abc/eu+7u/ZdQkSppESZMoaRIlTaKG1tCf9t3FffLbgJGrz83ZT66G332HnkPn05EmUdIkSppESZOoyTX02tlhc06eZTbyW6ucfAp+3+52Rk2ipEmUNImSJlHSJGpyDf1p1ZPg77GX+8mT3U7u+XbyuwijJlHSJEqaREmTKGkSNXna2l0nV5/3Pc8+935GrNqr7e7nMmoSJU2ipEmUNImSJlFDa+h3nw0feYZ635r1vvn4qj3h5/47q2bxIzyHzluRJlHSJEqaREmTqKM7xY3Yt5vcvufin+7OvkfcPbF9hFGTKGkSJU2ipEmUNIk6+hz608l1231z5Lvz6LlPuorT1vh0pEmUNImSJlHSJGrZDP2ufavPJ5/gvrvK/3T32wmjJlHSJEqaREmTKGkS9SYz9Dn77vTed/WnffurnzzV/cmoSZQ0iZImUdIkSppELZuhn5zN3b33++QnXfVtQO1E+xFGTaKkSZQ0iZImUdIkanKGfnd3930noO073Xvu6ndPfzv5V30yahIlTaKkSZQ0iZImUR/yPHQ+A6MmUdIkSppESZMoaRIlTaKkSZQ0iZImUdIkSppE/QFiqveqVDFvGgAAAABJRU5ErkJggg=="
+        },
+        {
+          "id": "ocps-mondays-with-maria",
+          "title": "Mondays with Maria \u2014 OCPS Superintendent Update",
+          "url": "https://theslice.ocps.net/88316?articleID=55029",
+          "description": "Weekly video message transcript from Superintendent Dr. Maria Vazquez",
+          "category": "District",
+          "source": "OCPS District",
+          "kid": null,
+          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cd4c100e572de3",
+          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAFEElEQVR4nO3d7a0jJwBA0WyULraI9F9Gitg6nAKIEoSAuZ6c8/v56/kKCTMDPz6fz2/Q8/vTbwD+mTSJkiZR0iRKmkRJkyhpEiVNoqRJlDSJkiZRf8z80c+ff55+H//i16+/tjzP+ClmnnntUTPPMxqfeebVd32um2beoVGTKGkSJU2ipEmUNImamqGPds2aR7tmjrtm1jMz4plH7XrmtedZez+7rH0uoyZR0iRKmkRJkyhpErU4Qx/tml3ueq1nV95Hu9bH115rzbOvbtQkSppESZMoaRIlTaK2zdCfde569XNXle9a1971G0KNUZMoaRIlTaKkSZQ0iXrJDH1mlnpuvX7Xmv6uVfV3zNmNmkRJkyhpEiVNoqRJ1LYZ+jfOAWvz+l3r9bs8+50aNYmSJlHSJEqaREmTqMUZ+rM7gY/OzW13zaNrfzOqfadGTaKkSZQ0iZImUdIkamqG/o3r47X16NGu6+dHz+7cvotRkyhpEiVNoqRJlDSJWjwPfdeu4zNmrjy/eSf4jF3/sXP3od/8vtYYNYmSJlHSJEqaREmTqB+fz+c//+jc7uU390U/N2ueea1dbl7Tfm5eP/MOjZpESZMoaRIlTaKkSdTB89DPrT7fXI8enTs3bc07ftMYGTWJkiZR0iRKmkRJk6jcXu4354Aznp3XP3u9+ujmaxk1iZImUdIkSppESZOoxZ3izu1gdm4OWLtWf+21Rrv+q+e+0zVGTaKkSZQ0iZImUdIkatt96M/O2c+dWr7rvLOZZx7dvO97zbnv3ahJlDSJkiZR0iRKmkRNzdBn3JyT3txx7uYc+dx5cDfXx3d9CqMmUdIkSppESZMoaRJ1cIZ+c9fx0c1V45t7tY1qO7c7bY2XkyZR0iRKmkRJk6htM/TRzWvjn70Sfkb/fLqb9ym4yp0vJk2ipEmUNImSJlEHZ+ijt57cPePZ+e+zv4SYofMq0iRKmkRJkyhpErV42trNNeub54vdvFt85nOtnQ6/9lqjte/Cfei8nDSJkiZR0iRKmkRt28t95lEzbu5OdnNX9mdfvXauujV0vpg0iZImUdIkSppEPXwe+swK7MzzjPpXue9aeX/WuZm+UZMoaRIlTaKkSZQ0iZqaoZ87BWy065lr+8Kd+1Vh128aa+/w3Oq8UZMoaRIlTaKkSZQ0icpd5T569ty0m2eUP3uV+9qjzt0FYNQkSppESZMoaRIlTaIWd4pbszb/PTdHrl3B3t8Bb9cqv/vQ+WLSJEqaREmTKGkStW2Gfm5v8P5q79r72fXq5+b1z147YdQkSppESZMoaRIlTaKunoe+y82dyfv7tK+9+q7nObdjv1GTKGkSJU2ipEmUNIla3CnuprVd12aeZ7S2t/yaXWeUr+nfO2DUJEqaREmTKGkSJU2iFq9yv7l729rfrF0/f+4683Nr+s+eO7/2KGvofDFpEiVNoqRJlDSJunof+qi2brvLrvu1d/0W8eyVAPZy51WkSZQ0iZImUdIk6upe7uec29Ps5l52N517z7v+Y0ZNoqRJlDSJkiZR0iTqJTP0GedWe3ddP79rr/ubv07MPMoaOq8iTaKkSZQ0iZImUdtm6DdXhHdd171rzr5r9n3uvPhnz01bY9QkSppESZMoaRIlTaIWZ+jPzt12zTfPXXl+c1+42nX47kPn5aRJlDSJkiZR0iTqK89D5//AqEmUNImSJlHSJEqaREmTKGkSJU2ipEmUNImSJlF/AwubHJ6zV2HTAAAAAElFTkSuQmCC"
+        },
+        {
+          "id": "parentsquare-dolphin-digest",
+          "title": "Dolphin Digest \u2014 Principal's Weekly Newsletter",
+          "url": "https://www.parentsquare.com/feeds/74836215",
+          "description": "Lake Whitney Elementary principal's weekly update and announcements",
+          "category": "Newsletter",
+          "source": "Lake Whitney",
+          "kid": null,
+          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cdef78a67aecaf",
+          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAE+UlEQVR4nO3d3W0cNxhA0ShwFy7C/ZfhIlzH+t1jGDTBn7vyOY9BVrOJLgh8Gg7n4/V6/Qc9/9/+AvB70iRKmkRJkyhpEiVNoqRJlDSJkiZR0iRKmkR9GfmXvn79tvt7/MGPH99/+Scj32fkU3M/ecTc1efM/eTa7/TJqkmUNImSJlHSJEqaRA1N6E+rpsunVdP3qk/t+zmrZvZVfw24+zt9smoSJU2ipEmUNImSJlGTE/rTqml3lZPTd+1T++7Oj1h1dasmUdIkSppESZMoaRK1bEI/6eQO7VU7xufuYj9/8t3d6SdZNYmSJlHSJEqaREmTqLec0J9WPXW+b+f508i1Tt4xr7FqEiVNoqRJlDSJkiZRyyb0u3PiyJ3lVXe6V53MNjd9r9obP+Lu79SqSZQ0iZImUdIkSppETU7otb3W+05uXzVZr7LvRPra79SqSZQ0iZImUdIkSppEfbxer9vf4a+dPIdtzr5pd99d/hqrJlHSJEqaREmTKGkSNfk+9LmJb9/935MT6Ml3mc2dFLfvPe8j13qa+z9m1SRKmkRJkyhpEiVNonInxdXu9tb2fq+y7y8GI8/Oj7BqEiVNoqRJlDSJkiZRG59DX/WeslVOvsts1XPxJ9/1NmffU/lWTaKkSZQ0iZImUdIkaug59JM7q/fNpKu+z92nvD/HkwIjrJpESZMoaRIlTaKkSdTkPfR994hrT0yP2Pf+tbmrzzn5FxXPofPGpEmUNImSJlHSJOroWe777j7v2+l9d46++53vXsuqSZQ0iZImUdIkSppELZvQT+4hrz0Fv+/vDCf3GIw4+Q47qyZR0iRKmkRJkyhpErXxOfQR++bxd3wr2VN/Ht93d96qSZQ0iZImUdIkSppEDT2HPjfJ7ns6e9+T1yd33a+6+skzAU4+X2/VJEqaREmTKGkSJU2ihib0uxPfiH1z/d0T4Pft1Z+7+sl7+lZNoqRJlDSJkiZR0iRq8jn0k7vTa6el3X2z+Sq1O+9PVk2ipEmUNImSJlHSJOrySXFP7/iOtqe7d95PnrY3d/URVk2ipEmUNImSJlHSJOrohH73VPa7O8ZPvm1t1dVHeB86/xxpEiVNoqRJlDSJmjzLvbbzfORac/ZNoCd3wvd3+D9ZNYmSJlHSJEqaREmTqGX30J9O7nuf+1TtDvXJHf5332o3wqpJlDSJkiZR0iRKmkRdntD37WCvvXFslX1TfG1mt2oSJU2ipEmUNImSJlGTb1vbZ99UWNurPzfp194rN8I9dD4VaRIlTaKkSZQ0iRqa0Pc9LT53rZPnkO/71Jzaqez7/tutmkRJkyhpEiVNoqRJVO4e+tPIdHn3vPe7J7yd3FFwcma3ahIlTaKkSZQ0iZImUUMT+tPdM9jvngI3d/V98+++PfarPjXHqkmUNImSJlHSJEqaRE1O6E8n3wJ28my0k3+L6L97bu5vEd6HzqciTaKkSZQ0iZImUcsm9JNWnWe+7/74vufZa6fNe9sa/xxpEiVNoqRJlDSJessJ/enk3LrvPvLcdz45j5/cdWDVJEqaREmTKGkSJU2ilk3oJ59Qfrp7Bvuq+8j9vfond+ZbNYmSJlHSJEqaREmTqMkJ/e7p7vv2tK9y8v3sI05ea9XVrZpESZMoaRIlTaKkSdTH6/W6/R3gN6yaREmTKGkSJU2ipEmUNImSJlHSJEqaREmTKGkS9ROizvk4Wma+/gAAAABJRU5ErkJggg=="
+        },
+        {
+          "id": "parentsquare-def-gala",
+          "title": "DEF Silent Auction & Gala \u2014 April 18",
+          "url": "https://www.parentsquare.com/feeds/74720724",
+          "description": "Dolphin Education Foundation Gala at West Orange Country Club. Tickets & auction info.",
+          "category": "Event",
+          "source": "Lake Whitney",
+          "kid": null,
+          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cdef78a67aecaf",
+          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAE/UlEQVR4nO3d3Y0bNxhA0WyQLlyE+y8jRbgO5d1jBDTBnyv5nEfDK2ntCwKfZob8er1ef0HP37c/APyaNImSJlHSJEqaREmTKGkSJU2ipEmUNImSJlH/jPylb9++7/4c/+PHj39/+pPn53n+naeRn1r1m676zCNW/WucNPIJrZpESZMoaRIlTaKkSdTQhP60arp8Gpkc5ybrVfP4qtdZNbOv+jbg7v/pk1WTKGkSJU2ipEmUNImanNCfVk27c0am1Nrsv++n9l2dH7Hq3a2aREmTKGkSJU2ipEnUsgn9pH0z6dOqO8bnrmLPfc/wGayaREmTKGkSJU2ipEnUW07oc+bm31V3nj+NvNfJK+Y1Vk2ipEmUNImSJlHSJGrZhH53Thy5srzqSvfJfermZvanfd8z7GPVJEqaREmTKGkSJU2iJif02r3Wc9Pu3Fx/97r2vh3pa/+nVk2ipEmUNImSJlHSJOrr9Xrd/gy/7e7V8BH7pt27v9dJVk2ipEmUNImSJlHSJGryPPS5iW/f9d+TJ4CfPMvs5I70c/Z9Y2DVJEqaREmTKGkSJU2iju4Ud3KS7V8Nv2vfNwYjz86PsGoSJU2ipEmUNImSJlFDd7mvuq697xr6qs+z6pWf9j3P3n8K3oTOR5EmUdIkSppESZOoyefQ7+6fdnLSr513tupfvv+sulWTKGkSJU2ipEmUNIlaNqH3rTqnrHZq212eQ+ePI02ipEmUNImSJlEbz0PfN8nus+9a86qT3d7xvnd3ufNRpEmUNImSJlHSJGrZaWu1Z9X3zdGr3mvk3WvX/Z/2vbJVkyhpEiVNoqRJlDSJWrZT3Mnz12pX3kec/MZgzsm5foRVkyhpEiVNoqRJlDSJGrrLfW522zdZ77uL++QZbat+i5N75p+8x96qSZQ0iZImUdIkSppEbbzL/e4z3SfvD597nZPfBtw9Hd6EzkeRJlHSJEqaREmTqKFr6Ktm21VXYEfe6+S98Z9xZ/7cZ953zp1VkyhpEiVNoqRJlDSJmtzLfdV973OvvG9yPLnn+ci71yb9k2emWzWJkiZR0iRKmkRJk6iN56GvmiXvnuN2d2q+e3f6COeh88eRJlHSJEqaREmTqMm93E/uPLZKbW+0z5j09z1xb9UkSppESZMoaRIlTaIm93Kf+6mRp8VXvfLcnfCrrLpmvWoivnvS+hyrJlHSJEqaREmTKGkStWwv9xH7rhrX9mCvPQle2/3eXe68MWkSJU2ipEmUNIlatpf7Knfn8RH7zjEfea99TxzUvlWwahIlTaKkSZQ0iZImURvvcp+z76r6iNps+3Ryj/p93waMsGoSJU2ipEmUNImSJlG5a+hPJ/czv7tv/Nwrrzr5btXuds5D58NJkyhpEiVNoqRJ1LLz0Fep7Vc29+7Pv7Nv/t13j/2qn5pj1SRKmkRJkyhpEiVNoiYn9Kd3fBL8rpO/xcm95Vd9q2DVJEqaREmTKGkSJU2ilk3oJ9V2HT+5V1ttt/l9T8FbNYmSJlHSJEqaREmTqLec0J/u7me+6jryvlPdV83j++66f7JqEiVNoqRJlDSJkiZRyyb0u/eZ393L7u61+Nru7qtYNYmSJlHSJEqaREmTqMkJvTYRj0yptee+T36e2vcnnkPnjUmTKGkSJU2ipEnU1+v1uv0Z4BesmkRJkyhpEiVNoqRJlDSJkiZR0iRKmkRJkyhpEvUfpQ3qFjauWQ0AAAAASUVORK5CYII="
         }
       ]
     }
