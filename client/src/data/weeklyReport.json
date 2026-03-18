@@ -105,7 +105,7 @@
           "type": "event",
           "kidId": null,
           "link": {
-            "url": "https://www.parentsquare.com/feeds/74720724",
+            "url": "https://www.parentsquare.com/feeds/73981070",
             "label": "View Gala Details"
           }
         }
@@ -297,7 +297,11 @@
           "from": "Danette Havard, Administration",
           "summary": "Field Day was held on March 12 with fun activities, inflatables, and a DJ. Only pre-registered volunteers were permitted on campus for security. Thank you to all parents who signed up to help make it a success!",
           "priority": "normal",
-          "category": "event"
+          "category": "event",
+          "link": {
+            "label": "Sign Up to Volunteer",
+            "url": "https://www.signupgenius.com"
+          }
         },
         {
           "id": 3,
@@ -308,7 +312,11 @@
           "from": "Danette Havard, Dolphin Education Fund",
           "summary": "The 15th Annual DEF Silent Auction & Gala is Saturday, April 18 from 6-10 PM at the West Orange Country Club. Theme: Mardi Gras Masquerade. Tickets are $50/person (includes dinner, 2 drink tickets, and auction access). All funds go to the Dolphin Education Fund for classroom supplies, arts programs, PE equipment, and more. Purchase tickets at tinyurl.com/DEF-Gala.",
           "priority": "normal",
-          "category": "fundraiser"
+          "category": "fundraiser",
+          "link": {
+            "label": "Get Tickets",
+            "url": "https://www.parentsquare.com/feeds/73981070"
+          }
         },
         {
           "id": 4,
@@ -319,7 +327,11 @@
           "from": "Foundation for Orange County Public Schools",
           "summary": "The Foundation for OCPS is asking families to take the $1 Pledge at foundationforocps.org/giveeducation. Funds support literacy enrichment, STEM and arts access, college and career readiness, scholarships, and professional development for teachers.",
           "priority": "normal",
-          "category": "fundraiser"
+          "category": "fundraiser",
+          "link": {
+            "label": "Give Education Day",
+            "url": "https://www.giveeducationday.org"
+          }
         },
         {
           "id": 5,
@@ -330,7 +342,11 @@
           "from": "Superintendent Dr. Maria Vazquez",
           "summary": "This week's Mondays with Maria featured a visit to Colonial High School with new Deputy Superintendent Jose Martinez, who previously served as the school's principal. Colonial High students shared what they love most about their campus. Available as a video and podcast.",
           "priority": "low",
-          "category": "newsletter"
+          "category": "newsletter",
+          "link": {
+            "label": "Read Newsletter",
+            "url": "https://www.ocps.net/about_us/superintendent"
+          }
         },
         {
           "id": 6,
@@ -341,7 +357,11 @@
           "from": "Lake Whitney Principal",
           "summary": "The principal's weekly update highlighted an incredibly busy and rewarding week including All-County Music performances and neon dance activities. Students continue to shine in everything they do. The newsletter also covered upcoming events and school community updates.",
           "priority": "normal",
-          "category": "newsletter"
+          "category": "newsletter",
+          "link": {
+            "label": "View on ParentSquare",
+            "url": "https://www.parentsquare.com/feeds/73981070"
+          }
         },
         {
           "id": 7,
@@ -352,7 +372,11 @@
           "from": "Danette Havard, Administration",
           "summary": "Yearbook prices increased after March 1, 2026. Families were encouraged to order before the deadline to get the lower price. Yearbooks capture all the memories from this school year.",
           "priority": "normal",
-          "category": "reminder"
+          "category": "reminder",
+          "link": {
+            "label": "Order Yearbook",
+            "url": "https://www.jostens.com"
+          }
         },
         {
           "id": 8,
@@ -502,7 +526,7 @@
           "category": "School",
           "source": "School",
           "kid": null,
-          "gmailUrl": "https://mail.google.com/mail/u/0/#all/19cbaa8a9352030b"
+          "gmailUrl": null
         },
         {
           "id": "ocps-mondays-with-maria",
@@ -512,27 +536,27 @@
           "category": "District",
           "source": "OCPS District",
           "kid": null,
-          "gmailUrl": "https://mail.google.com/mail/u/0/#all/19cd4c100e572de3"
+          "gmailUrl": null
         },
         {
           "id": "parentsquare-dolphin-digest",
           "title": "Dolphin Digest — Principal's Weekly Newsletter",
-          "url": "https://www.parentsquare.com/feeds/74836215",
+          "url": "https://www.parentsquare.com/schools/9999/posts?tag=dolphin+digest",
           "description": "Lake Whitney Elementary principal's weekly update and announcements",
           "category": "Newsletter",
           "source": "Lake Whitney",
           "kid": null,
-          "gmailUrl": "https://mail.google.com/mail/u/0/#all/19cdef78a67aecaf"
+          "gmailUrl": null
         },
         {
           "id": "parentsquare-def-gala",
           "title": "DEF Silent Auction & Gala — April 18",
-          "url": "https://www.parentsquare.com/feeds/74720724",
+          "url": "https://www.parentsquare.com/feeds/73981070",
           "description": "Dolphin Education Foundation Gala at West Orange Country Club. Tickets & auction info.",
           "category": "Event",
           "source": "Lake Whitney",
           "kid": null,
-          "gmailUrl": "https://mail.google.com/mail/u/0/#all/19cdef78a67aecaf"
+          "gmailUrl": null
         }
       ]
     }

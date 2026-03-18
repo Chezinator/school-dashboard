@@ -121,8 +121,8 @@ function DashboardContent() {
             {/* ── SCHOOL TAB ── */}
             {activeTab === "school" && (
               <div className="space-y-5 pt-2">
-                <WeatherForecast />
                 <LunchMenu />
+                <WeatherForecast />
               </div>
             )}
 

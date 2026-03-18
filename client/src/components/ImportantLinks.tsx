@@ -6,13 +6,13 @@
  * 1. Pinned Tools (top) — Canvas, Skyward, ParentSquare, MealViewer — always visible
  * 2. Standalone Links — links from school emails that don't belong to a specific card
  *
- * No QR codes. Gmail deep links open the specific thread directly.
+ * No QR codes. No Email buttons (Gmail deep links were unreliable).
  */
 
 import { useWeek } from "@/contexts/WeekContext";
 import {
-  ExternalLink, Mail, School, Newspaper,
-  GraduationCap, Pin, Globe, AlertCircle
+  ExternalLink, School, Newspaper,
+  GraduationCap, Pin, Globe, AlertCircle, Link2
 } from "lucide-react";
 
 interface LinkItem {
@@ -25,16 +25,16 @@ interface LinkItem {
   kid: string | null;
   pinned?: boolean;
   earmarked?: boolean;
-  gmailUrl: string | null;
+  gmailUrl?: string | null;
 }
 
 // Icon + color config per category
 const CATEGORY_CONFIG: Record<string, { icon: React.ReactNode; color: string; bg: string; border: string; accent: string }> = {
-  Tool:       { icon: <Globe className="w-3.5 h-3.5" />,         color: "text-stone-700",  bg: "bg-stone-50",   border: "border-stone-200",  accent: "bg-stone-700" },
-  School:     { icon: <School className="w-3.5 h-3.5" />,        color: "text-teal-700",   bg: "bg-teal-50",    border: "border-teal-200",   accent: "bg-teal-500" },
-  District:   { icon: <GraduationCap className="w-3.5 h-3.5" />, color: "text-blue-700",   bg: "bg-blue-50",    border: "border-blue-200",   accent: "bg-blue-500" },
-  Newsletter: { icon: <Newspaper className="w-3.5 h-3.5" />,     color: "text-purple-700", bg: "bg-purple-50",  border: "border-purple-200", accent: "bg-purple-500" },
-  Event:      { icon: <Globe className="w-3.5 h-3.5" />,         color: "text-amber-700",  bg: "bg-amber-50",   border: "border-amber-200",  accent: "bg-amber-500" },
+  Tool:       { icon: <Globe className="w-3.5 h-3.5" />,         color: "text-stone-700 dark:text-stone-300",  bg: "bg-stone-50 dark:bg-stone-800",   border: "border-stone-200 dark:border-stone-700",  accent: "bg-stone-600" },
+  School:     { icon: <School className="w-3.5 h-3.5" />,        color: "text-teal-700 dark:text-teal-300",   bg: "bg-teal-50 dark:bg-teal-900/20",    border: "border-teal-200 dark:border-teal-700",   accent: "bg-teal-500" },
+  District:   { icon: <GraduationCap className="w-3.5 h-3.5" />, color: "text-blue-700 dark:text-blue-300", bg: "bg-blue-50 dark:bg-blue-900/20",    border: "border-blue-200 dark:border-blue-700",   accent: "bg-blue-500" },
+  Newsletter: { icon: <Newspaper className="w-3.5 h-3.5" />,     color: "text-purple-700 dark:text-purple-300", bg: "bg-purple-50 dark:bg-purple-900/20",  border: "border-purple-200 dark:border-purple-700", accent: "bg-purple-500" },
+  Event:      { icon: <Globe className="w-3.5 h-3.5" />,         color: "text-amber-700 dark:text-amber-300",  bg: "bg-amber-50 dark:bg-amber-900/20",   border: "border-amber-200 dark:border-amber-700",  accent: "bg-amber-500" },
 };
 
 // Tool emoji map for pinned tools
@@ -108,30 +108,16 @@ function StandaloneLinkCard({ link }: { link: LinkItem }) {
         <h3 className="font-semibold text-foreground text-sm leading-snug mb-1">{link.title}</h3>
         <p className="text-xs text-muted-foreground leading-relaxed mb-3">{link.description}</p>
 
-        {/* Action buttons */}
-        <div className="flex gap-2">
-          <a
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-foreground hover:opacity-80 text-background text-xs font-medium rounded-lg transition-opacity"
-          >
-            <ExternalLink className="w-3.5 h-3.5" />
-            Open Link
-          </a>
-          {link.gmailUrl && (
-            <a
-              href={link.gmailUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-1.5 px-3 py-2 bg-muted hover:bg-muted/80 text-muted-foreground text-xs font-medium rounded-lg transition-colors"
-              title="View original email in Gmail"
-            >
-              <Mail className="w-3.5 h-3.5" />
-              Email
-            </a>
-          )}
-        </div>
+        {/* Single Open Link button — Email button removed (unreliable deep links) */}
+        <a
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-1.5 w-full px-3 py-2 bg-foreground hover:opacity-80 text-background text-xs font-medium rounded-lg transition-opacity"
+        >
+          <ExternalLink className="w-3.5 h-3.5" />
+          Open Link
+        </a>
       </div>
     </div>
   );
@@ -149,7 +135,7 @@ export default function ImportantLinks() {
       {/* Header */}
       <div className="flex items-center gap-2">
         <div className="w-8 h-8 rounded-lg bg-teal-light dark:bg-teal/20 flex items-center justify-center">
-          <Link2Icon className="w-4 h-4 text-teal" />
+          <Link2 className="w-4 h-4 text-teal" />
         </div>
         <div>
           <h2 className="font-display text-xl text-foreground">Quick Links</h2>
@@ -176,7 +162,7 @@ export default function ImportantLinks() {
       {standaloneLinks.length > 0 && (
         <div>
           <div className="flex items-center gap-1.5 mb-3">
-            <Mail className="w-3.5 h-3.5 text-muted-foreground" />
+            <Globe className="w-3.5 h-3.5 text-muted-foreground" />
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">From School Emails</span>
           </div>
           <div className="space-y-3">
@@ -196,9 +182,3 @@ export default function ImportantLinks() {
     </section>
   );
 }
-
-// Inline icon to avoid import conflict with Link2 from lucide
-function Link2Icon({ className }: { className?: string }) {
-  return <Link2 className={className} />;
-}
-import { Link2 } from "lucide-react";
