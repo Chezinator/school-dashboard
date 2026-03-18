@@ -286,7 +286,11 @@
           "from": "Superintendent Dr. Maria Vazquez",
           "summary": "Thank you for the important role you play each day in supporting your child's education. As we begin spring break, I want to wish you and your family a safe, happy, and relaxing week. When students return to school on Monday, March 23, we will begin the final nine weeks of the school year \u2014 an exciting time filled with important learning experiences, milestones, and celebrations.",
           "priority": "high",
-          "category": "announcement"
+          "category": "announcement",
+          "link": {
+            "label": "Lake Whitney on ParentSquare",
+            "url": "https://www.parentsquare.com/schools/11762"
+          }
         },
         {
           "id": 2,
@@ -325,7 +329,7 @@
           "date": "2026-03-04",
           "subject": "Give Education Day \u2014 Take the $1 Pledge",
           "from": "Foundation for Orange County Public Schools",
-          "summary": "The Foundation for OCPS is asking families to take the $1 Pledge at foundationforocps.org/giveeducation. Funds support literacy enrichment, STEM and arts access, college and career readiness, scholarships, and professional development for teachers.",
+          "summary": "The Foundation for OCPS is asking families to take the $1 Pledge at the Give Education Day website. Funds support literacy enrichment, STEM and arts access, college and career readiness, scholarships, and professional development for teachers.",
           "priority": "normal",
           "category": "fundraiser",
           "link": {
@@ -359,8 +363,8 @@
           "priority": "normal",
           "category": "newsletter",
           "link": {
-            "label": "View on ParentSquare",
-            "url": "https://www.parentsquare.com/feeds/73981070"
+            "label": "Read on ParentSquare",
+            "url": "https://www.parentsquare.com/feeds/74199872"
           }
         },
         {
@@ -387,7 +391,11 @@
           "from": "OCPS District 4 Communications",
           "summary": "The District 4 newsletter covered Black History Month recognition events and second semester updates across Orange County Public Schools. The newsletter highlighted community celebrations and student achievements throughout the district.",
           "priority": "low",
-          "category": "newsletter"
+          "category": "newsletter",
+          "link": {
+            "label": "View OCPS News",
+            "url": "https://www.ocps.net/about_us/news"
+          }
         }
       ],
       "homework": [

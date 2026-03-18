@@ -14,6 +14,7 @@ import {
   Bell,
   ChevronDown,
   ChevronUp,
+  ExternalLink,
 } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
 
@@ -208,10 +209,23 @@ export default function SchoolDistrictComms() {
                     {comm.summary}
                   </p>
 
-                  {/* Date */}
-                  <p className="text-xs text-amber font-medium mt-2">
-                    {formatDate(comm.date)}
-                  </p>
+                  {/* Date + Link row */}
+                  <div className="flex items-center justify-between mt-2 gap-3">
+                    <p className="text-xs text-amber font-medium">
+                      {formatDate(comm.date)}
+                    </p>
+                    {(comm as any).link && (
+                      <a
+                        href={(comm as any).link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 text-xs font-medium hover:bg-blue-100 transition-colors border border-blue-200"
+                      >
+                        {(comm as any).link.label}
+                        <ExternalLink className="w-2.5 h-2.5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

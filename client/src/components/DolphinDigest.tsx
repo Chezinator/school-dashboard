@@ -3,16 +3,17 @@
  * Design: Sunrise Command Center — warm coral, amber, teal palette
  *
  * Displays a summary card of the Lake Whitney Elementary Dolphin Digest
- * (Principal Dr. Crabb's weekly newsletter), with a "Read Full Digest" 
- * link that opens the Gmail thread directly.
+ * (Principal Dr. Crabb's weekly newsletter), with a "Read on ParentSquare" 
+ * link that opens the post directly.
  *
  * Data source: dolphinDigest field in weeklyReport.json
  * Automation: Each Sunday, the pipeline finds the latest Dolphin Digest 
- * email (subject contains "Dolphin Digest") and extracts highlights.
+ * email (subject contains "Dolphin Digest"), extracts highlights, and
+ * resolves the ParentSquare feed URL from the email tracking links.
  */
 
 import { useWeek } from "@/contexts/WeekContext";
-import { ExternalLink, Mail, Newspaper, ChevronDown, ChevronUp } from "lucide-react";
+import { ExternalLink, Newspaper, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 
 interface DigestHighlight {
@@ -25,8 +26,8 @@ interface DolphinDigestData {
   weekLabel: string;
   postedDate: string;
   postedBy: string;
-  gmailThreadId: string;
   gmailUrl: string;
+  linkLabel?: string;
   highlights: DigestHighlight[];
 }
 
@@ -38,6 +39,8 @@ export default function DolphinDigest() {
   if (!digest) return null;
 
   const visibleHighlights = expanded ? digest.highlights : digest.highlights.slice(0, 3);
+  const linkLabel = digest.linkLabel || "Read on ParentSquare";
+  const linkUrl = digest.gmailUrl;
 
   return (
     <section className="space-y-3">
@@ -68,16 +71,15 @@ export default function DolphinDigest() {
               <p className="text-xs text-muted-foreground">{digest.weekLabel}</p>
               <p className="text-xs text-muted-foreground">Posted {digest.postedDate} · {digest.postedBy}</p>
             </div>
-            {/* Read Full Digest button */}
+            {/* Read on ParentSquare button */}
             <a
-              href={digest.gmailUrl}
+              href={linkUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-light dark:bg-teal/20 text-teal text-xs font-medium hover:opacity-80 transition-opacity border border-teal/20"
             >
-              <Mail className="w-3 h-3" />
+              <ExternalLink className="w-3 h-3" />
               Full Digest
-              <ExternalLink className="w-2.5 h-2.5" />
             </a>
           </div>
         </div>
@@ -118,14 +120,13 @@ export default function DolphinDigest() {
         {/* Footer CTA */}
         <div className="px-4 py-3 bg-muted/30 border-t border-border/40">
           <a
-            href={digest.gmailUrl}
+            href={linkUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 w-full py-2 px-4 bg-foreground hover:opacity-80 text-background text-xs font-medium rounded-lg transition-opacity"
           >
-            <Mail className="w-3.5 h-3.5" />
-            Read Full Digest in Gmail
-            <ExternalLink className="w-3 h-3" />
+            <ExternalLink className="w-3.5 h-3.5" />
+            {linkLabel}
           </a>
         </div>
       </div>
