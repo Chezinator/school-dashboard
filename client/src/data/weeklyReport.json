@@ -27,13 +27,13 @@
   "weeks": [
     {
       "weekOf": "2026-03-23",
-      "weekLabel": "March 23 – 27, 2026",
+      "weekLabel": "March 23 \u2013 27, 2026",
       "lastUpdated": "2026-03-16T18:00:00Z",
       "actionItems": [
         {
           "id": 1,
           "title": "Prepare Bronson for BEST Writing Assessment",
-          "description": "State test on Tuesday, March 31 — 120-minute computer-based exam. Ensure good sleep, healthy breakfast, and no electronics the night before. Practice persuasive writing this week.",
+          "description": "State test on Tuesday, March 31 \u2014 120-minute computer-based exam. Ensure good sleep, healthy breakfast, and no electronics the night before. Practice persuasive writing this week.",
           "dueDate": "2026-03-31",
           "urgent": true,
           "kidId": "bronson",
@@ -50,7 +50,7 @@
         },
         {
           "id": 3,
-          "title": "Rain Gear Needed Wed–Fri",
+          "title": "Rain Gear Needed Wed\u2013Fri",
           "description": "Afternoon and morning showers expected Wednesday through Friday (34-44% chance). Pack rain jackets and umbrellas for school drop-off and pickup.",
           "dueDate": null,
           "urgent": false,
@@ -80,13 +80,13 @@
         {
           "date": "2026-03-23",
           "title": "Begin 4th Grading Period",
-          "description": "School resumes after Spring Break — final nine weeks of the school year",
+          "description": "School resumes after Spring Break \u2014 final nine weeks of the school year",
           "type": "school",
           "kidId": null
         },
         {
           "date": "2026-03-31",
-          "title": "Bronson — BEST Writing Assessment",
+          "title": "Bronson \u2014 BEST Writing Assessment",
           "description": "4th Grade State Test, 120-min computer-based, no electronics allowed. Good sleep and healthy breakfast essential.",
           "type": "test",
           "kidId": "bronson"
@@ -203,7 +203,7 @@
           "low": 61,
           "condition": "Sunny",
           "icon": "sun",
-          "dressSuggestion": "Light, breathable clothing — shorts and t-shirt weather. Don't forget sunscreen!"
+          "dressSuggestion": "Light, breathable clothing \u2014 shorts and t-shirt weather. Don't forget sunscreen!"
         },
         {
           "day": "Tuesday",
@@ -239,7 +239,7 @@
           "low": 58,
           "condition": "AM Showers",
           "icon": "cloud-rain",
-          "dressSuggestion": "Morning rain likely — bring umbrella for drop-off. Should clear up by afternoon."
+          "dressSuggestion": "Morning rain likely \u2014 bring umbrella for drop-off. Should clear up by afternoon."
         }
       ],
       "teacherComms": [
@@ -250,7 +250,7 @@
             {
               "date": "2026-03-09",
               "subject": "Week of March 9-13 Newsletter & BEST Writing Prep",
-              "summary": "Last newsletter before Spring Break covered the week of March 9-13. Key highlights: All work was due Thursday March 13 — check Canvas and Skyward for any missing assignments. Field Day was held March 12. Spring Break runs March 14-22. School resumes March 23 with the 4th Grading Period. The BEST Writing Assessment is March 31 (120-min computer-based state test). Blooket review links were shared for Math (Extend Thinking Numbers to 1000), Science (Human Body Parts), and Social Studies."
+              "summary": "Last newsletter before Spring Break covered the week of March 9-13. Key highlights: All work was due Thursday March 13 \u2014 check Canvas and Skyward for any missing assignments. Field Day was held March 12. Spring Break runs March 14-22. School resumes March 23 with the 4th Grading Period. The BEST Writing Assessment is March 31 (120-min computer-based state test). Blooket review links were shared for Math (Extend Thinking Numbers to 1000), Science (Human Body Parts), and Social Studies."
             },
             {
               "date": "2026-03-11",
@@ -284,7 +284,7 @@
           "date": "2026-03-12",
           "subject": "Wishing You a Safe and Restful Spring Break",
           "from": "Superintendent Dr. Maria Vazquez",
-          "summary": "Thank you for the important role you play each day in supporting your child's education. As we begin spring break, I want to wish you and your family a safe, happy, and relaxing week. When students return to school on Monday, March 23, we will begin the final nine weeks of the school year — an exciting time filled with important learning experiences, milestones, and celebrations.",
+          "summary": "Thank you for the important role you play each day in supporting your child's education. As we begin spring break, I want to wish you and your family a safe, happy, and relaxing week. When students return to school on Monday, March 23, we will begin the final nine weeks of the school year \u2014 an exciting time filled with important learning experiences, milestones, and celebrations.",
           "priority": "high",
           "category": "announcement"
         },
@@ -308,7 +308,7 @@
           "source": "Lake Whitney Elementary",
           "sourceType": "school",
           "date": "2026-03-03",
-          "subject": "15th Annual DEF Silent Auction & Gala — April 18",
+          "subject": "15th Annual DEF Silent Auction & Gala \u2014 April 18",
           "from": "Danette Havard, Dolphin Education Fund",
           "summary": "The 15th Annual DEF Silent Auction & Gala is Saturday, April 18 from 6-10 PM at the West Orange Country Club. Theme: Mardi Gras Masquerade. Tickets are $50/person (includes dinner, 2 drink tickets, and auction access). All funds go to the Dolphin Education Fund for classroom supplies, arts programs, PE equipment, and more. Purchase tickets at tinyurl.com/DEF-Gala.",
           "priority": "normal",
@@ -323,7 +323,7 @@
           "source": "OCPS District",
           "sourceType": "district",
           "date": "2026-03-04",
-          "subject": "Give Education Day — Take the $1 Pledge",
+          "subject": "Give Education Day \u2014 Take the $1 Pledge",
           "from": "Foundation for Orange County Public Schools",
           "summary": "The Foundation for OCPS is asking families to take the $1 Pledge at foundationforocps.org/giveeducation. Funds support literacy enrichment, STEM and arts access, college and career readiness, scholarships, and professional development for teachers.",
           "priority": "normal",
@@ -338,7 +338,7 @@
           "source": "OCPS District",
           "sourceType": "district",
           "date": "2026-03-02",
-          "subject": "Mondays with Maria — Weekly Superintendent Update",
+          "subject": "Mondays with Maria \u2014 Weekly Superintendent Update",
           "from": "Superintendent Dr. Maria Vazquez",
           "summary": "This week's Mondays with Maria featured a visit to Colonial High School with new Deputy Superintendent Jose Martinez, who previously served as the school's principal. Colonial High students shared what they love most about their campus. Available as a video and podcast.",
           "priority": "low",
@@ -353,7 +353,7 @@
           "source": "Lake Whitney Elementary",
           "sourceType": "school",
           "date": "2026-03-01",
-          "subject": "Dolphin Digest — Week of March 2, 2026",
+          "subject": "Dolphin Digest \u2014 Week of March 2, 2026",
           "from": "Lake Whitney Principal",
           "summary": "The principal's weekly update highlighted an incredibly busy and rewarding week including All-County Music performances and neon dance activities. Students continue to shine in everything they do. The newsletter also covered upcoming events and school community updates.",
           "priority": "normal",
@@ -368,7 +368,7 @@
           "source": "Lake Whitney Elementary",
           "sourceType": "school",
           "date": "2026-02-27",
-          "subject": "Yearbook Price Increase — Order Before March 1",
+          "subject": "Yearbook Price Increase \u2014 Order Before March 1",
           "from": "Danette Havard, Administration",
           "summary": "Yearbook prices increased after March 1, 2026. Families were encouraged to order before the deadline to get the lower price. Yearbooks capture all the memories from this school year.",
           "priority": "normal",
@@ -383,7 +383,7 @@
           "source": "OCPS District",
           "sourceType": "district",
           "date": "2026-02-27",
-          "subject": "INFORM: OCPS — District 4 News: Black History Month 2026",
+          "subject": "INFORM: OCPS \u2014 District 4 News: Black History Month 2026",
           "from": "OCPS District 4 Communications",
           "summary": "The District 4 newsletter covered Black History Month recognition events and second semester updates across Orange County Public Schools. The newsletter highlighted community celebrations and student achievements throughout the district.",
           "priority": "low",
@@ -397,7 +397,7 @@
             {
               "subject": "Writing",
               "title": "BEST Writing Practice Essay",
-              "description": "Practice persuasive writing prompt — 45 minutes timed. Prepare for the March 31 state assessment.",
+              "description": "Practice persuasive writing prompt \u2014 45 minutes timed. Prepare for the March 31 state assessment.",
               "dueDate": "2026-03-25",
               "status": "pending"
             },
@@ -417,7 +417,7 @@
             },
             {
               "subject": "Reading",
-              "title": "Reading Log — 20 min/night",
+              "title": "Reading Log \u2014 20 min/night",
               "description": "Read independently and log pages in reading journal",
               "dueDate": "2026-03-27",
               "status": "pending"
@@ -464,7 +464,7 @@
             },
             {
               "subject": "Reading",
-              "title": "Reading Log — 15 min/night",
+              "title": "Reading Log \u2014 15 min/night",
               "description": "Read independently and have a parent sign the log",
               "dueDate": "2026-03-27",
               "status": "pending"
@@ -475,7 +475,7 @@
       "importantLinks": [
         {
           "id": "canvas",
-          "title": "Canvas — Student Portal",
+          "title": "Canvas \u2014 Student Portal",
           "url": "https://ocps.instructure.com/",
           "description": "Assignments, grades, and course materials for both kids",
           "category": "Tool",
@@ -486,9 +486,9 @@
         },
         {
           "id": "skyward",
-          "title": "Skyward — Family Access",
+          "title": "Skyward \u2014 Family Access",
           "url": "https://sis.ocps.net/scripts/wsisa.dll/WService=wsEAplus/fwemnu01.w",
-          "description": "OCPS Skyward Family Access — grade & attendance portal. Direct family login link coming soon.",
+          "description": "OCPS Skyward Family Access \u2014 grade & attendance portal. Direct family login link coming soon.",
           "category": "Tool",
           "source": "OCPS",
           "kid": null,
@@ -509,7 +509,7 @@
         },
         {
           "id": "mealviewer",
-          "title": "MealViewer — Lunch Menu",
+          "title": "MealViewer \u2014 Lunch Menu",
           "url": "https://schools.mealviewer.com/school/LakeWhitneyElementary",
           "description": "Full lunch menu for Lake Whitney Elementary",
           "category": "Tool",
@@ -522,7 +522,7 @@
           "id": "lake-whitney-website",
           "title": "Lake Whitney Elementary Website",
           "url": "https://lakewhitneyes.ocps.net/",
-          "description": "Official school website — news, calendar, staff directory",
+          "description": "Official school website \u2014 news, calendar, staff directory",
           "category": "School",
           "source": "School",
           "kid": null,
@@ -530,7 +530,7 @@
         },
         {
           "id": "ocps-mondays-with-maria",
-          "title": "Mondays with Maria — OCPS Superintendent Update",
+          "title": "Mondays with Maria \u2014 OCPS Superintendent Update",
           "url": "https://theslice.ocps.net/88316?articleID=55029",
           "description": "Weekly video message transcript from Superintendent Dr. Maria Vazquez",
           "category": "District",
@@ -540,9 +540,9 @@
         },
         {
           "id": "parentsquare-dolphin-digest",
-          "title": "Dolphin Digest — Principal's Weekly Newsletter",
-          "url": "https://www.parentsquare.com/schools/9999/posts?tag=dolphin+digest",
-          "description": "Lake Whitney Elementary principal's weekly update and announcements",
+          "title": "Dolphin Digest Newsletter",
+          "url": "https://mail.google.com/mail/u/0/#all/19ccf80b5a2ab05a",
+          "description": "Principal Dr. Crabb's weekly newsletter \u2014 Week of March 9, 2026. Opens in Gmail.",
           "category": "Newsletter",
           "source": "Lake Whitney",
           "kid": null,
@@ -550,7 +550,7 @@
         },
         {
           "id": "parentsquare-def-gala",
-          "title": "DEF Silent Auction & Gala — April 18",
+          "title": "DEF Silent Auction & Gala \u2014 April 18",
           "url": "https://www.parentsquare.com/feeds/73981070",
           "description": "Dolphin Education Foundation Gala at West Orange Country Club. Tickets & auction info.",
           "category": "Event",
@@ -558,7 +558,41 @@
           "kid": null,
           "gmailUrl": null
         }
-      ]
+      ],
+      "dolphinDigest": {
+        "weekLabel": "Week of March 9, 2026",
+        "postedDate": "Sunday, March 8, 2026",
+        "postedBy": "Dr. Crabb, Principal",
+        "gmailThreadId": "19ccf80b5a2ab05a",
+        "gmailUrl": "https://mail.google.com/mail/u/0/#all/19ccf80b5a2ab05a",
+        "highlights": [
+          {
+            "icon": "\ud83c\udf89",
+            "title": "Community Dance Recap",
+            "body": "Thank you for your wonderful support at our school dance on February 27 \u2014 it was a joy to see our community come together."
+          },
+          {
+            "icon": "\ud83c\udfc6",
+            "title": "Student Spotlight: Black History Month",
+            "body": "Haven Bennett was awarded 1st place at the Black History Essay Contest for West Orange County, representing Lake Whitney!"
+          },
+          {
+            "icon": "\ud83d\udcda",
+            "title": "Book Fair Success",
+            "body": "The Scholastic Book Fair was a huge success! Thank you to Mrs. Dudek and all the volunteers who made it possible."
+          },
+          {
+            "icon": "\ud83c\udfc3",
+            "title": "Field Day \u2014 March 12",
+            "body": "Field Day is approaching! All guests must be ADDitions-approved volunteers to attend. Ensure your clearance is active and sign up for a volunteer shift."
+          },
+          {
+            "icon": "\ud83c\udf1f",
+            "title": "School of Excellence",
+            "body": "Lake Whitney has been recognized as a 2024-25 School of Excellence by the Florida Department of Education!"
+          }
+        ]
+      }
     }
   ]
 }

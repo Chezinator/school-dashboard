@@ -15,6 +15,7 @@ import WeatherForecast from "@/components/WeatherForecast";
 import TeacherComms from "@/components/TeacherComms";
 import Homework from "@/components/Homework";
 import SchoolDistrictComms from "@/components/SchoolDistrictComms";
+import DolphinDigest from "@/components/DolphinDigest";
 import ImportantLinks from "@/components/ImportantLinks";
 import WeekSwitcher from "@/components/WeekSwitcher";
 import { WeekProvider, useWeek } from "@/contexts/WeekContext";
@@ -107,6 +108,7 @@ function DashboardContent() {
                 <KidProfiles />
                 <ActionItems />
                 <TeacherComms />
+                <DolphinDigest />
               </div>
             )}
 
