@@ -3,7 +3,7 @@
     "appName": "SchoolBase",
     "familyName": "Stanfield",
     "schoolName": "Lake Whitney Elementary",
-    "schoolAddress": "Winter Garden, FL 34787",
+    "schoolAddress": "Windermere, FL 34786",
     "lastUpdated": "2026-03-16T18:00:00Z"
   },
   "kids": [
@@ -27,13 +27,13 @@
   "weeks": [
     {
       "weekOf": "2026-03-23",
-      "weekLabel": "March 23 \u2013 27, 2026",
+      "weekLabel": "March 23 – 27, 2026",
       "lastUpdated": "2026-03-16T18:00:00Z",
       "actionItems": [
         {
           "id": 1,
           "title": "Prepare Bronson for BEST Writing Assessment",
-          "description": "State test on Tuesday, March 31 \u2014 120-minute computer-based exam. Ensure good sleep, healthy breakfast, and no electronics the night before. Practice persuasive writing this week.",
+          "description": "State test on Tuesday, March 31 — 120-minute computer-based exam. Ensure good sleep, healthy breakfast, and no electronics the night before. Practice persuasive writing this week.",
           "dueDate": "2026-03-31",
           "urgent": true,
           "kidId": "bronson",
@@ -50,7 +50,7 @@
         },
         {
           "id": 3,
-          "title": "Rain Gear Needed Wed\u2013Fri",
+          "title": "Rain Gear Needed Wed–Fri",
           "description": "Afternoon and morning showers expected Wednesday through Friday (34-44% chance). Pack rain jackets and umbrellas for school drop-off and pickup.",
           "dueDate": null,
           "urgent": false,
@@ -80,13 +80,13 @@
         {
           "date": "2026-03-23",
           "title": "Begin 4th Grading Period",
-          "description": "School resumes after Spring Break \u2014 final nine weeks of the school year",
+          "description": "School resumes after Spring Break — final nine weeks of the school year",
           "type": "school",
           "kidId": null
         },
         {
           "date": "2026-03-31",
-          "title": "Bronson \u2014 BEST Writing Assessment",
+          "title": "Bronson — BEST Writing Assessment",
           "description": "4th Grade State Test, 120-min computer-based, no electronics allowed. Good sleep and healthy breakfast essential.",
           "type": "test",
           "kidId": "bronson"
@@ -203,7 +203,7 @@
           "low": 61,
           "condition": "Sunny",
           "icon": "sun",
-          "dressSuggestion": "Light, breathable clothing \u2014 shorts and t-shirt weather. Don't forget sunscreen!"
+          "dressSuggestion": "Light, breathable clothing — shorts and t-shirt weather. Don't forget sunscreen!"
         },
         {
           "day": "Tuesday",
@@ -239,7 +239,7 @@
           "low": 58,
           "condition": "AM Showers",
           "icon": "cloud-rain",
-          "dressSuggestion": "Morning rain likely \u2014 bring umbrella for drop-off. Should clear up by afternoon."
+          "dressSuggestion": "Morning rain likely — bring umbrella for drop-off. Should clear up by afternoon."
         }
       ],
       "teacherComms": [
@@ -250,7 +250,7 @@
             {
               "date": "2026-03-09",
               "subject": "Week of March 9-13 Newsletter & BEST Writing Prep",
-              "summary": "Last newsletter before Spring Break covered the week of March 9-13. Key highlights: All work was due Thursday March 13 \u2014 check Canvas and Skyward for any missing assignments. Field Day was held March 12. Spring Break runs March 14-22. School resumes March 23 with the 4th Grading Period. The BEST Writing Assessment is March 31 (120-min computer-based state test). Blooket review links were shared for Math (Extend Thinking Numbers to 1000), Science (Human Body Parts), and Social Studies."
+              "summary": "Last newsletter before Spring Break covered the week of March 9-13. Key highlights: All work was due Thursday March 13 — check Canvas and Skyward for any missing assignments. Field Day was held March 12. Spring Break runs March 14-22. School resumes March 23 with the 4th Grading Period. The BEST Writing Assessment is March 31 (120-min computer-based state test). Blooket review links were shared for Math (Extend Thinking Numbers to 1000), Science (Human Body Parts), and Social Studies."
             },
             {
               "date": "2026-03-11",
@@ -284,7 +284,7 @@
           "date": "2026-03-12",
           "subject": "Wishing You a Safe and Restful Spring Break",
           "from": "Superintendent Dr. Maria Vazquez",
-          "summary": "Thank you for the important role you play each day in supporting your child's education. As we begin spring break, I want to wish you and your family a safe, happy, and relaxing week. When students return to school on Monday, March 23, we will begin the final nine weeks of the school year \u2014 an exciting time filled with important learning experiences, milestones, and celebrations.",
+          "summary": "Thank you for the important role you play each day in supporting your child's education. As we begin spring break, I want to wish you and your family a safe, happy, and relaxing week. When students return to school on Monday, March 23, we will begin the final nine weeks of the school year — an exciting time filled with important learning experiences, milestones, and celebrations.",
           "priority": "high",
           "category": "announcement"
         },
@@ -304,7 +304,7 @@
           "source": "Lake Whitney Elementary",
           "sourceType": "school",
           "date": "2026-03-03",
-          "subject": "15th Annual DEF Silent Auction & Gala \u2014 April 18",
+          "subject": "15th Annual DEF Silent Auction & Gala — April 18",
           "from": "Danette Havard, Dolphin Education Fund",
           "summary": "The 15th Annual DEF Silent Auction & Gala is Saturday, April 18 from 6-10 PM at the West Orange Country Club. Theme: Mardi Gras Masquerade. Tickets are $50/person (includes dinner, 2 drink tickets, and auction access). All funds go to the Dolphin Education Fund for classroom supplies, arts programs, PE equipment, and more. Purchase tickets at tinyurl.com/DEF-Gala.",
           "priority": "normal",
@@ -315,7 +315,7 @@
           "source": "OCPS District",
           "sourceType": "district",
           "date": "2026-03-04",
-          "subject": "Give Education Day \u2014 Take the $1 Pledge",
+          "subject": "Give Education Day — Take the $1 Pledge",
           "from": "Foundation for Orange County Public Schools",
           "summary": "The Foundation for OCPS is asking families to take the $1 Pledge at foundationforocps.org/giveeducation. Funds support literacy enrichment, STEM and arts access, college and career readiness, scholarships, and professional development for teachers.",
           "priority": "normal",
@@ -326,7 +326,7 @@
           "source": "OCPS District",
           "sourceType": "district",
           "date": "2026-03-02",
-          "subject": "Mondays with Maria \u2014 Weekly Superintendent Update",
+          "subject": "Mondays with Maria — Weekly Superintendent Update",
           "from": "Superintendent Dr. Maria Vazquez",
           "summary": "This week's Mondays with Maria featured a visit to Colonial High School with new Deputy Superintendent Jose Martinez, who previously served as the school's principal. Colonial High students shared what they love most about their campus. Available as a video and podcast.",
           "priority": "low",
@@ -337,7 +337,7 @@
           "source": "Lake Whitney Elementary",
           "sourceType": "school",
           "date": "2026-03-01",
-          "subject": "Dolphin Digest \u2014 Week of March 2, 2026",
+          "subject": "Dolphin Digest — Week of March 2, 2026",
           "from": "Lake Whitney Principal",
           "summary": "The principal's weekly update highlighted an incredibly busy and rewarding week including All-County Music performances and neon dance activities. Students continue to shine in everything they do. The newsletter also covered upcoming events and school community updates.",
           "priority": "normal",
@@ -348,7 +348,7 @@
           "source": "Lake Whitney Elementary",
           "sourceType": "school",
           "date": "2026-02-27",
-          "subject": "Yearbook Price Increase \u2014 Order Before March 1",
+          "subject": "Yearbook Price Increase — Order Before March 1",
           "from": "Danette Havard, Administration",
           "summary": "Yearbook prices increased after March 1, 2026. Families were encouraged to order before the deadline to get the lower price. Yearbooks capture all the memories from this school year.",
           "priority": "normal",
@@ -359,7 +359,7 @@
           "source": "OCPS District",
           "sourceType": "district",
           "date": "2026-02-27",
-          "subject": "INFORM: OCPS \u2014 District 4 News: Black History Month 2026",
+          "subject": "INFORM: OCPS — District 4 News: Black History Month 2026",
           "from": "OCPS District 4 Communications",
           "summary": "The District 4 newsletter covered Black History Month recognition events and second semester updates across Orange County Public Schools. The newsletter highlighted community celebrations and student achievements throughout the district.",
           "priority": "low",
@@ -373,7 +373,7 @@
             {
               "subject": "Writing",
               "title": "BEST Writing Practice Essay",
-              "description": "Practice persuasive writing prompt \u2014 45 minutes timed. Prepare for the March 31 state assessment.",
+              "description": "Practice persuasive writing prompt — 45 minutes timed. Prepare for the March 31 state assessment.",
               "dueDate": "2026-03-25",
               "status": "pending"
             },
@@ -393,7 +393,7 @@
             },
             {
               "subject": "Reading",
-              "title": "Reading Log \u2014 20 min/night",
+              "title": "Reading Log — 20 min/night",
               "description": "Read independently and log pages in reading journal",
               "dueDate": "2026-03-27",
               "status": "pending"
@@ -440,7 +440,7 @@
             },
             {
               "subject": "Reading",
-              "title": "Reading Log \u2014 15 min/night",
+              "title": "Reading Log — 15 min/night",
               "description": "Read independently and have a parent sign the log",
               "dueDate": "2026-03-27",
               "status": "pending"
@@ -451,27 +451,26 @@
       "importantLinks": [
         {
           "id": "canvas",
-          "title": "Canvas \u2014 Student Portal",
+          "title": "Canvas — Student Portal",
           "url": "https://ocps.instructure.com/",
           "description": "Assignments, grades, and course materials for both kids",
           "category": "Tool",
           "source": "OCPS",
           "kid": null,
           "pinned": true,
-          "gmailUrl": null,
-          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAIAAAAG+WgKAAAEEUlEQVR4nO3d24kcMRRAQa9xFhuE8w/DQWwc6383GCGOHjNUfZp5eg+Ci6bVH9/f3z+g8/P0B+DdSIqYpIhJipikiEmKmKSISYqYpIhJipikiP0aedDn5+/Vn+M/vr7+/PMvz8/zfMyIue+17vOMuO1v8WSVIiYpYpIiJilikiI2NPE9nZ1oRmauEXOvMzLfVZ9n3bNGzH0LqxQxSRGTFDFJEZMUscmJ72nnjDNn5L3W7d+NPOu2vcs5VilikiImKWKSIiYpYtnEt9PcPuCcar7b+cvPs6xSxCRFTFLEJEVMUsRecuIbMffby7NT2HvMgFYpYpIiJilikiImKWLZxHfbtLLz84xMjnPX+t12Zd8IqxQxSRGTFDFJEZMUscmJ7+yJkU87z/Nc9zpz/6u3/S2sUsQkRUxSxCRFTFLEPl7xDuw7Z5xqLpt75dt2TkdYpYhJipikiEmKmKSIDU189+9zVZPRbadlrptt150dapUiJilikiImKWKSIrbw5JZ1s1v168dq6ln3Tef2AefuKlixShGTFDFJEZMUMUkRO3wd3869sJ2/olx3b/edZ7m4AztXkBQxSRGTFDFJEbvu7gzVHt/cDtrIe82dw/mKj5ljlSImKWKSIiYpYpIiNjnxrdsz2rl7eNvvIc9etVc9yypFTFLEJEVMUsQkRWzy5JbKzl8bVu8+5+yZMBUnt3CApIhJipikiEmKWDbx7Txn8v53n7PuasSd1zlapYhJipikiEmKmKSIDf2qc2QW2HkvubN3xBv57nPvPvKY205AfbJKEZMUMUkRkxQxSRHLTm7ZOVPMvfLZ6en+E1eeXMfHFSRFTFLEJEVMUsQWXsdX/Urwtl2ts3eN37m/OfKsJ6sUMUkRkxQxSRGTFLGhiW/Ezqlw54Q1otqtu+3zuI6PK0iKmKSISYqYpIhlE99O1V7hzmeN2DmXPdnj41KSIiYpYpIiJilib3tW55yd18Tdf58Fe3xcQVLEJEVMUsQkRexN9vie1k00I3beDWHk3Xe+jlWKmKSISYqYpIhJitjQWZ3370Y93XZKTPVe675XNe1apYhJipikiEmKmKSITd6d4ey99tad5bLzfnxz5v7n1/29nqxSxCRFTFLEJEVMUsSy+/Gd3R3beY/4nXceXPc6664rtEoRkxQxSRGTFDFJEcsmvp12noJy9h7oTzt369yBnStIipikiEmKmKSIveTEN+Lsrx/X3d98zs5rBq1SxCRFTFLEJEVMUsSyiW/n3tPIu+88z7Pa9Vt3NWL1rBFWKWKSIiYpYpIiJilikxPf2dM75/aeqrshVDPgujlx3ck2I6xSxCRFTFLEJEVMUsRe8n583MwqRUxSxCRFTFLEJEVMUsQkRUxSxCRFTFLEJEXsL3GPHknxMazHAAAAAElFTkSuQmCC"
+          "gmailUrl": null
         },
         {
           "id": "skyward",
-          "title": "Skyward \u2014 Family Access",
+          "title": "Skyward — Family Access",
           "url": "https://sis.ocps.net/scripts/wsisa.dll/WService=wsEAplus/fwemnu01.w",
-          "description": "Attendance, grades, and student information system",
+          "description": "OCPS Skyward Family Access — grade & attendance portal. Direct family login link coming soon.",
           "category": "Tool",
           "source": "OCPS",
           "kid": null,
           "pinned": true,
           "gmailUrl": null,
-          "qrCode": "data:image/png;base64,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"
+          "earmarked": true
         },
         {
           "id": "parentsquare",
@@ -482,64 +481,58 @@
           "source": "Lake Whitney",
           "kid": null,
           "pinned": true,
-          "gmailUrl": null,
-          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAIAAAAG+WgKAAAD+0lEQVR4nO3d7WkcMRRA0Ti4CxeR/stIEa7DKWAgEeLqY51zfnt3luQieGhm9Pb19fUDOj9P/wC+G0kRkxQxSRGTFDFJEZMUMUkRkxQxSRGTFLH3kT/6+Pi1+nf8xefn73/+zfMXVp+a++YR1W/eaeQXWqWISYqYpIhJipikiA1NfE/V1PM0MtGsm3rWzXfrrn72/+LJKkVMUsQkRUxSxCRFbHLie5qbDuamlXW7frftJ87Z+X/xZJUiJilikiImKWKSIpZNfGdVM87IXFbd+Xl2P3EdqxQxSRGTFDFJEZMUsZec+Ebmu/ufifuurFLEJEVMUsQkRUxSxLKJb+f+VHU/5LqpsPrUurte17FKEZMUMUkRkxQxSRGbnPjO7o5V79isnvVb93tG3LZTaZUiJilikiImKWKSIvb2P5/Afv87WF7xyT6rFDFJEZMUMUkRkxSxyfP4du5z3fZE3s57SuecfZOMVYqYpIhJipikiEmK2NAeX7WrtfNex7PfMzcr7ZyI133KKkVMUsQkRUxSxCRFbOtdnffv8d1/f2a1E7duX9IqRUxSxCRFTFLEJEVscuLbef5dZedO5dynXnFH78kqRUxSxCRFTFLEJEVs4cRX7c2dnXHWTXMjdv77VNeyShGTFDFJEZMUMUkRW/jmlrnvmfvUursxd7rtFL+532OVIiYpYpIiJilikiK29Ty+23aj5q4+Z25uHfmeSvXNVilikiImKWKSIiYpYkMT384dtHUT1si1dj7vNuf+a1mliEmKmKSISYqYpIhN3tW57lMjzs5lZ/ccR5x9L6hVipikiEmKmKSISYpY9uaWnXtPO89iuO2e0nWnV1TXskoRkxQxSRGTFDFJEVt4Avu6M9Cfvsd5fLfNm3PfbJUiJilikiImKWKSInZ4j+/+M+mebnsv6LpZ0nN8XEFSxCRFTFLEJEVs4R5f5exTaTvvh7z/33CEVYqYpIhJipikiEmK2OS7Ouf+pnJ2Ah2x7i0xI+bORhzhrk4OkBQxSRGTFDFJEVv4rs7K3BkK6/bvKjvPW985I1uliEmKmKSISYqYpIhNnsB+2xw09z07nz0cufrZCbT6ZqsUMUkRkxQxSRGTFLHJie9p58lxZ0+p23kH6W1vCh1hlSImKWKSIiYpYpIilk18O912St3Ip6qrj5h7js8eH5eSFDFJEZMUMUkRe8mJr5po1u3Wzc1Tt813TmDnCpIiJilikiImKWLZ6QyVdSf9jdh5rRHrnjSsPvVklSImKWKSIiYpYpIiNjnx7bRuJ27u7tBXPKX9ad3dqlYpYpIiJilikiImKWJDEx+Ms0oRkxQxSRGTFDFJEZMUMUkRkxQxSRGTFDFJEfsD6bNG0ecZMmsAAAAASUVORK5CYII="
+          "gmailUrl": null
         },
         {
           "id": "mealviewer",
-          "title": "MealViewer \u2014 Lunch Menu",
+          "title": "MealViewer — Lunch Menu",
           "url": "https://schools.mealviewer.com/school/LakeWhitneyElementary",
           "description": "Full lunch menu for Lake Whitney Elementary",
           "category": "Tool",
           "source": "Lake Whitney",
           "kid": null,
           "pinned": true,
-          "gmailUrl": null,
-          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAE9klEQVR4nO3d223cOABA0SRIFyli+y9ji0gdk/9VsCAIPu6Mz/k0bEm2LwhwJJHfX6/XN+j5cfsC4O+kSZQ0iZImUdIkSppESZMoaRIlTaKkSZQ0ifo58k2/fv2z+zr+x+/f//7nK8/rGfmefdczYuSa7x7npJFrNmoSJU2ipEmUNImSJlFDM/SnuVnhiLmZ49ycfdW8fuTIc+caOc4qtf+pUZMoaRIlTaKkSZQ0iZqcoT/NzcLuzgpX3Uee+y1G5uyrPnmYc/d/atQkSppESZMoaRIlTaKWzdBP2jevfxqZNY+4e80nz76KUZMoaRIlTaKkSZQ0iXrLGfrc8+FzR171dPqqa/6M2fcIoyZR0iRKmkRJkyhpErVshn5ynnjyXexVb6bPnWvf++wj7s79jZpESZMoaRIlTaKkSdTkDP3uSuD71oUbmZPeXVv+5Hp3dxk1iZImUdIkSppESZOo76/X6/Y1XPOpz6t/xpPwRk2ipEmUNImSJlHSJGpohj434zt5T3bV9ezbW/zkTH/Eqs8Q9p3dqEmUNImSJlHSJEqaRE3eQ983Zz+5U9jJ+ebd1e3m2G0N/kKaREmTKGkSJU2iNu6HPrfKWe1+/dw1jxznad9vcfK591V/DaMmUdIkSppESZMoaRI1NEM/uTL5yNnnjjNy5Jp9q9s91T4bMWoSJU2ipEmUNImSJlFH76GP/NSqc518yn3kyKucfH983+5vI4yaREmTKGkSJU2ipEnUsrXc981t765Xtur58Lsrt+/be24foyZR0iRKmkRJkyhpErVspbinfXdX5851cp32uSO/4ycG++b1Rk2ipEmUNImSJlHSJGrjfuir7mt/5fvjq86+73ueVn1aYtQkSppESZMoaRIlTaKOztD3zb7vPgk/p78C/Ih9fx+jJlHSJEqaREmTKGkSNblS3KrZ5d2dxPt3zE/O4k/eeXcPnTcmTaKkSZQ0iZImUZMz9H1z232ru696Znvu7CPu7hm3778zx6hJlDSJkiZR0iRKmkQNPeV+cl528rnufee6+4z9ybfOn6wUx4eTJlHSJEqaREmTqMkZ+sm1099xzbf+X2zuOCd/L6MmUdIkSppESZMoaRI1+ZT7iLlnyO/u073qSfh9e52PnH2Oe+gwRJpESZMoaRIlTaKW3UNfpbbC+d1PDJ7urh03YtWRjZpESZMoaRIlTaKkSdTRe+j9t6FXrVP3dPJZ/ZEjr7LvyEZNoqRJlDSJkiZR0iRq2UpxJ9f9XjXbXfXO+1PtOPt4D50vR5pESZMoaRIlTaKGZug177i79903Bfrr3T0ZNYmSJlHSJEqaREmTqKGn3Gt3aUfUdjfb9/T+vh3k7zJqEiVNoqRJlDSJkiZRk++h310pbsTITPbkSum1GfG+zz085c6HkyZR0iRKmkRJk6hlK8Xd3ZmrtuL6075350fs+9xj37mMmkRJkyhpEiVNoqRJ1Ma13E9adW93bl6/ahf1p894o3zuyEZNoqRJlDSJkiZR0iTqLWfo++7k7luRft9Ocyd3Ujv5HIJRkyhpEiVNoqRJlDSJWjZDv/sM+d2d3Vb91N0d4kacXDPQqEmUNImSJlHSJEqaRC3bD32fk3uijbh79pHredq3kvw+Rk2ipEmUNImSJlHSJOot90PnKzBqEiVNoqRJlDSJkiZR0iRKmkRJkyhpEiVNoqRJ1B9NH+X9ThuQWgAAAABJRU5ErkJggg=="
+          "gmailUrl": null
         },
         {
           "id": "lake-whitney-website",
           "title": "Lake Whitney Elementary Website",
           "url": "https://lakewhitneyes.ocps.net/",
-          "description": "Official school website \u2014 news, calendar, staff directory",
+          "description": "Official school website — news, calendar, staff directory",
           "category": "School",
           "source": "School",
           "kid": null,
-          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cbaa8a9352030b",
-          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAIAAAAG+WgKAAAEBklEQVR4nO3d3akVMRhAURW7sAj7L8MirOP6bkBC2Elmrms9iufncjYDH5lJvn58fHyBzrfbX4DPRlLEJEVMUsQkRUxSxCRFTFLEJEVMUsQkRez7zH/68ePn7u/xD79///rrX8bvs/Z/RjN/6cxnzZj5PqOn/RYjVylikiImKWKSIiYpYlMT32htWplRzVwnv2E1k45m/oq7v8XIVYqYpIhJipikiEmK2OLENzq5zrVmZgrbN0ueXJu7+1u4ShGTFDFJEZMUMUkRyya+k6rpaW0GnLFvRe/5XKWISYqYpIhJipikiL1y4vsc7t6buo+rFDFJEZMUMUkRkxSxbOK7O5vcXVNbW3PcN9/d/S1cpYhJipikiEmKmKSILU58d3eMXHNyz8+n7S96kqsUMUkRkxQxSRGTFLGvbzyBvdqZ5ORZDDPeeA/nyFWKmKSISYqYpIhJitjieXzVfpX7zrbbN82trbutfdbd6XLtd3eVIiYpYpIiJilikiK28XSG6uyDu2cNnLzz86R9s6SrFDFJEZMUMUkRkxSxjc/x7Xsqbd+dlifnxLVX3T1rfoarFDFJEZMUMUkRkxSxqYnv5NxRnX832jeFPf9Zv31rqSNXKWKSIiYpYpIiJiliUzu3nFxB+xz7VY6edrfqqJriXaWISYqYpIhJipikiC1OfPueyDt5x+YbTzy/O9vauYULJEVMUsQkRUxSxBZPZ3j+mtpo31rhyZPcT/4V9urkESRFTFLEJEVMUsSyuzr3nTl+98SEu7vEPO2zTHxcIClikiImKWKSIra4c8vo5Jl9M6/a5+73OXnfqef4eARJEZMUMUkRkxSxxRPYR/tOqdv3PjNOrvqNnrbCaI2PCyRFTFLEJEVMUsQWn+Mb7Vvjm/G0c+vu3r86Y9/Zf65SxCRFTFLEJEVMUsQWT2Df5+TsVk09+77zvqnQeXy8hqSISYqYpIhJitjGnVvW3qd657v7oty9F3SGuzp5DUkRkxQxSRGTFLFs55aT77Nvnjp55+eMk7vfVFyliEmKmKSISYqYpIhlO7fsc/JkgWou27eit281s5oKXaWISYqYpIhJipikiC0+x3d3Lezkyte+zzq56nfyVa5SxCRFTFLEJEVMUsSynVvu3rVYvfPapz/tXtCZ99m3J4yrFDFJEZMUMUkRkxSxx+3VOWNmWrl7il81T919Is8aH48gKWKSIiYpYpIi9sqJb1TNgGv/5+4zemvvvPYqa3xcIClikiImKWKSIpZNfCfXnionT2eoXuU8Pv47kiImKWKSIiYpYosT393dO984qe074WLfb+GuTh5BUsQkRUxSxCRFbOoEdpjnKkVMUsQkRUxSxCRFTFLEJEVMUsQkRUxSxCRF7A/SNC9jij8JuwAAAABJRU5ErkJggg=="
+          "gmailUrl": "https://mail.google.com/mail/u/0/#all/19cbaa8a9352030b"
         },
         {
           "id": "ocps-mondays-with-maria",
-          "title": "Mondays with Maria \u2014 OCPS Superintendent Update",
+          "title": "Mondays with Maria — OCPS Superintendent Update",
           "url": "https://theslice.ocps.net/88316?articleID=55029",
           "description": "Weekly video message transcript from Superintendent Dr. Maria Vazquez",
           "category": "District",
           "source": "OCPS District",
           "kid": null,
-          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cd4c100e572de3",
-          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAFEElEQVR4nO3d7a0jJwBA0WyULraI9F9Gitg6nAKIEoSAuZ6c8/v56/kKCTMDPz6fz2/Q8/vTbwD+mTSJkiZR0iRKmkRJkyhpEiVNoqRJlDSJkiZRf8z80c+ff55+H//i16+/tjzP+ClmnnntUTPPMxqfeebVd32um2beoVGTKGkSJU2ipEmUNImamqGPds2aR7tmjrtm1jMz4plH7XrmtedZez+7rH0uoyZR0iRKmkRJkyhpErU4Qx/tml3ueq1nV95Hu9bH115rzbOvbtQkSppESZMoaRIlTaK2zdCfde569XNXle9a1971G0KNUZMoaRIlTaKkSZQ0iXrJDH1mlnpuvX7Xmv6uVfV3zNmNmkRJkyhpEiVNoqRJ1LYZ+jfOAWvz+l3r9bs8+50aNYmSJlHSJEqaREmTqMUZ+rM7gY/OzW13zaNrfzOqfadGTaKkSZQ0iZImUdIkamqG/o3r47X16NGu6+dHz+7cvotRkyhpEiVNoqRJlDSJWjwPfdeu4zNmrjy/eSf4jF3/sXP3od/8vtYYNYmSJlHSJEqaREmTqB+fz+c//+jc7uU390U/N2ueea1dbl7Tfm5eP/MOjZpESZMoaRIlTaKkSdTB89DPrT7fXI8enTs3bc07ftMYGTWJkiZR0iRKmkRJk6jcXu4354Aznp3XP3u9+ujmaxk1iZImUdIkSppESZOoxZ3izu1gdm4OWLtWf+21Rrv+q+e+0zVGTaKkSZQ0iZImUdIkatt96M/O2c+dWr7rvLOZZx7dvO97zbnv3ahJlDSJkiZR0iRKmkRNzdBn3JyT3txx7uYc+dx5cDfXx3d9CqMmUdIkSppESZMoaRJ1cIZ+c9fx0c1V45t7tY1qO7c7bY2XkyZR0iRKmkRJk6htM/TRzWvjn70Sfkb/fLqb9ym4yp0vJk2ipEmUNImSJlEHZ+ijt57cPePZ+e+zv4SYofMq0iRKmkRJkyhpErV42trNNeub54vdvFt85nOtnQ6/9lqjte/Cfei8nDSJkiZR0iRKmkRt28t95lEzbu5OdnNX9mdfvXauujV0vpg0iZImUdIkSppEPXwe+swK7MzzjPpXue9aeX/WuZm+UZMoaRIlTaKkSZQ0iZqaoZ87BWy065lr+8Kd+1Vh128aa+/w3Oq8UZMoaRIlTaKkSZQ0icpd5T569ty0m2eUP3uV+9qjzt0FYNQkSppESZMoaRIlTaIWd4pbszb/PTdHrl3B3t8Bb9cqv/vQ+WLSJEqaREmTKGkStW2Gfm5v8P5q79r72fXq5+b1z147YdQkSppESZMoaRIlTaKunoe+y82dyfv7tK+9+q7nObdjv1GTKGkSJU2ipEmUNIla3CnuprVd12aeZ7S2t/yaXWeUr+nfO2DUJEqaREmTKGkSJU2iFq9yv7l729rfrF0/f+4683Nr+s+eO7/2KGvofDFpEiVNoqRJlDSJunof+qi2brvLrvu1d/0W8eyVAPZy51WkSZQ0iZImUdIk6upe7uec29Ps5l52N517z7v+Y0ZNoqRJlDSJkiZR0iTqJTP0GedWe3ddP79rr/ubv07MPMoaOq8iTaKkSZQ0iZImUdtm6DdXhHdd171rzr5r9n3uvPhnz01bY9QkSppESZMoaRIlTaIWZ+jPzt12zTfPXXl+c1+42nX47kPn5aRJlDSJkiZR0iTqK89D5//AqEmUNImSJlHSJEqaREmTKGkSJU2ipEmUNImSJlF/AwubHJ6zV2HTAAAAAElFTkSuQmCC"
+          "gmailUrl": "https://mail.google.com/mail/u/0/#all/19cd4c100e572de3"
         },
         {
           "id": "parentsquare-dolphin-digest",
-          "title": "Dolphin Digest \u2014 Principal's Weekly Newsletter",
+          "title": "Dolphin Digest — Principal's Weekly Newsletter",
           "url": "https://www.parentsquare.com/feeds/74836215",
           "description": "Lake Whitney Elementary principal's weekly update and announcements",
           "category": "Newsletter",
           "source": "Lake Whitney",
           "kid": null,
-          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cdef78a67aecaf",
-          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAE+UlEQVR4nO3d3W0cNxhA0ShwFy7C/ZfhIlzH+t1jGDTBn7vyOY9BVrOJLgh8Gg7n4/V6/Qc9/9/+AvB70iRKmkRJkyhpEiVNoqRJlDSJkiZR0iRKmkR9GfmXvn79tvt7/MGPH99/+Scj32fkU3M/ecTc1efM/eTa7/TJqkmUNImSJlHSJEqaRA1N6E+rpsunVdP3qk/t+zmrZvZVfw24+zt9smoSJU2ipEmUNImSJlGTE/rTqml3lZPTd+1T++7Oj1h1dasmUdIkSppESZMoaRK1bEI/6eQO7VU7xufuYj9/8t3d6SdZNYmSJlHSJEqaREmTqLec0J9WPXW+b+f508i1Tt4xr7FqEiVNoqRJlDSJkiZRyyb0u3PiyJ3lVXe6V53MNjd9r9obP+Lu79SqSZQ0iZImUdIkSppETU7otb3W+05uXzVZr7LvRPra79SqSZQ0iZImUdIkSppEfbxer9vf4a+dPIdtzr5pd99d/hqrJlHSJEqaREmTKGkSNfk+9LmJb9/935MT6Ml3mc2dFLfvPe8j13qa+z9m1SRKmkRJkyhpEiVNonInxdXu9tb2fq+y7y8GI8/Oj7BqEiVNoqRJlDSJkiZRG59DX/WeslVOvsts1XPxJ9/1NmffU/lWTaKkSZQ0iZImUdIkaug59JM7q/fNpKu+z92nvD/HkwIjrJpESZMoaRIlTaKkSdTkPfR994hrT0yP2Pf+tbmrzzn5FxXPofPGpEmUNImSJlHSJOroWe777j7v2+l9d46++53vXsuqSZQ0iZImUdIkSppELZvQT+4hrz0Fv+/vDCf3GIw4+Q47qyZR0iRKmkRJkyhpErXxOfQR++bxd3wr2VN/Ht93d96qSZQ0iZImUdIkSppEDT2HPjfJ7ns6e9+T1yd33a+6+skzAU4+X2/VJEqaREmTKGkSJU2ihib0uxPfiH1z/d0T4Pft1Z+7+sl7+lZNoqRJlDSJkiZR0iRq8jn0k7vTa6el3X2z+Sq1O+9PVk2ipEmUNImSJlHSJOrySXFP7/iOtqe7d95PnrY3d/URVk2ipEmUNImSJlHSJOrohH73VPa7O8ZPvm1t1dVHeB86/xxpEiVNoqRJlDSJmjzLvbbzfORac/ZNoCd3wvd3+D9ZNYmSJlHSJEqaREmTqGX30J9O7nuf+1TtDvXJHf5332o3wqpJlDSJkiZR0iRKmkRdntD37WCvvXFslX1TfG1mt2oSJU2ipEmUNImSJlGTb1vbZ99UWNurPzfp194rN8I9dD4VaRIlTaKkSZQ0iRqa0Pc9LT53rZPnkO/71Jzaqez7/tutmkRJkyhpEiVNoqRJVO4e+tPIdHn3vPe7J7yd3FFwcma3ahIlTaKkSZQ0iZImUUMT+tPdM9jvngI3d/V98+++PfarPjXHqkmUNImSJlHSJEqaRE1O6E8n3wJ28my0k3+L6L97bu5vEd6HzqciTaKkSZQ0iZImUcsm9JNWnWe+7/74vufZa6fNe9sa/xxpEiVNoqRJlDSJessJ/enk3LrvPvLcdz45j5/cdWDVJEqaREmTKGkSJU2ilk3oJ59Qfrp7Bvuq+8j9vfond+ZbNYmSJlHSJEqaREmTqMkJ/e7p7vv2tK9y8v3sI05ea9XVrZpESZMoaRIlTaKkSdTH6/W6/R3gN6yaREmTKGkSJU2ipEmUNImSJlHSJEqaREmTKGkS9ROizvk4Wma+/gAAAABJRU5ErkJggg=="
+          "gmailUrl": "https://mail.google.com/mail/u/0/#all/19cdef78a67aecaf"
         },
         {
           "id": "parentsquare-def-gala",
-          "title": "DEF Silent Auction & Gala \u2014 April 18",
+          "title": "DEF Silent Auction & Gala — April 18",
           "url": "https://www.parentsquare.com/feeds/74720724",
           "description": "Dolphin Education Foundation Gala at West Orange Country Club. Tickets & auction info.",
           "category": "Event",
           "source": "Lake Whitney",
           "kid": null,
-          "gmailUrl": "https://mail.google.com/mail/u/0/#inbox/19cdef78a67aecaf",
-          "qrCode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAE/UlEQVR4nO3d3Y0bNxhA0WyQLlyE+y8jRbgO5d1jBDTBnyv5nEfDK2ntCwKfZob8er1ef0HP37c/APyaNImSJlHSJEqaREmTKGkSJU2ipEmUNImSJlH/jPylb9++7/4c/+PHj39/+pPn53n+naeRn1r1m676zCNW/WucNPIJrZpESZMoaRIlTaKkSdTQhP60arp8Gpkc5ybrVfP4qtdZNbOv+jbg7v/pk1WTKGkSJU2ipEmUNImanNCfVk27c0am1Nrsv++n9l2dH7Hq3a2aREmTKGkSJU2ipEnUsgn9pH0z6dOqO8bnrmLPfc/wGayaREmTKGkSJU2ipEnUW07oc+bm31V3nj+NvNfJK+Y1Vk2ipEmUNImSJlHSJGrZhH53Thy5srzqSvfJfermZvanfd8z7GPVJEqaREmTKGkSJU2iJif02r3Wc9Pu3Fx/97r2vh3pa/+nVk2ipEmUNImSJlHSJOrr9Xrd/gy/7e7V8BH7pt27v9dJVk2ipEmUNImSJlHSJGryPPS5iW/f9d+TJ4CfPMvs5I70c/Z9Y2DVJEqaREmTKGkSJU2iju4Ud3KS7V8Nv2vfNwYjz86PsGoSJU2ipEmUNImSJlFDd7mvuq697xr6qs+z6pWf9j3P3n8K3oTOR5EmUdIkSppESZOoyefQ7+6fdnLSr513tupfvv+sulWTKGkSJU2ipEmUNIlaNqH3rTqnrHZq212eQ+ePI02ipEmUNImSJlEbz0PfN8nus+9a86qT3d7xvnd3ufNRpEmUNImSJlHSJGrZaWu1Z9X3zdGr3mvk3WvX/Z/2vbJVkyhpEiVNoqRJlDSJWrZT3Mnz12pX3kec/MZgzsm5foRVkyhpEiVNoqRJlDSJGrrLfW522zdZ77uL++QZbat+i5N75p+8x96qSZQ0iZImUdIkSppEbbzL/e4z3SfvD597nZPfBtw9Hd6EzkeRJlHSJEqaREmTqKFr6Ktm21VXYEfe6+S98Z9xZ/7cZ953zp1VkyhpEiVNoqRJlDSJmtzLfdV973OvvG9yPLnn+ci71yb9k2emWzWJkiZR0iRKmkRJk6iN56GvmiXvnuN2d2q+e3f6COeh88eRJlHSJEqaREmTqMm93E/uPLZKbW+0z5j09z1xb9UkSppESZMoaRIlTaIm93Kf+6mRp8VXvfLcnfCrrLpmvWoivnvS+hyrJlHSJEqaREmTKGkStWwv9xH7rhrX9mCvPQle2/3eXe68MWkSJU2ipEmUNIlatpf7Knfn8RH7zjEfea99TxzUvlWwahIlTaKkSZQ0iZImURvvcp+z76r6iNps+3Ryj/p93waMsGoSJU2ipEmUNImSJlG5a+hPJ/czv7tv/Nwrrzr5btXuds5D58NJkyhpEiVNoqRJ1LLz0Fep7Vc29+7Pv7Nv/t13j/2qn5pj1SRKmkRJkyhpEiVNoiYn9Kd3fBL8rpO/xcm95Vd9q2DVJEqaREmTKGkSJU2ilk3oJ9V2HT+5V1ttt/l9T8FbNYmSJlHSJEqaREmTqLec0J/u7me+6jryvlPdV83j++66f7JqEiVNoqRJlDSJkiZRyyb0u/eZ393L7u61+Nru7qtYNYmSJlHSJEqaREmTqMkJvTYRj0yptee+T36e2vcnnkPnjUmTKGkSJU2ipEnU1+v1uv0Z4BesmkRJkyhpEiVNoqRJlDSJkiZR0iRKmkRJkyhpEvUfpQ3qFjauWQ0AAAAASUVORK5CYII="
+          "gmailUrl": "https://mail.google.com/mail/u/0/#all/19cdef78a67aecaf"
         }
       ]
     }
