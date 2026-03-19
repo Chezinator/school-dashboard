@@ -1,6 +1,7 @@
 /**
  * TeacherComms — Teacher communication highlights per kid.
  * Teal accent for informational content.
+ * Dark mode: uses bg-card and bg-muted (semantic) instead of hardcoded bg-white / bg-gray-50.
  */
 import { MessageSquare, Mail } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
@@ -13,7 +14,7 @@ export default function TeacherComms() {
   return (
     <section>
       <div className="flex items-center gap-2 mb-4">
-        <div className="w-8 h-8 rounded-lg bg-teal-light flex items-center justify-center">
+        <div className="w-8 h-8 rounded-lg bg-teal-light dark:bg-teal/20 flex items-center justify-center">
           <MessageSquare className="w-4 h-4 text-teal" />
         </div>
         <h2 className="font-display text-xl text-foreground">Teacher Communications</h2>
@@ -25,10 +26,10 @@ export default function TeacherComms() {
           return (
             <div
               key={comm.kidId}
-              className="bg-white rounded-2xl shadow-sm border border-border/50 overflow-hidden"
+              className="bg-card rounded-2xl shadow-sm border border-border/50 overflow-hidden"
             >
               {/* Teacher header */}
-              <div className="flex items-center gap-3 px-4 py-3 border-b border-border/30 bg-gradient-to-r from-teal-50/50 to-transparent">
+              <div className="flex items-center gap-3 px-4 py-3 border-b border-border/30 bg-teal/5 dark:bg-teal/10">
                 <div
                   className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-bold text-sm shrink-0"
                   style={{ backgroundColor: kid?.color || "#888" }}
@@ -44,7 +45,7 @@ export default function TeacherComms() {
               {/* Messages */}
               <div className="p-4 space-y-3">
                 {comm.messages.map((msg, idx) => (
-                  <div key={idx} className="card-info rounded-lg p-3 bg-gray-50/50">
+                  <div key={idx} className="card-info rounded-lg p-3 bg-muted/40 dark:bg-muted/20">
                     <div className="flex items-center gap-2 mb-1.5">
                       <Mail className="w-3.5 h-3.5 text-teal" />
                       <span className="text-xs font-semibold text-teal">{msg.subject}</span>

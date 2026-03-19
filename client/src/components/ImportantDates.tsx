@@ -2,6 +2,7 @@
  * ImportantDates — Calendar section showing this week's dates and upcoming events.
  * Amber accent for date-related items.
  * Supports optional `link` on each event for embedded action buttons.
+ * Dark mode: uses bg-card and dark: variants for all colored backgrounds.
  */
 import { CalendarDays, Star, BookOpen, PartyPopper, ExternalLink } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
@@ -19,7 +20,7 @@ function formatDate(dateStr: string) {
 function getTypeIcon(type: string) {
   switch (type) {
     case "test":
-      return <BookOpen className="w-4 h-4 text-red-500" />;
+      return <BookOpen className="w-4 h-4 text-red-500 dark:text-red-400" />;
     case "event":
       return <PartyPopper className="w-4 h-4 text-amber" />;
     case "school":
@@ -32,11 +33,11 @@ function getTypeIcon(type: string) {
 function getTypeBg(type: string) {
   switch (type) {
     case "test":
-      return "bg-red-50";
+      return "bg-red-50 dark:bg-red-900/30";
     case "event":
-      return "bg-amber-light";
+      return "bg-amber-light dark:bg-amber/20";
     case "school":
-      return "bg-teal-light";
+      return "bg-teal-light dark:bg-teal/20";
     default:
       return "bg-muted";
   }
@@ -45,13 +46,13 @@ function getTypeBg(type: string) {
 function getTypeLabel(type: string) {
   switch (type) {
     case "test":
-      return { text: "Assessment", className: "bg-red-100 text-red-700" };
+      return { text: "Assessment", className: "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400" };
     case "event":
-      return { text: "Event", className: "bg-amber-100 text-amber-700" };
+      return { text: "Event", className: "bg-amber-100 dark:bg-amber/20 text-amber-700 dark:text-amber" };
     case "school":
-      return { text: "School", className: "bg-teal-100 text-teal-700" };
+      return { text: "School", className: "bg-teal-100 dark:bg-teal/20 text-teal-700 dark:text-teal" };
     default:
-      return { text: "Date", className: "bg-gray-100 text-gray-700" };
+      return { text: "Date", className: "bg-muted text-muted-foreground" };
   }
 }
 
@@ -63,7 +64,7 @@ export default function ImportantDates() {
   return (
     <section>
       <div className="flex items-center gap-2 mb-4">
-        <div className="w-8 h-8 rounded-lg bg-amber-light flex items-center justify-center">
+        <div className="w-8 h-8 rounded-lg bg-amber-light dark:bg-amber/20 flex items-center justify-center">
           <CalendarDays className="w-4 h-4 text-amber" />
         </div>
         <h2 className="font-display text-xl text-foreground">Important Dates</h2>
@@ -80,7 +81,7 @@ export default function ImportantDates() {
           return (
             <div
               key={idx}
-              className="bg-white rounded-xl p-4 shadow-sm border border-border/50 card-date"
+              className="bg-card rounded-xl p-4 shadow-sm border border-border/50 card-date"
             >
               <div className="flex items-start gap-3">
                 <div className={`w-8 h-8 rounded-lg ${getTypeBg(item.type)} flex items-center justify-center shrink-0 mt-0.5`}>

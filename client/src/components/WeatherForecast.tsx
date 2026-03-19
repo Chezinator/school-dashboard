@@ -1,6 +1,7 @@
 /**
  * WeatherForecast — Daily weather cards with highs/lows, conditions, and dressing suggestions.
  * Uses the watercolor weather background as a decorative accent.
+ * Dark mode: uses bg-card and dark: variants for all colored backgrounds.
  */
 import { Sun, CloudSun, Cloud, CloudRain, Thermometer, Shirt } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
@@ -24,10 +25,10 @@ function getWeatherIcon(icon: string) {
 }
 
 function getTempColor(temp: number) {
-  if (temp >= 85) return "text-red-500";
-  if (temp >= 80) return "text-orange-500";
-  if (temp >= 75) return "text-amber-500";
-  return "text-teal-600";
+  if (temp >= 85) return "text-red-500 dark:text-red-400";
+  if (temp >= 80) return "text-orange-500 dark:text-orange-400";
+  if (temp >= 75) return "text-amber-500 dark:text-amber-400";
+  return "text-teal-600 dark:text-teal-400";
 }
 
 export default function WeatherForecast() {
@@ -37,8 +38,8 @@ export default function WeatherForecast() {
   return (
     <section>
       <div className="flex items-center gap-2 mb-4">
-        <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center">
-          <Thermometer className="w-4 h-4 text-blue-500" />
+        <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
+          <Thermometer className="w-4 h-4 text-blue-500 dark:text-blue-400" />
         </div>
         <h2 className="font-display text-xl text-foreground">Weather Forecast</h2>
       </div>
@@ -50,10 +51,10 @@ export default function WeatherForecast() {
           alt="Florida sky watercolor"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/60 to-transparent flex items-center px-5">
+        <div className="absolute inset-0 bg-gradient-to-r from-background/70 dark:from-background/80 to-transparent flex items-center px-5">
           <div>
-            <p className="text-sm font-medium text-gray-700">Winter Garden, FL</p>
-            <p className="text-xs text-gray-500">Week of {week.weekLabel}</p>
+            <p className="text-sm font-medium text-foreground">Winter Garden, FL</p>
+            <p className="text-xs text-muted-foreground">Week of {week.weekLabel}</p>
           </div>
         </div>
       </div>
@@ -63,7 +64,7 @@ export default function WeatherForecast() {
         {weather.map((day, idx) => (
           <div
             key={idx}
-            className="bg-white rounded-xl p-3.5 shadow-sm border border-border/50 transition-all hover:shadow-md"
+            className="bg-card rounded-xl p-3.5 shadow-sm border border-border/50 transition-all hover:shadow-md"
           >
             <div className="flex items-center gap-3">
               {/* Day & icon */}

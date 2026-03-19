@@ -1,6 +1,7 @@
 /**
  * KidProfiles — Compact profile badges for each child.
  * Teal for Bronson, coral for Kaia.
+ * Dark mode: uses bg-card (semantic) instead of hardcoded bg-white.
  */
 import { useWeek } from "@/contexts/WeekContext";
 
@@ -12,7 +13,7 @@ export default function KidProfiles() {
       {kids.map((kid) => (
         <div
           key={kid.id}
-          className="bg-white rounded-2xl p-4 shadow-sm border border-border/50 flex items-center gap-3 transition-all hover:shadow-md"
+          className="bg-card rounded-2xl p-4 shadow-sm border border-border/50 flex items-center gap-3 transition-all hover:shadow-md"
         >
           <div
             className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg shrink-0"

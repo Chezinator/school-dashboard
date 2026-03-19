@@ -1,6 +1,7 @@
 /**
  * LunchMenu — Daily lunch menu cards with entrees, sides, and fruits.
  * Uses the lunch illustration as a decorative accent.
+ * Dark mode: uses bg-card and dark: variants for all colored backgrounds.
  */
 import { useState } from "react";
 import { UtensilsCrossed, ChevronLeft, ChevronRight, Apple, Salad, ChefHat } from "lucide-react";
@@ -21,19 +22,19 @@ export default function LunchMenu() {
   return (
     <section>
       <div className="flex items-center gap-2 mb-4">
-        <div className="w-8 h-8 rounded-lg bg-amber-light flex items-center justify-center">
+        <div className="w-8 h-8 rounded-lg bg-amber-light dark:bg-amber/20 flex items-center justify-center">
           <UtensilsCrossed className="w-4 h-4 text-amber" />
         </div>
         <h2 className="font-display text-xl text-foreground">Lunch Menu</h2>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-border/50 overflow-hidden">
+      <div className="bg-card rounded-2xl shadow-sm border border-border/50 overflow-hidden">
         {/* Day selector */}
-        <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-amber-50 to-orange-50 border-b border-border/30">
+        <div className="flex items-center justify-between px-4 py-3 bg-amber/5 dark:bg-amber/10 border-b border-border/30">
           <button
             onClick={goPrev}
             disabled={activeDay === 0}
-            className="w-8 h-8 rounded-lg bg-white/70 flex items-center justify-center disabled:opacity-30 hover:bg-white transition-colors"
+            className="w-8 h-8 rounded-lg bg-card flex items-center justify-center disabled:opacity-30 hover:bg-muted transition-colors"
           >
             <ChevronLeft className="w-4 h-4" />
           </button>
@@ -46,14 +47,14 @@ export default function LunchMenu() {
           <button
             onClick={goNext}
             disabled={activeDay === menu.length - 1}
-            className="w-8 h-8 rounded-lg bg-white/70 flex items-center justify-center disabled:opacity-30 hover:bg-white transition-colors"
+            className="w-8 h-8 rounded-lg bg-card flex items-center justify-center disabled:opacity-30 hover:bg-muted transition-colors"
           >
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>
 
         {/* Day dots */}
-        <div className="flex justify-center gap-1.5 py-2 bg-gradient-to-r from-amber-50/50 to-orange-50/50">
+        <div className="flex justify-center gap-1.5 py-2 bg-amber/5 dark:bg-amber/10">
           {menu.map((_, idx) => (
             <button
               key={idx}
@@ -76,7 +77,7 @@ export default function LunchMenu() {
               {current.entrees.map((entree, idx) => (
                 <span
                   key={idx}
-                  className="inline-flex items-center px-3 py-1.5 rounded-lg bg-coral-light text-foreground text-sm font-medium"
+                  className="inline-flex items-center px-3 py-1.5 rounded-lg bg-coral-light dark:bg-coral/15 text-foreground text-sm font-medium"
                 >
                   {entree}
                 </span>
@@ -94,7 +95,7 @@ export default function LunchMenu() {
               {current.sides.map((side, idx) => (
                 <span
                   key={idx}
-                  className="inline-flex items-center px-3 py-1.5 rounded-lg bg-teal-light text-foreground text-sm"
+                  className="inline-flex items-center px-3 py-1.5 rounded-lg bg-teal-light dark:bg-teal/15 text-foreground text-sm"
                 >
                   {side}
                 </span>
@@ -112,7 +113,7 @@ export default function LunchMenu() {
               {current.fruits.map((fruit, idx) => (
                 <span
                   key={idx}
-                  className="inline-flex items-center px-3 py-1.5 rounded-lg bg-green-50 text-foreground text-sm"
+                  className="inline-flex items-center px-3 py-1.5 rounded-lg bg-green-50 dark:bg-green-900/20 text-foreground text-sm"
                 >
                   {fruit}
                 </span>

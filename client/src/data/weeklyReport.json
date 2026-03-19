@@ -334,7 +334,7 @@
           "category": "fundraiser",
           "link": {
             "label": "Give Education Day",
-            "url": "https://www.giveeducationday.org"
+            "url": "https://foundationforocps.org/giveeducation/"
           }
         },
         {
@@ -349,7 +349,7 @@
           "category": "newsletter",
           "link": {
             "label": "Read Newsletter",
-            "url": "https://www.ocps.net/about_us/superintendent"
+            "url": "https://theslice.ocps.net/79467_1"
           }
         },
         {
@@ -394,7 +394,7 @@
           "category": "newsletter",
           "link": {
             "label": "View OCPS News",
-            "url": "https://www.ocps.net/about_us/news"
+            "url": "https://theslice.ocps.net/"
           }
         }
       ],
@@ -495,8 +495,8 @@
         {
           "id": "skyward",
           "title": "Skyward \u2014 Family Access",
-          "url": "https://sis.ocps.net/scripts/wsisa.dll/WService=wsEAplus/fwemnu01.w",
-          "description": "OCPS Skyward Family Access \u2014 grade & attendance portal. Direct family login link coming soon.",
+          "url": "https://parents.classlink.com/ocps",
+          "description": "OCPS Family Access via ClassLink \u2014 grade & attendance portal. Direct family login link coming soon.",
           "category": "Tool",
           "source": "OCPS",
           "kid": null,
@@ -539,7 +539,7 @@
         {
           "id": "ocps-mondays-with-maria",
           "title": "Mondays with Maria \u2014 OCPS Superintendent Update",
-          "url": "https://theslice.ocps.net/88316?articleID=55029",
+          "url": "https://theslice.ocps.net/79467_1",
           "description": "Weekly video message transcript from Superintendent Dr. Maria Vazquez",
           "category": "District",
           "source": "OCPS District",
@@ -549,7 +549,7 @@
         {
           "id": "parentsquare-dolphin-digest",
           "title": "Dolphin Digest Newsletter",
-          "url": "https://mail.google.com/mail/u/0/#all/19ccf80b5a2ab05a",
+          "url": "https://www.parentsquare.com/feeds/74199872",
           "description": "Principal Dr. Crabb's weekly newsletter \u2014 Week of March 9, 2026. Opens in Gmail.",
           "category": "Newsletter",
           "source": "Lake Whitney",
@@ -572,7 +572,7 @@
         "postedDate": "Sunday, March 8, 2026",
         "postedBy": "Dr. Crabb, Principal",
         "gmailThreadId": "19ccf80b5a2ab05a",
-        "gmailUrl": "https://mail.google.com/mail/u/0/#all/19ccf80b5a2ab05a",
+        "gmailUrl": "https://www.parentsquare.com/feeds/74199872",
         "highlights": [
           {
             "icon": "\ud83c\udf89",

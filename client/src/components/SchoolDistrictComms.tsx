@@ -2,6 +2,7 @@
  * SchoolDistrictComms — School & District Communications section.
  * Displays important communications from OCPS and Lake Whitney Elementary.
  * Sunrise Command Center design: warm editorial cards with source badges and priority indicators.
+ * Dark mode: uses bg-card and dark: variants for all colored backgrounds.
  */
 import { useState } from "react";
 import {
@@ -47,17 +48,17 @@ function getCategoryIcon(category: string) {
 function getCategoryStyle(category: string) {
   switch (category) {
     case "announcement":
-      return { bg: "bg-coral-light", text: "text-coral", label: "Announcement" };
+      return { bg: "bg-coral-light dark:bg-coral/20", text: "text-coral", label: "Announcement" };
     case "event":
-      return { bg: "bg-amber-light", text: "text-amber", label: "Event" };
+      return { bg: "bg-amber-light dark:bg-amber/20", text: "text-amber", label: "Event" };
     case "fundraiser":
-      return { bg: "bg-pink-50", text: "text-pink-600", label: "Fundraiser" };
+      return { bg: "bg-pink-50 dark:bg-pink-900/20", text: "text-pink-600 dark:text-pink-400", label: "Fundraiser" };
     case "newsletter":
-      return { bg: "bg-teal-light", text: "text-teal", label: "Newsletter" };
+      return { bg: "bg-teal-light dark:bg-teal/20", text: "text-teal", label: "Newsletter" };
     case "reminder":
-      return { bg: "bg-amber-light", text: "text-amber", label: "Reminder" };
+      return { bg: "bg-amber-light dark:bg-amber/20", text: "text-amber", label: "Reminder" };
     default:
-      return { bg: "bg-gray-50", text: "text-gray-600", label: "Update" };
+      return { bg: "bg-muted", text: "text-muted-foreground", label: "Update" };
   }
 }
 
@@ -65,16 +66,16 @@ function getSourceStyle(sourceType: string) {
   if (sourceType === "district") {
     return {
       icon: <Building2 className="w-3.5 h-3.5" />,
-      bg: "bg-blue-50",
-      text: "text-blue-700",
-      border: "border-blue-200",
+      bg: "bg-blue-50 dark:bg-blue-900/20",
+      text: "text-blue-700 dark:text-blue-300",
+      border: "border-blue-200 dark:border-blue-700",
     };
   }
   return {
     icon: <School className="w-3.5 h-3.5" />,
-    bg: "bg-emerald-50",
-    text: "text-emerald-700",
-    border: "border-emerald-200",
+    bg: "bg-emerald-50 dark:bg-emerald-900/20",
+    text: "text-emerald-700 dark:text-emerald-300",
+    border: "border-emerald-200 dark:border-emerald-700",
   };
 }
 
@@ -111,8 +112,8 @@ export default function SchoolDistrictComms() {
   return (
     <section>
       <div className="flex items-center gap-2 mb-4">
-        <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center">
-          <Building2 className="w-4 h-4 text-blue-600" />
+        <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
+          <Building2 className="w-4 h-4 text-blue-600 dark:text-blue-400" />
         </div>
         <h2 className="font-display text-xl text-foreground">
           School & District Communications
@@ -137,7 +138,7 @@ export default function SchoolDistrictComms() {
             className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
               filter === tab.key
                 ? "bg-blue-600 text-white shadow-sm"
-                : "bg-white text-foreground border border-border/50 hover:bg-gray-50"
+                : "bg-card text-foreground border border-border/50 hover:bg-muted"
             }`}
           >
             {tab.label}
@@ -161,7 +162,7 @@ export default function SchoolDistrictComms() {
           return (
             <div
               key={comm.id}
-              className={`bg-white rounded-xl p-4 shadow-sm border border-border/50 ${getPriorityBorder(
+              className={`bg-card rounded-xl p-4 shadow-sm border border-border/50 ${getPriorityBorder(
                 comm.priority
               )} transition-all hover:shadow-md`}
             >
@@ -188,7 +189,7 @@ export default function SchoolDistrictComms() {
                       {catStyle.label}
                     </span>
                     {comm.priority === "high" && (
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-700">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400">
                         Important
                       </span>
                     )}
@@ -219,7 +220,7 @@ export default function SchoolDistrictComms() {
                         href={(comm as any).link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="shrink-0 inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-blue-50 text-blue-700 text-xs font-medium hover:bg-blue-100 transition-colors border border-blue-200"
+                        className="shrink-0 inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-xs font-medium hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors border border-blue-200 dark:border-blue-700"
                       >
                         {(comm as any).link.label}
                         <ExternalLink className="w-2.5 h-2.5" />
@@ -237,7 +238,7 @@ export default function SchoolDistrictComms() {
       {hasMore && (
         <button
           onClick={() => setShowAll(!showAll)}
-          className="w-full mt-3 py-2.5 rounded-xl bg-white border border-border/50 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-gray-50 transition-all flex items-center justify-center gap-1.5"
+          className="w-full mt-3 py-2.5 rounded-xl bg-card border border-border/50 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-all flex items-center justify-center gap-1.5"
         >
           {showAll ? (
             <>
