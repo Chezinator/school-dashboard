@@ -3,30 +3,47 @@
  * Design: Sunrise Command Center — warm coral, amber, teal palette
  *
  * Monthly calendar view for the Dates tab.
- * - Color-coded event dots per type (red=test, amber=event, teal=school)
- * - Tap a date to see event details in an expandable panel below
- * - Month navigation arrows
+ * - Color-coded event dots per type:
+ *     red=test, amber=event, teal=school, green=holiday, purple=homework
+ * - Homework due dates pulled from week.homework and merged into the calendar
+ * - Tap a date to see event/homework details in an expandable panel below
+ * - Month navigation arrows + "Today" shortcut
  * - Mobile-first, dark mode compatible
  * - Multi-day events (endDate) are highlighted across the range
  */
 
 import { useState, useMemo } from "react";
-import { ChevronLeft, ChevronRight, BookOpen, PartyPopper, Star, CalendarDays, ExternalLink, X } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  BookOpen,
+  PartyPopper,
+  Star,
+  CalendarDays,
+  ExternalLink,
+  X,
+  GraduationCap,
+} from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
+
+// ── Shared types ──────────────────────────────────────────────────────────────
 
 interface EventLink {
   url: string;
   label: string;
 }
 
-interface DateItem {
+/** Unified calendar event — covers both importantDates and homework assignments */
+interface CalendarEvent {
   date: string;
   endDate?: string;
   title: string;
   description?: string;
-  type: string;
+  type: string; // "test" | "event" | "school" | "holiday" | "homework"
   kidId: string | null;
-  link?: EventLink;
+  subject?: string;        // homework only
+  link?: EventLink;        // single link
+  links?: EventLink[];     // multiple links (e.g. multiple Blooket games)
 }
 
 // ── Color config per event type ──────────────────────────────────────────────
@@ -76,6 +93,15 @@ const TYPE_CONFIG: Record<string, {
     label: "Holiday",
     icon: <CalendarDays className="w-3.5 h-3.5" />,
   },
+  homework: {
+    dot: "bg-violet-500",
+    bg: "bg-violet-50 dark:bg-violet-900/25",
+    text: "text-violet-700 dark:text-violet-300",
+    border: "border-violet-200 dark:border-violet-800",
+    badge: "bg-violet-100 dark:bg-violet-900/25 text-violet-700 dark:text-violet-300",
+    label: "Homework",
+    icon: <GraduationCap className="w-3.5 h-3.5" />,
+  },
 };
 
 function getConfig(type: string) {
@@ -109,8 +135,8 @@ function formatShort(dateStr: string) {
   });
 }
 
-// Returns all ISO date strings that a date item spans (inclusive)
-function getSpannedDates(item: DateItem): string[] {
+/** Returns all ISO date strings that an event spans (inclusive) */
+function getSpannedDates(item: CalendarEvent): string[] {
   const start = toDateObj(item.date);
   const end = item.endDate ? toDateObj(item.endDate) : start;
   const dates: string[] = [];
@@ -129,12 +155,17 @@ function EventDetailCard({
   kids,
   onClose,
 }: {
-  item: DateItem;
+  item: CalendarEvent;
   kids: Array<{ id: string; name: string; color: string }>;
   onClose: () => void;
 }) {
   const cfg = getConfig(item.type);
   const kidObj = item.kidId ? kids.find((k) => k.id === item.kidId) : null;
+
+  // Collect all action links (handles both `link` and `links[]`)
+  const allLinks: EventLink[] = [];
+  if (item.link) allLinks.push(item.link);
+  if (item.links) allLinks.push(...item.links);
 
   return (
     <div className={`rounded-xl border ${cfg.border} ${cfg.bg} overflow-hidden`}>
@@ -147,6 +178,13 @@ function EventDetailCard({
               {cfg.icon}
               {cfg.label}
             </span>
+            {/* Subject chip for homework */}
+            {item.subject && (
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-violet-100 dark:bg-violet-900/25 text-violet-700 dark:text-violet-300">
+                {item.subject}
+              </span>
+            )}
+            {/* Kid name chip */}
             {kidObj && (
               <span
                 className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium text-white"
@@ -170,21 +208,30 @@ function EventDetailCard({
           <p className="text-xs text-foreground/70 leading-relaxed mb-2">{item.description}</p>
         )}
         <p className="text-xs font-medium text-muted-foreground">
+          {item.type === "homework" ? "Due: " : ""}
           {formatShort(item.date)}
           {item.endDate && item.endDate !== item.date && ` — ${formatShort(item.endDate)}`}
         </p>
 
-        {item.link && (
-          <div className="mt-2.5 pt-2.5 border-t border-black/10 dark:border-white/10">
-            <a
-              href={item.link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-xs font-medium transition-colors"
-            >
-              <ExternalLink className="w-3 h-3" />
-              {item.link.label}
-            </a>
+        {/* Action links */}
+        {allLinks.length > 0 && (
+          <div className="mt-2.5 pt-2.5 border-t border-black/10 dark:border-white/10 flex flex-wrap gap-2">
+            {allLinks.map((lnk, i) => (
+              <a
+                key={i}
+                href={lnk.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-white text-xs font-medium transition-colors ${
+                  item.type === "homework"
+                    ? "bg-violet-500 hover:bg-violet-600"
+                    : "bg-amber-500 hover:bg-amber-600"
+                }`}
+              >
+                <ExternalLink className="w-3 h-3" />
+                {lnk.label}
+              </a>
+            ))}
           </div>
         )}
       </div>
@@ -196,11 +243,47 @@ function EventDetailCard({
 
 export default function MonthCalendar() {
   const { week, kids } = useWeek();
-  const dates: DateItem[] = week.importantDates ?? [];
 
-  // Determine the initial month from the week's first event date, or current month
-  const firstEventDate = dates[0]?.date
-    ? toDateObj(dates[0].date)
+  // Merge importantDates + homework into a single CalendarEvent array
+  const allEvents = useMemo<CalendarEvent[]>(() => {
+    const events: CalendarEvent[] = [];
+
+    // 1. Important dates (school events, tests, holidays, etc.)
+    for (const item of (week.importantDates ?? [])) {
+      events.push({
+        date: item.date,
+        endDate: (item as any).endDate,
+        title: item.title,
+        description: (item as any).description,
+        type: item.type,
+        kidId: item.kidId,
+        link: (item as any).link,
+      });
+    }
+
+    // 2. Homework assignments — one CalendarEvent per assignment
+    for (const kidHw of (week.homework ?? [])) {
+      for (const assignment of kidHw.assignments) {
+        if (!assignment.dueDate) continue;
+        events.push({
+          date: assignment.dueDate,
+          title: assignment.title,
+          description: assignment.description,
+          type: "homework",
+          kidId: kidHw.kidId,
+          subject: assignment.subject,
+          link: (assignment as any).link,
+          links: (assignment as any).links,
+        });
+      }
+    }
+
+    return events;
+  }, [week]);
+
+  // Determine the initial month: prefer the first important date, else current month
+  const firstEventDate = allEvents[0]?.date
+    ? toDateObj(allEvents[0].date)
     : new Date();
   const [viewYear, setViewYear] = useState(firstEventDate.getFullYear());
   const [viewMonth, setViewMonth] = useState(firstEventDate.getMonth());
@@ -208,8 +291,8 @@ export default function MonthCalendar() {
 
   // Build a map: ISO date string → list of events
   const eventMap = useMemo(() => {
-    const map: Record<string, DateItem[]> = {};
-    for (const item of dates) {
+    const map: Record<string, CalendarEvent[]> = {};
+    for (const item of allEvents) {
       const spanned = getSpannedDates(item);
       for (const d of spanned) {
         if (!map[d]) map[d] = [];
@@ -217,7 +300,7 @@ export default function MonthCalendar() {
       }
     }
     return map;
-  }, [dates]);
+  }, [allEvents]);
 
   // Calendar grid computation
   const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
@@ -237,29 +320,49 @@ export default function MonthCalendar() {
     else setViewMonth(m => m + 1);
     setSelectedDate(null);
   }
+  function goToToday() {
+    setViewYear(today.getFullYear());
+    setViewMonth(today.getMonth());
+    setSelectedDate(null);
+  }
 
   const monthName = new Date(viewYear, viewMonth, 1).toLocaleDateString("en-US", {
     month: "long",
     year: "numeric",
   });
 
+  const isViewingCurrentMonth =
+    viewYear === today.getFullYear() && viewMonth === today.getMonth();
+
   const selectedEvents = selectedDate ? (eventMap[selectedDate] ?? []) : [];
 
   return (
     <section className="space-y-3">
       {/* Month navigation */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-2">
         <button
           onClick={prevMonth}
-          className="w-9 h-9 rounded-xl bg-card border border-border/50 flex items-center justify-center hover:bg-muted transition-colors"
+          className="w-9 h-9 rounded-xl bg-card border border-border/50 flex items-center justify-center hover:bg-muted transition-colors shrink-0"
           aria-label="Previous month"
         >
           <ChevronLeft className="w-4 h-4 text-foreground" />
         </button>
-        <h3 className="font-display text-lg text-foreground font-semibold">{monthName}</h3>
+
+        <div className="flex items-center gap-2">
+          <h3 className="font-display text-lg text-foreground font-semibold">{monthName}</h3>
+          {!isViewingCurrentMonth && (
+            <button
+              onClick={goToToday}
+              className="text-xs font-medium px-2 py-1 rounded-lg bg-coral/10 text-coral hover:bg-coral/20 transition-colors"
+            >
+              Today
+            </button>
+          )}
+        </div>
+
         <button
           onClick={nextMonth}
-          className="w-9 h-9 rounded-xl bg-card border border-border/50 flex items-center justify-center hover:bg-muted transition-colors"
+          className="w-9 h-9 rounded-xl bg-card border border-border/50 flex items-center justify-center hover:bg-muted transition-colors shrink-0"
           aria-label="Next month"
         >
           <ChevronRight className="w-4 h-4 text-foreground" />
@@ -288,8 +391,8 @@ export default function MonthCalendar() {
             const isSelected = iso === selectedDate;
             const hasEvents = events.length > 0;
 
-            // Limit visible dots to 3
-            const visibleDots = events.slice(0, 3);
+            // Deduplicate dot colors (max 3 unique types shown)
+            const uniqueTypes = Array.from(new Set(events.map(e => e.type))).slice(0, 3);
 
             return (
               <button
@@ -299,41 +402,43 @@ export default function MonthCalendar() {
                   if (!iso) return;
                   setSelectedDate(prev => prev === iso ? null : iso);
                 }}
-                className={`
-                  relative flex flex-col items-center justify-start pt-1.5 pb-1.5 min-h-[52px] sm:min-h-[60px]
-                  border-b border-r border-border/20 last:border-r-0
-                  transition-all duration-150
-                  ${!isCurrentMonth ? "opacity-0 pointer-events-none" : ""}
-                  ${hasEvents && !isSelected ? "hover:bg-muted/50 cursor-pointer" : ""}
-                  ${isSelected ? "bg-amber/10 dark:bg-amber/15" : ""}
-                  ${!hasEvents && isCurrentMonth ? "cursor-default" : ""}
-                `}
-                aria-label={iso ? `${iso}${hasEvents ? `, ${events.length} event${events.length > 1 ? "s" : ""}` : ""}` : undefined}
+                className={[
+                  "relative flex flex-col items-center justify-start pt-1.5 pb-1.5 min-h-[52px] sm:min-h-[60px]",
+                  "border-b border-r border-border/20 last:border-r-0",
+                  "transition-all duration-150",
+                  !isCurrentMonth ? "opacity-0 pointer-events-none" : "",
+                  hasEvents && !isSelected ? "hover:bg-muted/50 cursor-pointer" : "",
+                  isSelected ? "bg-amber/10 dark:bg-amber/15" : "",
+                  !hasEvents && isCurrentMonth ? "cursor-default" : "",
+                ].join(" ")}
+                aria-label={iso
+                  ? `${iso}${hasEvents ? `, ${events.length} event${events.length > 1 ? "s" : ""}` : ""}`
+                  : undefined}
               >
                 {/* Date number */}
                 <span
-                  className={`
-                    w-7 h-7 flex items-center justify-center rounded-full text-sm font-medium transition-all
-                    ${isToday ? "bg-coral text-white font-bold" : ""}
-                    ${isSelected && !isToday ? "bg-amber text-white font-bold" : ""}
-                    ${!isToday && !isSelected && isCurrentMonth ? "text-foreground" : ""}
-                    ${!isCurrentMonth ? "text-muted-foreground/30" : ""}
-                  `}
+                  className={[
+                    "w-7 h-7 flex items-center justify-center rounded-full text-sm font-medium transition-all",
+                    isToday ? "bg-coral text-white font-bold" : "",
+                    isSelected && !isToday ? "bg-amber text-white font-bold" : "",
+                    !isToday && !isSelected && isCurrentMonth ? "text-foreground" : "",
+                    !isCurrentMonth ? "text-muted-foreground/30" : "",
+                  ].join(" ")}
                 >
                   {isCurrentMonth ? dayNum : ""}
                 </span>
 
-                {/* Event dots */}
+                {/* Event dots — one per unique type */}
                 {hasEvents && (
                   <div className="flex items-center gap-0.5 mt-1">
-                    {visibleDots.map((ev, i) => (
+                    {uniqueTypes.map((type, i) => (
                       <span
                         key={i}
-                        className={`w-1.5 h-1.5 rounded-full ${getConfig(ev.type).dot}`}
+                        className={`w-1.5 h-1.5 rounded-full ${getConfig(type).dot}`}
                       />
                     ))}
                     {events.length > 3 && (
-                      <span className="text-[9px] text-muted-foreground font-medium">+</span>
+                      <span className="text-[9px] text-muted-foreground font-medium leading-none">+</span>
                     )}
                   </div>
                 )}
@@ -344,15 +449,15 @@ export default function MonthCalendar() {
       </div>
 
       {/* Legend */}
-      <div className="flex flex-wrap gap-3 px-1">
+      <div className="flex flex-wrap gap-x-4 gap-y-2 px-1">
         {Object.entries(TYPE_CONFIG).map(([type, cfg]) => (
           <div key={type} className="flex items-center gap-1.5">
-            <span className={`w-2.5 h-2.5 rounded-full ${cfg.dot}`} />
+            <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${cfg.dot}`} />
             <span className="text-xs text-muted-foreground">{cfg.label}</span>
           </div>
         ))}
         <div className="flex items-center gap-1.5">
-          <span className="w-6 h-6 rounded-full bg-coral flex items-center justify-center text-white text-[10px] font-bold">T</span>
+          <span className="w-6 h-6 rounded-full bg-coral flex items-center justify-center text-white text-[10px] font-bold shrink-0">T</span>
           <span className="text-xs text-muted-foreground">Today</span>
         </div>
       </div>
@@ -377,18 +482,11 @@ export default function MonthCalendar() {
         </div>
       )}
 
-      {/* Empty state for selected date with no events (shouldn't happen, but guard) */}
-      {selectedDate && selectedEvents.length === 0 && (
-        <div className="text-center py-4 text-muted-foreground text-sm">
-          No events on this date.
-        </div>
-      )}
-
-      {/* No events in this month hint */}
-      {dates.length === 0 && (
+      {/* No events in this data set */}
+      {allEvents.length === 0 && (
         <div className="bg-card rounded-xl p-8 border border-border/60 text-center">
           <CalendarDays className="w-8 h-8 mx-auto mb-2 text-muted-foreground/30" />
-          <p className="text-sm text-muted-foreground">No important dates this week</p>
+          <p className="text-sm text-muted-foreground">No dates or homework this week</p>
         </div>
       )}
     </section>
