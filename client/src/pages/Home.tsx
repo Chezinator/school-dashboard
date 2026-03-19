@@ -18,6 +18,7 @@ import SchoolDistrictComms from "@/components/SchoolDistrictComms";
 import DolphinDigest from "@/components/DolphinDigest";
 import ImportantLinks from "@/components/ImportantLinks";
 import WeekSwitcher from "@/components/WeekSwitcher";
+import MonthCalendar from "@/components/MonthCalendar";
 import { WeekProvider, useWeek } from "@/contexts/WeekContext";
 import { useTheme } from "@/contexts/ThemeContext";
 import {
@@ -30,6 +31,8 @@ import {
   Sun,
   RefreshCw,
   Heart,
+  List,
+  Calendar,
 } from "lucide-react";
 
 // Tab definitions
@@ -54,6 +57,7 @@ function DashboardContent() {
   const { theme, toggleTheme } = useTheme();
   const [activeTab, setActiveTab] = useState<TabId>("home");
   const [prevTab, setPrevTab] = useState<TabId>("home");
+  const [datesView, setDatesView] = useState<"list" | "calendar">("list");
 
   const tabOrder = TABS.map(t => t.id);
   const direction = tabOrder.indexOf(activeTab) - tabOrder.indexOf(prevTab);
@@ -115,8 +119,51 @@ function DashboardContent() {
             {/* ── DATES TAB ── */}
             {activeTab === "dates" && (
               <div className="space-y-5 pt-2">
-                <ImportantDates />
-                <SchoolDistrictComms />
+                {/* List / Calendar toggle */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-lg bg-amber-light dark:bg-amber/20 flex items-center justify-center">
+                      <CalendarDays className="w-4 h-4 text-amber" />
+                    </div>
+                    <h2 className="font-display text-xl text-foreground">Dates</h2>
+                  </div>
+                  <div className="flex items-center bg-muted rounded-xl p-1 gap-0.5">
+                    <button
+                      onClick={() => setDatesView("list")}
+                      aria-label="List view"
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
+                        datesView === "list"
+                          ? "bg-card text-foreground shadow-sm border border-border/40"
+                          : "text-muted-foreground hover:text-foreground"
+                      }`}
+                    >
+                      <List className="w-3.5 h-3.5" />
+                      List
+                    </button>
+                    <button
+                      onClick={() => setDatesView("calendar")}
+                      aria-label="Calendar view"
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
+                        datesView === "calendar"
+                          ? "bg-card text-foreground shadow-sm border border-border/40"
+                          : "text-muted-foreground hover:text-foreground"
+                      }`}
+                    >
+                      <Calendar className="w-3.5 h-3.5" />
+                      Calendar
+                    </button>
+                  </div>
+                </div>
+
+                {/* View content */}
+                {datesView === "list" ? (
+                  <>
+                    <ImportantDates />
+                    <SchoolDistrictComms />
+                  </>
+                ) : (
+                  <MonthCalendar />
+                )}
               </div>
             )}
 
