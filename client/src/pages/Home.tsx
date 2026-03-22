@@ -1,8 +1,8 @@
 /**
  * Home — SchoolBase Dashboard
- * Sunrise Command Center design with bottom nav bar (mobile-app style).
+ * Dayhaven aesthetic: warm cream, Fraunces serif, color-blocked cards,
+ * dark charcoal pill CTAs, generous whitespace, spring animations.
  * 5 tabs: Home | Dates | School | Homework | Links
- * Dark mode toggle in header.
  */
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -35,7 +35,6 @@ import {
   Calendar,
 } from "lucide-react";
 
-// Tab definitions
 const TABS = [
   { id: "home",     label: "Home",    icon: HomeIcon },
   { id: "dates",    label: "Dates",   icon: CalendarDays },
@@ -47,9 +46,9 @@ const TABS = [
 type TabId = typeof TABS[number]["id"];
 
 const tabVariants = {
-  enter: (dir: number) => ({ opacity: 0, x: dir > 0 ? 40 : -40 }),
+  enter: (dir: number) => ({ opacity: 0, x: dir > 0 ? 30 : -30 }),
   center: { opacity: 1, x: 0 },
-  exit: (dir: number) => ({ opacity: 0, x: dir > 0 ? -40 : 40 }),
+  exit: (dir: number) => ({ opacity: 0, x: dir > 0 ? -30 : 30 }),
 };
 
 function DashboardContent() {
@@ -72,21 +71,20 @@ function DashboardContent() {
       {/* Hero Header with dark mode toggle */}
       <div className="relative">
         <HeroHeader />
-        {/* Dark mode toggle — top-right corner over hero */}
         <button
           onClick={toggleTheme}
           aria-label="Toggle dark mode"
-          className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/50 transition-colors"
+          className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-white/15 backdrop-blur-md flex items-center justify-center text-white hover:bg-white/25 transition-all duration-200 border border-white/20"
         >
           {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
         </button>
       </div>
 
       {/* Week Switcher */}
-      <div className="max-w-2xl mx-auto w-full px-4 pt-4">
+      <div className="max-w-2xl mx-auto w-full px-4 pt-5">
         <WeekSwitcher />
         {!isLatest && (
-          <div className="mb-3 px-4 py-2 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 text-center">
+          <div className="mb-3 px-4 py-2.5 rounded-2xl bg-amber-light dark:bg-amber/15 border border-amber/20 dark:border-amber/30 text-center">
             <p className="text-sm text-amber-800 dark:text-amber-300 font-medium">
               Viewing archived week — data is from the selected week.
             </p>
@@ -94,7 +92,7 @@ function DashboardContent() {
         )}
       </div>
 
-      {/* Tab content — scrollable, with bottom padding for nav bar */}
+      {/* Tab content */}
       <main className="flex-1 max-w-2xl mx-auto w-full px-4 pb-28 overflow-x-hidden">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
@@ -104,11 +102,11 @@ function DashboardContent() {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.22, ease: "easeInOut" }}
+            transition={{ type: "spring", stiffness: 300, damping: 30, mass: 0.8 }}
           >
             {/* ── HOME TAB ── */}
             {activeTab === "home" && (
-              <div className="space-y-5 pt-2">
+              <div className="space-y-6 pt-3">
                 <KidProfiles />
                 <ActionItems />
                 <TeacherComms />
@@ -118,22 +116,22 @@ function DashboardContent() {
 
             {/* ── DATES TAB ── */}
             {activeTab === "dates" && (
-              <div className="space-y-5 pt-2">
+              <div className="space-y-6 pt-3">
                 {/* List / Calendar toggle */}
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-amber-light dark:bg-amber/20 flex items-center justify-center">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-9 h-9 rounded-2xl bg-amber-light dark:bg-amber/15 flex items-center justify-center">
                       <CalendarDays className="w-4 h-4 text-amber" />
                     </div>
-                    <h2 className="font-display text-xl text-foreground">Dates</h2>
+                    <h2 className="font-display text-xl text-foreground tracking-tight">Dates</h2>
                   </div>
-                  <div className="flex items-center bg-muted rounded-xl p-1 gap-0.5">
+                  <div className="flex items-center bg-muted rounded-full p-1 gap-0.5">
                     <button
                       onClick={() => setDatesView("list")}
                       aria-label="List view"
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
+                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
                         datesView === "list"
-                          ? "bg-card text-foreground shadow-sm border border-border/40"
+                          ? "bg-card text-foreground shadow-sm"
                           : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
@@ -143,9 +141,9 @@ function DashboardContent() {
                     <button
                       onClick={() => setDatesView("calendar")}
                       aria-label="Calendar view"
-                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
+                      className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
                         datesView === "calendar"
-                          ? "bg-card text-foreground shadow-sm border border-border/40"
+                          ? "bg-card text-foreground shadow-sm"
                           : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
@@ -155,7 +153,6 @@ function DashboardContent() {
                   </div>
                 </div>
 
-                {/* View content */}
                 {datesView === "list" ? (
                   <>
                     <ImportantDates />
@@ -169,7 +166,7 @@ function DashboardContent() {
 
             {/* ── SCHOOL TAB ── */}
             {activeTab === "school" && (
-              <div className="space-y-5 pt-2">
+              <div className="space-y-6 pt-3">
                 <LunchMenu />
                 <WeatherForecast />
               </div>
@@ -177,14 +174,14 @@ function DashboardContent() {
 
             {/* ── HOMEWORK TAB ── */}
             {activeTab === "homework" && (
-              <div className="pt-2">
+              <div className="pt-3">
                 <Homework />
               </div>
             )}
 
             {/* ── LINKS TAB ── */}
             {activeTab === "links" && (
-              <div className="pt-2">
+              <div className="pt-3">
                 <ImportantLinks />
               </div>
             )}
@@ -193,7 +190,7 @@ function DashboardContent() {
       </main>
 
       {/* ── BOTTOM NAV BAR ── */}
-      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-card/95 dark:bg-card/95 backdrop-blur-md border-t border-border/60 safe-area-pb">
+      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-card/90 dark:bg-card/90 backdrop-blur-xl border-t border-border/50 safe-area-pb">
         <div className="max-w-2xl mx-auto flex items-stretch">
           {TABS.map((tab) => {
             const Icon = tab.icon;
@@ -204,21 +201,17 @@ function DashboardContent() {
                 onClick={() => goToTab(tab.id)}
                 className={`flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 px-1 transition-all duration-200 ${
                   isActive
-                    ? "text-coral"
+                    ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
-                <div className={`relative flex items-center justify-center w-8 h-6 rounded-full transition-all duration-200 ${
-                  isActive ? "bg-coral/10" : ""
+                <div className={`relative flex items-center justify-center w-9 h-7 rounded-full transition-all duration-300 ${
+                  isActive ? "bg-sage-light dark:bg-sage/20" : ""
                 }`}>
                   <Icon className={`transition-all duration-200 ${isActive ? "w-5 h-5" : "w-4.5 h-4.5"}`} />
-                  {/* Active dot indicator */}
-                  {isActive && (
-                    <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-coral" />
-                  )}
                 </div>
-                <span className={`text-[10px] font-medium leading-none transition-all duration-200 ${
-                  isActive ? "text-coral font-semibold" : "text-muted-foreground"
+                <span className={`text-[10px] leading-none transition-all duration-200 ${
+                  isActive ? "font-bold" : "font-medium"
                 }`}>
                   {tab.label}
                 </span>
@@ -228,24 +221,24 @@ function DashboardContent() {
         </div>
       </nav>
 
-      {/* Footer — visible only on Links tab to avoid clutter */}
+      {/* Footer — visible only on Links tab */}
       {activeTab === "links" && (
         <div className="max-w-2xl mx-auto w-full px-4 pb-32 text-center">
-          <div className="border-t border-border/50 pt-4">
+          <div className="border-t border-border/40 pt-5">
             <div className="flex items-center justify-center gap-2 mb-1">
-              <span className="font-display text-sm text-foreground/70">SchoolBase</span>
-              <span className="text-muted-foreground/40 text-xs">·</span>
+              <span className="font-display text-sm text-foreground/60">SchoolBase</span>
+              <span className="text-muted-foreground/30 text-xs">·</span>
               <span className="text-xs text-muted-foreground">{meta.familyName} Family</span>
             </div>
-            <p className="text-xs text-muted-foreground/60">
+            <p className="text-xs text-muted-foreground/50">
               {meta.schoolName} · {meta.schoolAddress}
             </p>
-            <div className="flex items-center justify-center gap-1.5 mt-1.5">
-              <RefreshCw className="w-3 h-3 text-muted-foreground/50" />
-              <p className="text-xs text-muted-foreground/50">Last updated: {lastUpdatedFormatted}</p>
+            <div className="flex items-center justify-center gap-1.5 mt-2">
+              <RefreshCw className="w-3 h-3 text-muted-foreground/40" />
+              <p className="text-xs text-muted-foreground/40">Last updated: {lastUpdatedFormatted}</p>
             </div>
-            <p className="text-xs text-muted-foreground/30 mt-1.5 flex items-center justify-center gap-1">
-              Made with <Heart className="w-3 h-3 text-coral/50 fill-coral/50" /> for the family
+            <p className="text-xs text-muted-foreground/25 mt-2 flex items-center justify-center gap-1">
+              Made with <Heart className="w-3 h-3 text-coral/40 fill-coral/40" /> for the family
             </p>
           </div>
         </div>

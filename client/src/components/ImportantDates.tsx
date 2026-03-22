@@ -1,8 +1,6 @@
 /**
- * ImportantDates — Calendar section showing this week's dates and upcoming events.
- * Amber accent for date-related items.
- * Supports optional `link` on each event for embedded action buttons.
- * Dark mode: uses bg-card and dark: variants for all colored backgrounds.
+ * ImportantDates — Dayhaven aesthetic
+ * Color-blocked rounded cards, pill badges, charcoal pill CTAs, Fraunces headings.
  */
 import { CalendarDays, Star, BookOpen, PartyPopper, ExternalLink } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
@@ -20,7 +18,7 @@ function formatDate(dateStr: string) {
 function getTypeIcon(type: string) {
   switch (type) {
     case "test":
-      return <BookOpen className="w-4 h-4 text-red-500 dark:text-red-400" />;
+      return <BookOpen className="w-4 h-4 text-coral" />;
     case "event":
       return <PartyPopper className="w-4 h-4 text-amber" />;
     case "school":
@@ -33,11 +31,11 @@ function getTypeIcon(type: string) {
 function getTypeBg(type: string) {
   switch (type) {
     case "test":
-      return "bg-red-50 dark:bg-red-900/30";
+      return "bg-coral-light dark:bg-coral/15";
     case "event":
-      return "bg-amber-light dark:bg-amber/20";
+      return "bg-amber-light dark:bg-amber/15";
     case "school":
-      return "bg-teal-light dark:bg-teal/20";
+      return "bg-teal-light dark:bg-teal/15";
     default:
       return "bg-muted";
   }
@@ -46,11 +44,11 @@ function getTypeBg(type: string) {
 function getTypeLabel(type: string) {
   switch (type) {
     case "test":
-      return { text: "Assessment", className: "bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400" };
+      return { text: "Assessment", className: "bg-coral-light dark:bg-coral/15 text-coral" };
     case "event":
-      return { text: "Event", className: "bg-amber-100 dark:bg-amber/20 text-amber-700 dark:text-amber" };
+      return { text: "Event", className: "bg-amber-light dark:bg-amber/15 text-amber" };
     case "school":
-      return { text: "School", className: "bg-teal-100 dark:bg-teal/20 text-teal-700 dark:text-teal" };
+      return { text: "School", className: "bg-teal-light dark:bg-teal/15 text-teal" };
     default:
       return { text: "Date", className: "bg-muted text-muted-foreground" };
   }
@@ -63,11 +61,11 @@ export default function ImportantDates() {
 
   return (
     <section>
-      <div className="flex items-center gap-2 mb-4">
-        <div className="w-8 h-8 rounded-lg bg-amber-light dark:bg-amber/20 flex items-center justify-center">
+      <div className="flex items-center gap-2.5 mb-5">
+        <div className="w-9 h-9 rounded-2xl bg-amber-light dark:bg-amber/15 flex items-center justify-center">
           <CalendarDays className="w-4 h-4 text-amber" />
         </div>
-        <h2 className="font-display text-xl text-foreground">Important Dates</h2>
+        <h2 className="font-display text-xl text-foreground tracking-tight">Important Dates</h2>
       </div>
 
       <div className="space-y-3">
@@ -81,20 +79,20 @@ export default function ImportantDates() {
           return (
             <div
               key={idx}
-              className="bg-card rounded-xl p-4 shadow-sm border border-border/50 card-date"
+              className="bg-card rounded-2xl p-4 sm:p-5 border border-border/40 card-amber transition-all duration-300 hover:shadow-md"
             >
               <div className="flex items-start gap-3">
-                <div className={`w-8 h-8 rounded-lg ${getTypeBg(item.type)} flex items-center justify-center shrink-0 mt-0.5`}>
+                <div className={`w-9 h-9 rounded-2xl ${getTypeBg(item.type)} flex items-center justify-center shrink-0 mt-0.5`}>
                   {getTypeIcon(item.type)}
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2 flex-wrap mb-1">
-                    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${label.className}`}>
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold ${label.className}`}>
                       {label.text}
                     </span>
                     {kidName && (
                       <span
-                        className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium text-white"
+                        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold text-white"
                         style={{
                           backgroundColor: kids.find((k) => k.id === item.kidId)?.color || "#888",
                         }}
@@ -105,21 +103,20 @@ export default function ImportantDates() {
                   </div>
                   <h3 className="font-semibold text-foreground text-sm">{item.title}</h3>
                   {(item as any).description && (
-                    <p className="text-muted-foreground text-xs mt-1">{(item as any).description}</p>
+                    <p className="text-muted-foreground text-xs mt-1 leading-relaxed">{(item as any).description}</p>
                   )}
-                  <p className="text-xs text-amber font-medium mt-1.5">
+                  <p className="text-xs text-amber font-medium mt-2">
                     {formatDate(item.date)}
                     {(item as any).endDate && ` — ${formatDate((item as any).endDate)}`}
                   </p>
 
-                  {/* Embedded action link */}
                   {eventLink && (
-                    <div className="mt-3 pt-3 border-t border-border/30">
+                    <div className="mt-3 pt-3 border-t border-border/25">
                       <a
                         href={eventLink.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-xs font-medium transition-colors"
+                        className="pill-cta text-xs py-2 px-4"
                       >
                         <ExternalLink className="w-3 h-3" />
                         {eventLink.label}

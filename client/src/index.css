@@ -41,85 +41,94 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Custom colors for the Sunrise Command Center */
-  --color-coral: oklch(0.65 0.18 25);
-  --color-coral-light: oklch(0.92 0.05 25);
-  --color-amber: oklch(0.75 0.15 75);
-  --color-amber-light: oklch(0.93 0.05 75);
+  /* ── Dayhaven palette ── */
+  /* Soft coral */
+  --color-coral: oklch(0.72 0.14 22);
+  --color-coral-light: oklch(0.94 0.03 22);
+  /* Muted amber / warm gold */
+  --color-amber: oklch(0.78 0.12 75);
+  --color-amber-light: oklch(0.95 0.03 75);
+  /* Sage green */
+  --color-sage: oklch(0.68 0.08 155);
+  --color-sage-light: oklch(0.94 0.02 155);
+  /* Teal */
   --color-teal: oklch(0.62 0.1 190);
-  --color-teal-light: oklch(0.93 0.03 190);
-  --color-sage: oklch(0.7 0.06 150);
-  --color-warm-white: oklch(0.985 0.005 80);
+  --color-teal-light: oklch(0.94 0.025 190);
+  /* Warm neutrals */
+  --color-warm-white: oklch(0.985 0.004 80);
   --color-warm-gray: oklch(0.55 0.01 60);
+  /* Dark charcoal for pill CTAs */
+  --color-charcoal: oklch(0.22 0.01 260);
 
-  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-display: 'Fraunces', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.75rem;
-  --background: oklch(0.98 0.005 80);
-  --foreground: oklch(0.25 0.02 50);
+  --radius: 0.875rem;
+  /* Warm cream base — #FBF8F3 range */
+  --background: oklch(0.98 0.006 80);
+  --foreground: oklch(0.22 0.015 50);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.25 0.02 50);
+  --card-foreground: oklch(0.22 0.015 50);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.02 50);
-  --primary: oklch(0.65 0.18 25);
+  --popover-foreground: oklch(0.22 0.015 50);
+  --primary: oklch(0.22 0.01 260);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.96 0.008 80);
-  --secondary-foreground: oklch(0.35 0.02 50);
-  --muted: oklch(0.95 0.005 80);
-  --muted-foreground: oklch(0.5 0.015 60);
-  --accent: oklch(0.93 0.03 190);
-  --accent-foreground: oklch(0.25 0.02 50);
+  --secondary: oklch(0.96 0.006 80);
+  --secondary-foreground: oklch(0.35 0.015 50);
+  --muted: oklch(0.955 0.005 80);
+  --muted-foreground: oklch(0.48 0.012 60);
+  --accent: oklch(0.94 0.025 155);
+  --accent-foreground: oklch(0.22 0.015 50);
   --destructive: oklch(0.58 0.22 27);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.91 0.01 80);
-  --input: oklch(0.91 0.01 80);
-  --ring: oklch(0.65 0.18 25);
-  --chart-1: oklch(0.65 0.18 25);
-  --chart-2: oklch(0.75 0.15 75);
+  --border: oklch(0.92 0.008 80);
+  --input: oklch(0.92 0.008 80);
+  --ring: oklch(0.22 0.01 260);
+  --chart-1: oklch(0.72 0.14 22);
+  --chart-2: oklch(0.78 0.12 75);
   --chart-3: oklch(0.62 0.1 190);
-  --chart-4: oklch(0.7 0.06 150);
+  --chart-4: oklch(0.68 0.08 155);
   --chart-5: oklch(0.55 0.01 60);
   --sidebar: oklch(0.99 0.003 80);
-  --sidebar-foreground: oklch(0.25 0.02 50);
-  --sidebar-primary: oklch(0.65 0.18 25);
+  --sidebar-foreground: oklch(0.22 0.015 50);
+  --sidebar-primary: oklch(0.22 0.01 260);
   --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.95 0.005 80);
-  --sidebar-accent-foreground: oklch(0.25 0.02 50);
-  --sidebar-border: oklch(0.91 0.01 80);
-  --sidebar-ring: oklch(0.65 0.18 25);
+  --sidebar-accent: oklch(0.955 0.005 80);
+  --sidebar-accent-foreground: oklch(0.22 0.015 50);
+  --sidebar-border: oklch(0.92 0.008 80);
+  --sidebar-ring: oklch(0.22 0.01 260);
 }
 
 .dark {
-  --background: oklch(0.14 0.01 260);
-  --foreground: oklch(0.92 0.005 80);
-  --card: oklch(0.18 0.01 260);
-  --card-foreground: oklch(0.92 0.005 80);
-  --popover: oklch(0.18 0.01 260);
-  --popover-foreground: oklch(0.92 0.005 80);
-  --primary: oklch(0.7 0.18 25);
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.22 0.01 260);
+  --background: oklch(0.13 0.008 260);
+  --foreground: oklch(0.93 0.005 80);
+  --card: oklch(0.17 0.008 260);
+  --card-foreground: oklch(0.93 0.005 80);
+  --popover: oklch(0.17 0.008 260);
+  --popover-foreground: oklch(0.93 0.005 80);
+  --primary: oklch(0.93 0.005 80);
+  --primary-foreground: oklch(0.13 0.008 260);
+  --secondary: oklch(0.21 0.008 260);
   --secondary-foreground: oklch(0.85 0.005 80);
-  --muted: oklch(0.22 0.01 260);
-  --muted-foreground: oklch(0.6 0.01 80);
-  --accent: oklch(0.25 0.03 190);
-  --accent-foreground: oklch(0.92 0.005 80);
+  --muted: oklch(0.21 0.008 260);
+  --muted-foreground: oklch(0.58 0.01 80);
+  --accent: oklch(0.24 0.02 190);
+  --accent-foreground: oklch(0.93 0.005 80);
   --destructive: oklch(0.65 0.22 27);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.28 0.01 260);
-  --input: oklch(0.28 0.01 260);
-  --ring: oklch(0.7 0.18 25);
-  --sidebar: oklch(0.18 0.01 260);
-  --sidebar-foreground: oklch(0.92 0.005 80);
-  --sidebar-primary: oklch(0.7 0.18 25);
-  --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.22 0.01 260);
-  --sidebar-accent-foreground: oklch(0.92 0.005 80);
-  --sidebar-border: oklch(0.28 0.01 260);
-  --sidebar-ring: oklch(0.7 0.18 25);
+  --border: oklch(0.26 0.008 260);
+  --input: oklch(0.26 0.008 260);
+  --ring: oklch(0.93 0.005 80);
+  --sidebar: oklch(0.17 0.008 260);
+  --sidebar-foreground: oklch(0.93 0.005 80);
+  --sidebar-primary: oklch(0.93 0.005 80);
+  --sidebar-primary-foreground: oklch(0.13 0.008 260);
+  --sidebar-accent: oklch(0.21 0.008 260);
+  --sidebar-accent-foreground: oklch(0.93 0.005 80);
+  --sidebar-border: oklch(0.26 0.008 260);
+  --sidebar-ring: oklch(0.93 0.005 80);
 }
 
 @layer base {
@@ -129,6 +138,8 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -173,34 +184,55 @@
   }
 
   .font-display {
-    font-family: 'DM Serif Display', Georgia, serif;
+    font-family: 'Fraunces', Georgia, serif;
+    font-optical-sizing: auto;
   }
 
-  /* Sunrise gradient for header */
-  .sunrise-gradient {
-    background: linear-gradient(135deg, oklch(0.65 0.18 25) 0%, oklch(0.75 0.15 75) 50%, oklch(0.62 0.1 190) 100%);
+  /* ── Dayhaven pill CTA ── */
+  .pill-cta {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200;
+    background-color: oklch(0.22 0.01 260);
+    color: oklch(0.99 0 0);
+  }
+  .pill-cta:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+  .dark .pill-cta {
+    background-color: oklch(0.93 0.005 80);
+    color: oklch(0.13 0.008 260);
   }
 
-  /* Card accent borders */
-  .card-urgent {
-    border-left: 4px solid oklch(0.65 0.18 25);
+  /* ── Color-blocked card accents ── */
+  .card-sage {
+    border-left: 4px solid oklch(0.68 0.08 155);
   }
-  .card-date {
-    border-left: 4px solid oklch(0.75 0.15 75);
+  .card-coral {
+    border-left: 4px solid oklch(0.72 0.14 22);
   }
-  .card-info {
+  .card-amber {
+    border-left: 4px solid oklch(0.78 0.12 75);
+  }
+  .card-teal {
     border-left: 4px solid oklch(0.62 0.1 190);
   }
-  .card-homework {
-    border-left: 4px solid oklch(0.7 0.06 150);
-  }
 
-  /* Pulse animation for urgent items */
+  /* Urgent pulse */
   @keyframes urgentPulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.7; }
   }
   .urgent-pulse {
     animation: urgentPulse 2s ease-in-out infinite;
+  }
+
+  /* ── Spring entrance animation ── */
+  @keyframes springUp {
+    0% { opacity: 0; transform: translateY(16px); }
+    60% { transform: translateY(-3px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .spring-up {
+    animation: springUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   }
 }

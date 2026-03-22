@@ -1,17 +1,7 @@
 /**
- * DolphinDigest — SchoolBase Dashboard Component
- * Design: Sunrise Command Center — warm coral, amber, teal palette
- *
- * Displays a summary card of the Lake Whitney Elementary Dolphin Digest
- * (Principal Dr. Crabb's weekly newsletter), with a "Read on ParentSquare" 
- * link that opens the post directly.
- *
- * Data source: dolphinDigest field in weeklyReport.json
- * Automation: Each Sunday, the pipeline finds the latest Dolphin Digest 
- * email (subject contains "Dolphin Digest"), extracts highlights, and
- * resolves the ParentSquare feed URL from the email tracking links.
+ * DolphinDigest — Dayhaven aesthetic
+ * Teal accent, Fraunces headings, pill CTA buttons, generous whitespace.
  */
-
 import { useWeek } from "@/contexts/WeekContext";
 import { ExternalLink, Newspaper, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
@@ -43,40 +33,39 @@ export default function DolphinDigest() {
   const linkUrl = digest.gmailUrl;
 
   return (
-    <section className="space-y-3">
+    <section className="space-y-4">
       {/* Header */}
-      <div className="flex items-center gap-2">
-        <div className="w-8 h-8 rounded-lg bg-teal-light dark:bg-teal/20 flex items-center justify-center">
+      <div className="flex items-center gap-2.5">
+        <div className="w-9 h-9 rounded-2xl bg-teal-light dark:bg-teal/15 flex items-center justify-center">
           <Newspaper className="w-4 h-4 text-teal" />
         </div>
         <div>
-          <h2 className="font-display text-xl text-foreground">Dolphin Digest</h2>
+          <h2 className="font-display text-xl text-foreground tracking-tight">Dolphin Digest</h2>
           <p className="text-xs text-muted-foreground">Principal's Weekly Newsletter</p>
         </div>
       </div>
 
       {/* Main card */}
-      <div className="bg-card rounded-2xl border border-border/60 shadow-sm overflow-hidden">
+      <div className="bg-card rounded-2xl border border-border/40 overflow-hidden transition-all duration-300 hover:shadow-md">
         {/* Teal top accent */}
-        <div className="h-1.5 w-full bg-gradient-to-r from-teal to-teal/40" />
+        <div className="h-1 w-full bg-gradient-to-r from-teal to-teal/30" />
 
         {/* Card header */}
-        <div className="px-4 pt-4 pb-3 border-b border-border/40">
+        <div className="px-4 sm:px-5 pt-4 pb-3 border-b border-border/30">
           <div className="flex items-start justify-between gap-3">
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-lg">🐬</span>
-                <h3 className="font-semibold text-foreground text-sm">Lake Whitney Dolphin Digest</h3>
+                <h3 className="font-display font-semibold text-foreground text-sm">Lake Whitney Dolphin Digest</h3>
               </div>
               <p className="text-xs text-muted-foreground">{digest.weekLabel}</p>
               <p className="text-xs text-muted-foreground">Posted {digest.postedDate} · {digest.postedBy}</p>
             </div>
-            {/* Read on ParentSquare button */}
             <a
               href={linkUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-teal-light dark:bg-teal/20 text-teal text-xs font-medium hover:opacity-80 transition-opacity border border-teal/20"
+              className="shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-teal-light dark:bg-teal/15 text-teal text-xs font-semibold hover:opacity-80 transition-opacity border border-teal/15"
             >
               <ExternalLink className="w-3 h-3" />
               Full Digest
@@ -85,9 +74,9 @@ export default function DolphinDigest() {
         </div>
 
         {/* Highlights */}
-        <div className="divide-y divide-border/30">
+        <div className="divide-y divide-border/25">
           {visibleHighlights.map((highlight, i) => (
-            <div key={i} className="px-4 py-3 flex gap-3 items-start">
+            <div key={i} className="px-4 sm:px-5 py-3.5 flex gap-3 items-start">
               <span className="text-base mt-0.5 shrink-0">{highlight.icon}</span>
               <div className="min-w-0">
                 <p className="text-sm font-medium text-foreground leading-snug mb-0.5">{highlight.title}</p>
@@ -97,11 +86,11 @@ export default function DolphinDigest() {
           ))}
         </div>
 
-        {/* Expand/collapse if more than 3 highlights */}
+        {/* Expand/collapse */}
         {digest.highlights.length > 3 && (
           <button
             onClick={() => setExpanded(!expanded)}
-            className="w-full flex items-center justify-center gap-1.5 py-2.5 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors border-t border-border/40"
+            className="w-full flex items-center justify-center gap-1.5 py-2.5 text-xs font-semibold text-muted-foreground hover:text-foreground hover:bg-muted/30 transition-colors border-t border-border/30"
           >
             {expanded ? (
               <>
@@ -117,13 +106,13 @@ export default function DolphinDigest() {
           </button>
         )}
 
-        {/* Footer CTA */}
-        <div className="px-4 py-3 bg-muted/30 border-t border-border/40">
+        {/* Footer CTA — dark charcoal pill */}
+        <div className="px-4 sm:px-5 py-3.5 bg-muted/20 border-t border-border/30">
           <a
             href={linkUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full py-2 px-4 bg-foreground hover:opacity-80 text-background text-xs font-medium rounded-lg transition-opacity"
+            className="pill-cta w-full"
           >
             <ExternalLink className="w-3.5 h-3.5" />
             {linkLabel}

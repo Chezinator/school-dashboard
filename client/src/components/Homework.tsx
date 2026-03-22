@@ -1,7 +1,7 @@
 /**
- * Homework — Assignments per kid with subject, due date, status, and embedded links.
- * Supports functional completion toggle stored in localStorage.
- * Sage/green accent for homework items.
+ * Homework — Dayhaven aesthetic
+ * Color-blocked rounded cards, pill subject badges, charcoal pill CTAs,
+ * Fraunces headings, completion toggle with localStorage persistence.
  */
 import { useState, useEffect, useCallback } from "react";
 import { BookOpen, Calendar, CheckCircle2, Circle, ExternalLink } from "lucide-react";
@@ -30,17 +30,17 @@ function formatDate(dateStr: string) {
 function getSubjectColor(subject: string) {
   switch (subject.toLowerCase()) {
     case "writing":
-      return { bg: "bg-coral-light dark:bg-coral/10", text: "text-coral", border: "border-coral/20" };
+      return { bg: "bg-coral-light dark:bg-coral/12", text: "text-coral" };
     case "math":
-      return { bg: "bg-amber-light dark:bg-amber/10", text: "text-amber", border: "border-amber/20" };
+      return { bg: "bg-amber-light dark:bg-amber/12", text: "text-amber" };
     case "reading":
-      return { bg: "bg-teal-light dark:bg-teal/10", text: "text-teal", border: "border-teal/20" };
+      return { bg: "bg-teal-light dark:bg-teal/12", text: "text-teal" };
     case "science":
-      return { bg: "bg-green-50 dark:bg-green-900/20", text: "text-green-600 dark:text-green-400", border: "border-green-200" };
+      return { bg: "bg-sage-light dark:bg-sage/12", text: "text-sage" };
     case "phonics":
-      return { bg: "bg-purple-50 dark:bg-purple-900/20", text: "text-purple-600 dark:text-purple-400", border: "border-purple-200" };
+      return { bg: "bg-violet-50 dark:bg-violet-900/15", text: "text-violet-600 dark:text-violet-400" };
     default:
-      return { bg: "bg-gray-50 dark:bg-gray-800", text: "text-gray-600 dark:text-gray-400", border: "border-gray-200" };
+      return { bg: "bg-muted", text: "text-muted-foreground" };
   }
 }
 
@@ -50,7 +50,7 @@ function LinkButton({ link }: { link: AssignmentLink }) {
       href={link.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-foreground hover:opacity-80 text-background text-xs font-medium transition-opacity"
+      className="pill-cta text-xs py-1.5 px-4"
     >
       <ExternalLink className="w-3 h-3" />
       {link.label}
@@ -58,7 +58,6 @@ function LinkButton({ link }: { link: AssignmentLink }) {
   );
 }
 
-// Build a stable localStorage key for a homework item
 function buildKey(weekLabel: string, kidId: string, idx: number) {
   return `schoolbase:hw:${weekLabel}:${kidId}:${idx}`;
 }
@@ -68,10 +67,8 @@ export default function Homework() {
   const homework = week.homework;
   const [activeKid, setActiveKid] = useState(kids[0].id);
 
-  // Track completed state per assignment in localStorage
   const [completed, setCompleted] = useState<Record<string, boolean>>({});
 
-  // Load from localStorage on mount / week / kid change
   useEffect(() => {
     const currentHomework = homework.find((h) => h.kidId === activeKid);
     if (!currentHomework) return;
@@ -95,7 +92,6 @@ export default function Homework() {
 
   const currentHomework = homework.find((h) => h.kidId === activeKid);
 
-  // Count completed for badge
   const totalAssignments = currentHomework?.assignments.length ?? 0;
   const completedCount = currentHomework?.assignments.filter((_: Assignment, idx: number) => {
     const key = buildKey(week.weekLabel, activeKid, idx);
@@ -104,12 +100,12 @@ export default function Homework() {
 
   return (
     <section>
-      <div className="flex items-center gap-2 mb-4">
-        <div className="w-8 h-8 rounded-lg bg-green-50 dark:bg-green-900/20 flex items-center justify-center">
+      <div className="flex items-center gap-2.5 mb-5">
+        <div className="w-9 h-9 rounded-2xl bg-sage-light dark:bg-sage/15 flex items-center justify-center">
           <BookOpen className="w-4 h-4 text-sage" />
         </div>
         <div>
-          <h2 className="font-display text-xl text-foreground">Homework</h2>
+          <h2 className="font-display text-xl text-foreground tracking-tight">Homework</h2>
           {totalAssignments > 0 && (
             <p className="text-xs text-muted-foreground">
               {completedCount}/{totalAssignments} completed
@@ -118,20 +114,20 @@ export default function Homework() {
         </div>
       </div>
 
-      {/* Kid tabs */}
-      <div className="flex gap-2 mb-4">
+      {/* Kid tabs — pill style */}
+      <div className="flex gap-2 mb-5">
         {kids.map((kid) => (
           <button
             key={kid.id}
             onClick={() => setActiveKid(kid.id)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 ${
               activeKid === kid.id
                 ? "text-white shadow-md"
-                : "bg-card text-foreground border border-border/50 hover:bg-muted"
+                : "bg-card text-foreground border border-border/40 hover:bg-muted"
             }`}
             style={activeKid === kid.id ? { backgroundColor: kid.color } : {}}
           >
-            <span className={`w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold ${
+            <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
               activeKid === kid.id ? "bg-white/20 text-white" : "bg-muted text-muted-foreground"
             }`}>
               {kid.avatar}
@@ -143,9 +139,9 @@ export default function Homework() {
 
       {/* Progress bar */}
       {totalAssignments > 0 && (
-        <div className="mb-4 h-1.5 rounded-full bg-border overflow-hidden">
+        <div className="mb-5 h-1.5 rounded-full bg-border/60 overflow-hidden">
           <div
-            className="h-full rounded-full bg-green-500 transition-all duration-500"
+            className="h-full rounded-full bg-sage transition-all duration-500"
             style={{ width: `${(completedCount / totalAssignments) * 100}%` }}
           />
         </div>
@@ -158,7 +154,6 @@ export default function Homework() {
           const key = buildKey(week.weekLabel, activeKid, idx);
           const isDone = completed[key] ?? (assignment.status === "completed");
 
-          // Collect all links for this assignment
           const allLinks: AssignmentLink[] = [
             ...(assignment.link ? [assignment.link] : []),
             ...(assignment.links ?? []),
@@ -167,19 +162,18 @@ export default function Homework() {
           return (
             <div
               key={idx}
-              className={`bg-card rounded-xl p-4 shadow-sm border transition-all duration-200 ${
+              className={`bg-card rounded-2xl p-4 sm:p-5 border transition-all duration-300 ${
                 isDone
-                  ? "border-green-200 dark:border-green-800 opacity-70"
-                  : "border-border/50"
+                  ? "border-sage/30 dark:border-sage/20 opacity-65"
+                  : "border-border/40 hover:shadow-md"
               }`}
             >
               <div className="flex items-start gap-3">
-                {/* Completion toggle button */}
                 <button
                   onClick={() => toggleComplete(activeKid, idx)}
                   aria-label={isDone ? "Mark as incomplete" : "Mark as complete"}
                   className={`mt-0.5 shrink-0 transition-all duration-200 hover:scale-110 active:scale-95 ${
-                    isDone ? "text-green-500" : "text-muted-foreground/40 hover:text-green-400"
+                    isDone ? "text-sage" : "text-muted-foreground/30 hover:text-sage/60"
                   }`}
                 >
                   {isDone ? (
@@ -189,14 +183,14 @@ export default function Homework() {
                   )}
                 </button>
 
-                <div className={`min-w-0 flex-1 transition-all duration-200 ${isDone ? "line-through-title" : ""}`}>
+                <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2 flex-wrap mb-1">
-                    <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-xs font-semibold ${colors.bg} ${colors.text}`}>
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold ${colors.bg} ${colors.text}`}>
                       {assignment.subject}
                     </span>
                     {isDone && (
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-md text-xs font-medium bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400">
-                        ✓ Done
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sage-light dark:bg-sage/15 text-sage">
+                        Done
                       </span>
                     )}
                   </div>
@@ -205,15 +199,14 @@ export default function Homework() {
                   }`}>
                     {assignment.title}
                   </h3>
-                  <p className="text-muted-foreground text-xs mt-1">{assignment.description}</p>
+                  <p className="text-muted-foreground text-xs mt-1 leading-relaxed">{assignment.description}</p>
                   <div className="flex items-center gap-1 mt-2">
                     <Calendar className="w-3 h-3 text-amber" />
                     <span className="text-xs text-amber font-medium">Due {formatDate(assignment.dueDate)}</span>
                   </div>
 
-                  {/* Embedded action links */}
                   {allLinks.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-border/30">
+                    <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-border/25">
                       {allLinks.map((lk, li) => (
                         <LinkButton key={li} link={lk} />
                       ))}
@@ -226,8 +219,8 @@ export default function Homework() {
         })}
 
         {(!currentHomework || currentHomework.assignments.length === 0) && (
-          <div className="bg-card rounded-xl p-8 shadow-sm border border-border/50 text-center">
-            <BookOpen className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
+          <div className="bg-card rounded-2xl p-8 border border-border/40 text-center">
+            <BookOpen className="w-8 h-8 text-muted-foreground/20 mx-auto mb-2" />
             <p className="text-muted-foreground text-sm">No homework assignments this week</p>
           </div>
         )}

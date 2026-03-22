@@ -1,7 +1,6 @@
 /**
- * WeatherForecast — Daily weather cards with highs/lows, conditions, and dressing suggestions.
- * Uses the watercolor weather background as a decorative accent.
- * Dark mode: uses bg-card and dark: variants for all colored backgrounds.
+ * WeatherForecast — Dayhaven aesthetic
+ * Rounded-2xl cards, warm tones, generous whitespace, Fraunces headings.
  */
 import { Sun, CloudSun, Cloud, CloudRain, Thermometer, Shirt } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
@@ -10,25 +9,20 @@ const WEATHER_BG = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSo
 
 function getWeatherIcon(icon: string) {
   switch (icon) {
-    case "sun":
-      return <Sun className="w-7 h-7 text-amber-500" />;
-    case "cloud-sun":
-      return <CloudSun className="w-7 h-7 text-amber-400" />;
-    case "cloud":
-      return <Cloud className="w-7 h-7 text-gray-400" />;
+    case "sun":       return <Sun className="w-7 h-7 text-amber" />;
+    case "cloud-sun": return <CloudSun className="w-7 h-7 text-amber" />;
+    case "cloud":     return <Cloud className="w-7 h-7 text-warm-gray" />;
     case "rain":
-    case "cloud-rain":
-      return <CloudRain className="w-7 h-7 text-blue-400" />;
-    default:
-      return <Sun className="w-7 h-7 text-amber-500" />;
+    case "cloud-rain": return <CloudRain className="w-7 h-7 text-teal" />;
+    default:          return <Sun className="w-7 h-7 text-amber" />;
   }
 }
 
 function getTempColor(temp: number) {
-  if (temp >= 85) return "text-red-500 dark:text-red-400";
-  if (temp >= 80) return "text-orange-500 dark:text-orange-400";
-  if (temp >= 75) return "text-amber-500 dark:text-amber-400";
-  return "text-teal-600 dark:text-teal-400";
+  if (temp >= 85) return "text-coral";
+  if (temp >= 80) return "text-amber";
+  if (temp >= 75) return "text-amber";
+  return "text-teal";
 }
 
 export default function WeatherForecast() {
@@ -37,40 +31,39 @@ export default function WeatherForecast() {
 
   return (
     <section>
-      <div className="flex items-center gap-2 mb-4">
-        <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center">
-          <Thermometer className="w-4 h-4 text-blue-500 dark:text-blue-400" />
+      <div className="flex items-center gap-2.5 mb-5">
+        <div className="w-9 h-9 rounded-2xl bg-teal-light dark:bg-teal/15 flex items-center justify-center">
+          <Thermometer className="w-4 h-4 text-teal" />
         </div>
-        <h2 className="font-display text-xl text-foreground">Weather Forecast</h2>
+        <h2 className="font-display text-xl text-foreground tracking-tight">Weather Forecast</h2>
       </div>
 
       {/* Decorative weather banner */}
-      <div className="relative rounded-2xl overflow-hidden mb-3 h-24 sm:h-28">
+      <div className="relative rounded-2xl overflow-hidden mb-4 h-24 sm:h-28">
         <img
           src={WEATHER_BG}
           alt="Florida sky watercolor"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/70 dark:from-background/80 to-transparent flex items-center px-5">
+        <div className="absolute inset-0 bg-gradient-to-r from-background/75 dark:from-background/85 to-transparent flex items-center px-5">
           <div>
-            <p className="text-sm font-medium text-foreground">Winter Garden, FL</p>
+            <p className="text-sm font-display font-semibold text-foreground">Winter Garden, FL</p>
             <p className="text-xs text-muted-foreground">Week of {week.weekLabel}</p>
           </div>
         </div>
       </div>
 
       {/* Daily forecast cards */}
-      <div className="space-y-2">
+      <div className="space-y-2.5">
         {weather.map((day, idx) => (
           <div
             key={idx}
-            className="bg-card rounded-xl p-3.5 shadow-sm border border-border/50 transition-all hover:shadow-md"
+            className="bg-card rounded-2xl p-3.5 sm:p-4 border border-border/40 transition-all duration-300 hover:shadow-md"
           >
             <div className="flex items-center gap-3">
-              {/* Day & icon */}
               <div className="flex items-center gap-3 min-w-0 flex-1">
                 <div className="w-10 text-center shrink-0">
-                  <p className="text-xs font-semibold text-muted-foreground uppercase">
+                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
                     {day.day.slice(0, 3)}
                   </p>
                 </div>
@@ -84,7 +77,6 @@ export default function WeatherForecast() {
                 </div>
               </div>
 
-              {/* Temps */}
               <div className="text-right shrink-0">
                 <p className={`text-lg font-bold ${getTempColor(day.high)}`}>
                   {day.high}°
