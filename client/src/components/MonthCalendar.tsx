@@ -1,7 +1,8 @@
 /**
- * MonthCalendar — Dayhaven mockup style:
- * Solid cream card for the grid, color-coded event dots,
- * event details in color-blocked cards. No borders, no shadows.
+ * MonthCalendar — Full monthly calendar view.
+ * Consolidates importantDates + homework from ALL weeks into one view.
+ * Past events are dimmed but still visible and tappable.
+ * No archiving — everything stays.
  */
 import { useState, useMemo } from "react";
 import { CaretLeft, CaretRight, ArrowSquareOut, X, CalendarDots } from "@phosphor-icons/react";
@@ -57,10 +58,11 @@ function getSpannedDates(item: CalendarEvent): string[] {
 }
 
 function EventDetailCard({
-  item, kids, onClose,
+  item, kids, isPast, onClose,
 }: {
   item: CalendarEvent;
   kids: Array<{ id: string; name: string; color: string }>;
+  isPast: boolean;
   onClose: () => void;
 }) {
   const cfg = getConfig(item.type);
@@ -70,7 +72,7 @@ function EventDetailCard({
   if (item.links) allLinks.push(...item.links);
 
   return (
-    <div className={`dh-card ${cfg.card} relative`}>
+    <div className={`dh-card ${cfg.card} relative ${isPast ? "opacity-65" : ""}`}>
       <button
         onClick={onClose}
         className="absolute top-3 right-3 w-6 h-6 rounded-full bg-black/10 flex items-center justify-center hover:bg-black/20 transition-colors"
@@ -79,7 +81,7 @@ function EventDetailCard({
         <X className="w-3.5 h-3.5" />
       </button>
 
-      <div className="flex items-center gap-2 mb-1.5">
+      <div className="flex items-center gap-2 mb-1.5 flex-wrap">
         <span className="text-[10px] font-bold uppercase tracking-wider opacity-50">{cfg.label}</span>
         {item.subject && (
           <span className="text-[10px] font-bold uppercase tracking-wider opacity-50">· {item.subject}</span>
@@ -91,6 +93,9 @@ function EventDetailCard({
           >
             {kidObj.name}
           </span>
+        )}
+        {isPast && (
+          <span className="text-[10px] font-bold uppercase tracking-wider opacity-40 italic">Past</span>
         )}
       </div>
 
@@ -125,36 +130,52 @@ function EventDetailCard({
 }
 
 export default function MonthCalendar() {
-  const { week, kids } = useWeek();
+  const { allWeeks, kids } = useWeek();
 
+  // Consolidate ALL events from ALL weeks into one flat array
   const allEvents = useMemo<CalendarEvent[]>(() => {
     const events: CalendarEvent[] = [];
-    for (const item of (week.importantDates ?? [])) {
-      events.push({
-        date: item.date, endDate: (item as any).endDate, title: item.title,
-        description: (item as any).description, type: item.type,
-        kidId: item.kidId, link: (item as any).link,
-      });
-    }
-    for (const kidHw of (week.homework ?? [])) {
-      for (const assignment of kidHw.assignments) {
-        if (!assignment.dueDate) continue;
+    const seen = new Set<string>(); // deduplicate by title+date
+
+    for (const wk of allWeeks) {
+      for (const item of (wk.importantDates ?? [])) {
+        const key = `${item.date}|${item.title}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
         events.push({
-          date: assignment.dueDate, title: assignment.title,
-          description: assignment.description, type: "homework",
-          kidId: kidHw.kidId, subject: assignment.subject,
-          link: (assignment as any).link, links: (assignment as any).links,
+          date: item.date, endDate: (item as any).endDate, title: item.title,
+          description: (item as any).description, type: item.type,
+          kidId: item.kidId, link: (item as any).link,
         });
+      }
+      for (const kidHw of (wk.homework ?? [])) {
+        for (const assignment of kidHw.assignments) {
+          if (!assignment.dueDate) continue;
+          const key = `${assignment.dueDate}|${assignment.title}|${kidHw.kidId}`;
+          if (seen.has(key)) continue;
+          seen.add(key);
+          events.push({
+            date: assignment.dueDate, title: assignment.title,
+            description: assignment.description, type: "homework",
+            kidId: kidHw.kidId, subject: assignment.subject,
+            link: (assignment as any).link, links: (assignment as any).links,
+          });
+        }
       }
     }
     return events;
-  }, [week]);
+  }, [allWeeks]);
 
-  const firstEventDate = allEvents[0]?.date ? toDateObj(allEvents[0].date) : new Date();
-  const [viewYear, setViewYear] = useState(firstEventDate.getFullYear());
-  const [viewMonth, setViewMonth] = useState(firstEventDate.getMonth());
+  // Default to the month of the most recent event, or current month
+  const now = new Date();
+  const defaultMonth = allEvents.length > 0
+    ? toDateObj(allEvents.sort((a, b) => b.date.localeCompare(a.date))[0].date)
+    : now;
+  const [viewYear, setViewYear] = useState(defaultMonth.getFullYear());
+  const [viewMonth, setViewMonth] = useState(defaultMonth.getMonth());
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
 
+  // Build event map: date → events[]
   const eventMap = useMemo(() => {
     const map: Record<string, CalendarEvent[]> = {};
     for (const item of allEvents) {
@@ -171,6 +192,7 @@ export default function MonthCalendar() {
   const totalCells = Math.ceil((firstDayOfWeek + daysInMonth) / 7) * 7;
 
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
   const todayISO = isoDate(today.getFullYear(), today.getMonth(), today.getDate());
 
   function prevMonth() {
@@ -195,6 +217,7 @@ export default function MonthCalendar() {
 
   const isViewingCurrentMonth = viewYear === today.getFullYear() && viewMonth === today.getMonth();
   const selectedEvents = selectedDate ? (eventMap[selectedDate] ?? []) : [];
+  const selectedIsPast = selectedDate ? toDateObj(selectedDate) < today : false;
 
   return (
     <section className="space-y-4">
@@ -250,6 +273,7 @@ export default function MonthCalendar() {
             const isToday = iso === todayISO;
             const isSelected = iso === selectedDate;
             const hasEvents = events.length > 0;
+            const isPastDate = iso ? toDateObj(iso) < today : false;
             const uniqueTypes = Array.from(new Set(events.map(e => e.type))).slice(0, 3);
 
             return (
@@ -264,6 +288,7 @@ export default function MonthCalendar() {
                   "relative flex flex-col items-center justify-start pt-1.5 pb-1.5 min-h-[52px] sm:min-h-[60px]",
                   "transition-all duration-200",
                   !isCurrentMonth ? "opacity-0 pointer-events-none" : "",
+                  isPastDate && !isSelected && !isToday ? "opacity-50" : "",
                   hasEvents && !isSelected ? "hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer" : "",
                   isSelected ? "bg-black/8 dark:bg-white/8" : "",
                   !hasEvents && isCurrentMonth ? "cursor-default" : "",
@@ -277,7 +302,6 @@ export default function MonthCalendar() {
                     "w-7 h-7 flex items-center justify-center rounded-full text-sm font-medium transition-all",
                     isToday ? "bg-dh-coral text-white font-bold" : "",
                     isSelected && !isToday ? "bg-dh-charcoal text-white font-bold" : "",
-                    !isToday && !isSelected && isCurrentMonth ? "" : "",
                     !isCurrentMonth ? "opacity-20" : "",
                   ].join(" ")}
                 >
@@ -312,6 +336,10 @@ export default function MonthCalendar() {
           <span className="w-5 h-5 rounded-full bg-dh-coral flex items-center justify-center text-white text-[9px] font-bold shrink-0">T</span>
           <span className="text-xs text-muted-foreground">Today</span>
         </div>
+        <div className="flex items-center gap-1.5">
+          <span className="w-2.5 h-2.5 rounded-full shrink-0 bg-muted-foreground/30" />
+          <span className="text-xs text-muted-foreground">Past (dimmed)</span>
+        </div>
       </div>
 
       {/* Selected date event details */}
@@ -329,12 +357,16 @@ export default function MonthCalendar() {
               <p className="text-sm font-display font-semibold text-foreground">
                 {formatFull(selectedDate)}
               </p>
+              {selectedIsPast && (
+                <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground italic">Past</span>
+              )}
             </div>
             {selectedEvents.map((ev, idx) => (
               <EventDetailCard
                 key={idx}
                 item={ev}
                 kids={kids}
+                isPast={selectedIsPast}
                 onClose={() => setSelectedDate(null)}
               />
             ))}
@@ -345,7 +377,7 @@ export default function MonthCalendar() {
       {allEvents.length === 0 && (
         <div className="dh-card dh-card-cream text-center py-8">
           <CalendarDots size={32} weight="duotone" className="opacity-20 mx-auto mb-2" />
-          <p className="text-sm opacity-60">No dates or homework this week</p>
+          <p className="text-sm opacity-60">No dates or homework yet</p>
         </div>
       )}
     </section>

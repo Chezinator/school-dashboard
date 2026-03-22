@@ -18,10 +18,23 @@ function formatShort(dateStr: string) {
 }
 
 export default function UpcomingDatesCard({ delay = 0, onNavigate }: Props) {
-  const { week } = useWeek();
+  const { allWeeks } = useWeek();
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  const upcoming = [...week.importantDates]
+
+  // Consolidate importantDates from ALL weeks, deduplicate
+  const seen = new Set<string>();
+  const allDates: Array<{ date: string; title: string }> = [];
+  for (const wk of allWeeks) {
+    for (const item of wk.importantDates ?? []) {
+      const key = `${item.date}|${item.title}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      allDates.push({ date: item.date, title: item.title });
+    }
+  }
+
+  const upcoming = allDates
     .filter((d) => new Date(d.date + "T00:00:00") >= today)
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
     .slice(0, 3);

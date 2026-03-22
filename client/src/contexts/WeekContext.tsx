@@ -14,6 +14,8 @@ interface WeekContextValue {
   meta: typeof reportData.meta;
   /** Static kids array */
   kids: typeof reportData.kids;
+  /** All weeks (for consolidated calendar view) */
+  allWeeks: WeekData[];
   /** The currently selected week's data */
   week: WeekData;
   /** Index of the current week in the weeks array (0 = most recent) */
@@ -61,6 +63,7 @@ export function WeekProvider({ children }: { children: ReactNode }) {
     return {
       meta: reportData.meta,
       kids: reportData.kids,
+      allWeeks: weeks,
       week,
       weekIndex,
       totalWeeks: weeks.length,
