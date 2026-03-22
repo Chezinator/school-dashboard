@@ -29,17 +29,15 @@ export default function TodayWeatherCard({ delay = 0, onNavigate }: Props) {
   const weather = week.weather;
 
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
   const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const todayIdx = today.getDay();
+  const todayDayName = dayNames[today.getDay()];
 
-  // Get next 3 days of weather
-  const upcomingWeather: typeof weather = [];
-  for (let i = 0; i < 7 && upcomingWeather.length < 3; i++) {
-    const checkIdx = (todayIdx + i) % 7;
-    const dayName = dayNames[checkIdx];
-    const found = weather.find((w) => w.day === dayName);
-    if (found) upcomingWeather.push(found);
-  }
+  // Sort by date, show today + next 2 days
+  const upcomingWeather = [...weather]
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .filter((w) => new Date(w.date + "T00:00:00") >= today)
+    .slice(0, 3);
 
   if (!upcomingWeather.length) return null;
 
@@ -63,7 +61,7 @@ export default function TodayWeatherCard({ delay = 0, onNavigate }: Props) {
 
       <div className="space-y-2">
         {upcomingWeather.map((w, i) => {
-          const isToday = w.day === dayNames[todayIdx];
+          const isToday = w.day === todayDayName;
           return (
             <div key={w.day} className="flex items-center gap-2">
               <span className="text-[10px] font-bold uppercase tracking-wider opacity-50 w-8 shrink-0">

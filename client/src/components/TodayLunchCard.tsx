@@ -17,17 +17,17 @@ export default function TodayLunchCard({ delay = 0, onNavigate }: Props) {
   const menu = week.lunchMenu;
 
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
   const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  const todayIdx = today.getDay();
+  const todayDayName = dayNames[today.getDay()];
 
-  // Get next 3 school days of menu (skip weekends)
-  const upcomingDays: typeof menu = [];
-  for (let i = 0; i < 7 && upcomingDays.length < 3; i++) {
-    const checkIdx = (todayIdx + i) % 7;
-    const dayName = dayNames[checkIdx];
-    const found = menu.find((m) => m.day === dayName);
-    if (found) upcomingDays.push(found);
-  }
+  // Sort menu by actual date, then show today + next 2 upcoming school days
+  const sortedMenu = [...menu].sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  );
+  const upcomingDays = sortedMenu
+    .filter((m) => new Date(m.date + "T00:00:00") >= today)
+    .slice(0, 3);
 
   if (!upcomingDays.length) return null;
 
@@ -49,7 +49,7 @@ export default function TodayLunchCard({ delay = 0, onNavigate }: Props) {
 
       <div className="space-y-2.5">
         {upcomingDays.map((day, i) => {
-          const isToday = day.day === dayNames[todayIdx];
+          const isToday = day.day === todayDayName;
           return (
             <div key={day.day}>
               <p className="text-[10px] font-bold uppercase tracking-wider opacity-50 mb-0.5">

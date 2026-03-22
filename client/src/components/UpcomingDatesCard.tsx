@@ -19,8 +19,12 @@ function formatShort(dateStr: string) {
 
 export default function UpcomingDatesCard({ delay = 0, onNavigate }: Props) {
   const { week } = useWeek();
-  const dates = week.importantDates;
-  const upcoming = dates.slice(0, 3);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const upcoming = [...week.importantDates]
+    .filter((d) => new Date(d.date + "T00:00:00") >= today)
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .slice(0, 3);
 
   if (!upcoming.length) return null;
 

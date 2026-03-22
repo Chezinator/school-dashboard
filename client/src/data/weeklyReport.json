@@ -47,6 +47,15 @@
         },
         {
           "id": 2,
+          "title": "Kaia — Word Study Quiz Friday",
+          "description": "Potential Word Study Quiz on Friday on Soft 'c' /s/ (_ce pattern). Practice words: face, race, place, space, grace, trace. Review nightly.",
+          "dueDate": "2026-04-03",
+          "urgent": true,
+          "kidId": "kaia",
+          "category": "test-prep"
+        },
+        {
+          "id": 3,
           "title": "Teacher Appreciation Week — Daily Themes",
           "description": "Show appreciation all week! Mon: High Fives, Tue: Letters/Notes, Wed: Dress Like Teacher/Jokes, Thu: Treats (fave snacks), Fri: Gifts. Ms. Cuccinello loves tulips, chocolate chip cookies, and Diet Coke.",
           "dueDate": "2026-04-03",
@@ -55,13 +64,17 @@
           "category": "event",
           "links": [
             {
+              "url": "https://m.signupgenius.com/#!/showSignUp/30E0E4EACA62FA4F94-63043178-mrs",
+              "label": "Sign Up"
+            },
+            {
               "url": "https://lakewhitneyes.ocps.net/",
               "label": "School Website"
             }
           ]
         },
         {
-          "id": 3,
+          "id": 4,
           "title": "Kaia — Green Meadows Field Trip April 17",
           "description": "2nd Grade field trip to Green Meadows Petting Farm on April 17. Mark your calendar and watch for permission slip details.",
           "dueDate": "2026-04-17",
@@ -70,10 +83,10 @@
           "category": "event"
         },
         {
-          "id": 4,
+          "id": 5,
           "title": "Check Canvas & Skyward for Missing Work",
-          "description": "4th grading period has begun. Check Canvas and Skyward for any incomplete assignments from the previous grading period.",
-          "dueDate": "2026-03-30",
+          "description": "New 4th grading period has begun. Check Canvas and Skyward for any incomplete assignments from the previous grading period.",
+          "dueDate": "2026-04-03",
           "urgent": false,
           "kidId": "bronson",
           "category": "reminder",
@@ -93,29 +106,71 @@
         {
           "date": "2026-03-31",
           "title": "Bronson — BEST Writing Assessment",
-          "description": "4th Grade State Test, 120-min computer-based. No electronics. Good sleep and healthy breakfast essential.",
+          "description": "4th Grade Florida State Test. 120-minute computer-based test. No electronic devices allowed. Ensure good sleep and healthy breakfast. Do NOT schedule appointments.",
           "type": "test",
           "kidId": "bronson"
         },
         {
           "date": "2026-03-30",
-          "endDate": "2026-04-03",
-          "title": "Teacher Appreciation Week",
-          "description": "Themed days: Mon-High Fives, Tue-Letters, Wed-Dress Like Teacher/Jokes, Thu-Treats, Fri-Gifts",
+          "title": "Teacher Appreciation — High Fives Day",
+          "description": "Show appreciation by giving teachers and staff a HIGH FIVE! All week: Mon-High Fives, Tue-Letters, Wed-Dress Like Teacher/Jokes, Thu-Treats, Fri-Gifts.",
           "type": "event",
           "kidId": null
         },
         {
+          "date": "2026-03-31",
+          "title": "Teacher Appreciation — Letters Day",
+          "description": "Write kind notes or draw pictures for your teachers today.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-01",
+          "title": "Teacher Appreciation — Dress Like Teacher / Jokes",
+          "description": "Dress like your teacher or tell them a joke!",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-02",
+          "title": "Teacher Appreciation — Treats Day",
+          "description": "Bring your teacher or a staff member their favorite snack or drink. Ms. Cuccinello loves: chocolate chip cookies, chips & salsa, Diet Coke, iced caramel latte with coconut milk.",
+          "type": "event",
+          "kidId": null,
+          "link": {
+            "url": "https://m.signupgenius.com/#!/showSignUp/30E0E4EACA62FA4F94-63043178-mrs",
+            "label": "Sign Up"
+          }
+        },
+        {
+          "date": "2026-04-03",
+          "title": "Teacher Appreciation — Gifts Day",
+          "description": "Bring your teacher a gift card or item off their Amazon wishlist. Ms. Cuccinello's favorites: tulips, chocolate chip cookies, chips & salsa.",
+          "type": "event",
+          "kidId": null,
+          "link": {
+            "url": "https://m.signupgenius.com/#!/showSignUp/30E0E4EACA62FA4F94-63043178-mrs",
+            "label": "Sign Up"
+          }
+        },
+        {
+          "date": "2026-04-03",
+          "title": "Kaia — Word Study Quiz (Soft 'c' /s/)",
+          "description": "Potential Word Study Quiz on Soft 'c' /s/ (_ce pattern). Practice words: face, race, place, space, grace, trace.",
+          "type": "test",
+          "kidId": "kaia"
+        },
+        {
           "date": "2026-04-17",
           "title": "Kaia — Green Meadows Field Trip",
-          "description": "2nd Grade field trip to Green Meadows Petting Farm",
+          "description": "2nd Grade field trip to Green Meadows Petting Farm. Watch for permission slip details.",
           "type": "event",
           "kidId": "kaia"
         },
         {
           "date": "2026-04-18",
           "title": "DEF Silent Auction & Gala",
-          "description": "15th Annual Gala at West Orange Country Club, 6-10 PM. Mardi Gras Masquerade theme. Tickets $50/person.",
+          "description": "15th Annual Gala at West Orange Country Club, 6–10 PM. Mardi Gras Masquerade theme. Tickets $50/person.",
           "type": "event",
           "kidId": null,
           "link": {
@@ -281,17 +336,40 @@
             {
               "subject": "Writing",
               "title": "BEST Writing Practice",
-              "description": "Practice persuasive writing in preparation for Tuesday's state assessment",
+              "description": "Practice persuasive writing in preparation for Tuesday's state assessment. Review your thesis, supporting details, and conclusion structure.",
               "dueDate": "2026-03-31",
+              "status": "pending"
+            },
+            {
+              "subject": "Reading",
+              "title": "Nightly Reading Log — 20 min/night",
+              "description": "Read independently for 20 minutes each night and have a parent sign the reading log.",
+              "dueDate": "2026-04-03",
               "status": "pending"
             },
             {
               "subject": "Math",
               "title": "Math Review — Canvas",
-              "description": "Complete any assigned review work on Canvas for the new grading period",
+              "description": "Complete any assigned review work on Canvas for the new 4th grading period. Check for any missing or incomplete assignments.",
               "dueDate": "2026-04-03",
               "status": "pending",
-              "link": { "url": "https://ocps.instructure.com/", "label": "Canvas" }
+              "link": {
+                "url": "https://ocps.instructure.com/",
+                "label": "Canvas"
+              }
+            },
+            {
+              "subject": "Math",
+              "title": "Blooket — Math Practice",
+              "description": "Complete the assigned Blooket math practice game for the week.",
+              "dueDate": "2026-04-03",
+              "status": "pending",
+              "links": [
+                {
+                  "url": "https://play.blooket.com/play?hwId=69adadded03413c503a4d263",
+                  "label": "Play Blooket"
+                }
+              ]
             }
           ]
         },
@@ -300,17 +378,37 @@
           "assignments": [
             {
               "subject": "Reading",
-              "title": "Reading Log — 15 min/night",
-              "description": "Read independently and have a parent sign the log",
+              "title": "Nightly Reading Log — 15 min/night",
+              "description": "Read independently for 15 minutes each night and have a parent sign the reading log.",
               "dueDate": "2026-04-03",
               "status": "pending"
             },
             {
               "subject": "Phonics",
-              "title": "Word Study Practice",
-              "description": "Continue practicing Soft 'c' /s/ words (_ce pattern)",
+              "title": "Word Study — Soft 'c' /s/ Pattern (_ce)",
+              "description": "Practice Soft 'c' /s/ words using the _ce pattern (e.g., face, race, place, space). Quiz may be on Friday.",
               "dueDate": "2026-04-03",
               "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Money Madness — Open Book Review",
+              "description": "Review the Money Madness book for any follow-up comprehension or math questions. Have the book available for reference.",
+              "dueDate": "2026-04-03",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Blooket — Science Review",
+              "description": "Complete the assigned Blooket science review game.",
+              "dueDate": "2026-04-03",
+              "status": "pending",
+              "links": [
+                {
+                  "url": "https://play.blooket.com/play?hwId=69adaefa142ea32f5e141bb0",
+                  "label": "Play Blooket"
+                }
+              ]
             }
           ]
         }
