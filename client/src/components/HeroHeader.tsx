@@ -1,70 +1,86 @@
 /**
- * HeroHeader — Dayhaven aesthetic
- * Family photo hero with warm overlay, Fraunces display type, editorial feel.
- * Photo anchored right so all four faces are visible.
+ * HeroHeader — Dayhaven app-style greeting header.
+ * Compact, personalized "Good morning" with family photo circle and dark mode toggle.
+ * The family photo is shown as a circular avatar, not a full-width banner.
  */
-import { MapPin } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
+import { useTheme } from "@/contexts/ThemeContext";
+import { Moon, Sun } from "lucide-react";
+import { motion } from "framer-motion";
 
 const FAMILY_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/family-photo_c81abf91.jpg";
-const SCHOOLBASE_ICON = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/schoolbase-icon-v2-7LxVP9zbedTFhsiPyARsmC.png";
+
+function getGreeting(): string {
+  const hour = new Date().getHours();
+  if (hour < 12) return "Good morning";
+  if (hour < 17) return "Good afternoon";
+  return "Good evening";
+}
+
+function getEmoji(): string {
+  const hour = new Date().getHours();
+  if (hour < 12) return "☀️";
+  if (hour < 17) return "🌤️";
+  return "🌙";
+}
 
 export default function HeroHeader() {
   const { meta, week } = useWeek();
+  const { theme, toggleTheme } = useTheme();
+  const greeting = getGreeting();
+  const emoji = getEmoji();
 
   return (
-    <header className="relative overflow-hidden rounded-b-[2rem]" style={{ minHeight: "280px" }}>
-      {/* Family photo — anchored right */}
-      <div className="absolute inset-0">
-        <img
-          src={FAMILY_PHOTO}
-          alt="The Stanfield family at Universal Studios"
-          className="w-full h-full object-cover"
-          style={{ objectPosition: "70% center" }}
-        />
-        {/* Warm dark overlay — heavier on left for text */}
-        <div className="absolute inset-0" style={{
-          background: "linear-gradient(to right, rgba(30,25,20,0.85) 0%, rgba(30,25,20,0.65) 35%, rgba(30,25,20,0.2) 65%, rgba(30,25,20,0.05) 100%)"
-        }} />
-        <div className="absolute inset-0" style={{
-          background: "linear-gradient(to bottom, rgba(30,25,20,0.3) 0%, transparent 40%, rgba(30,25,20,0.25) 100%)"
-        }} />
-      </div>
-
-      {/* Content — left-aligned */}
-      <div className="relative z-10 px-5 pt-10 pb-8 sm:px-8 sm:pt-14 sm:pb-10">
-        <div className="max-w-[55%] sm:max-w-[50%]">
-          {/* App icon + name */}
-          <div className="flex items-center gap-3 mb-3">
-            <img
-              src={SCHOOLBASE_ICON}
-              alt="SchoolBase"
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl shadow-lg shrink-0"
-            />
-            <div>
-              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white leading-none drop-shadow-lg tracking-tight">
-                SchoolBase
-              </h1>
-              <p className="text-amber-200/90 text-sm font-medium tracking-wide drop-shadow-md mt-0.5">
-                {meta.familyName} Family
-              </p>
+    <header className="px-5 pt-12 pb-2 sm:px-6 sm:pt-14">
+      <div className="flex items-start justify-between gap-3">
+        {/* Left — greeting + family name */}
+        <div className="flex items-center gap-3.5">
+          {/* Family photo avatar */}
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.1 }}
+            className="shrink-0"
+          >
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden shadow-lg border-2 border-white dark:border-border">
+              <img
+                src={FAMILY_PHOTO}
+                alt="Stanfield family"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: "70% 30%" }}
+              />
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-white/75 text-sm drop-shadow-md">
-            <span className="flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 shrink-0" />
-              {meta.schoolName}
-            </span>
-            <span className="hidden sm:inline text-white/30">|</span>
-            <span className="hidden sm:inline">{meta.schoolAddress}</span>
-          </div>
-
-          <div className="mt-4 inline-flex items-center gap-2 bg-white/15 backdrop-blur-md rounded-full px-4 py-2 text-white text-sm border border-white/20">
-            <span className="w-2 h-2 rounded-full bg-amber-300 animate-pulse shrink-0" />
-            Week of {week.weekLabel}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ type: "spring", stiffness: 200, damping: 20, delay: 0.2 }}
+          >
+            <div className="flex items-center gap-1.5">
+              <span className="text-base">{emoji}</span>
+              <p className="text-sm text-muted-foreground font-medium">{greeting}</p>
+            </div>
+            <h1 className="font-display text-2xl sm:text-3xl text-foreground leading-tight tracking-tight -mt-0.5">
+              {meta.familyName} Family
+            </h1>
+            <p className="text-xs text-muted-foreground mt-0.5">
+              {meta.schoolName} · Week of {week.weekLabel}
+            </p>
+          </motion.div>
         </div>
+
+        {/* Right — dark mode toggle */}
+        <motion.button
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.3 }}
+          onClick={toggleTheme}
+          aria-label="Toggle dark mode"
+          className="mt-1 w-10 h-10 rounded-2xl bg-card border border-border/40 flex items-center justify-center text-foreground hover:bg-muted transition-all duration-200 active:scale-90 shrink-0"
+        >
+          {theme === "dark" ? <Sun className="w-4.5 h-4.5" /> : <Moon className="w-4.5 h-4.5" />}
+        </motion.button>
       </div>
     </header>
   );
