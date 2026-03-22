@@ -1,9 +1,10 @@
 /**
- * DolphinDigest — Dayhaven app aesthetic
- * Teal accent, Fraunces headings, pill CTA buttons, motion hover.
+ * DolphinDigest — Dayhaven mockup style:
+ * Solid teal card for the digest, highlights listed inside.
+ * No borders, no shadows — solid fills only.
  */
 import { useWeek } from "@/contexts/WeekContext";
-import { ExternalLink, Newspaper, ChevronDown, ChevronUp } from "lucide-react";
+import { ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -26,78 +27,57 @@ export default function DolphinDigest() {
   const linkUrl = digest.gmailUrl;
 
   return (
-    <section className="space-y-4">
-      <div className="flex items-center gap-2.5">
-        <div className="w-9 h-9 rounded-2xl bg-teal-light dark:bg-teal/15 flex items-center justify-center">
-          <Newspaper className="w-4 h-4 text-teal" />
-        </div>
-        <div>
-          <h2 className="font-display text-xl text-foreground tracking-tight">Dolphin Digest</h2>
-          <p className="text-xs text-muted-foreground">Principal's Weekly Newsletter</p>
-        </div>
-      </div>
+    <section>
+      <h2 className="font-display text-xl text-foreground tracking-tight mb-4">Dolphin Digest</h2>
 
       <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-20px" }}
+        transition={{ type: "spring", stiffness: 260, damping: 24 }}
         whileHover={{ y: -2 }}
-        transition={{ type: "spring", stiffness: 400, damping: 25 }}
-        className="bg-card rounded-2xl border border-border/40 overflow-hidden"
+        className="dh-card dh-card-teal"
       >
-        <div className="h-1 w-full bg-gradient-to-r from-teal to-teal/30" />
-
-        <div className="px-4 pt-4 pb-3 border-b border-border/20">
-          <div className="flex items-start justify-between gap-3">
-            <div>
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-lg">🐬</span>
-                <h3 className="font-display font-semibold text-foreground text-sm">Lake Whitney Dolphin Digest</h3>
-              </div>
-              <p className="text-xs text-muted-foreground">{digest.weekLabel}</p>
-              <p className="text-xs text-muted-foreground">Posted {digest.postedDate} · {digest.postedBy}</p>
-            </div>
-            <a
-              href={linkUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-teal-light dark:bg-teal/15 text-teal text-xs font-semibold hover:opacity-80 transition-opacity border border-teal/15"
-            >
-              <ExternalLink className="w-3 h-3" />
-              Full Digest
-            </a>
-          </div>
+        <div className="flex items-center gap-2 mb-1">
+          <span className="text-lg">🐬</span>
+          <h3 className="font-display text-base font-bold">Lake Whitney Dolphin Digest</h3>
         </div>
+        <p className="text-xs opacity-60 mb-4">{digest.weekLabel} · {digest.postedBy}</p>
 
-        <div className="divide-y divide-border/20">
+        <div className="space-y-3 mb-4">
           {visibleHighlights.map((highlight, i) => (
-            <div key={i} className="px-4 py-3.5 flex gap-3 items-start">
+            <div key={i} className="flex gap-2.5 items-start">
               <span className="text-base mt-0.5 shrink-0">{highlight.icon}</span>
               <div className="min-w-0">
-                <p className="text-sm font-medium text-foreground leading-snug mb-0.5">{highlight.title}</p>
-                <p className="text-xs text-muted-foreground leading-relaxed">{highlight.body}</p>
+                <p className="text-sm font-semibold leading-snug mb-0.5">{highlight.title}</p>
+                <p className="text-xs opacity-75 leading-relaxed">{highlight.body}</p>
               </div>
             </div>
           ))}
         </div>
 
         {digest.highlights.length > 3 && (
-          <motion.button
+          <button
             onClick={() => setExpanded(!expanded)}
-            whileTap={{ scale: 0.97 }}
-            className="w-full flex items-center justify-center gap-1.5 py-2.5 text-xs font-semibold text-muted-foreground hover:text-foreground hover:bg-muted/30 transition-colors border-t border-border/20"
+            className="flex items-center gap-1.5 text-xs font-semibold opacity-60 hover:opacity-100 transition-opacity mb-4"
           >
             {expanded ? (
               <><ChevronUp className="w-3.5 h-3.5" /> Show Less</>
             ) : (
-              <><ChevronDown className="w-3.5 h-3.5" /> {digest.highlights.length - 3} More Highlights</>
+              <><ChevronDown className="w-3.5 h-3.5" /> {digest.highlights.length - 3} More</>
             )}
-          </motion.button>
+          </button>
         )}
 
-        <div className="px-4 py-3.5 bg-muted/20 border-t border-border/20">
-          <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="pill-cta w-full">
-            <ExternalLink className="w-3.5 h-3.5" />
-            {linkLabel}
-          </a>
-        </div>
+        <a
+          href={linkUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-white/20 hover:bg-white/30 transition-colors"
+        >
+          <ExternalLink className="w-3 h-3" />
+          {linkLabel}
+        </a>
       </motion.div>
     </section>
   );

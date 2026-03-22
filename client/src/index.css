@@ -41,23 +41,32 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* ── Dayhaven palette ── */
-  /* Soft coral */
-  --color-coral: oklch(0.72 0.14 22);
+  /* ── Dayhaven Color-Blocked Palette ── */
+  /* These are the SOLID card fill colors from the mockups */
+  --color-dh-sage: oklch(0.82 0.06 148);         /* Sage green card fill */
+  --color-dh-sage-text: oklch(0.25 0.03 148);     /* Dark text on sage */
+  --color-dh-coral: oklch(0.76 0.1 30);           /* Coral/salmon card fill */
+  --color-dh-coral-text: oklch(0.25 0.03 30);     /* Dark text on coral */
+  --color-dh-amber: oklch(0.82 0.08 85);          /* Muted amber/gold card fill */
+  --color-dh-amber-text: oklch(0.25 0.03 85);     /* Dark text on amber */
+  --color-dh-teal: oklch(0.42 0.06 175);          /* Dark teal card fill */
+  --color-dh-teal-text: oklch(0.95 0.01 80);      /* Light text on dark teal */
+  --color-dh-pink: oklch(0.88 0.05 15);           /* Light pink card fill */
+  --color-dh-pink-text: oklch(0.25 0.03 15);      /* Dark text on pink */
+  --color-dh-cream: oklch(0.92 0.02 85);          /* Lighter cream card fill */
+  --color-dh-charcoal: oklch(0.22 0.01 260);      /* Dark charcoal for buttons/text */
+
+  /* Legacy compat */
+  --color-coral: oklch(0.76 0.1 30);
   --color-coral-light: oklch(0.94 0.03 22);
-  /* Muted amber / warm gold */
-  --color-amber: oklch(0.78 0.12 75);
+  --color-amber: oklch(0.82 0.08 85);
   --color-amber-light: oklch(0.95 0.03 75);
-  /* Sage green */
-  --color-sage: oklch(0.68 0.08 155);
+  --color-sage: oklch(0.82 0.06 148);
   --color-sage-light: oklch(0.94 0.02 155);
-  /* Teal */
   --color-teal: oklch(0.62 0.1 190);
   --color-teal-light: oklch(0.94 0.025 190);
-  /* Warm neutrals */
   --color-warm-white: oklch(0.985 0.004 80);
   --color-warm-gray: oklch(0.55 0.01 60);
-  /* Dark charcoal for pill CTAs */
   --color-charcoal: oklch(0.22 0.01 260);
 
   --font-display: 'Fraunces', Georgia, serif;
@@ -65,8 +74,8 @@
 }
 
 :root {
-  --radius: 0.875rem;
-  /* Warm cream base — #FBF8F3 range */
+  --radius: 1.25rem;
+  /* Warm cream base — #FBF8F3 */
   --background: oklch(0.98 0.006 80);
   --foreground: oklch(0.22 0.015 50);
   --card: oklch(1 0 0);
@@ -188,7 +197,7 @@
     font-optical-sizing: auto;
   }
 
-  /* ── Dayhaven pill CTA ── */
+  /* ── Dayhaven pill CTA — dark charcoal rounded pill ── */
   .pill-cta {
     @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200;
     background-color: oklch(0.22 0.01 260);
@@ -203,18 +212,59 @@
     color: oklch(0.13 0.008 260);
   }
 
-  /* ── Color-blocked card accents ── */
-  .card-sage {
-    border-left: 4px solid oklch(0.68 0.08 155);
+  /* ── Color-blocked card styles (solid fills, no borders, no shadows) ── */
+  .dh-card {
+    @apply rounded-3xl p-5 sm:p-6;
+    border: none;
+    box-shadow: none;
   }
-  .card-coral {
-    border-left: 4px solid oklch(0.72 0.14 22);
+  .dh-card-sage {
+    background-color: oklch(0.82 0.06 148);
+    color: oklch(0.25 0.03 148);
   }
-  .card-amber {
-    border-left: 4px solid oklch(0.78 0.12 75);
+  .dark .dh-card-sage {
+    background-color: oklch(0.32 0.04 148);
+    color: oklch(0.92 0.02 148);
   }
-  .card-teal {
-    border-left: 4px solid oklch(0.62 0.1 190);
+  .dh-card-coral {
+    background-color: oklch(0.76 0.1 30);
+    color: oklch(0.25 0.03 30);
+  }
+  .dark .dh-card-coral {
+    background-color: oklch(0.35 0.06 30);
+    color: oklch(0.92 0.02 30);
+  }
+  .dh-card-amber {
+    background-color: oklch(0.82 0.08 85);
+    color: oklch(0.25 0.03 85);
+  }
+  .dark .dh-card-amber {
+    background-color: oklch(0.35 0.05 85);
+    color: oklch(0.92 0.02 85);
+  }
+  .dh-card-teal {
+    background-color: oklch(0.42 0.06 175);
+    color: oklch(0.95 0.01 80);
+  }
+  .dark .dh-card-teal {
+    background-color: oklch(0.28 0.04 175);
+    color: oklch(0.92 0.02 175);
+  }
+  .dh-card-pink {
+    background-color: oklch(0.88 0.05 15);
+    color: oklch(0.25 0.03 15);
+  }
+  .dark .dh-card-pink {
+    background-color: oklch(0.32 0.04 15);
+    color: oklch(0.92 0.02 15);
+  }
+  .dh-card-cream {
+    background-color: oklch(0.94 0.015 85);
+    color: oklch(0.25 0.03 85);
+  }
+  .dark .dh-card-cream {
+    background-color: oklch(0.22 0.008 260);
+    color: oklch(0.92 0.005 80);
   }
 
   /* Urgent pulse */
@@ -224,15 +274,5 @@
   }
   .urgent-pulse {
     animation: urgentPulse 2s ease-in-out infinite;
-  }
-
-  /* ── Spring entrance animation ── */
-  @keyframes springUp {
-    0% { opacity: 0; transform: translateY(16px); }
-    60% { transform: translateY(-3px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  .spring-up {
-    animation: springUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   }
 }

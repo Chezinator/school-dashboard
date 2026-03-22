@@ -1,14 +1,14 @@
 /**
- * Home — SchoolBase Dashboard (Dayhaven App Experience)
+ * Home — Dayhaven App Dashboard
  * 
- * App-like UX with:
- * - Personalized greeting home screen with smart info cards
+ * Matches the landing page mockups exactly:
+ * - Large serif greeting "Good morning, Stanfield"
+ * - 2-column color-blocked cards (schedule + lunch)
+ * - Weather card below
+ * - Action items as color-blocked cards
+ * - 4-icon bottom nav (home, calendar, mail, profile)
  * - Pull-to-refresh on mobile
- * - Framer Motion whileInView entrance animations
- * - Spring tab transitions
- * - Bottom nav with active indicator
- * 
- * 5 tabs: Home | Dates | School | Homework | Links
+ * - Spring entrance animations
  */
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -27,15 +27,16 @@ import MonthCalendar from "@/components/MonthCalendar";
 import PullToRefresh from "@/components/PullToRefresh";
 import TodayLunchCard from "@/components/TodayLunchCard";
 import TodayWeatherCard from "@/components/TodayWeatherCard";
+import TodayScheduleCard from "@/components/TodayScheduleCard";
 import UpcomingDatesCard from "@/components/UpcomingDatesCard";
 import HomeworkSummaryCard from "@/components/HomeworkSummaryCard";
 import QuickToolsRow from "@/components/QuickToolsRow";
-import AnimatedCard, { AnimatedSection } from "@/components/AnimatedCard";
 import { WeekProvider, useWeek } from "@/contexts/WeekContext";
 import {
   Home as HomeIcon,
   CalendarDays,
-  GraduationCap,
+  Mail,
+  User,
   BookOpen,
   Link2,
   RefreshCw,
@@ -44,20 +45,20 @@ import {
   Calendar,
 } from "lucide-react";
 
+/* 4 tabs matching the mockup bottom nav: Home, Dates, Comms, More */
 const TABS = [
-  { id: "home",     label: "Home",    icon: HomeIcon },
-  { id: "dates",    label: "Dates",   icon: CalendarDays },
-  { id: "school",   label: "School",  icon: GraduationCap },
-  { id: "homework", label: "Work",    icon: BookOpen },
-  { id: "links",    label: "Links",   icon: Link2 },
+  { id: "home",   icon: HomeIcon },
+  { id: "dates",  icon: CalendarDays },
+  { id: "comms",  icon: Mail },
+  { id: "more",   icon: User },
 ] as const;
 
 type TabId = typeof TABS[number]["id"];
 
 const tabVariants = {
-  enter: (dir: number) => ({ opacity: 0, x: dir > 0 ? 24 : -24, scale: 0.98 }),
-  center: { opacity: 1, x: 0, scale: 1 },
-  exit: (dir: number) => ({ opacity: 0, x: dir > 0 ? -24 : 24, scale: 0.98 }),
+  enter: (dir: number) => ({ opacity: 0, x: dir > 0 ? 20 : -20 }),
+  center: { opacity: 1, x: 0 },
+  exit: (dir: number) => ({ opacity: 0, x: dir > 0 ? -20 : 20 }),
 };
 
 function DashboardContent() {
@@ -72,7 +73,6 @@ function DashboardContent() {
   function goToTab(id: TabId) {
     setPrevTab(activeTab);
     setActiveTab(id);
-    // Scroll to top on tab switch
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -88,23 +88,21 @@ function DashboardContent() {
         <HeroHeader />
 
         {/* Week Switcher */}
-        <div className="max-w-2xl mx-auto w-full px-4 pt-4">
+        <div className="max-w-lg mx-auto w-full px-5 pt-2">
           <WeekSwitcher />
           {!isLatest && (
             <motion.div
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mb-3 px-4 py-2.5 rounded-2xl bg-amber-light dark:bg-amber/15 border border-amber/20 dark:border-amber/30 text-center"
+              className="mb-3 px-4 py-2.5 rounded-2xl dh-card-amber text-center"
             >
-              <p className="text-sm text-amber-800 dark:text-amber-300 font-medium">
-                Viewing archived week
-              </p>
+              <p className="text-sm font-medium">Viewing archived week</p>
             </motion.div>
           )}
         </div>
 
         {/* Tab content */}
-        <main className="flex-1 max-w-2xl mx-auto w-full px-4 pb-24 overflow-x-hidden">
+        <main className="flex-1 max-w-lg mx-auto w-full px-5 pb-24 overflow-x-hidden">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={activeTab}
@@ -115,62 +113,43 @@ function DashboardContent() {
               exit="exit"
               transition={{ type: "spring", stiffness: 320, damping: 32, mass: 0.7 }}
             >
-              {/* ── HOME TAB — Smart Cards ── */}
+
+              {/* ── HOME TAB — Matches the mockup dashboard screen ── */}
               {activeTab === "home" && (
-                <div className="space-y-4 pt-2">
-                  {/* Quick Tools */}
-                  <AnimatedSection delay={0}>
-                    <div className="mb-1">
-                      <h2 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">Quick Access</h2>
-                      <QuickToolsRow delay={0} />
-                    </div>
-                  </AnimatedSection>
+                <div className="space-y-4 pt-3">
+                  {/* Quick Tools Row */}
+                  <QuickToolsRow delay={0} />
 
-                  {/* Action Items — most important, always first */}
-                  <AnimatedSection delay={1}>
-                    <ActionItems />
-                  </AnimatedSection>
-
-                  {/* Smart info row — lunch + weather side by side */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {/* 2-column grid: Schedule + Lunch — matching the mockup exactly */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <TodayScheduleCard delay={1} />
                     <TodayLunchCard delay={2} />
+                  </div>
+
+                  {/* Weather + Homework row */}
+                  <div className="grid grid-cols-2 gap-3">
                     <TodayWeatherCard delay={3} />
+                    <HomeworkSummaryCard delay={4} />
                   </div>
 
-                  {/* Upcoming dates + homework progress */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <UpcomingDatesCard delay={4} />
-                    <HomeworkSummaryCard delay={5} />
-                  </div>
+                  {/* Action Items */}
+                  <ActionItems />
 
-                  {/* Teacher Communications */}
-                  <AnimatedSection delay={6}>
-                    <TeacherComms />
-                  </AnimatedSection>
-
-                  {/* Dolphin Digest */}
-                  <AnimatedSection delay={7}>
-                    <DolphinDigest />
-                  </AnimatedSection>
+                  {/* Upcoming Dates */}
+                  <UpcomingDatesCard delay={6} />
                 </div>
               )}
 
               {/* ── DATES TAB ── */}
               {activeTab === "dates" && (
-                <div className="space-y-5 pt-2">
-                  {/* List / Calendar toggle */}
+                <div className="space-y-5 pt-3">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-9 h-9 rounded-2xl bg-amber-light dark:bg-amber/15 flex items-center justify-center">
-                        <CalendarDays className="w-4 h-4 text-amber" />
-                      </div>
-                      <h2 className="font-display text-xl text-foreground tracking-tight">Dates</h2>
-                    </div>
+                    <h2 className="font-display text-xl text-foreground tracking-tight">Dates</h2>
                     <div className="flex items-center bg-muted rounded-full p-1 gap-0.5">
                       <button
                         onClick={() => setDatesView("list")}
                         aria-label="List view"
-                        className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
                           datesView === "list"
                             ? "bg-card text-foreground shadow-sm"
                             : "text-muted-foreground hover:text-foreground"
@@ -182,7 +161,7 @@ function DashboardContent() {
                       <button
                         onClick={() => setDatesView("calendar")}
                         aria-label="Calendar view"
-                        className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
                           datesView === "calendar"
                             ? "bg-card text-foreground shadow-sm"
                             : "text-muted-foreground hover:text-foreground"
@@ -196,45 +175,37 @@ function DashboardContent() {
 
                   {datesView === "list" ? (
                     <>
-                      <AnimatedSection delay={0}><ImportantDates /></AnimatedSection>
-                      <AnimatedSection delay={1}><SchoolDistrictComms /></AnimatedSection>
+                      <ImportantDates />
+                      <SchoolDistrictComms />
                     </>
                   ) : (
-                    <AnimatedSection delay={0}><MonthCalendar /></AnimatedSection>
+                    <MonthCalendar />
                   )}
                 </div>
               )}
 
-              {/* ── SCHOOL TAB ── */}
-              {activeTab === "school" && (
-                <div className="space-y-6 pt-2">
-                  <AnimatedSection delay={0}><LunchMenu /></AnimatedSection>
-                  <AnimatedSection delay={1}><WeatherForecast /></AnimatedSection>
+              {/* ── COMMS TAB — Teacher comms + Dolphin Digest ── */}
+              {activeTab === "comms" && (
+                <div className="space-y-6 pt-3">
+                  <TeacherComms />
+                  <DolphinDigest />
                 </div>
               )}
 
-              {/* ── HOMEWORK TAB ── */}
-              {activeTab === "homework" && (
-                <div className="pt-2">
-                  <AnimatedSection delay={0}><Homework /></AnimatedSection>
-                </div>
-              )}
-
-              {/* ── LINKS TAB ── */}
-              {activeTab === "links" && (
-                <div className="pt-2">
-                  <AnimatedSection delay={0}><ImportantLinks /></AnimatedSection>
+              {/* ── MORE TAB — School info, Homework, Links ── */}
+              {activeTab === "more" && (
+                <div className="space-y-6 pt-3">
+                  <LunchMenu />
+                  <WeatherForecast />
+                  <Homework />
+                  <ImportantLinks />
 
                   {/* Footer */}
-                  <div className="mt-10 text-center pb-4">
-                    <div className="border-t border-border/30 pt-5">
-                      <div className="flex items-center justify-center gap-2 mb-1">
-                        <span className="font-display text-sm text-foreground/50">SchoolBase</span>
-                        <span className="text-muted-foreground/20 text-xs">·</span>
-                        <span className="text-xs text-muted-foreground/60">{meta.familyName} Family</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground/40">
-                        {meta.schoolName} · {meta.schoolAddress}
+                  <div className="mt-8 text-center pb-4">
+                    <div className="pt-5">
+                      <p className="font-display text-sm text-muted-foreground/50">Dayhaven</p>
+                      <p className="text-xs text-muted-foreground/40 mt-1">
+                        {meta.familyName} Family · {meta.schoolName}
                       </p>
                       <div className="flex items-center justify-center gap-1.5 mt-2">
                         <RefreshCw className="w-3 h-3 text-muted-foreground/30" />
@@ -247,14 +218,18 @@ function DashboardContent() {
                   </div>
                 </div>
               )}
+
             </motion.div>
           </AnimatePresence>
         </main>
       </PullToRefresh>
 
-      {/* ── BOTTOM NAV BAR ── */}
-      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-card/95 dark:bg-card/95 backdrop-blur-xl border-t border-border/30">
-        <div className="max-w-2xl mx-auto flex items-stretch" style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}>
+      {/* ── BOTTOM NAV — 4 icons, no labels, matching the mockup ── */}
+      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl">
+        <div
+          className="max-w-lg mx-auto flex items-center justify-around py-3"
+          style={{ paddingBottom: "max(env(safe-area-inset-bottom, 0px), 12px)" }}
+        >
           {TABS.map((tab) => {
             const Icon = tab.icon;
             const isActive = activeTab === tab.id;
@@ -262,24 +237,23 @@ function DashboardContent() {
               <button
                 key={tab.id}
                 onClick={() => goToTab(tab.id)}
-                className="flex-1 flex flex-col items-center justify-center gap-0.5 py-2 px-1 transition-all duration-200 active:scale-90"
+                className="flex items-center justify-center w-12 h-12 transition-all duration-200 active:scale-90"
+                aria-label={tab.id}
               >
                 <motion.div
-                  className={`relative flex items-center justify-center w-10 h-7 rounded-full transition-colors duration-300 ${
-                    isActive ? "bg-sage-light dark:bg-sage/20" : ""
-                  }`}
-                  animate={isActive ? { scale: 1 } : { scale: 0.95 }}
+                  animate={isActive ? { scale: 1 } : { scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
-                  <Icon className={`transition-all duration-200 ${
-                    isActive ? "w-5 h-5 text-foreground" : "w-[18px] h-[18px] text-muted-foreground"
-                  }`} />
+                  <Icon
+                    className={`transition-all duration-200 ${
+                      isActive
+                        ? "w-6 h-6 text-foreground"
+                        : "w-5 h-5 text-muted-foreground"
+                    }`}
+                    fill={isActive ? "currentColor" : "none"}
+                    strokeWidth={isActive ? 1.5 : 2}
+                  />
                 </motion.div>
-                <span className={`text-[10px] leading-none transition-all duration-200 ${
-                  isActive ? "font-bold text-foreground" : "font-medium text-muted-foreground"
-                }`}>
-                  {tab.label}
-                </span>
               </button>
             );
           })}

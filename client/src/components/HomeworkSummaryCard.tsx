@@ -1,10 +1,11 @@
 /**
- * HomeworkSummaryCard — Compact smart card for the home screen.
- * Shows homework completion progress per kid at a glance.
+ * HomeworkSummaryCard — Dayhaven mockup style:
+ * Solid PINK background, homework progress per kid.
+ * No borders, no shadows.
  */
 import { BookOpen, CheckCircle2 } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
-import AnimatedCard from "./AnimatedCard";
+import { motion } from "framer-motion";
 
 function buildKey(weekLabel: string, kidId: string, idx: number) {
   return `schoolbase:hw:${weekLabel}:${kidId}:${idx}`;
@@ -17,62 +18,57 @@ export default function HomeworkSummaryCard({ delay = 0 }: { delay?: number }) {
   if (!homework?.length) return null;
 
   return (
-    <AnimatedCard delay={delay}>
-      <div className="bg-card rounded-2xl p-4 border border-border/40 hover:shadow-md transition-all duration-300">
-        <div className="flex items-center gap-2.5 mb-3">
-          <div className="w-10 h-10 rounded-2xl bg-violet-50 dark:bg-violet-900/15 flex items-center justify-center shrink-0">
-            <BookOpen className="w-5 h-5 text-violet-500 dark:text-violet-400" />
-          </div>
-          <div>
-            <h3 className="text-xs font-bold text-muted-foreground uppercase tracking-wider">Homework</h3>
-            <p className="text-xs text-muted-foreground">This week's assignments</p>
-          </div>
-        </div>
-
-        <div className="space-y-2.5">
-          {homework.map((kidHw) => {
-            const kid = kids.find((k) => k.id === kidHw.kidId);
-            if (!kid) return null;
-
-            const total = kidHw.assignments.length;
-            const completed = kidHw.assignments.filter((_, idx) => {
-              const key = buildKey(week.weekLabel, kidHw.kidId, idx);
-              return localStorage.getItem(key) === "true";
-            }).length;
-
-            const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
-
-            return (
-              <div key={kidHw.kidId} className="flex items-center gap-3">
-                <div
-                  className="w-7 h-7 rounded-xl flex items-center justify-center text-white text-xs font-bold shrink-0"
-                  style={{ backgroundColor: kid.color }}
-                >
-                  {kid.avatar}
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-xs font-medium text-foreground">{kid.name}</span>
-                    <span className="text-xs text-muted-foreground">{completed}/{total}</span>
-                  </div>
-                  <div className="h-1.5 rounded-full bg-border/60 overflow-hidden">
-                    <div
-                      className="h-full rounded-full transition-all duration-500"
-                      style={{
-                        width: `${pct}%`,
-                        backgroundColor: pct === 100 ? "oklch(0.68 0.08 155)" : kid.color,
-                      }}
-                    />
-                  </div>
-                </div>
-                {pct === 100 && (
-                  <CheckCircle2 className="w-4 h-4 text-sage shrink-0" />
-                )}
-              </div>
-            );
-          })}
-        </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20, scale: 0.97 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: "-30px" }}
+      transition={{ type: "spring", stiffness: 260, damping: 24, delay: delay * 0.06 }}
+      whileHover={{ y: -2 }}
+      className="dh-card dh-card-pink"
+    >
+      <div className="flex items-center gap-2 mb-3">
+        <BookOpen className="w-4 h-4 opacity-70" />
+        <h3 className="font-display text-sm font-semibold">Homework</h3>
       </div>
-    </AnimatedCard>
+
+      <div className="space-y-3">
+        {homework.map((kidHw) => {
+          const kid = kids.find((k) => k.id === kidHw.kidId);
+          if (!kid) return null;
+
+          const total = kidHw.assignments.length;
+          const completed = kidHw.assignments.filter((_, idx) => {
+            const key = buildKey(week.weekLabel, kidHw.kidId, idx);
+            return localStorage.getItem(key) === "true";
+          }).length;
+
+          const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+          return (
+            <div key={kidHw.kidId} className="flex items-center gap-2.5">
+              <div
+                className="w-6 h-6 rounded-full flex items-center justify-center text-white text-[10px] font-bold shrink-0"
+                style={{ backgroundColor: kid.color }}
+              >
+                {kid.avatar}
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-xs font-medium">{kid.name}</span>
+                  <span className="text-[10px] font-medium opacity-70">{completed}/{total}</span>
+                </div>
+                <div className="h-1.5 rounded-full bg-black/10 overflow-hidden">
+                  <div
+                    className="h-full rounded-full transition-all duration-500 bg-black/25"
+                    style={{ width: `${pct}%` }}
+                  />
+                </div>
+              </div>
+              {pct === 100 && <CheckCircle2 className="w-4 h-4 opacity-60 shrink-0" />}
+            </div>
+          );
+        })}
+      </div>
+    </motion.div>
   );
 }

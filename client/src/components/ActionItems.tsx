@@ -1,101 +1,80 @@
 /**
- * ActionItems — Dayhaven app aesthetic
- * Color-blocked rounded cards with coral accent for urgent, sage for info.
- * Staggered entrance animations via AnimatedCard.
+ * ActionItems — Dayhaven mockup style:
+ * Color-blocked cards for each action item. Urgent items get coral bg,
+ * regular items alternate sage/amber/pink. No borders, no shadows — solid fills only.
  */
-import { AlertTriangle, Info, Calendar } from "lucide-react";
+import { AlertTriangle, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import { useWeek } from "@/contexts/WeekContext";
-import AnimatedCard from "./AnimatedCard";
 
-function formatDate(dateStr: string | null) {
-  if (!dateStr) return null;
-  const d = new Date(dateStr + "T00:00:00");
-  return d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
-}
+const CARD_STYLES = ["dh-card-sage", "dh-card-amber", "dh-card-pink", "dh-card-cream"];
 
 export default function ActionItems() {
   const { week, kids } = useWeek();
   const items = week.actionItems;
 
-  function getKidName(kidId: string | null) {
-    if (!kidId) return null;
-    const kid = kids.find((k) => k.id === kidId);
-    return kid ? kid.name : null;
-  }
-
   if (!items.length) return null;
 
   return (
     <section>
-      <div className="flex items-center gap-2.5 mb-4">
-        <div className="w-9 h-9 rounded-2xl bg-coral-light dark:bg-coral/15 flex items-center justify-center">
-          <AlertTriangle className="w-4 h-4 text-coral" />
-        </div>
+      <div className="flex items-center justify-between mb-4">
         <h2 className="font-display text-xl text-foreground tracking-tight">Action Items</h2>
-        <span className="ml-auto inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-coral-light dark:bg-coral/15 text-coral">
+        <span className="text-xs font-bold text-muted-foreground bg-muted rounded-full px-3 py-1">
           {items.length}
         </span>
       </div>
 
       <div className="space-y-3">
-        {items.map((item, idx) => (
-          <AnimatedCard key={item.id} delay={idx}>
+        {items.map((item, idx) => {
+          const kid = kids.find((k) => k.id === item.kidId);
+          const style = item.urgent ? "dh-card-coral" : CARD_STYLES[idx % CARD_STYLES.length];
+          const dueDate = item.dueDate
+            ? new Date(item.dueDate + "T00:00:00").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })
+            : null;
+
+          return (
             <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-20px" }}
+              transition={{ type: "spring", stiffness: 260, damping: 24, delay: idx * 0.06 }}
               whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 25 }}
-              className={`bg-card rounded-2xl p-4 sm:p-5 border border-border/40 transition-shadow duration-300 hover:shadow-md ${
-                item.urgent ? "card-coral" : "card-sage"
-              }`}
+              className={`dh-card ${style}`}
             >
               <div className="flex items-start gap-3">
-                <div className={`mt-0.5 shrink-0 ${item.urgent ? "urgent-pulse" : ""}`}>
-                  {item.urgent ? (
-                    <div className="w-9 h-9 rounded-2xl bg-coral-light dark:bg-coral/15 flex items-center justify-center">
-                      <AlertTriangle className="w-4 h-4 text-coral" />
-                    </div>
-                  ) : (
-                    <div className="w-9 h-9 rounded-2xl bg-sage-light dark:bg-sage/15 flex items-center justify-center">
-                      <Info className="w-4 h-4 text-sage" />
-                    </div>
-                  )}
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <h3 className="font-semibold text-foreground text-sm">{item.title}</h3>
+                {item.urgent && (
+                  <AlertTriangle className="w-4 h-4 mt-0.5 shrink-0 opacity-70" />
+                )}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1 flex-wrap">
+                    <h3 className="font-display text-sm font-semibold leading-snug">{item.title}</h3>
                     {item.urgent && (
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-coral-light dark:bg-coral/15 text-coral">
-                        Urgent
-                      </span>
+                      <span className="text-[10px] font-bold uppercase tracking-wider opacity-70">Urgent</span>
                     )}
                   </div>
-                  <p className="text-muted-foreground text-sm mt-1.5 leading-relaxed">
-                    {item.description}
-                  </p>
-                  <div className="flex items-center gap-3 mt-2.5 flex-wrap">
-                    {item.dueDate && (
-                      <span className="inline-flex items-center gap-1 text-xs text-amber font-medium">
+                  <p className="text-xs leading-relaxed opacity-80 mb-2">{item.description}</p>
+                  <div className="flex items-center gap-3 flex-wrap">
+                    {dueDate && (
+                      <span className="flex items-center gap-1 text-xs font-medium opacity-70">
                         <Calendar className="w-3 h-3" />
-                        {formatDate(item.dueDate)}
+                        {dueDate}
                       </span>
                     )}
-                    {getKidName(item.kidId) && (
+                    {kid && (
                       <span
-                        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold text-white"
-                        style={{
-                          backgroundColor: kids.find((k) => k.id === item.kidId)?.color || "#888",
-                        }}
+                        className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold text-white"
+                        style={{ backgroundColor: kid.color }}
                       >
-                        {getKidName(item.kidId)}
+                        {kid.name}
                       </span>
                     )}
                   </div>
                 </div>
               </div>
             </motion.div>
-          </AnimatedCard>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

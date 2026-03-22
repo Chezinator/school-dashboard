@@ -1,8 +1,8 @@
 /**
- * WeekSwitcher — Dayhaven aesthetic
- * Pill-shaped week navigation with rounded-full buttons, warm tones.
+ * WeekSwitcher — Dayhaven mockup style:
+ * Pill-shaped week navigation, solid fills, no borders.
  */
-import { ChevronLeft, ChevronRight, Clock } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
 
 export default function WeekSwitcher() {
@@ -15,24 +15,23 @@ export default function WeekSwitcher() {
       <button
         onClick={goOlder}
         disabled={!hasOlder}
-        className="w-9 h-9 rounded-full bg-card border border-border/40 flex items-center justify-center disabled:opacity-20 hover:bg-muted transition-all duration-200"
+        className="w-8 h-8 rounded-full bg-muted flex items-center justify-center disabled:opacity-20 hover:bg-black/10 dark:hover:bg-white/10 transition-all"
         aria-label="Previous week"
       >
-        <ChevronLeft className="w-4 h-4 text-foreground" />
+        <ChevronLeft className="w-4 h-4" />
       </button>
 
-      <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border/40">
-        <Clock className="w-3.5 h-3.5 text-amber shrink-0" />
+      <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-muted">
         <span className="text-sm font-medium text-foreground whitespace-nowrap">
           {week.weekLabel}
         </span>
         {isLatest && (
-          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sage-light dark:bg-sage/15 text-sage uppercase tracking-wider">
+          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dh-sage/20 text-dh-sage uppercase tracking-wider">
             Current
           </span>
         )}
         {!isLatest && (
-          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-light dark:bg-amber/15 text-amber uppercase tracking-wider">
+          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dh-amber/20 text-dh-amber uppercase tracking-wider">
             Archive
           </span>
         )}
@@ -41,10 +40,10 @@ export default function WeekSwitcher() {
       <button
         onClick={goNewer}
         disabled={!hasNewer}
-        className="w-9 h-9 rounded-full bg-card border border-border/40 flex items-center justify-center disabled:opacity-20 hover:bg-muted transition-all duration-200"
+        className="w-8 h-8 rounded-full bg-muted flex items-center justify-center disabled:opacity-20 hover:bg-black/10 dark:hover:bg-white/10 transition-all"
         aria-label="Next week"
       >
-        <ChevronRight className="w-4 h-4 text-foreground" />
+        <ChevronRight className="w-4 h-4" />
       </button>
     </div>
   );

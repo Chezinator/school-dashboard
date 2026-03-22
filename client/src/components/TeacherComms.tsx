@@ -1,72 +1,66 @@
 /**
- * TeacherComms — Dayhaven app aesthetic
- * Color-blocked rounded cards, teal accent, staggered entrance animations.
+ * TeacherComms — Matches the Dayhaven Communications mockup exactly:
+ * "School Communications" heading, stacked color-blocked cards per teacher.
+ * Each card has solid fill (sage, teal, coral), bold name, subject, summary.
+ * No borders, no shadows.
  */
-import { MessageSquare, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useWeek } from "@/contexts/WeekContext";
-import AnimatedCard from "./AnimatedCard";
+
+const COMM_COLORS = ["dh-card-sage", "dh-card-teal", "dh-card-coral", "dh-card-amber", "dh-card-pink"];
 
 export default function TeacherComms() {
   const { week, kids } = useWeek();
   const comms = week.teacherComms;
   if (!comms.length) return null;
 
+  let colorIdx = 0;
+
   return (
     <section>
-      <div className="flex items-center gap-2.5 mb-4">
-        <div className="w-9 h-9 rounded-2xl bg-teal-light dark:bg-teal/15 flex items-center justify-center">
-          <MessageSquare className="w-4 h-4 text-teal" />
-        </div>
-        <h2 className="font-display text-xl text-foreground tracking-tight">Teacher Notes</h2>
-      </div>
+      <h2 className="font-display text-2xl text-foreground tracking-tight mb-1">
+        School Communications
+      </h2>
+      <p className="text-sm text-muted-foreground mb-5">Inside the family inbox</p>
 
       <div className="space-y-3">
-        {comms.map((comm, idx) => {
+        {comms.map((comm, cIdx) => {
           const kid = kids.find((k) => k.id === comm.kidId);
-          return (
-            <AnimatedCard key={comm.kidId} delay={idx}>
+          return comm.messages.map((msg, mIdx) => {
+            const style = COMM_COLORS[colorIdx % COMM_COLORS.length];
+            colorIdx++;
+            return (
               <motion.div
+                key={`${cIdx}-${mIdx}`}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-20px" }}
+                transition={{ type: "spring", stiffness: 260, damping: 24, delay: colorIdx * 0.06 }}
                 whileHover={{ y: -2 }}
-                transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                className="bg-card rounded-2xl border border-border/40 overflow-hidden"
+                className={`dh-card ${style}`}
               >
-                {/* Teacher header */}
-                <div className="flex items-center gap-3 px-4 py-3.5 border-b border-border/20 bg-teal/5 dark:bg-teal/8">
-                  <div
-                    className="w-10 h-10 rounded-2xl flex items-center justify-center text-white font-bold text-sm shrink-0 shadow-sm"
-                    style={{ backgroundColor: kid?.color || "#888" }}
-                  >
-                    {kid?.avatar}
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-semibold text-foreground text-sm">{comm.teacher}</p>
-                    <p className="text-xs text-muted-foreground">{kid?.name}'s Teacher · {kid?.grade}</p>
-                  </div>
-                </div>
-
-                {/* Messages */}
-                <div className="p-4 space-y-2.5">
-                  {comm.messages.map((msg, mIdx) => (
-                    <div key={mIdx} className="card-teal rounded-xl p-3.5 bg-muted/30 dark:bg-muted/15">
-                      <div className="flex items-center gap-2 mb-1.5">
-                        <Mail className="w-3.5 h-3.5 text-teal" />
-                        <span className="text-xs font-semibold text-teal">{msg.subject}</span>
-                      </div>
-                      <p className="text-sm text-foreground leading-relaxed">{msg.summary}</p>
-                      <p className="text-xs text-muted-foreground mt-2">
-                        {new Date(msg.date + "T00:00:00").toLocaleDateString("en-US", {
-                          weekday: "long",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </p>
-                    </div>
-                  ))}
+                <p className="font-display text-base font-bold leading-tight">{comm.teacher}</p>
+                <p className="text-sm font-semibold opacity-80 italic mb-2">{msg.subject}</p>
+                <p className="text-sm leading-relaxed opacity-80">{msg.summary}</p>
+                <div className="flex items-center gap-2 mt-3">
+                  {kid && (
+                    <span
+                      className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold text-white"
+                      style={{ backgroundColor: kid.color }}
+                    >
+                      {kid.name}
+                    </span>
+                  )}
+                  <span className="text-xs opacity-60">
+                    {new Date(msg.date + "T00:00:00").toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  </span>
                 </div>
               </motion.div>
-            </AnimatedCard>
-          );
+            );
+          });
         })}
       </div>
     </section>

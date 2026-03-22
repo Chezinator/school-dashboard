@@ -1,97 +1,30 @@
 /**
- * MonthCalendar — Dayhaven aesthetic
- * Warm cream base, rounded-2xl cards, pill buttons, color-coded event dots,
- * homework integration, tap-to-view details, dark mode compatible.
+ * MonthCalendar — Dayhaven mockup style:
+ * Solid cream card for the grid, color-coded event dots,
+ * event details in color-blocked cards. No borders, no shadows.
  */
-
 import { useState, useMemo } from "react";
-import {
-  ChevronLeft,
-  ChevronRight,
-  BookOpen,
-  PartyPopper,
-  Star,
-  CalendarDays,
-  ExternalLink,
-  X,
-  GraduationCap,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, X, CalendarDays } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useWeek } from "@/contexts/WeekContext";
-
-// ── Types ────────────────────────────────────────────────────────────────────
 
 interface EventLink { url: string; label: string; }
 
 interface CalendarEvent {
-  date: string;
-  endDate?: string;
-  title: string;
-  description?: string;
-  type: string;
-  kidId: string | null;
-  subject?: string;
-  link?: EventLink;
-  links?: EventLink[];
+  date: string; endDate?: string; title: string; description?: string;
+  type: string; kidId: string | null; subject?: string;
+  link?: EventLink; links?: EventLink[];
 }
 
-// ── Color config ─────────────────────────────────────────────────────────────
-
-const TYPE_CONFIG: Record<string, {
-  dot: string; bg: string; text: string; border: string;
-  badge: string; label: string; icon: React.ReactNode;
-}> = {
-  test: {
-    dot: "bg-coral",
-    bg: "bg-coral-light dark:bg-coral/12",
-    text: "text-coral",
-    border: "border-coral/20 dark:border-coral/30",
-    badge: "bg-coral-light dark:bg-coral/15 text-coral",
-    label: "Assessment",
-    icon: <BookOpen className="w-3.5 h-3.5" />,
-  },
-  event: {
-    dot: "bg-amber",
-    bg: "bg-amber-light dark:bg-amber/12",
-    text: "text-amber",
-    border: "border-amber/20 dark:border-amber/30",
-    badge: "bg-amber-light dark:bg-amber/15 text-amber",
-    label: "Event",
-    icon: <PartyPopper className="w-3.5 h-3.5" />,
-  },
-  school: {
-    dot: "bg-teal",
-    bg: "bg-teal-light dark:bg-teal/12",
-    text: "text-teal",
-    border: "border-teal/20 dark:border-teal/30",
-    badge: "bg-teal-light dark:bg-teal/15 text-teal",
-    label: "School",
-    icon: <Star className="w-3.5 h-3.5" />,
-  },
-  holiday: {
-    dot: "bg-sage",
-    bg: "bg-sage-light dark:bg-sage/12",
-    text: "text-sage",
-    border: "border-sage/20 dark:border-sage/30",
-    badge: "bg-sage-light dark:bg-sage/15 text-sage",
-    label: "Holiday",
-    icon: <CalendarDays className="w-3.5 h-3.5" />,
-  },
-  homework: {
-    dot: "bg-violet-500",
-    bg: "bg-violet-50 dark:bg-violet-900/15",
-    text: "text-violet-600 dark:text-violet-400",
-    border: "border-violet-200/40 dark:border-violet-700/30",
-    badge: "bg-violet-50 dark:bg-violet-900/15 text-violet-600 dark:text-violet-400",
-    label: "Homework",
-    icon: <GraduationCap className="w-3.5 h-3.5" />,
-  },
+const TYPE_CONFIG: Record<string, { dot: string; card: string; label: string }> = {
+  test:     { dot: "bg-dh-coral",  card: "dh-card-coral",  label: "Assessment" },
+  event:    { dot: "bg-dh-amber",  card: "dh-card-amber",  label: "Event" },
+  school:   { dot: "bg-dh-teal",   card: "dh-card-teal",   label: "School" },
+  holiday:  { dot: "bg-dh-sage",   card: "dh-card-sage",   label: "Holiday" },
+  homework: { dot: "bg-violet-500", card: "dh-card-pink",   label: "Homework" },
 };
 
-function getConfig(type: string) {
-  return TYPE_CONFIG[type] ?? TYPE_CONFIG["school"];
-}
-
-// ── Helpers ──────────────────────────────────────────────────────────────────
+function getConfig(type: string) { return TYPE_CONFIG[type] ?? TYPE_CONFIG["school"]; }
 
 function toDateObj(dateStr: string) { return new Date(dateStr + "T00:00:00"); }
 
@@ -123,8 +56,6 @@ function getSpannedDates(item: CalendarEvent): string[] {
   return dates;
 }
 
-// ── Event Detail Card ────────────────────────────────────────────────────────
-
 function EventDetailCard({
   item, kids, onClose,
 }: {
@@ -134,76 +65,64 @@ function EventDetailCard({
 }) {
   const cfg = getConfig(item.type);
   const kidObj = item.kidId ? kids.find((k) => k.id === item.kidId) : null;
-
   const allLinks: EventLink[] = [];
   if (item.link) allLinks.push(item.link);
   if (item.links) allLinks.push(...item.links);
 
   return (
-    <div className={`rounded-2xl border ${cfg.border} ${cfg.bg} overflow-hidden`}>
-      <div className={`h-1 w-full ${cfg.dot}`} />
-      <div className="p-4">
-        <div className="flex items-start justify-between gap-2 mb-2">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold ${cfg.badge}`}>
-              {cfg.icon}
-              {cfg.label}
-            </span>
-            {item.subject && (
-              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-violet-50 dark:bg-violet-900/15 text-violet-600 dark:text-violet-400">
-                {item.subject}
-              </span>
-            )}
-            {kidObj && (
-              <span
-                className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold text-white"
-                style={{ backgroundColor: kidObj.color }}
-              >
-                {kidObj.name}
-              </span>
-            )}
-          </div>
-          <button
-            onClick={onClose}
-            className="shrink-0 w-6 h-6 rounded-full bg-foreground/8 flex items-center justify-center hover:bg-foreground/15 transition-colors"
-            aria-label="Close"
-          >
-            <X className="w-3.5 h-3.5 text-foreground" />
-          </button>
-        </div>
+    <div className={`dh-card ${cfg.card} relative`}>
+      <button
+        onClick={onClose}
+        className="absolute top-3 right-3 w-6 h-6 rounded-full bg-black/10 flex items-center justify-center hover:bg-black/20 transition-colors"
+        aria-label="Close"
+      >
+        <X className="w-3.5 h-3.5" />
+      </button>
 
-        <h3 className={`font-semibold text-sm leading-snug mb-1 ${cfg.text}`}>{item.title}</h3>
-        {item.description && (
-          <p className="text-xs text-foreground/70 leading-relaxed mb-2">{item.description}</p>
+      <div className="flex items-center gap-2 mb-1.5">
+        <span className="text-[10px] font-bold uppercase tracking-wider opacity-50">{cfg.label}</span>
+        {item.subject && (
+          <span className="text-[10px] font-bold uppercase tracking-wider opacity-50">· {item.subject}</span>
         )}
-        <p className="text-xs font-medium text-muted-foreground">
-          {item.type === "homework" ? "Due: " : ""}
-          {formatShort(item.date)}
-          {item.endDate && item.endDate !== item.date && ` — ${formatShort(item.endDate)}`}
-        </p>
-
-        {allLinks.length > 0 && (
-          <div className="mt-3 pt-3 border-t border-foreground/8 flex flex-wrap gap-2">
-            {allLinks.map((lnk, i) => (
-              <a
-                key={i}
-                href={lnk.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="pill-cta text-xs py-1.5 px-4"
-              >
-                <ExternalLink className="w-3 h-3" />
-                {lnk.label}
-              </a>
-            ))}
-          </div>
+        {kidObj && (
+          <span
+            className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold text-white"
+            style={{ backgroundColor: kidObj.color }}
+          >
+            {kidObj.name}
+          </span>
         )}
       </div>
+
+      <h3 className="font-display text-sm font-semibold leading-snug mb-1">{item.title}</h3>
+      {item.description && (
+        <p className="text-xs opacity-75 leading-relaxed mb-2">{item.description}</p>
+      )}
+      <p className="text-xs font-medium opacity-60">
+        {item.type === "homework" ? "Due: " : ""}
+        {formatShort(item.date)}
+        {item.endDate && item.endDate !== item.date && ` — ${formatShort(item.endDate)}`}
+      </p>
+
+      {allLinks.length > 0 && (
+        <div className="flex flex-wrap gap-2 mt-3">
+          {allLinks.map((lnk, i) => (
+            <a
+              key={i}
+              href={lnk.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-black/15 hover:bg-black/25 transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" />
+              {lnk.label}
+            </a>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
-
-// ── Main Component ───────────────────────────────────────────────────────────
 
 export default function MonthCalendar() {
   const { week, kids } = useWeek();
@@ -283,18 +202,18 @@ export default function MonthCalendar() {
       <div className="flex items-center justify-between gap-2">
         <button
           onClick={prevMonth}
-          className="w-9 h-9 rounded-full bg-card border border-border/40 flex items-center justify-center hover:bg-muted transition-all duration-200 shrink-0"
+          className="w-8 h-8 rounded-full bg-muted flex items-center justify-center hover:bg-black/10 dark:hover:bg-white/10 transition-all shrink-0"
           aria-label="Previous month"
         >
-          <ChevronLeft className="w-4 h-4 text-foreground" />
+          <ChevronLeft className="w-4 h-4" />
         </button>
 
         <div className="flex items-center gap-2">
-          <h3 className="font-display text-lg text-foreground font-semibold tracking-tight">{monthName}</h3>
+          <h3 className="font-display text-lg font-semibold tracking-tight">{monthName}</h3>
           {!isViewingCurrentMonth && (
             <button
               onClick={goToToday}
-              className="text-xs font-semibold px-3 py-1 rounded-full bg-coral-light dark:bg-coral/15 text-coral hover:opacity-80 transition-opacity"
+              className="text-xs font-semibold px-3 py-1 rounded-full bg-dh-coral/15 text-dh-coral hover:opacity-80 transition-opacity"
             >
               Today
             </button>
@@ -303,19 +222,19 @@ export default function MonthCalendar() {
 
         <button
           onClick={nextMonth}
-          className="w-9 h-9 rounded-full bg-card border border-border/40 flex items-center justify-center hover:bg-muted transition-all duration-200 shrink-0"
+          className="w-8 h-8 rounded-full bg-muted flex items-center justify-center hover:bg-black/10 dark:hover:bg-white/10 transition-all shrink-0"
           aria-label="Next month"
         >
-          <ChevronRight className="w-4 h-4 text-foreground" />
+          <ChevronRight className="w-4 h-4" />
         </button>
       </div>
 
-      {/* Calendar grid */}
-      <div className="bg-card rounded-2xl border border-border/40 overflow-hidden">
+      {/* Calendar grid — solid cream card */}
+      <div className="dh-card dh-card-cream !p-0 overflow-hidden">
         {/* Day-of-week headers */}
-        <div className="grid grid-cols-7 border-b border-border/30">
+        <div className="grid grid-cols-7">
           {["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"].map((d) => (
-            <div key={d} className="py-2.5 text-center text-[11px] font-bold text-muted-foreground uppercase tracking-wider">
+            <div key={d} className="py-2.5 text-center text-[10px] font-bold opacity-40 uppercase tracking-wider">
               {d}
             </div>
           ))}
@@ -343,11 +262,10 @@ export default function MonthCalendar() {
                 }}
                 className={[
                   "relative flex flex-col items-center justify-start pt-1.5 pb-1.5 min-h-[52px] sm:min-h-[60px]",
-                  "border-b border-r border-border/15 last:border-r-0",
                   "transition-all duration-200",
                   !isCurrentMonth ? "opacity-0 pointer-events-none" : "",
-                  hasEvents && !isSelected ? "hover:bg-muted/40 cursor-pointer" : "",
-                  isSelected ? "bg-amber/8 dark:bg-amber/12" : "",
+                  hasEvents && !isSelected ? "hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer" : "",
+                  isSelected ? "bg-black/8 dark:bg-white/8" : "",
                   !hasEvents && isCurrentMonth ? "cursor-default" : "",
                 ].join(" ")}
                 aria-label={iso
@@ -357,10 +275,10 @@ export default function MonthCalendar() {
                 <span
                   className={[
                     "w-7 h-7 flex items-center justify-center rounded-full text-sm font-medium transition-all",
-                    isToday ? "bg-coral text-white font-bold" : "",
-                    isSelected && !isToday ? "bg-amber text-white font-bold" : "",
-                    !isToday && !isSelected && isCurrentMonth ? "text-foreground" : "",
-                    !isCurrentMonth ? "text-muted-foreground/30" : "",
+                    isToday ? "bg-dh-coral text-white font-bold" : "",
+                    isSelected && !isToday ? "bg-dh-charcoal text-white font-bold" : "",
+                    !isToday && !isSelected && isCurrentMonth ? "" : "",
+                    !isCurrentMonth ? "opacity-20" : "",
                   ].join(" ")}
                 >
                   {isCurrentMonth ? dayNum : ""}
@@ -372,7 +290,7 @@ export default function MonthCalendar() {
                       <span key={i} className={`w-1.5 h-1.5 rounded-full ${getConfig(type).dot}`} />
                     ))}
                     {events.length > 3 && (
-                      <span className="text-[9px] text-muted-foreground font-medium leading-none">+</span>
+                      <span className="text-[9px] opacity-40 font-medium leading-none">+</span>
                     )}
                   </div>
                 )}
@@ -391,35 +309,43 @@ export default function MonthCalendar() {
           </div>
         ))}
         <div className="flex items-center gap-1.5">
-          <span className="w-5 h-5 rounded-full bg-coral flex items-center justify-center text-white text-[9px] font-bold shrink-0">T</span>
+          <span className="w-5 h-5 rounded-full bg-dh-coral flex items-center justify-center text-white text-[9px] font-bold shrink-0">T</span>
           <span className="text-xs text-muted-foreground">Today</span>
         </div>
       </div>
 
       {/* Selected date event details */}
-      {selectedDate && selectedEvents.length > 0 && (
-        <div className="space-y-3">
-          <div className="flex items-center gap-2">
-            <div className="w-1 h-4 rounded-full bg-amber" />
-            <p className="text-sm font-display font-semibold text-foreground">
-              {formatFull(selectedDate)}
-            </p>
-          </div>
-          {selectedEvents.map((ev, idx) => (
-            <EventDetailCard
-              key={idx}
-              item={ev}
-              kids={kids}
-              onClose={() => setSelectedDate(null)}
-            />
-          ))}
-        </div>
-      )}
+      <AnimatePresence>
+        {selectedDate && selectedEvents.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ type: "spring", stiffness: 300, damping: 28 }}
+            className="space-y-3"
+          >
+            <div className="flex items-center gap-2">
+              <div className="w-1 h-4 rounded-full bg-dh-amber" />
+              <p className="text-sm font-display font-semibold text-foreground">
+                {formatFull(selectedDate)}
+              </p>
+            </div>
+            {selectedEvents.map((ev, idx) => (
+              <EventDetailCard
+                key={idx}
+                item={ev}
+                kids={kids}
+                onClose={() => setSelectedDate(null)}
+              />
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {allEvents.length === 0 && (
-        <div className="bg-card rounded-2xl p-8 border border-border/40 text-center">
-          <CalendarDays className="w-8 h-8 mx-auto mb-2 text-muted-foreground/20" />
-          <p className="text-sm text-muted-foreground">No dates or homework this week</p>
+        <div className="dh-card dh-card-cream text-center py-8">
+          <CalendarDays className="w-8 h-8 opacity-20 mx-auto mb-2" />
+          <p className="text-sm opacity-60">No dates or homework this week</p>
         </div>
       )}
     </section>
