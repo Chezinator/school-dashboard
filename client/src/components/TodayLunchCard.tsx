@@ -63,7 +63,7 @@ export default function TodayLunchCard({ delay = 0, onNavigate }: Props) {
         })}
       </div>
 
-      <p className="text-[10px] font-semibold opacity-40 mt-3 uppercase tracking-wider">Tap for full menu →</p>
+      <p className="text-[10px] font-semibold opacity-40 mt-3 uppercase tracking-wider">View full menu →</p>
     </motion.button>
   );
 }

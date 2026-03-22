@@ -104,7 +104,7 @@ export default function HomeworkSummaryCard({ delay = 0, onNavigate }: Props) {
         </div>
       )}
 
-      <p className="text-[10px] font-semibold opacity-40 mt-2 uppercase tracking-wider">Tap for details →</p>
+      <p className="text-[10px] font-semibold opacity-40 mt-2 uppercase tracking-wider">View details →</p>
     </motion.button>
   );
 }

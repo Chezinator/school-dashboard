@@ -58,7 +58,7 @@ export default function TodayWeatherCard({ delay = 0, onNavigate }: Props) {
     >
       <div className="flex items-center gap-2 mb-3">
         <SunIcon size={18} weight="duotone" className="opacity-70" />
-        <h3 className="font-display text-sm font-semibold">Forecast</h3>
+        <h3 className="font-display text-sm font-semibold">Weather</h3>
       </div>
 
       <div className="space-y-2">
@@ -79,7 +79,7 @@ export default function TodayWeatherCard({ delay = 0, onNavigate }: Props) {
         })}
       </div>
 
-      <p className="text-[10px] font-semibold opacity-40 mt-3 uppercase tracking-wider">Tap for details →</p>
+      <p className="text-[10px] font-semibold opacity-40 mt-3 uppercase tracking-wider">View details →</p>
     </motion.button>
   );
 }

@@ -51,7 +51,7 @@ export default function UpcomingDatesCard({ delay = 0, onNavigate }: Props) {
         ))}
       </div>
 
-      <p className="text-[10px] font-semibold opacity-40 mt-3 uppercase tracking-wider">Tap for calendar →</p>
+      <p className="text-[10px] font-semibold opacity-40 mt-3 uppercase tracking-wider">View calendar →</p>
     </motion.button>
   );
 }

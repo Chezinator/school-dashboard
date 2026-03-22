@@ -4,9 +4,10 @@
  * Standalone links as color-blocked cards.
  * No borders, no shadows — solid fills only.
  */
+import React from "react";
 import { useWeek } from "@/contexts/WeekContext";
 import { motion } from "framer-motion";
-import { ArrowSquareOut, WarningCircle, GlobeSimple, LinkSimple } from "@phosphor-icons/react";
+import { ArrowSquareOut, WarningCircle, GlobeSimple, LinkSimple, PaintBrush, CloudSun, ChatCircle, ForkKnife } from "@phosphor-icons/react";
 
 interface LinkItem {
   id: string; title: string; url: string; description: string;
@@ -14,8 +15,11 @@ interface LinkItem {
   pinned?: boolean; earmarked?: boolean; gmailUrl?: string | null;
 }
 
-const TOOL_ICONS: Record<string, string> = {
-  canvas: "🎨", skyward: "🌤️", parentsquare: "💬", mealviewer: "🍽️",
+const TOOL_PHOSPHOR_ICONS: Record<string, React.ReactNode> = {
+  canvas: <PaintBrush size={28} weight="duotone" className="opacity-70" />,
+  skyward: <CloudSun size={28} weight="duotone" className="opacity-70" />,
+  parentsquare: <ChatCircle size={28} weight="duotone" className="opacity-70" />,
+  mealviewer: <ForkKnife size={28} weight="duotone" className="opacity-70" />,
 };
 
 const TOOL_CARDS: Record<string, string> = {
@@ -52,7 +56,7 @@ export default function ImportantLinks() {
           <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-3">Pinned Tools</p>
           <div className="grid grid-cols-2 gap-3">
             {pinnedTools.map((link, idx) => {
-              const emoji = TOOL_ICONS[link.id] ?? "🔗";
+              const toolIcon = TOOL_PHOSPHOR_ICONS[link.id] ?? <LinkSimple size={28} weight="duotone" className="opacity-70" />;
               const cardStyle = TOOL_CARDS[link.id] || "dh-card-cream";
               return (
                 <motion.div
@@ -64,7 +68,7 @@ export default function ImportantLinks() {
                   whileHover={{ y: -3 }}
                   className={`dh-card ${cardStyle} flex flex-col`}
                 >
-                  <div className="text-2xl mb-3">{emoji}</div>
+                  <div className="mb-3">{toolIcon}</div>
                   <h3 className="font-display text-sm font-semibold leading-tight mb-1">{link.title}</h3>
                   <p className="text-xs opacity-70 leading-relaxed mb-3 flex-1">{link.description}</p>
                   {link.earmarked ? (
@@ -121,7 +125,7 @@ export default function ImportantLinks() {
                     className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold bg-black/15 hover:bg-black/25 transition-colors"
                   >
                     <ArrowSquareOut size={14} weight="bold" />
-                    Open Link
+                    Open
                   </a>
                 </motion.div>
               );

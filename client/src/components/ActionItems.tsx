@@ -1,27 +1,38 @@
 /**
- * ActionItems — Color-coded by kid (Bronson=teal, Kaia=coral, general=amber).
- * Phosphor icons on titles. Solid color-blocked cards.
- * Links rendered as pill buttons. Date labeled "Due" for clarity.
+ * ActionItems — All cards use teal as the base color.
+ * Urgency is communicated through tint intensity: urgent = full opacity, non-urgent = lighter tint.
+ * Phosphor icons replace all emoji. Links rendered as pill buttons. Date labeled "Due".
  */
 import { useWeek } from "@/contexts/WeekContext";
-import { Warning, CalendarCheck, ArrowSquareOut } from "@phosphor-icons/react";
+import {
+  Warning,
+  CalendarCheck,
+  ArrowSquareOut,
+  Pencil,
+  Bell,
+  Confetti,
+  HandHeart,
+  Clock,
+  Lightbulb,
+  PushPin,
+} from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 
 interface ActionLink { url: string; label: string; }
 
-const KID_CARD_STYLE: Record<string, string> = {
-  bronson: "dh-card-teal",
-  kaia: "dh-card-coral",
-};
-
-const CATEGORY_ICONS: Record<string, string> = {
-  "test-prep": "📝",
-  "reminder": "🔔",
-  "event": "🎉",
-  "volunteer": "🤝",
-  "deadline": "⏰",
-  "info": "💡",
-};
+// Phosphor icon for each action item category
+function CategoryIcon({ category }: { category: string }) {
+  const props = { size: 18, weight: "duotone" as const, className: "shrink-0 mt-0.5" };
+  switch (category) {
+    case "test-prep":  return <Pencil {...props} />;
+    case "reminder":   return <Bell {...props} />;
+    case "event":      return <Confetti {...props} />;
+    case "volunteer":  return <HandHeart {...props} />;
+    case "deadline":   return <Clock {...props} />;
+    case "info":       return <Lightbulb {...props} />;
+    default:           return <PushPin {...props} />;
+  }
+}
 
 export default function ActionItems() {
   const { week, kids } = useWeek();
@@ -32,7 +43,7 @@ export default function ActionItems() {
   return (
     <section>
       <div className="flex items-center gap-2 mb-3">
-        <Warning size={20} weight="duotone" className="text-dh-coral" />
+        <Warning size={20} weight="duotone" className="text-dh-teal" />
         <h2 className="font-display text-lg font-semibold text-foreground tracking-tight">Action Items</h2>
         <span className="text-xs font-bold text-muted-foreground bg-muted rounded-full px-2.5 py-0.5 ml-auto">
           {items.length}
@@ -42,13 +53,11 @@ export default function ActionItems() {
       <div className="space-y-3">
         {items.map((item, idx) => {
           const kid = item.kidId ? kids.find((k) => k.id === item.kidId) : null;
-          const cardStyle = item.kidId ? (KID_CARD_STYLE[item.kidId] || "dh-card-cream") : "dh-card-amber";
-          const emoji = CATEGORY_ICONS[item.category] || "📌";
           const dueDate = item.dueDate
             ? new Date(item.dueDate + "T00:00:00").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })
             : null;
 
-          // Support both single link and links array (use type assertion for JSON union)
+          // Support both single link and links array
           const anyItem = item as any;
           const links: ActionLink[] = anyItem.links
             ? anyItem.links
@@ -64,10 +73,12 @@ export default function ActionItems() {
               viewport={{ once: true, margin: "-20px" }}
               transition={{ type: "spring", stiffness: 260, damping: 24, delay: idx * 0.05 }}
               whileHover={{ y: -2 }}
-              className={`dh-card ${cardStyle} ${item.urgent ? "urgent-pulse" : ""}`}
+              className={`dh-card dh-card-teal ${item.urgent ? "urgent-pulse" : "opacity-80"}`}
             >
               <div className="flex items-start gap-3">
-                <span className="text-lg mt-0.5 shrink-0" aria-hidden="true">{emoji}</span>
+                {/* Phosphor category icon */}
+                <CategoryIcon category={item.category} />
+
                 <div className="flex-1 min-w-0">
                   {/* Kid badge + Urgent badge */}
                   {(kid || item.urgent) && (

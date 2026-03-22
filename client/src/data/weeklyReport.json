@@ -52,8 +52,8 @@
           "kidId": "bronson",
           "category": "reminder",
           "links": [
-            { "url": "https://ocps.instructure.com/", "label": "Open Canvas" },
-            { "url": "https://parents.classlink.com/ocps", "label": "Open Skyward" }
+            { "url": "https://ocps.instructure.com/", "label": "Canvas" },
+            { "url": "https://parents.classlink.com/ocps", "label": "Skyward" }
           ]
         },
         {
