@@ -4,10 +4,12 @@
  * - Family photo hero background with greeting overlay
  * - Color-coded cards: Bronson=teal, Kaia=coral, dates=sage, lunch=coral, weather=amber, homework=pink
  * - Cards are clickable to navigate to relevant tabs AND scroll to the exact section
+ * - Scroll-to-section uses a pendingScrollRef + useEffect to wait for DOM availability
+ *   (AnimatePresence exit animation means the new tab DOM isn't ready immediately)
  * - Bottom nav uses Phosphor icons — reversed (outline when inactive, filled when active)
  * - Pull-to-refresh on mobile
  */
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   House,
@@ -53,14 +55,25 @@ const tabVariants = {
   exit: (dir: number) => ({ opacity: 0, x: dir > 0 ? -20 : 20 }),
 };
 
-/** Scroll to a section by ID after a short delay (allows tab transition to complete) */
-function scrollToSection(sectionId: string, delay = 350) {
-  setTimeout(() => {
+/**
+ * Poll for a DOM element by ID using requestAnimationFrame, then scroll to it.
+ * This is necessary because AnimatePresence delays rendering of the new tab content.
+ */
+function pollAndScroll(sectionId: string, maxAttempts = 40) {
+  let attempts = 0;
+  function attempt() {
+    attempts++;
     const el = document.getElementById(sectionId);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Small extra delay to let the spring animation settle
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 80);
+    } else if (attempts < maxAttempts) {
+      requestAnimationFrame(attempt);
     }
-  }, delay);
+  }
+  requestAnimationFrame(attempt);
 }
 
 function DashboardContent() {
@@ -69,8 +82,21 @@ function DashboardContent() {
   const [prevTab, setPrevTab] = useState<TabId>("home");
   const [datesView, setDatesView] = useState<"list" | "calendar">("list");
 
+  // Store the pending scroll target — set before tab switch, consumed after render
+  const pendingScrollRef = useRef<string | null>(null);
+
   const tabOrder = TABS.map(t => t.id);
   const direction = tabOrder.indexOf(activeTab) - tabOrder.indexOf(prevTab);
+
+  // After activeTab changes and the component re-renders with new tab content,
+  // execute the pending scroll if one is queued
+  useEffect(() => {
+    const sectionId = pendingScrollRef.current;
+    if (sectionId) {
+      pendingScrollRef.current = null;
+      pollAndScroll(sectionId);
+    }
+  }, [activeTab]);
 
   /** Switch to a tab and scroll to top */
   function goToTab(id: TabId) {
@@ -81,11 +107,12 @@ function DashboardContent() {
 
   /** Switch to a tab AND scroll to a specific section within it */
   function goToTabAndScroll(tabId: TabId, sectionId: string) {
+    // Queue the scroll target BEFORE changing tab so useEffect picks it up
+    pendingScrollRef.current = sectionId;
     setPrevTab(activeTab);
     setActiveTab(tabId);
-    // First scroll to top instantly so the tab renders fully, then scroll to section
+    // Instantly reset scroll position so the new tab starts at top
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
-    scrollToSection(sectionId);
   }
 
   const handleRefresh = useCallback(async () => {
@@ -193,14 +220,14 @@ function DashboardContent() {
 
                   {datesView === "list" ? (
                     <>
-                      {/* Anchor for scroll-to from home card */}
-                      <div id="section-dates" style={{ scrollMarginTop: "8px" }}>
+                      {/* section-dates anchor — scroll target from home card */}
+                      <div id="section-dates" style={{ scrollMarginTop: "12px" }}>
                         <ImportantDates />
                       </div>
                       <SchoolDistrictComms />
                     </>
                   ) : (
-                    <div id="section-dates" style={{ scrollMarginTop: "8px" }}>
+                    <div id="section-dates" style={{ scrollMarginTop: "12px" }}>
                       <MonthCalendar />
                     </div>
                   )}
@@ -210,10 +237,10 @@ function DashboardContent() {
               {/* ── COMMS TAB ── */}
               {activeTab === "comms" && (
                 <div className="space-y-6 pt-3">
-                  <div id="section-teacher-comms" style={{ scrollMarginTop: "8px" }}>
+                  <div id="section-teacher-comms" style={{ scrollMarginTop: "12px" }}>
                     <TeacherComms />
                   </div>
-                  <div id="section-dolphin-digest" style={{ scrollMarginTop: "8px" }}>
+                  <div id="section-dolphin-digest" style={{ scrollMarginTop: "12px" }}>
                     <DolphinDigest />
                   </div>
                 </div>
@@ -222,22 +249,22 @@ function DashboardContent() {
               {/* ── MORE TAB ── */}
               {activeTab === "more" && (
                 <div className="space-y-6 pt-3">
-                  {/* Lunch section — anchor for scroll-to */}
-                  <div id="section-lunch" style={{ scrollMarginTop: "8px" }}>
+                  {/* section-lunch anchor — scroll target from home Lunch card */}
+                  <div id="section-lunch" style={{ scrollMarginTop: "12px" }}>
                     <LunchMenu />
                   </div>
 
-                  {/* Weather section — anchor for scroll-to */}
-                  <div id="section-weather" style={{ scrollMarginTop: "8px" }}>
+                  {/* section-weather anchor — scroll target from home Weather card */}
+                  <div id="section-weather" style={{ scrollMarginTop: "12px" }}>
                     <WeatherForecast />
                   </div>
 
-                  {/* Homework section — anchor for scroll-to */}
-                  <div id="section-homework" style={{ scrollMarginTop: "8px" }}>
+                  {/* section-homework anchor — scroll target from home Homework card */}
+                  <div id="section-homework" style={{ scrollMarginTop: "12px" }}>
                     <Homework />
                   </div>
 
-                  <div id="section-links" style={{ scrollMarginTop: "8px" }}>
+                  <div id="section-links" style={{ scrollMarginTop: "12px" }}>
                     <ImportantLinks />
                   </div>
 
