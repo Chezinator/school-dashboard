@@ -45,10 +45,8 @@ export default function TeacherComms() {
                 whileHover={{ y: -2 }}
                 className={`dh-card ${cardStyle}`}
               >
-                <p className="font-display text-base font-bold leading-tight">{comm.teacher}</p>
-                <p className="text-sm font-semibold opacity-80 italic mb-2">{msg.subject}</p>
-                <p className="text-sm leading-relaxed opacity-80">{msg.summary}</p>
-                <div className="flex items-center gap-2 mt-3">
+                {/* Kid badge FIRST, then teacher name */}
+                <div className="flex items-center gap-2 mb-2">
                   {kid && (
                     <span
                       className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold text-white"
@@ -57,6 +55,11 @@ export default function TeacherComms() {
                       {kid.name}
                     </span>
                   )}
+                  <p className="font-display text-base font-bold leading-tight">{comm.teacher}</p>
+                </div>
+                <p className="text-sm font-semibold opacity-80 italic mb-2">{msg.subject}</p>
+                <p className="text-sm leading-relaxed opacity-80">{msg.summary}</p>
+                <div className="flex items-center gap-2 mt-3">
                   <span className="text-xs opacity-60">
                     Sent {new Date(msg.date + "T00:00:00").toLocaleDateString("en-US", {
                       month: "short",

@@ -55,9 +55,10 @@ export default function TodayLunchCard({ delay = 0, onNavigate }: Props) {
               <p className="text-[10px] font-bold uppercase tracking-wider opacity-50 mb-0.5">
                 {isToday ? "Today" : day.day.slice(0, 3)}
               </p>
-              <p className="text-xs font-medium leading-snug truncate">
-                {day.entrees[0]}
-              </p>
+              <p className="text-xs font-medium leading-snug truncate">{day.entrees[0]}</p>
+              {day.entrees[1] && (
+                <p className="text-xs opacity-65 leading-snug truncate">{day.entrees[1]}</p>
+              )}
             </div>
           );
         })}

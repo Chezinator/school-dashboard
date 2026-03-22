@@ -73,7 +73,7 @@ export default function ActionItems() {
               viewport={{ once: true, margin: "-20px" }}
               transition={{ type: "spring", stiffness: 260, damping: 24, delay: idx * 0.05 }}
               whileHover={{ y: -2 }}
-              className={`dh-card dh-card-teal ${item.urgent ? "urgent-pulse" : "opacity-80"}`}
+              className={`dh-card ${item.urgent ? "dh-card-teal urgent-pulse" : "dh-card-teal-light"}`}
             >
               <div className="flex items-start gap-3">
                 {/* Phosphor category icon */}
