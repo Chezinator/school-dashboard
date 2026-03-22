@@ -39,8 +39,14 @@
           "kidId": "bronson",
           "category": "test-prep",
           "links": [
-            { "url": "https://ocps.instructure.com/", "label": "Canvas" },
-            { "url": "https://www.parentsquare.com/feeds/74199872", "label": "Dolphin Digest" }
+            {
+              "url": "https://ocps.instructure.com/",
+              "label": "Canvas"
+            },
+            {
+              "url": "https://www.parentsquare.com/feeds/74199872",
+              "label": "Dolphin Digest"
+            }
           ]
         },
         {
@@ -52,8 +58,14 @@
           "kidId": "bronson",
           "category": "reminder",
           "links": [
-            { "url": "https://ocps.instructure.com/", "label": "Canvas" },
-            { "url": "https://parents.classlink.com/ocps", "label": "Skyward" }
+            {
+              "url": "https://ocps.instructure.com/",
+              "label": "Canvas"
+            },
+            {
+              "url": "https://parents.classlink.com/ocps",
+              "label": "Skyward"
+            }
           ]
         },
         {
@@ -74,7 +86,10 @@
           "kidId": null,
           "category": "event",
           "links": [
-            { "url": "https://lakewhitneyes.ocps.net/", "label": "School Website" }
+            {
+              "url": "https://lakewhitneyes.ocps.net/",
+              "label": "School Website"
+            }
           ]
         },
         {
@@ -86,7 +101,10 @@
           "kidId": null,
           "category": "info",
           "links": [
-            { "url": "https://www.parentsquare.com/", "label": "ParentSquare" }
+            {
+              "url": "https://www.parentsquare.com/",
+              "label": "ParentSquare"
+            }
           ]
         }
       ],
@@ -616,5 +634,177 @@
         ]
       }
     }
-  ]
+  ],
+  "currentWeek": {
+    "startDate": "2026-03-30",
+    "endDate": "2026-04-03",
+    "label": "Week of March 30 - April 3, 2026",
+    "highlights": [
+      {
+        "icon": "\ud83d\udcdd",
+        "title": "Bronson: BEST Writing Assessment",
+        "body": "Tuesday, March 31 (4th Grade Florida State Test). 120-minute computer-based test. No electronic devices allowed. Ensure good sleep and breakfast. Do NOT schedule appointments."
+      },
+      {
+        "icon": "\ud83c\udf4e",
+        "title": "Teacher Appreciation Week",
+        "body": "March 30 - April 3. Themed days: Mon-High 5s, Tue-Letters, Wed-Jokes, Thu-Treats, Fri-Gifts. See full report for details."
+      },
+      {
+        "icon": "\ud83d\udcda",
+        "title": "Kaia: Word Study Quiz & Open Book Test",
+        "body": "A potential Word Study Quiz on Soft \"c\" /s/ (_ce) and an Open Book Test on *Money Madness* were scheduled for Friday, March 27. No new assessments are listed for this week."
+      }
+    ]
+  },
+  "upcomingEvents": [
+    {
+      "id": "bronson-best-writing-assessment-20260331",
+      "title": "Bronson - BEST Writing Assessment",
+      "date": "2026-03-31",
+      "description": "4th Grade Florida State Test. 120-minute computer-based test. No electronic devices allowed. Ensure good sleep and breakfast. Do NOT schedule appointments.",
+      "kid": "Bronson",
+      "category": "Assessment",
+      "reminder": "1 day before"
+    },
+    {
+      "id": "lwe-teacher-appreciation-week-20260330",
+      "title": "LWE Teacher Appreciation Week",
+      "date": "2026-03-30 to 2026-04-03",
+      "description": "Show appreciation for teachers and staff. Themed days: Mon-High 5s, Tue-Letters, Wed-Jokes, Thu-Treats, Fri-Gifts. See full report for details.",
+      "kid": "Both",
+      "category": "School Event",
+      "reminder": "1 day before"
+    },
+    {
+      "id": "kaia-green-meadows-field-trip-20260417",
+      "title": "Kaia - Green Meadows Petting Farm Field Trip",
+      "date": "2026-04-17",
+      "description": "2nd Grade Field Trip to Green Meadows Petting Farm.",
+      "kid": "Kaia",
+      "category": "Field Trip",
+      "reminder": "1 week before"
+    }
+  ],
+  "lunchMenu": [
+    {
+      "day": "Monday, March 30",
+      "entrees": "Breaded Chicken Nuggets OR Deli Box",
+      "sides": "Mashed Potatoes, Peas & Carrots",
+      "fruit_drink": "Apple Cherry Juice, Apple Juice"
+    },
+    {
+      "day": "Tuesday, March 31",
+      "entrees": "Chicken Tinga Soft Tacos OR Yogurt, Cheese, w/ Banana Bread Plate",
+      "sides": "Seasoned Black Beans",
+      "fruit_drink": "Strawberry Cup"
+    },
+    {
+      "day": "Wednesday, April 1",
+      "entrees": "Grilled Cheese Sandwich OR Rotisserie Chicken and Cheese Sandwich (Note: Buttermilk Pancakes w/ Turkey Sausage also listed - may be a special breakfast-for-lunch item)",
+      "sides": "Tater Tots, Coleslaw",
+      "fruit_drink": "Orange Wedges"
+    },
+    {
+      "day": "Thursday, April 2",
+      "entrees": "Mac and Cheese OR PBJ Sandwich Box",
+      "sides": "Fresh Steamed Broccoli, Steamed Broccoli, Italian Blend Vegetables",
+      "fruit_drink": "Apple Cherry Juice, Apple Juice"
+    },
+    {
+      "day": "Friday, April 3",
+      "entrees": "Four Cheese Pizza Wedge OR Bento Box w/ Pepperoni, Cheese, Marinara, & Bread",
+      "sides": "Marinara Dipping Sauce Cup",
+      "fruit_drink": "Tropical Trio Juice Slushie, Berry Berry Blue Juice Slushie"
+    }
+  ],
+  "weatherForecast": [
+    {
+      "day": "Monday, March 30",
+      "high_low": "78\u00b0F / 62\u00b0F",
+      "conditions": "Partly Cloudy",
+      "rain_chance": "5%",
+      "wind": "W 15 mph"
+    },
+    {
+      "day": "Tuesday, March 31",
+      "high_low": "80\u00b0F / 62\u00b0F",
+      "conditions": "Partly Cloudy",
+      "rain_chance": "6%",
+      "wind": "W 14 mph"
+    },
+    {
+      "day": "Wednesday, April 1",
+      "high_low": "82\u00b0F / 63\u00b0F",
+      "conditions": "Partly Cloudy",
+      "rain_chance": "15%",
+      "wind": "W 14 mph"
+    },
+    {
+      "day": "Thursday, April 2",
+      "high_low": "84\u00b0F / 64\u00b0F",
+      "conditions": "Partly Cloudy",
+      "rain_chance": "20%",
+      "wind": "W 13 mph"
+    },
+    {
+      "day": "Friday, April 3",
+      "high_low": "84\u00b0F / 65\u00b0F",
+      "conditions": "PM Showers",
+      "rain_chance": "35%",
+      "wind": "W 12 mph"
+    }
+  ],
+  "teacherAppreciationWeek": {
+    "startDate": "2026-03-30",
+    "endDate": "2026-04-03",
+    "themedDays": [
+      {
+        "day": "Monday, March 30",
+        "theme": "High Fives",
+        "description": "Show appreciation by giving teachers and staff members a HIGH FIVE!"
+      },
+      {
+        "day": "Tuesday, March 31",
+        "theme": "Letters",
+        "description": "Write kind notes or draw pictures for teachers."
+      },
+      {
+        "day": "Wednesday, April 1",
+        "theme": "Dress-like-teacher/Joke",
+        "description": "Dress like your teacher or tell them a joke!"
+      },
+      {
+        "day": "Thursday, April 2",
+        "theme": "Treats",
+        "description": "Bring your teacher or a staff member their favorite snack or drink."
+      },
+      {
+        "day": "Friday, April 3",
+        "theme": "Gifts",
+        "description": "Bring your teacher a gift card or item off their Amazon wishlist."
+      }
+    ],
+    "cuccinelloFavorites": {
+      "colors": "Pink, Black & Gray",
+      "flowers": "Tulips",
+      "sweets": "Chocolate Chip Cookies",
+      "snacks": "Chips/salsa/cheese",
+      "drinks": "Diet Coke/DP/water, Iced Caramel latte w/ coconut milk",
+      "restaurants": "Mexican food/Good NY Pizza/Riff's Bagels, Servandos/Taco Norteno/Chilis/Texas Roadhouse",
+      "signupGeniusUrl": "https://m.signupgenius.com/#!/showSignUp/30E0E4EACA62FA4F94-63043178-mrs"
+    }
+  },
+  "kaiaFieldTrip": {
+    "date": "2026-04-17",
+    "destination": "Green Meadows Petting Farm",
+    "grade": "2nd Grade",
+    "description": "2nd Grade Field Trip to Green Meadows Petting Farm."
+  },
+  "bronsonBESTTest": {
+    "date": "2026-03-31",
+    "testName": "BEST Writing Assessment",
+    "grade": "4th Grade",
+    "description": "Florida State Test. 120-minute computer-based test. No electronic devices allowed. Ensure good sleep and breakfast. Do NOT schedule appointments."
+  }
 }
