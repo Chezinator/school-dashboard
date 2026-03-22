@@ -88,7 +88,7 @@ export default function SchoolDistrictComms() {
                     {comm.source}
                   </span>
                   <span className="text-[10px] opacity-40">·</span>
-                  <span className="text-[10px] opacity-50">{formatDate(comm.date)}</span>
+                   <span className="text-[10px] opacity-50">Sent {formatDate(comm.date)}</span>
                 </div>
                 <h3 className="font-display text-sm font-semibold leading-snug mb-1">{comm.subject}</h3>
                 <p className="text-xs opacity-60 mb-2">From: {comm.from}</p>

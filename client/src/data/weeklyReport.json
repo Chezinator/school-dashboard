@@ -37,7 +37,11 @@
           "dueDate": "2026-03-31",
           "urgent": true,
           "kidId": "bronson",
-          "category": "test-prep"
+          "category": "test-prep",
+          "links": [
+            { "url": "https://ocps.instructure.com/", "label": "Canvas" },
+            { "url": "https://www.parentsquare.com/feeds/74199872", "label": "Dolphin Digest" }
+          ]
         },
         {
           "id": 2,
@@ -46,7 +50,11 @@
           "dueDate": "2026-03-23",
           "urgent": true,
           "kidId": "bronson",
-          "category": "reminder"
+          "category": "reminder",
+          "links": [
+            { "url": "https://ocps.instructure.com/", "label": "Open Canvas" },
+            { "url": "https://parents.classlink.com/ocps", "label": "Open Skyward" }
+          ]
         },
         {
           "id": 3,
@@ -64,7 +72,10 @@
           "dueDate": "2026-03-30",
           "urgent": false,
           "kidId": null,
-          "category": "event"
+          "category": "event",
+          "links": [
+            { "url": "https://lakewhitneyes.ocps.net/", "label": "School Website" }
+          ]
         },
         {
           "id": 5,
@@ -73,7 +84,10 @@
           "dueDate": "2026-03-22",
           "urgent": false,
           "kidId": null,
-          "category": "info"
+          "category": "info",
+          "links": [
+            { "url": "https://www.parentsquare.com/", "label": "ParentSquare" }
+          ]
         }
       ],
       "importantDates": [

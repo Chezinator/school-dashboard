@@ -53,7 +53,7 @@ export default function TodayWeatherCard({ delay = 0, onNavigate }: Props) {
       viewport={{ once: true, margin: "-30px" }}
       transition={{ type: "spring", stiffness: 260, damping: 24, delay: delay * 0.06 }}
       whileHover={{ y: -2 }}
-      className="dh-card dh-card-amber text-left w-full cursor-pointer"
+      className="dh-card dh-card-amber text-left w-full cursor-pointer flex flex-col"
       aria-label="View full forecast"
     >
       <div className="flex items-center gap-2 mb-3">

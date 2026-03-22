@@ -58,7 +58,7 @@ export default function TeacherComms() {
                     </span>
                   )}
                   <span className="text-xs opacity-60">
-                    {new Date(msg.date + "T00:00:00").toLocaleDateString("en-US", {
+                    Sent {new Date(msg.date + "T00:00:00").toLocaleDateString("en-US", {
                       month: "short",
                       day: "numeric",
                     })}
