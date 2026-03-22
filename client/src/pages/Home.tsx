@@ -1,14 +1,13 @@
 /**
  * Home — Dayhaven App Dashboard
- * 
+ *
  * - Family photo hero background with greeting overlay
  * - Color-coded cards: Bronson=teal, Kaia=coral, dates=sage, lunch=coral, weather=amber, homework=pink
- * - Cards are clickable to navigate to relevant tabs
+ * - Cards are clickable to navigate to relevant tabs AND scroll to the exact section
  * - Bottom nav uses Phosphor icons — reversed (outline when inactive, filled when active)
- * - QuickToolsRow removed from home (already in Quick Links tab)
  * - Pull-to-refresh on mobile
  */
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   House,
@@ -54,6 +53,16 @@ const tabVariants = {
   exit: (dir: number) => ({ opacity: 0, x: dir > 0 ? -20 : 20 }),
 };
 
+/** Scroll to a section by ID after a short delay (allows tab transition to complete) */
+function scrollToSection(sectionId: string, delay = 350) {
+  setTimeout(() => {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, delay);
+}
+
 function DashboardContent() {
   const { meta, lastUpdatedFormatted, isLatest } = useWeek();
   const [activeTab, setActiveTab] = useState<TabId>("home");
@@ -63,10 +72,20 @@ function DashboardContent() {
   const tabOrder = TABS.map(t => t.id);
   const direction = tabOrder.indexOf(activeTab) - tabOrder.indexOf(prevTab);
 
+  /** Switch to a tab and scroll to top */
   function goToTab(id: TabId) {
     setPrevTab(activeTab);
     setActiveTab(id);
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  /** Switch to a tab AND scroll to a specific section within it */
+  function goToTabAndScroll(tabId: TabId, sectionId: string) {
+    setPrevTab(activeTab);
+    setActiveTab(tabId);
+    // First scroll to top instantly so the tab renders fully, then scroll to section
+    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+    scrollToSection(sectionId);
   }
 
   const handleRefresh = useCallback(async () => {
@@ -112,14 +131,26 @@ function DashboardContent() {
                 <div className="space-y-4 pt-3">
                   {/* 2-column grid: Upcoming Dates + Lunch */}
                   <div className="grid grid-cols-2 gap-3">
-                    <UpcomingDatesCard delay={0} onNavigate={() => goToTab("dates")} />
-                    <TodayLunchCard delay={1} onNavigate={() => goToTab("more")} />
+                    <UpcomingDatesCard
+                      delay={0}
+                      onNavigate={() => goToTabAndScroll("dates", "section-dates")}
+                    />
+                    <TodayLunchCard
+                      delay={1}
+                      onNavigate={() => goToTabAndScroll("more", "section-lunch")}
+                    />
                   </div>
 
                   {/* Weather + Homework row */}
                   <div className="grid grid-cols-2 gap-3">
-                    <TodayWeatherCard delay={2} onNavigate={() => goToTab("more")} />
-                    <HomeworkSummaryCard delay={3} onNavigate={() => goToTab("more")} />
+                    <TodayWeatherCard
+                      delay={2}
+                      onNavigate={() => goToTabAndScroll("more", "section-weather")}
+                    />
+                    <HomeworkSummaryCard
+                      delay={3}
+                      onNavigate={() => goToTabAndScroll("more", "section-homework")}
+                    />
                   </div>
 
                   {/* Action Items */}
@@ -162,11 +193,16 @@ function DashboardContent() {
 
                   {datesView === "list" ? (
                     <>
-                      <ImportantDates />
+                      {/* Anchor for scroll-to from home card */}
+                      <div id="section-dates" style={{ scrollMarginTop: "8px" }}>
+                        <ImportantDates />
+                      </div>
                       <SchoolDistrictComms />
                     </>
                   ) : (
-                    <MonthCalendar />
+                    <div id="section-dates" style={{ scrollMarginTop: "8px" }}>
+                      <MonthCalendar />
+                    </div>
                   )}
                 </div>
               )}
@@ -174,18 +210,36 @@ function DashboardContent() {
               {/* ── COMMS TAB ── */}
               {activeTab === "comms" && (
                 <div className="space-y-6 pt-3">
-                  <TeacherComms />
-                  <DolphinDigest />
+                  <div id="section-teacher-comms" style={{ scrollMarginTop: "8px" }}>
+                    <TeacherComms />
+                  </div>
+                  <div id="section-dolphin-digest" style={{ scrollMarginTop: "8px" }}>
+                    <DolphinDigest />
+                  </div>
                 </div>
               )}
 
               {/* ── MORE TAB ── */}
               {activeTab === "more" && (
                 <div className="space-y-6 pt-3">
-                  <LunchMenu />
-                  <WeatherForecast />
-                  <Homework />
-                  <ImportantLinks />
+                  {/* Lunch section — anchor for scroll-to */}
+                  <div id="section-lunch" style={{ scrollMarginTop: "8px" }}>
+                    <LunchMenu />
+                  </div>
+
+                  {/* Weather section — anchor for scroll-to */}
+                  <div id="section-weather" style={{ scrollMarginTop: "8px" }}>
+                    <WeatherForecast />
+                  </div>
+
+                  {/* Homework section — anchor for scroll-to */}
+                  <div id="section-homework" style={{ scrollMarginTop: "8px" }}>
+                    <Homework />
+                  </div>
+
+                  <div id="section-links" style={{ scrollMarginTop: "8px" }}>
+                    <ImportantLinks />
+                  </div>
 
                   {/* Footer */}
                   <div className="mt-8 text-center pb-4">
