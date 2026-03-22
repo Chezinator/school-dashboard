@@ -2,7 +2,7 @@
  * WeekSwitcher — Dayhaven mockup style:
  * Pill-shaped week navigation, solid fills, no borders.
  */
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { CaretLeft, CaretRight } from "@phosphor-icons/react";
 import { useWeek } from "@/contexts/WeekContext";
 
 export default function WeekSwitcher() {
@@ -18,7 +18,7 @@ export default function WeekSwitcher() {
         className="w-8 h-8 rounded-full bg-muted flex items-center justify-center disabled:opacity-20 hover:bg-black/10 dark:hover:bg-white/10 transition-all"
         aria-label="Previous week"
       >
-        <ChevronLeft className="w-4 h-4" />
+        <CaretLeft size={16} weight="bold" />
       </button>
 
       <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-muted">
@@ -43,7 +43,7 @@ export default function WeekSwitcher() {
         className="w-8 h-8 rounded-full bg-muted flex items-center justify-center disabled:opacity-20 hover:bg-black/10 dark:hover:bg-white/10 transition-all"
         aria-label="Next week"
       >
-        <ChevronRight className="w-4 h-4" />
+        <CaretRight size={16} weight="bold" />
       </button>
     </div>
   );

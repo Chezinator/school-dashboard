@@ -6,7 +6,7 @@
  */
 import { useWeek } from "@/contexts/WeekContext";
 import { motion } from "framer-motion";
-import { ExternalLink, AlertCircle, Globe } from "lucide-react";
+import { ArrowSquareOut, WarningCircle, GlobeSimple, LinkSimple } from "@phosphor-icons/react";
 
 interface LinkItem {
   id: string; title: string; url: string; description: string;
@@ -41,7 +41,10 @@ export default function ImportantLinks() {
 
   return (
     <section className="space-y-6">
-      <h2 className="font-display text-xl text-foreground tracking-tight">Quick Links</h2>
+      <div className="flex items-center gap-2">
+        <LinkSimple size={22} weight="duotone" className="text-dh-teal" />
+        <h2 className="font-display text-xl text-foreground tracking-tight">Quick Links</h2>
+      </div>
 
       {/* Pinned tools — 2-col color-blocked grid */}
       {pinnedTools.length > 0 && (
@@ -66,7 +69,7 @@ export default function ImportantLinks() {
                   <p className="text-xs opacity-70 leading-relaxed mb-3 flex-1">{link.description}</p>
                   {link.earmarked ? (
                     <div className="flex items-center gap-1.5 text-xs font-medium opacity-60">
-                      <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                      <WarningCircle size={14} weight="bold" className="shrink-0" />
                       Direct link coming soon
                     </div>
                   ) : (
@@ -76,7 +79,7 @@ export default function ImportantLinks() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold bg-black/15 hover:bg-black/25 transition-colors self-start"
                     >
-                      <ExternalLink className="w-3 h-3" />
+                      <ArrowSquareOut size={14} weight="bold" />
                       Open
                     </a>
                   )}
@@ -117,7 +120,7 @@ export default function ImportantLinks() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold bg-black/15 hover:bg-black/25 transition-colors"
                   >
-                    <ExternalLink className="w-3 h-3" />
+                    <ArrowSquareOut size={14} weight="bold" />
                     Open Link
                   </a>
                 </motion.div>
@@ -129,7 +132,7 @@ export default function ImportantLinks() {
 
       {allLinks.length === 0 && (
         <div className="dh-card dh-card-cream text-center py-8">
-          <Globe className="w-8 h-8 opacity-20 mx-auto mb-2" />
+          <GlobeSimple size={32} weight="duotone" className="opacity-20 mx-auto mb-2" />
           <p className="text-sm opacity-60">No links available this week</p>
         </div>
       )}

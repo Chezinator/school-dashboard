@@ -4,7 +4,7 @@
  * No borders, no shadows — solid fills only.
  */
 import { useWeek } from "@/contexts/WeekContext";
-import { ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowSquareOut, CaretDown, CaretUp, Newspaper } from "@phosphor-icons/react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -28,7 +28,10 @@ export default function DolphinDigest() {
 
   return (
     <section>
-      <h2 className="font-display text-xl text-foreground tracking-tight mb-4">Dolphin Digest</h2>
+      <div className="flex items-center gap-2 mb-4">
+        <Newspaper size={22} weight="duotone" className="text-dh-teal" />
+        <h2 className="font-display text-xl text-foreground tracking-tight">Dolphin Digest</h2>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 16 }}
@@ -62,9 +65,9 @@ export default function DolphinDigest() {
             className="flex items-center gap-1.5 text-xs font-semibold opacity-60 hover:opacity-100 transition-opacity mb-4"
           >
             {expanded ? (
-              <><ChevronUp className="w-3.5 h-3.5" /> Show Less</>
+              <><CaretUp size={14} weight="bold" /> Show Less</>
             ) : (
-              <><ChevronDown className="w-3.5 h-3.5" /> {digest.highlights.length - 3} More</>
+              <><CaretDown size={14} weight="bold" /> {digest.highlights.length - 3} More</>
             )}
           </button>
         )}
@@ -75,7 +78,7 @@ export default function DolphinDigest() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-white/20 hover:bg-white/30 transition-colors"
         >
-          <ExternalLink className="w-3 h-3" />
+          <ArrowSquareOut size={14} weight="bold" />
           {linkLabel}
         </a>
       </motion.div>

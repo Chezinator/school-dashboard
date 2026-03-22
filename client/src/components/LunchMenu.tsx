@@ -4,7 +4,7 @@
  * No borders, no shadows — solid fills only.
  */
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { CaretLeft, CaretRight, ForkKnife } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useWeek } from "@/contexts/WeekContext";
 
@@ -21,7 +21,10 @@ export default function LunchMenu() {
 
   return (
     <section>
-      <h2 className="font-display text-xl text-foreground tracking-tight mb-4">Lunch Menu</h2>
+      <div className="flex items-center gap-2 mb-4">
+        <ForkKnife size={22} weight="duotone" className="text-dh-coral" />
+        <h2 className="font-display text-xl text-foreground tracking-tight">Lunch Menu</h2>
+      </div>
 
       <div className="dh-card dh-card-coral">
         {/* Day selector */}
@@ -31,7 +34,7 @@ export default function LunchMenu() {
             disabled={activeDay === 0}
             className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center disabled:opacity-20 hover:bg-black/15 transition-all active:scale-90"
           >
-            <ChevronLeft className="w-4 h-4" />
+            <CaretLeft size={16} weight="bold" />
           </button>
           <div className="text-center">
             <p className="font-display font-semibold text-sm">{current.day}</p>
@@ -44,7 +47,7 @@ export default function LunchMenu() {
             disabled={activeDay === menu.length - 1}
             className="w-8 h-8 rounded-full bg-black/10 flex items-center justify-center disabled:opacity-20 hover:bg-black/15 transition-all active:scale-90"
           >
-            <ChevronRight className="w-4 h-4" />
+            <CaretRight size={16} weight="bold" />
           </button>
         </div>
 

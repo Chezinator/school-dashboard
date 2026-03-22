@@ -4,7 +4,7 @@
  * event details in color-blocked cards. No borders, no shadows.
  */
 import { useState, useMemo } from "react";
-import { ChevronLeft, ChevronRight, ExternalLink, X, CalendarDays } from "lucide-react";
+import { CaretLeft, CaretRight, ArrowSquareOut, X, CalendarDots } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useWeek } from "@/contexts/WeekContext";
 
@@ -114,7 +114,7 @@ function EventDetailCard({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-black/15 hover:bg-black/25 transition-colors"
             >
-              <ExternalLink className="w-3 h-3" />
+              <ArrowSquareOut size={14} weight="bold" />
               {lnk.label}
             </a>
           ))}
@@ -205,7 +205,7 @@ export default function MonthCalendar() {
           className="w-8 h-8 rounded-full bg-muted flex items-center justify-center hover:bg-black/10 dark:hover:bg-white/10 transition-all shrink-0"
           aria-label="Previous month"
         >
-          <ChevronLeft className="w-4 h-4" />
+          <CaretLeft size={16} weight="bold" />
         </button>
 
         <div className="flex items-center gap-2">
@@ -225,7 +225,7 @@ export default function MonthCalendar() {
           className="w-8 h-8 rounded-full bg-muted flex items-center justify-center hover:bg-black/10 dark:hover:bg-white/10 transition-all shrink-0"
           aria-label="Next month"
         >
-          <ChevronRight className="w-4 h-4" />
+          <CaretRight size={16} weight="bold" />
         </button>
       </div>
 
@@ -344,7 +344,7 @@ export default function MonthCalendar() {
 
       {allEvents.length === 0 && (
         <div className="dh-card dh-card-cream text-center py-8">
-          <CalendarDays className="w-8 h-8 opacity-20 mx-auto mb-2" />
+          <CalendarDots size={32} weight="duotone" className="opacity-20 mx-auto mb-2" />
           <p className="text-sm opacity-60">No dates or homework this week</p>
         </div>
       )}

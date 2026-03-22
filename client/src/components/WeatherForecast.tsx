@@ -1,21 +1,20 @@
 /**
- * WeatherForecast — Dayhaven mockup style:
- * Solid sage green card for the forecast. Each day as a row inside.
- * No borders, no shadows.
+ * WeatherForecast — Amber card for the forecast.
+ * Phosphor icons throughout. No borders, no shadows.
  */
-import { Sun, CloudSun, Cloud, CloudRain, Shirt } from "lucide-react";
+import { Sun, CloudSun, Cloud, CloudRain, TShirt, Thermometer } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import { useWeek } from "@/contexts/WeekContext";
 
 function getWeatherIcon(icon: string) {
-  const cls = "w-6 h-6 opacity-70";
+  const props = { size: 22, weight: "duotone" as const, className: "opacity-70 shrink-0" };
   switch (icon) {
-    case "sun":        return <Sun className={cls} />;
-    case "cloud-sun":  return <CloudSun className={cls} />;
-    case "cloud":      return <Cloud className={cls} />;
+    case "sun":        return <Sun {...props} />;
+    case "cloud-sun":  return <CloudSun {...props} />;
+    case "cloud":      return <Cloud {...props} />;
     case "rain":
-    case "cloud-rain": return <CloudRain className={cls} />;
-    default:           return <Sun className={cls} />;
+    case "cloud-rain": return <CloudRain {...props} />;
+    default:           return <Sun {...props} />;
   }
 }
 
@@ -25,14 +24,17 @@ export default function WeatherForecast() {
 
   return (
     <section>
-      <h2 className="font-display text-xl text-foreground tracking-tight mb-4">Weather</h2>
+      <div className="flex items-center gap-2 mb-4">
+        <Thermometer size={22} weight="duotone" className="text-dh-amber" />
+        <h2 className="font-display text-xl text-foreground tracking-tight">Weather</h2>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-20px" }}
         transition={{ type: "spring", stiffness: 260, damping: 24 }}
-        className="dh-card dh-card-sage"
+        className="dh-card dh-card-amber"
       >
         <p className="text-xs font-bold uppercase tracking-wider opacity-50 mb-3">
           Week of {week.weekLabel}
@@ -48,7 +50,7 @@ export default function WeatherForecast() {
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium leading-tight">{day.condition}</p>
                 <div className="flex items-center gap-1 mt-0.5">
-                  <Shirt className="w-3 h-3 opacity-50" />
+                  <TShirt size={12} weight="bold" className="opacity-50 shrink-0" />
                   <p className="text-xs opacity-60 truncate">{day.dressSuggestion}</p>
                 </div>
               </div>

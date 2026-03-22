@@ -1,11 +1,10 @@
 /**
- * HeroHeader — Matches the Dayhaven mockup exactly:
- * Large "Good morning, Stanfield" serif greeting, family photo circle, dark mode toggle.
- * Clean, spacious, editorial feel.
+ * HeroHeader — Family photo as background image with greeting overlaid on left.
+ * Dark mode toggle top-right. Photo serves as customizable hero background.
  */
 import { useWeek } from "@/contexts/WeekContext";
 import { useTheme } from "@/contexts/ThemeContext";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 
 const FAMILY_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/family-photo_c81abf91.jpg";
@@ -22,44 +21,45 @@ export default function HeroHeader() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="px-5 pt-14 pb-4 sm:px-6 sm:pt-16">
-      <div className="max-w-2xl mx-auto">
-        {/* Top row: photo + dark mode toggle */}
-        <div className="flex items-center justify-between mb-6">
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.1 }}
-          >
-            <div className="w-12 h-12 rounded-full overflow-hidden">
-              <img
-                src={FAMILY_PHOTO}
-                alt="Stanfield family"
-                className="w-full h-full object-cover"
-                style={{ objectPosition: "70% 30%" }}
-              />
-            </div>
-          </motion.div>
+    <header className="relative w-full overflow-hidden" style={{ minHeight: "220px" }}>
+      {/* Background family photo */}
+      <div className="absolute inset-0">
+        <img
+          src={FAMILY_PHOTO}
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "50% 25%" }}
+        />
+        {/* Gradient overlay for text readability — dark from left */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+      </div>
 
+      {/* Content overlay */}
+      <div className="relative z-10 px-5 pt-12 pb-6 sm:px-6 sm:pt-14 max-w-lg mx-auto">
+        {/* Top row: dark mode toggle (right) */}
+        <div className="flex items-center justify-end mb-10">
           <motion.button
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.3 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.2 }}
             onClick={toggleTheme}
-            aria-label="Toggle dark mode"
-            className="w-10 h-10 rounded-full flex items-center justify-center text-foreground hover:bg-muted/50 transition-all duration-200 active:scale-90"
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            className="w-10 h-10 rounded-full flex items-center justify-center text-white/90 hover:text-white hover:bg-white/15 transition-all duration-200 active:scale-90 backdrop-blur-sm"
           >
-            {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            {theme === "dark" ? <Sun size={22} weight="bold" /> : <Moon size={22} weight="bold" />}
           </motion.button>
         </div>
 
-        {/* Large serif greeting — matching the mockup "Good morning, Sarah" style */}
+        {/* Greeting text — overlaid on left side */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 200, damping: 20, delay: 0.15 }}
+          transition={{ type: "spring", stiffness: 200, damping: 20, delay: 0.1 }}
+          className="max-w-[280px]"
         >
-          <h1 className="font-display text-[2rem] sm:text-[2.5rem] leading-[1.1] text-foreground tracking-tight">
+          <h1 className="font-display text-[2rem] sm:text-[2.5rem] leading-[1.1] text-white tracking-tight drop-shadow-lg">
             {getGreeting()}
             <br />
             <span className="font-display font-semibold">{meta.familyName}</span>

@@ -3,7 +3,7 @@
  * Color-blocked cards per event type. No borders, no shadows.
  * Tests = coral, Events = amber, School = sage, Holidays = teal.
  */
-import { ExternalLink } from "lucide-react";
+import { ArrowSquareOut, CalendarCheck } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import { useWeek } from "@/contexts/WeekContext";
 
@@ -41,7 +41,10 @@ export default function ImportantDates() {
 
   return (
     <section>
-      <h2 className="font-display text-xl text-foreground tracking-tight mb-4">Important Dates</h2>
+      <div className="flex items-center gap-2 mb-4">
+        <CalendarCheck size={22} weight="duotone" className="text-dh-sage" />
+        <h2 className="font-display text-xl text-foreground tracking-tight">Important Dates</h2>
+      </div>
 
       <div className="space-y-3">
         {dates.map((item, idx) => {
@@ -86,7 +89,7 @@ export default function ImportantDates() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 mt-3 px-4 py-1.5 rounded-full text-xs font-semibold bg-black/15 hover:bg-black/25 transition-colors"
                 >
-                  <ExternalLink className="w-3 h-3" />
+                  <ArrowSquareOut size={14} weight="bold" />
                   {eventLink.label}
                 </a>
               )}

@@ -4,7 +4,7 @@
  * No borders, no shadows — solid fills only.
  */
 import { useState } from "react";
-import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import { CaretDown, CaretUp, ArrowSquareOut, Buildings } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useWeek } from "@/contexts/WeekContext";
 
@@ -35,7 +35,10 @@ export default function SchoolDistrictComms() {
 
   return (
     <section>
-      <h2 className="font-display text-xl text-foreground tracking-tight mb-4">School & District</h2>
+      <div className="flex items-center gap-2 mb-4">
+        <Buildings size={22} weight="duotone" className="text-dh-sage" />
+        <h2 className="font-display text-xl text-foreground tracking-tight">School & District</h2>
+      </div>
 
       {/* Source filter pills */}
       <div className="flex gap-2 mb-4 overflow-x-auto pb-1">
@@ -97,7 +100,7 @@ export default function SchoolDistrictComms() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 mt-3 px-4 py-1.5 rounded-full text-xs font-semibold bg-black/15 hover:bg-black/25 transition-colors"
                   >
-                    <ExternalLink className="w-3 h-3" />
+                    <ArrowSquareOut size={14} weight="bold" />
                     {(comm as any).link.label}
                   </a>
                 )}
@@ -113,9 +116,9 @@ export default function SchoolDistrictComms() {
           className="w-full mt-3 py-2.5 rounded-full bg-muted text-sm font-semibold text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center justify-center gap-1.5"
         >
           {showAll ? (
-            <>Show Less <ChevronUp className="w-4 h-4" /></>
+            <>Show Less <CaretUp size={16} weight="bold" /></>
           ) : (
-            <>Show All {filtered.length} <ChevronDown className="w-4 h-4" /></>
+            <>Show All {filtered.length} <CaretDown size={16} weight="bold" /></>
           )}
         </button>
       )}

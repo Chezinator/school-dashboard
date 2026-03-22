@@ -5,7 +5,7 @@
  * No borders, no shadows — solid fills only.
  */
 import { useState, useEffect, useCallback } from "react";
-import { BookOpen, Calendar, CheckCircle2, Circle, ExternalLink } from "lucide-react";
+import { BookOpenText, CalendarCheck, CheckCircle, Circle, ArrowSquareOut } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useWeek } from "@/contexts/WeekContext";
 
@@ -73,7 +73,10 @@ export default function Homework() {
   return (
     <section>
       <div className="flex items-center justify-between mb-4">
-        <h2 className="font-display text-xl text-foreground tracking-tight">Homework</h2>
+        <div className="flex items-center gap-2">
+          <BookOpenText size={22} weight="duotone" className="text-dh-pink" />
+          <h2 className="font-display text-xl text-foreground tracking-tight">Homework</h2>
+        </div>
         {totalAssignments > 0 && (
           <span className="text-xs font-bold text-muted-foreground bg-muted rounded-full px-3 py-1">
             {completedCount}/{totalAssignments}
@@ -149,7 +152,7 @@ export default function Homework() {
                     whileTap={{ scale: 0.8 }}
                     className="mt-0.5 shrink-0 opacity-70 hover:opacity-100 transition-opacity"
                   >
-                    {isDone ? <CheckCircle2 className="w-5 h-5" /> : <Circle className="w-5 h-5" />}
+                    {isDone ? <CheckCircle size={20} weight="fill" /> : <Circle size={20} />}
                   </motion.button>
 
                   <div className="min-w-0 flex-1">
@@ -161,7 +164,7 @@ export default function Homework() {
                     </h3>
                     <p className="text-xs leading-relaxed opacity-75 mt-1">{assignment.description}</p>
                     <div className="flex items-center gap-1 mt-2">
-                      <Calendar className="w-3 h-3 opacity-50" />
+                      <CalendarCheck size={12} weight="bold" className="opacity-50" />
                       <span className="text-xs font-medium opacity-60">Due {formatDate(assignment.dueDate)}</span>
                     </div>
                     {allLinks.length > 0 && (
@@ -174,7 +177,7 @@ export default function Homework() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-black/15 hover:bg-black/25 transition-colors"
                           >
-                            <ExternalLink className="w-3 h-3" />
+                            <ArrowSquareOut size={14} weight="bold" />
                             {lk.label}
                           </a>
                         ))}
@@ -188,7 +191,7 @@ export default function Homework() {
 
           {(!currentHomework || currentHomework.assignments.length === 0) && (
             <div className="dh-card dh-card-cream text-center py-8">
-              <BookOpen className="w-8 h-8 opacity-20 mx-auto mb-2" />
+              <BookOpenText size={32} weight="duotone" className="opacity-20 mx-auto mb-2" />
               <p className="text-sm opacity-60">No homework assignments this week</p>
             </div>
           )}

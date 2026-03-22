@@ -1,17 +1,23 @@
 /**
  * Home — Dayhaven App Dashboard
  * 
- * Matches the landing page mockups exactly:
- * - Large serif greeting "Good morning, Stanfield"
- * - 2-column color-blocked cards (schedule + lunch)
- * - Weather card below
- * - Action items as color-blocked cards
- * - 4-icon bottom nav (home, calendar, mail, profile)
+ * - Family photo hero background with greeting overlay
+ * - Color-coded cards: Bronson=teal, Kaia=coral, dates=sage, lunch=coral, weather=amber, homework=pink
+ * - Cards are clickable to navigate to relevant tabs
+ * - Bottom nav uses Phosphor icons — reversed (outline when inactive, filled when active)
+ * - QuickToolsRow removed from home (already in Quick Links tab)
  * - Pull-to-refresh on mobile
- * - Spring entrance animations
  */
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  House,
+  CalendarDots,
+  EnvelopeSimple,
+  DotsThreeCircle,
+  List,
+  CalendarBlank,
+} from "@phosphor-icons/react";
 import HeroHeader from "@/components/HeroHeader";
 import ActionItems from "@/components/ActionItems";
 import ImportantDates from "@/components/ImportantDates";
@@ -27,30 +33,17 @@ import MonthCalendar from "@/components/MonthCalendar";
 import PullToRefresh from "@/components/PullToRefresh";
 import TodayLunchCard from "@/components/TodayLunchCard";
 import TodayWeatherCard from "@/components/TodayWeatherCard";
-import TodayScheduleCard from "@/components/TodayScheduleCard";
 import UpcomingDatesCard from "@/components/UpcomingDatesCard";
 import HomeworkSummaryCard from "@/components/HomeworkSummaryCard";
-import QuickToolsRow from "@/components/QuickToolsRow";
 import { WeekProvider, useWeek } from "@/contexts/WeekContext";
-import {
-  Home as HomeIcon,
-  CalendarDays,
-  Mail,
-  User,
-  BookOpen,
-  Link2,
-  RefreshCw,
-  Heart,
-  List,
-  Calendar,
-} from "lucide-react";
+import { ArrowsClockwise, Heart } from "@phosphor-icons/react";
 
-/* 4 tabs matching the mockup bottom nav: Home, Dates, Comms, More */
+/* 4 tabs: Home, Dates, Comms, More */
 const TABS = [
-  { id: "home",   icon: HomeIcon },
-  { id: "dates",  icon: CalendarDays },
-  { id: "comms",  icon: Mail },
-  { id: "more",   icon: User },
+  { id: "home",  label: "Home",  Icon: House },
+  { id: "dates", label: "Dates", Icon: CalendarDots },
+  { id: "comms", label: "Comms", Icon: EnvelopeSimple },
+  { id: "more",  label: "More",  Icon: DotsThreeCircle },
 ] as const;
 
 type TabId = typeof TABS[number]["id"];
@@ -84,11 +77,11 @@ function DashboardContent() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <PullToRefresh onRefresh={handleRefresh}>
-        {/* Greeting Header */}
+        {/* Hero Header — family photo background */}
         <HeroHeader />
 
         {/* Week Switcher */}
-        <div className="max-w-lg mx-auto w-full px-5 pt-2">
+        <div className="max-w-lg mx-auto w-full px-5 pt-4">
           <WeekSwitcher />
           {!isLatest && (
             <motion.div
@@ -114,29 +107,23 @@ function DashboardContent() {
               transition={{ type: "spring", stiffness: 320, damping: 32, mass: 0.7 }}
             >
 
-              {/* ── HOME TAB — Matches the mockup dashboard screen ── */}
+              {/* ── HOME TAB ── */}
               {activeTab === "home" && (
                 <div className="space-y-4 pt-3">
-                  {/* Quick Tools Row */}
-                  <QuickToolsRow delay={0} />
-
-                  {/* 2-column grid: Schedule + Lunch — matching the mockup exactly */}
+                  {/* 2-column grid: Upcoming Dates + Lunch */}
                   <div className="grid grid-cols-2 gap-3">
-                    <TodayScheduleCard delay={1} />
-                    <TodayLunchCard delay={2} />
+                    <UpcomingDatesCard delay={0} onNavigate={() => goToTab("dates")} />
+                    <TodayLunchCard delay={1} onNavigate={() => goToTab("more")} />
                   </div>
 
                   {/* Weather + Homework row */}
                   <div className="grid grid-cols-2 gap-3">
-                    <TodayWeatherCard delay={3} />
-                    <HomeworkSummaryCard delay={4} />
+                    <TodayWeatherCard delay={2} onNavigate={() => goToTab("more")} />
+                    <HomeworkSummaryCard delay={3} onNavigate={() => goToTab("more")} />
                   </div>
 
                   {/* Action Items */}
                   <ActionItems />
-
-                  {/* Upcoming Dates */}
-                  <UpcomingDatesCard delay={6} />
                 </div>
               )}
 
@@ -155,7 +142,7 @@ function DashboardContent() {
                             : "text-muted-foreground hover:text-foreground"
                         }`}
                       >
-                        <List className="w-3.5 h-3.5" />
+                        <List size={14} />
                         List
                       </button>
                       <button
@@ -167,7 +154,7 @@ function DashboardContent() {
                             : "text-muted-foreground hover:text-foreground"
                         }`}
                       >
-                        <Calendar className="w-3.5 h-3.5" />
+                        <CalendarBlank size={14} />
                         Calendar
                       </button>
                     </div>
@@ -184,7 +171,7 @@ function DashboardContent() {
                 </div>
               )}
 
-              {/* ── COMMS TAB — Teacher comms + Dolphin Digest ── */}
+              {/* ── COMMS TAB ── */}
               {activeTab === "comms" && (
                 <div className="space-y-6 pt-3">
                   <TeacherComms />
@@ -192,7 +179,7 @@ function DashboardContent() {
                 </div>
               )}
 
-              {/* ── MORE TAB — School info, Homework, Links ── */}
+              {/* ── MORE TAB ── */}
               {activeTab === "more" && (
                 <div className="space-y-6 pt-3">
                   <LunchMenu />
@@ -208,11 +195,11 @@ function DashboardContent() {
                         {meta.familyName} Family · {meta.schoolName}
                       </p>
                       <div className="flex items-center justify-center gap-1.5 mt-2">
-                        <RefreshCw className="w-3 h-3 text-muted-foreground/30" />
+                        <ArrowsClockwise size={12} className="text-muted-foreground/30" />
                         <p className="text-xs text-muted-foreground/30">{lastUpdatedFormatted}</p>
                       </div>
                       <p className="text-xs text-muted-foreground/20 mt-2 flex items-center justify-center gap-1">
-                        Made with <Heart className="w-3 h-3 text-coral/30 fill-coral/30" /> for the family
+                        Made with <Heart size={12} weight="fill" className="text-dh-coral/30" /> for the family
                       </p>
                     </div>
                   </div>
@@ -224,36 +211,44 @@ function DashboardContent() {
         </main>
       </PullToRefresh>
 
-      {/* ── BOTTOM NAV — 4 icons, no labels, matching the mockup ── */}
-      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl">
+      {/* ── BOTTOM NAV — Phosphor icons, reversed fill treatment ── */}
+      <nav
+        className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-t border-border/30"
+        role="tablist"
+        aria-label="Main navigation"
+      >
         <div
-          className="max-w-lg mx-auto flex items-center justify-around py-3"
-          style={{ paddingBottom: "max(env(safe-area-inset-bottom, 0px), 12px)" }}
+          className="max-w-lg mx-auto flex items-center justify-around py-2"
+          style={{ paddingBottom: "max(env(safe-area-inset-bottom, 0px), 8px)" }}
         >
           {TABS.map((tab) => {
-            const Icon = tab.icon;
             const isActive = activeTab === tab.id;
             return (
               <button
                 key={tab.id}
+                role="tab"
+                aria-selected={isActive}
+                aria-label={tab.label}
                 onClick={() => goToTab(tab.id)}
-                className="flex items-center justify-center w-12 h-12 transition-all duration-200 active:scale-90"
-                aria-label={tab.id}
+                className="flex flex-col items-center justify-center gap-0.5 w-16 py-1 transition-all duration-200 active:scale-90"
               >
                 <motion.div
                   animate={isActive ? { scale: 1 } : { scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
-                  <Icon
-                    className={`transition-all duration-200 ${
-                      isActive
-                        ? "w-6 h-6 text-foreground"
-                        : "w-5 h-5 text-muted-foreground"
+                  <tab.Icon
+                    size={24}
+                    weight={isActive ? "fill" : "regular"}
+                    className={`transition-colors duration-200 ${
+                      isActive ? "text-foreground" : "text-muted-foreground"
                     }`}
-                    fill={isActive ? "currentColor" : "none"}
-                    strokeWidth={isActive ? 1.5 : 2}
                   />
                 </motion.div>
+                <span className={`text-[10px] font-medium transition-colors duration-200 ${
+                  isActive ? "text-foreground" : "text-muted-foreground"
+                }`}>
+                  {tab.label}
+                </span>
               </button>
             );
           })}
