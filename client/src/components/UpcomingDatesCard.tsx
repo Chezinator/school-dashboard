@@ -36,7 +36,7 @@ export default function UpcomingDatesCard({ delay = 0, onNavigate }: Props) {
 
   const upcoming = allDates
     .filter((d) => new Date(d.date + "T00:00:00") >= today)
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .sort((a, b) => new Date(a.date + "T00:00:00").getTime() - new Date(b.date + "T00:00:00").getTime())
     .slice(0, 3);
 
   if (!upcoming.length) return null;

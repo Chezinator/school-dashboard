@@ -35,7 +35,7 @@ export default function TodayWeatherCard({ delay = 0, onNavigate }: Props) {
 
   // Sort by date, show today + next 2 days
   const upcomingWeather = [...weather]
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .sort((a, b) => new Date(a.date + "T00:00:00").getTime() - new Date(b.date + "T00:00:00").getTime())
     .filter((w) => new Date(w.date + "T00:00:00") >= today)
     .slice(0, 3);
 

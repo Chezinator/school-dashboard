@@ -23,7 +23,7 @@ export default function TodayLunchCard({ delay = 0, onNavigate }: Props) {
 
   // Sort menu by actual date, then show today + next 2 upcoming school days
   const sortedMenu = [...menu].sort(
-    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+    (a, b) => new Date(a.date + "T00:00:00").getTime() - new Date(b.date + "T00:00:00").getTime()
   );
   const upcomingDays = sortedMenu
     .filter((m) => new Date(m.date + "T00:00:00") >= today)
