@@ -177,6 +177,35 @@
             "url": "https://www.parentsquare.com/feeds/73981070",
             "label": "View Gala Details"
           }
+        },
+        {
+          "date": "2026-04-24",
+          "title": "No School — Teacher Professional Day",
+          "description": "OCPS Teacher Professional Day. Students have the day off. Teachers participate in professional development.",
+          "type": "holiday",
+          "kidId": null
+        },
+        {
+          "date": "2026-05-25",
+          "title": "No School — Memorial Day",
+          "description": "Memorial Day Holiday. Schools and District Offices closed.",
+          "type": "holiday",
+          "kidId": null
+        },
+        {
+          "date": "2026-05-27",
+          "title": "Last Day of School",
+          "description": "End of Fourth Marking Period. Last day of the 2025-2026 school year for students.",
+          "type": "school",
+          "kidId": null
+        },
+        {
+          "date": "2026-05-28",
+          "endDate": "2026-05-29",
+          "title": "Post Planning — Staff Only",
+          "description": "Post-planning days for teachers and staff. No students.",
+          "type": "school",
+          "kidId": null
         }
       ],
       "lunchMenu": [
@@ -659,6 +688,35 @@
             "url": "https://www.parentsquare.com/feeds/73981070",
             "label": "View Gala Details"
           }
+        },
+        {
+          "date": "2026-04-24",
+          "title": "No School — Teacher Professional Day",
+          "description": "OCPS Teacher Professional Day. Students have the day off. Teachers participate in professional development.",
+          "type": "holiday",
+          "kidId": null
+        },
+        {
+          "date": "2026-05-25",
+          "title": "No School — Memorial Day",
+          "description": "Memorial Day Holiday. Schools and District Offices closed.",
+          "type": "holiday",
+          "kidId": null
+        },
+        {
+          "date": "2026-05-27",
+          "title": "Last Day of School",
+          "description": "End of Fourth Marking Period. Last day of the 2025-2026 school year for students.",
+          "type": "school",
+          "kidId": null
+        },
+        {
+          "date": "2026-05-28",
+          "endDate": "2026-05-29",
+          "title": "Post Planning — Staff Only",
+          "description": "Post-planning days for teachers and staff. No students.",
+          "type": "school",
+          "kidId": null
         }
       ],
       "lunchMenu": [

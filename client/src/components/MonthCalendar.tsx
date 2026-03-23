@@ -20,7 +20,7 @@ const TYPE_CONFIG: Record<string, { dot: string; card: string; label: string }> 
   test:     { dot: "bg-dh-coral",  card: "dh-card-coral",  label: "Assessment" },
   event:    { dot: "bg-dh-amber",  card: "dh-card-amber",  label: "Event" },
   school:   { dot: "bg-dh-teal",   card: "dh-card-teal",   label: "School" },
-  holiday:  { dot: "bg-dh-sage",   card: "dh-card-sage",   label: "Holiday" },
+  holiday:  { dot: "bg-dh-blue",   card: "dh-card-blue",   label: "Holiday" },
   homework: { dot: "bg-dh-pink",   card: "dh-card-pink",   label: "Homework" },
 };
 

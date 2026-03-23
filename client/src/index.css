@@ -55,6 +55,8 @@
   --color-dh-pink-text: oklch(0.25 0.03 15);      /* Dark text on pink */
   --color-dh-cream: oklch(0.92 0.02 85);          /* Lighter cream card fill */
   --color-dh-charcoal: oklch(0.22 0.01 260);      /* Dark charcoal for buttons/text */
+  --color-dh-blue: oklch(0.72 0.1 250);            /* Blue for holidays/no-school days */
+  --color-dh-blue-text: oklch(0.22 0.04 250);      /* Dark text on blue */
 
   /* Legacy compat */
   --color-coral: oklch(0.76 0.1 30);
@@ -267,6 +269,14 @@
   .dark .dh-card-pink {
     background-color: oklch(0.32 0.04 15);
     color: oklch(0.92 0.02 15);
+  }
+  .dh-card-blue {
+    background-color: oklch(0.72 0.1 250);
+    color: oklch(0.22 0.04 250);
+  }
+  .dark .dh-card-blue {
+    background-color: oklch(0.30 0.06 250);
+    color: oklch(0.92 0.02 250);
   }
   .dh-card-cream {
     background-color: oklch(0.94 0.015 85);

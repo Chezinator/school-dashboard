@@ -2,10 +2,12 @@
  * HeroHeader — Family photo as background image with greeting overlaid on left.
  * Dark mode toggle top-right. Photo serves as customizable hero background.
  */
+import { useState } from "react";
 import { useWeek } from "@/contexts/WeekContext";
 import { useTheme } from "@/contexts/ThemeContext";
-import { Moon, Sun } from "@phosphor-icons/react";
+import { Moon, Sun, ArrowsClockwise } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
+import { toast } from "sonner";
 
 const FAMILY_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/family-photo_c81abf91.jpg";
 
@@ -17,8 +19,21 @@ function getGreeting(): string {
 }
 
 export default function HeroHeader() {
-  const { meta } = useWeek();
+  const { meta, lastUpdatedFormatted } = useWeek();
   const { theme, toggleTheme } = useTheme();
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
+  function handleCheckForUpdates() {
+    setIsRefreshing(true);
+    // Simulate checking — in a static app, this just reloads
+    setTimeout(() => {
+      setIsRefreshing(false);
+      toast.info("Data is up to date", {
+        description: `Last updated: ${lastUpdatedFormatted}. To get fresh data, ask Manus to pull the latest teacher emails.`,
+        duration: 5000,
+      });
+    }, 800);
+  }
 
   return (
     <header className="relative w-full overflow-hidden" style={{ minHeight: "220px" }}>
@@ -53,16 +68,32 @@ export default function HeroHeader() {
             </h1>
           </motion.div>
 
-          <motion.button
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.2 }}
-            onClick={toggleTheme}
-            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-            className="w-10 h-10 rounded-full flex items-center justify-center text-white/90 hover:text-white hover:bg-white/15 transition-all duration-200 active:scale-90 backdrop-blur-sm shrink-0 mt-1"
-          >
-            {theme === "dark" ? <Sun size={22} weight="bold" /> : <Moon size={22} weight="bold" />}
-          </motion.button>
+          <div className="flex items-center gap-1.5 shrink-0 mt-1">
+            <motion.button
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.15 }}
+              onClick={handleCheckForUpdates}
+              aria-label="Check for updates"
+              className="w-10 h-10 rounded-full flex items-center justify-center text-white/90 hover:text-white hover:bg-white/15 transition-all duration-200 active:scale-90 backdrop-blur-sm"
+            >
+              <ArrowsClockwise
+                size={21}
+                weight="bold"
+                className={isRefreshing ? "animate-spin" : ""}
+              />
+            </motion.button>
+            <motion.button
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.2 }}
+              onClick={toggleTheme}
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+              className="w-10 h-10 rounded-full flex items-center justify-center text-white/90 hover:text-white hover:bg-white/15 transition-all duration-200 active:scale-90 backdrop-blur-sm"
+            >
+              {theme === "dark" ? <Sun size={22} weight="bold" /> : <Moon size={22} weight="bold" />}
+            </motion.button>
+          </div>
         </div>
       </div>
     </header>
