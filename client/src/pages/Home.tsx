@@ -18,6 +18,7 @@ import {
   DotsThreeCircle,
   List,
   CalendarBlank,
+  Rows,
 } from "@phosphor-icons/react";
 import HeroHeader from "@/components/HeroHeader";
 import ActionItems from "@/components/ActionItems";
@@ -31,6 +32,7 @@ import DolphinDigest from "@/components/DolphinDigest";
 import ImportantLinks from "@/components/ImportantLinks";
 import WeekSwitcher from "@/components/WeekSwitcher";
 import MonthCalendar from "@/components/MonthCalendar";
+import WeeklyCalendar from "@/components/WeeklyCalendar";
 import PullToRefresh from "@/components/PullToRefresh";
 import TodayLunchCard from "@/components/TodayLunchCard";
 import TodayWeatherCard from "@/components/TodayWeatherCard";
@@ -80,7 +82,7 @@ function DashboardContent() {
   const { meta, lastUpdatedFormatted } = useWeek();
   const [activeTab, setActiveTab] = useState<TabId>("home");
   const [prevTab, setPrevTab] = useState<TabId>("home");
-  const [datesView, setDatesView] = useState<"list" | "calendar">("list");
+  const [datesView, setDatesView] = useState<"list" | "week" | "month">("week");
 
   // Store the pending scroll target — set before tab switch, consumed after render
   const pendingScrollRef = useRef<string | null>(null);
@@ -183,6 +185,30 @@ function DashboardContent() {
                     <h2 className="font-display text-xl text-foreground tracking-tight">Dates</h2>
                     <div className="flex items-center bg-muted rounded-full p-1 gap-0.5">
                       <button
+                        onClick={() => setDatesView("week")}
+                        aria-label="Week view"
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
+                          datesView === "week"
+                            ? "bg-card text-foreground shadow-sm"
+                            : "text-muted-foreground hover:text-foreground"
+                        }`}
+                      >
+                        <Rows size={14} />
+                        Week
+                      </button>
+                      <button
+                        onClick={() => setDatesView("month")}
+                        aria-label="Month view"
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
+                          datesView === "month"
+                            ? "bg-card text-foreground shadow-sm"
+                            : "text-muted-foreground hover:text-foreground"
+                        }`}
+                      >
+                        <CalendarBlank size={14} />
+                        Month
+                      </button>
+                      <button
                         onClick={() => setDatesView("list")}
                         aria-label="List view"
                         className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
@@ -194,34 +220,21 @@ function DashboardContent() {
                         <List size={14} />
                         List
                       </button>
-                      <button
-                        onClick={() => setDatesView("calendar")}
-                        aria-label="Calendar view"
-                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 ${
-                          datesView === "calendar"
-                            ? "bg-card text-foreground shadow-sm"
-                            : "text-muted-foreground hover:text-foreground"
-                        }`}
-                      >
-                        <CalendarBlank size={14} />
-                        Calendar
-                      </button>
                     </div>
                   </div>
 
-                  {datesView === "list" ? (
-                    <>
-                      {/* section-dates anchor — scroll target from home card */}
-                      <div id="section-dates" style={{ scrollMarginTop: "12px" }}>
+                  <div id="section-dates" style={{ scrollMarginTop: "12px" }}>
+                    {datesView === "week" && <WeeklyCalendar />}
+                    {datesView === "month" && <MonthCalendar />}
+                    {datesView === "list" && (
+                      <>
                         <ImportantDates />
-                      </div>
-                      <SchoolDistrictComms />
-                    </>
-                  ) : (
-                    <div id="section-dates" style={{ scrollMarginTop: "12px" }}>
-                      <MonthCalendar />
-                    </div>
-                  )}
+                        <div className="mt-5">
+                          <SchoolDistrictComms />
+                        </div>
+                      </>
+                    )}
+                  </div>
                 </div>
               )}
 

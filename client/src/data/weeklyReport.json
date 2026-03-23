@@ -348,26 +348,19 @@
               "status": "pending"
             },
             {
-              "subject": "Math",
-              "title": "Math Review — Canvas",
-              "description": "Complete any assigned review work on Canvas for the new 4th grading period. Check for any missing or incomplete assignments.",
-              "dueDate": "2026-04-03",
-              "status": "pending",
-              "link": {
-                "url": "https://ocps.instructure.com/",
-                "label": "Canvas"
-              }
-            },
-            {
-              "subject": "Math",
-              "title": "Blooket — Math Practice",
-              "description": "Complete the assigned Blooket math practice game for the week.",
+              "subject": "General",
+              "title": "Check Canvas & Skyward for Missing Work",
+              "description": "Per Ms. Cuccinello: check Canvas and Skyward for any missing or incomplete assignments from Q3 as the 4th grading period begins.",
               "dueDate": "2026-04-03",
               "status": "pending",
               "links": [
                 {
-                  "url": "https://play.blooket.com/play?hwId=69adadded03413c503a4d263",
-                  "label": "Play Blooket"
+                  "url": "https://ocps.instructure.com/",
+                  "label": "Canvas"
+                },
+                {
+                  "url": "https://parents.classlink.com/ocps",
+                  "label": "Skyward"
                 }
               ]
             }
@@ -399,14 +392,31 @@
             },
             {
               "subject": "Math",
-              "title": "Blooket — Science Review",
-              "description": "Complete the assigned Blooket science review game.",
+              "title": "Blooket: Extend Thinking of Numbers to 1,000",
+              "description": "Complete the Blooket math homework game assigned by Ms. Smith. Practice extending thinking of numbers to 1,000.",
+              "dueDate": "2026-04-03",
+              "status": "pending",
+              "links": [
+                {
+                  "url": "https://play.blooket.com/play?hwId=69adadded03413c503a4d263",
+                  "label": "Play on Blooket"
+                }
+              ]
+            },
+            {
+              "subject": "Science",
+              "title": "Blooket: Human Body Parts Review",
+              "description": "Complete both Blooket science review games assigned by Ms. Smith. Study human body parts and their basic functions.",
               "dueDate": "2026-04-03",
               "status": "pending",
               "links": [
                 {
                   "url": "https://play.blooket.com/play?hwId=69adaefa142ea32f5e141bb0",
-                  "label": "Play Blooket"
+                  "label": "Blooket: Identifying Body Parts"
+                },
+                {
+                  "url": "https://play.blooket.com/play?hwId=69adaf6d597488fadb09b367",
+                  "label": "Blooket: Body Part Functions"
                 }
               ]
             }
@@ -791,7 +801,7 @@
             {
               "date": "2026-03-09",
               "subject": "Week of March 9-13 Newsletter & BEST Writing Prep",
-              "summary": "Last newsletter before Spring Break covered the week of March 9-13. Key highlights: All work was due Thursday March 13 — check Canvas and Skyward for any missing assignments. Field Day was held March 12. Spring Break runs March 14-22. School resumes March 23 with the 4th Grading Period. The BEST Writing Assessment is March 31 (120-min computer-based state test). Blooket review links were shared for Math (Extend Thinking Numbers to 1000), Science (Human Body Parts), and Social Studies."
+              "summary": "Last newsletter before Spring Break covered the week of March 9-13. Key highlights: All work was due Thursday March 13 — check Canvas and Skyward for any missing assignments. Field Day was held March 12 (wear class shirt, bring water bottle, towel, change of clothes). Spring Break runs March 14-22. School resumes March 23 with the 4th Grading Period. The BEST Writing Assessment is March 31 (120-min computer-based state test)."
             },
             {
               "date": "2026-03-11",
@@ -812,7 +822,12 @@
             {
               "date": "2026-03-08",
               "subject": "Blooket Review Games Shared",
-              "summary": "Ms. Smith shared Blooket review links for students to practice at home: Math (Numbers to 1000), Science (Human Body Parts), and Social Studies review game. Poetry vocabulary was also shared (poem, line, stanza, break, poet). These are great for review during Spring Break."
+              "summary": "Ms. Smith shared Blooket review links for students to practice at home: Math (Numbers to 1000), Science (Human Body Parts), and Social Studies review game via TCI on OCPS Launchpad."
+            },
+            {
+              "date": "2026-03-21",
+              "subject": "Spring Break Weekly — March 23-27 Newsletter",
+              "summary": "Students averaged 98% on science test and 90% on word study test before break. This week: Phonics focus is Soft 'c' /s/ (_ce). Daily Math HW pages 153-162 (Add/Subtract with Numbers to 1,000). Potential Word Study Quiz Friday. Money Madness Open Book Test Friday. Media Center Thursday — send in library books. Show and tell / tech time Monday. After school support available Friday until 4pm. Field trip to Green Meadows Petting Farm planned for 4/17."
             }
           ]
         }
@@ -974,9 +989,23 @@
           "assignments": [
             {
               "subject": "Phonics",
-              "title": "Diphthongs Review: ou, ow, oi, oy, au, aw",
-              "description": "Practice diphthong sounds from the last unit. Review worksheet sent home.",
-              "dueDate": "2026-03-25",
+              "title": "Soft 'c' /s/ Word Study (_ce pattern)",
+              "description": "Practice Soft 'c' /s/ words using the _ce pattern (e.g., face, race, place, space). Potential Word Study Quiz on Friday.",
+              "dueDate": "2026-03-27",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Daily Math HW — Pages 153-162",
+              "description": "Mon: Lesson 11-1 pgs 153-154. Tue: Lesson 11-2 pgs 155-156. Wed: Lesson 11-3 pgs 157-158. Thu: Lesson 11-5 pgs 161-162. Add/Subtract with Numbers to 1,000 using place-value strategies.",
+              "dueDate": "2026-03-27",
+              "status": "pending"
+            },
+            {
+              "subject": "ELA",
+              "title": "Money Madness — Open Book Test Friday",
+              "description": "Review Money Madness for Friday's open book test. Access from OCPS Launchpad > Dashboard > My Backpack Apps > McGrawHill > Grade 2 Wonders FL > Resources > Literature Collection > pgs 490-509.",
+              "dueDate": "2026-03-27",
               "status": "pending"
             },
             {

@@ -1,12 +1,13 @@
 /**
  * WeekSwitcher — Dayhaven mockup style:
  * Pill-shaped week navigation, solid fills, no borders.
+ * No week is treated differently — all weeks shown equally.
  */
 import { CaretLeft, CaretRight } from "@phosphor-icons/react";
 import { useWeek } from "@/contexts/WeekContext";
 
 export default function WeekSwitcher() {
-  const { week, hasNewer, hasOlder, goNewer, goOlder, isLatest, totalWeeks } = useWeek();
+  const { week, hasNewer, hasOlder, goNewer, goOlder, totalWeeks } = useWeek();
 
   if (totalWeeks <= 1) return null;
 
@@ -25,16 +26,6 @@ export default function WeekSwitcher() {
         <span className="text-sm font-medium text-foreground whitespace-nowrap">
           {week.weekLabel}
         </span>
-        {isLatest && (
-          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dh-sage/20 text-dh-sage uppercase tracking-wider">
-            Current
-          </span>
-        )}
-        {!isLatest && (
-          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-dh-amber/20 text-dh-amber uppercase tracking-wider">
-            Archive
-          </span>
-        )}
       </div>
 
       <button

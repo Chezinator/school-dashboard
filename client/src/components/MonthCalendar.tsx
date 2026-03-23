@@ -21,7 +21,7 @@ const TYPE_CONFIG: Record<string, { dot: string; card: string; label: string }> 
   event:    { dot: "bg-dh-amber",  card: "dh-card-amber",  label: "Event" },
   school:   { dot: "bg-dh-teal",   card: "dh-card-teal",   label: "School" },
   holiday:  { dot: "bg-dh-sage",   card: "dh-card-sage",   label: "Holiday" },
-  homework: { dot: "bg-violet-500", card: "dh-card-pink",   label: "Homework" },
+  homework: { dot: "bg-dh-pink",   card: "dh-card-pink",   label: "Homework" },
 };
 
 function getConfig(type: string) { return TYPE_CONFIG[type] ?? TYPE_CONFIG["school"]; }
