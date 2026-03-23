@@ -27,12 +27,12 @@
   "weeks": [
     {
       "weekOf": "2026-03-30",
-      "weekLabel": "March 30 – April 3, 2026",
+      "weekLabel": "March 30 \u2013 April 3, 2026",
       "lastUpdated": "2026-03-29T18:00:00Z",
       "actionItems": [
         {
           "id": 1,
-          "title": "Bronson's BEST Writing Assessment — Tuesday",
+          "title": "Bronson's BEST Writing Assessment \u2014 Tuesday",
           "description": "4th Grade Florida State Test on Tuesday, March 31. 120-minute computer-based test. No electronic devices allowed. Ensure good sleep, healthy breakfast, and no electronics the night before. Do NOT schedule appointments.",
           "dueDate": "2026-03-31",
           "urgent": true,
@@ -47,7 +47,7 @@
         },
         {
           "id": 2,
-          "title": "Kaia — Word Study Quiz Friday",
+          "title": "Kaia \u2014 Word Study Quiz Friday",
           "description": "Potential Word Study Quiz on Friday on Soft 'c' /s/ (_ce pattern). Practice words: face, race, place, space, grace, trace. Review nightly.",
           "dueDate": "2026-04-03",
           "urgent": true,
@@ -56,7 +56,7 @@
         },
         {
           "id": 3,
-          "title": "Teacher Appreciation Week — Daily Themes",
+          "title": "Teacher Appreciation Week \u2014 Daily Themes",
           "description": "Show appreciation all week! Mon: High Fives, Tue: Letters/Notes, Wed: Dress Like Teacher/Jokes, Thu: Treats (fave snacks), Fri: Gifts. Ms. Cuccinello loves tulips, chocolate chip cookies, and Diet Coke.",
           "dueDate": "2026-04-03",
           "urgent": false,
@@ -75,7 +75,7 @@
         },
         {
           "id": 4,
-          "title": "Kaia — Green Meadows Field Trip April 17",
+          "title": "Kaia \u2014 Green Meadows Field Trip April 17",
           "description": "2nd Grade field trip to Green Meadows Petting Farm on April 17. Mark your calendar and watch for permission slip details.",
           "dueDate": "2026-04-17",
           "urgent": false,
@@ -105,35 +105,35 @@
       "importantDates": [
         {
           "date": "2026-03-31",
-          "title": "Bronson — BEST Writing Assessment",
+          "title": "Bronson \u2014 BEST Writing Assessment",
           "description": "4th Grade Florida State Test. 120-minute computer-based test. No electronic devices allowed. Ensure good sleep and healthy breakfast. Do NOT schedule appointments.",
           "type": "test",
           "kidId": "bronson"
         },
         {
           "date": "2026-03-30",
-          "title": "Teacher Appreciation — High Fives Day",
+          "title": "Teacher Appreciation \u2014 High Fives Day",
           "description": "Show appreciation by giving teachers and staff a HIGH FIVE! All week: Mon-High Fives, Tue-Letters, Wed-Dress Like Teacher/Jokes, Thu-Treats, Fri-Gifts.",
           "type": "event",
           "kidId": null
         },
         {
           "date": "2026-03-31",
-          "title": "Teacher Appreciation — Letters Day",
+          "title": "Teacher Appreciation \u2014 Letters Day",
           "description": "Write kind notes or draw pictures for your teachers today.",
           "type": "event",
           "kidId": null
         },
         {
           "date": "2026-04-01",
-          "title": "Teacher Appreciation — Dress Like Teacher / Jokes",
+          "title": "Teacher Appreciation \u2014 Dress Like Teacher / Jokes",
           "description": "Dress like your teacher or tell them a joke!",
           "type": "event",
           "kidId": null
         },
         {
           "date": "2026-04-02",
-          "title": "Teacher Appreciation — Treats Day",
+          "title": "Teacher Appreciation \u2014 Treats Day",
           "description": "Bring your teacher or a staff member their favorite snack or drink. Ms. Cuccinello loves: chocolate chip cookies, chips & salsa, Diet Coke, iced caramel latte with coconut milk.",
           "type": "event",
           "kidId": null,
@@ -144,7 +144,7 @@
         },
         {
           "date": "2026-04-03",
-          "title": "Teacher Appreciation — Gifts Day",
+          "title": "Teacher Appreciation \u2014 Gifts Day",
           "description": "Bring your teacher a gift card or item off their Amazon wishlist. Ms. Cuccinello's favorites: tulips, chocolate chip cookies, chips & salsa.",
           "type": "event",
           "kidId": null,
@@ -155,14 +155,14 @@
         },
         {
           "date": "2026-04-03",
-          "title": "Kaia — Word Study Quiz (Soft 'c' /s/)",
+          "title": "Kaia \u2014 Word Study Quiz (Soft 'c' /s/)",
           "description": "Potential Word Study Quiz on Soft 'c' /s/ (_ce pattern). Practice words: face, race, place, space, grace, trace.",
           "type": "test",
           "kidId": "kaia"
         },
         {
           "date": "2026-04-17",
-          "title": "Kaia — Green Meadows Field Trip",
+          "title": "Kaia \u2014 Green Meadows Field Trip",
           "description": "2nd Grade field trip to Green Meadows Petting Farm. Watch for permission slip details.",
           "type": "event",
           "kidId": "kaia"
@@ -170,7 +170,7 @@
         {
           "date": "2026-04-18",
           "title": "DEF Silent Auction & Gala",
-          "description": "15th Annual Gala at West Orange Country Club, 6–10 PM. Mardi Gras Masquerade theme. Tickets $50/person.",
+          "description": "15th Annual Gala at West Orange Country Club, 6\u201310 PM. Mardi Gras Masquerade theme. Tickets $50/person.",
           "type": "event",
           "kidId": null,
           "link": {
@@ -180,14 +180,14 @@
         },
         {
           "date": "2026-04-24",
-          "title": "No School — Teacher Professional Day",
+          "title": "No School \u2014 Teacher Professional Day",
           "description": "OCPS Teacher Professional Day. Students have the day off. Teachers participate in professional development.",
           "type": "holiday",
           "kidId": null
         },
         {
           "date": "2026-05-25",
-          "title": "No School — Memorial Day",
+          "title": "No School \u2014 Memorial Day",
           "description": "Memorial Day Holiday. Schools and District Offices closed.",
           "type": "holiday",
           "kidId": null
@@ -202,9 +202,44 @@
         {
           "date": "2026-05-28",
           "endDate": "2026-05-29",
-          "title": "Post Planning — Staff Only",
+          "title": "Post Planning \u2014 Staff Only",
           "description": "Post-planning days for teachers and staff. No students.",
           "type": "school",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-07",
+          "title": "PTO Spirit Night Fundraiser",
+          "description": "PTO Spirit Night Fundraiser event. Details from Ms. Cuccinello's March 23-27 newsletter.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-08",
+          "title": "SAC/PTO Meeting \u2014 9:00/9:30 AM",
+          "description": "School Advisory Council and PTO meeting at 9:00 AM / 9:30 AM. From Ms. Cuccinello's newsletter.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-09",
+          "title": "ARTS Night",
+          "description": "School ARTS Night event. From Ms. Cuccinello's March 23-27 newsletter.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-17",
+          "title": "School Play \u2014 Day 1",
+          "description": "Lake Whitney Elementary School Play, Day 1 of 2. From Ms. Cuccinello's newsletter.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-18",
+          "title": "School Play \u2014 Day 2",
+          "description": "Lake Whitney Elementary School Play, Day 2 of 2. From Ms. Cuccinello's newsletter.",
+          "type": "event",
           "kidId": null
         }
       ],
@@ -338,22 +373,67 @@
         {
           "kidId": "bronson",
           "teacher": "Ms. Cuccinello",
+          "teacherEmail": "Jeneen.Cuccinello@ocps.net",
           "messages": [
             {
-              "date": "2026-03-29",
-              "subject": "Teacher Appreciation Week & BEST Writing Prep",
-              "summary": "Teacher Appreciation Week begins Monday! Themed days: High Fives (Mon), Letters (Tue), Dress Like Teacher/Jokes (Wed), Treats (Thu), Gifts (Fri). Ms. Cuccinello's favorites: tulips, chocolate chip cookies, chips & salsa, Diet Coke, iced caramel latte with coconut milk. Also: BEST Writing Assessment is Tuesday March 31 — ensure Bronson gets good sleep and a healthy breakfast."
+              "date": "2026-03-22",
+              "subject": "Newsletter",
+              "summary": "Welcome back from Spring Break! New nine weeks starting strong. Newsletter PDF attached with weekly schedule, subjects, and upcoming events.",
+              "fullBody": "Hope you all had a great Spring Break! It's a new nine weeks and we are going to start strong- now that we are all rested!\n\nI'm looking forward to making this last 9 weeks amazing!\n\nJeneen Cuccinello\nFourth Grade Teacher\nLake Whitney Elementary School\n407-877-8888",
+              "attachments": [
+                {
+                  "filename": "March 23-27.pdf",
+                  "type": "application/pdf",
+                  "description": "Weekly classroom newsletter",
+                  "extractedContent": "Week of: March 23-27, 2026\n\nUpcoming Events:\n\u2022 Monday \u2014 PE, Begin 4th grading period\n\u2022 Tuesday \u2014 ART\n  - ELA: Mixed Review of Reading Poetry and Prose and Reading Informational Text / Writing\n  - Math: Data \u2014 MA.4.DP.1.1: Collect and represent numerical data, including fractional values, using tables, stem-and-leaf plots or line plots. MA.4.DP.1.2: Determine the mode, median or range. MA.4.DP.1.3: Solve real-world problems involving numerical data.\n\u2022 Wednesday \u2014 PE, Early Release Day - Modified Schedule\n  - Science: Heredity and Reproduction \u2014 SC.4.L.16.1 Identify processes of sexual reproduction in flowering plants. SC.4.L.16.2 Explain inherited vs environmental characteristics. SC.4.L.16.3 Recognize animal behaviors shaped by heredity and learning. SC.4.L.16.4 Compare/contrast life cycles of Florida plants and animals.\n\u2022 Thursday \u2014 MUSIC\n\u2022 Friday \u2014 PE\n\u2022 Social Studies: Florida's Government\n\nReminders:\n\u2022 It's a new 9 weeks \u2014 Start Strong!\n\u2022 MARCH 31 \u2014 4th grade BEST Writing Assessment\n\u2022 APRIL 7 \u2014 PTO Spirit Night Fundraiser\n\u2022 APRIL 8 \u2014 SAC/PTO 9:00/9:30\n\u2022 APRIL 9 \u2014 ARTS Night\n\u2022 APRIL 17-18 \u2014 School Play\n\u2022 APRIL 18 \u2014 GALA"
+                },
+                {
+                  "filename": "image001.jpg",
+                  "type": "image/jpeg",
+                  "description": "Motivational image"
+                },
+                {
+                  "filename": "image002.jpg",
+                  "type": "image/jpeg",
+                  "description": "Motivational image"
+                },
+                {
+                  "filename": "image003.jpg",
+                  "type": "image/jpeg",
+                  "description": "Motivational image"
+                },
+                {
+                  "filename": "image004.jpg",
+                  "type": "image/jpeg",
+                  "description": "Motivational image"
+                }
+              ]
             }
           ]
         },
         {
           "kidId": "kaia",
           "teacher": "Ms. Smith",
+          "teacherEmail": "Adrienne.Smith@ocps.net",
           "messages": [
             {
-              "date": "2026-03-29",
-              "subject": "Teacher Appreciation Week & Upcoming Field Trip",
-              "summary": "Teacher Appreciation Week begins Monday! Show Ms. Smith some love with the daily themes. Looking ahead: 2nd Grade field trip to Green Meadows Petting Farm on April 17. Watch for permission slip details."
+              "date": "2026-03-20",
+              "subject": "Spring Break Weekly",
+              "summary": "Students averaged 98% on science test and 90% on word study quiz! Newsletter attached with March 23-27 schedule, daily math HW, and upcoming events.",
+              "fullBody": "I hope everyone is enjoying an excellent spring break! Attached is the newsletter and pic of last week\u2764\ufe0f Speaking of last week\u2026the students averaged a 98% on their science test and a 90% on their word study quiz! Way to go class!\n\nHave a wonderful rest of your break!\n\nMs. Smith\nAdrienne.Smith@ocps.net",
+              "attachments": [
+                {
+                  "filename": "26-3-22 Newsletter.pptx",
+                  "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                  "description": "Weekly classroom newsletter (PowerPoint)",
+                  "extractedContent": "March 23-27, 2026\n\nPhonics Focus: Soft \"c\" /s/ (_ce)\n\nOur Learning:\n\u2022 ELA: Use clues to figure out word meanings, explain author's purpose, determine central idea and relevant details, retell Money Madness.\n\u2022 Math: Add/Subtract w/Numbers to 1,000 using many place-value strategies.\n\u2022 Science: Hereditary and Reproduction\n\u2022 Social Studies: How Do Families Learn About Their Past? And Responsibilities\n\nAssessments:\n\u2022 Friday: Potential Word Study Quiz on Soft \"c\" /s/ (_ce) and Money Madness Open Book Test\n\nDaily Schedule & Homework:\n\u2022 Monday \u2014 Art. Math HW: Lesson 11-1 pgs. 153-154\n\u2022 Tuesday \u2014 Music. Math HW: Lesson 11-2 pgs. 155-156\n\u2022 Wednesday \u2014 PE Early Release. Math HW: Lesson 11-3 pgs. 157-158\n\u2022 Thursday \u2014 PE/Media. Math HW: Lesson 11-5 pgs. 161-162\n\u2022 Friday \u2014 PE. School Spirit FriYay & log your minutes in Beanstack!\n\nWednesdays are also School Spirit days!\n\nImportant Dates:\n\u2022 3/13-22 Spring Break!\n\u2022 3/21 World Down Syndrome Day\n\u2022 3/30 - April 3rd PTO Teacher Appreciation Week\n\u2022 4/17 2nd grade field trip to Green Meadows Petting Farm"
+                },
+                {
+                  "filename": "20260312_144140.jpg",
+                  "type": "image/jpeg",
+                  "description": "Class photo from last week"
+                }
+              ]
             }
           ]
         }
@@ -371,7 +451,7 @@
             },
             {
               "subject": "Reading",
-              "title": "Nightly Reading Log — 20 min/night",
+              "title": "Nightly Reading Log \u2014 20 min/night",
               "description": "Read independently for 20 minutes each night and have a parent sign the reading log.",
               "dueDate": "2026-04-03",
               "status": "pending"
@@ -400,21 +480,21 @@
           "assignments": [
             {
               "subject": "Reading",
-              "title": "Nightly Reading Log — 15 min/night",
+              "title": "Nightly Reading Log \u2014 15 min/night",
               "description": "Read independently for 15 minutes each night and have a parent sign the reading log.",
               "dueDate": "2026-04-03",
               "status": "pending"
             },
             {
               "subject": "Phonics",
-              "title": "Word Study — Soft 'c' /s/ Pattern (_ce)",
+              "title": "Word Study \u2014 Soft 'c' /s/ Pattern (_ce)",
               "description": "Practice Soft 'c' /s/ words using the _ce pattern (e.g., face, race, place, space). Quiz may be on Friday.",
               "dueDate": "2026-04-03",
               "status": "pending"
             },
             {
               "subject": "Math",
-              "title": "Money Madness — Open Book Review",
+              "title": "Money Madness \u2014 Open Book Review",
               "description": "Review the Money Madness book for any follow-up comprehension or math questions. Have the book available for reference.",
               "dueDate": "2026-04-03",
               "status": "pending"
@@ -448,6 +528,19 @@
                   "label": "Blooket: Body Part Functions"
                 }
               ]
+            },
+            {
+              "subject": "Social Studies",
+              "title": "Social Studies Review Game \u2014 Native American Cultures",
+              "description": "Review game shared by Ms. Smith for studying Native American Cultures. Play on Educaplay.",
+              "dueDate": "2026-04-03",
+              "status": "pending",
+              "links": [
+                {
+                  "url": "https://www.educaplay.com/game/21568573-native_american_cultures.html",
+                  "label": "Play Review Game"
+                }
+              ]
             }
           ]
         }
@@ -455,7 +548,7 @@
       "importantLinks": [
         {
           "id": "canvas",
-          "title": "Canvas — Student Portal",
+          "title": "Canvas \u2014 Student Portal",
           "url": "https://ocps.instructure.com/",
           "description": "Assignments, grades, and course materials for both kids",
           "category": "Tool",
@@ -466,9 +559,9 @@
         },
         {
           "id": "skyward",
-          "title": "Skyward — Family Access",
+          "title": "Skyward \u2014 Family Access",
           "url": "https://parents.classlink.com/ocps",
-          "description": "OCPS Family Access via ClassLink — grade & attendance portal. Direct family login link coming soon.",
+          "description": "OCPS Family Access via ClassLink \u2014 grade & attendance portal. Direct family login link coming soon.",
           "category": "Tool",
           "source": "OCPS",
           "kid": null,
@@ -489,7 +582,7 @@
         },
         {
           "id": "mealviewer",
-          "title": "MealViewer — Lunch Menu",
+          "title": "MealViewer \u2014 Lunch Menu",
           "url": "https://schools.mealviewer.com/school/LakeWhitneyElementary",
           "description": "Full lunch menu for Lake Whitney Elementary",
           "category": "Tool",
@@ -502,7 +595,7 @@
           "id": "lake-whitney-website",
           "title": "Lake Whitney Elementary Website",
           "url": "https://lakewhitneyes.ocps.net/",
-          "description": "Official school website — news, calendar, staff directory",
+          "description": "Official school website \u2014 news, calendar, staff directory",
           "category": "School",
           "source": "School",
           "kid": null,
@@ -510,7 +603,7 @@
         },
         {
           "id": "ocps-mondays-with-maria",
-          "title": "Mondays with Maria — OCPS Superintendent Update",
+          "title": "Mondays with Maria \u2014 OCPS Superintendent Update",
           "url": "https://theslice.ocps.net/79467_1",
           "description": "Weekly video message transcript from Superintendent Dr. Maria Vazquez",
           "category": "District",
@@ -522,7 +615,7 @@
           "id": "parentsquare-dolphin-digest",
           "title": "Dolphin Digest Newsletter",
           "url": "https://www.parentsquare.com/feeds/74199872",
-          "description": "Principal Dr. Crabb's weekly newsletter — Week of March 9, 2026. Opens in Gmail.",
+          "description": "Principal Dr. Crabb's weekly newsletter \u2014 Week of March 9, 2026. Opens in Gmail.",
           "category": "Newsletter",
           "source": "Lake Whitney",
           "kid": null,
@@ -530,7 +623,7 @@
         },
         {
           "id": "parentsquare-def-gala",
-          "title": "DEF Silent Auction & Gala — April 18",
+          "title": "DEF Silent Auction & Gala \u2014 April 18",
           "url": "https://www.parentsquare.com/feeds/73981070",
           "description": "Dolphin Education Foundation Gala at West Orange Country Club. Tickets & auction info.",
           "category": "Event",
@@ -546,28 +639,28 @@
         "gmailUrl": "https://www.parentsquare.com/feeds/74199872",
         "highlights": [
           {
-            "icon": "📝",
-            "title": "BEST Writing Assessment — Tuesday",
+            "icon": "\ud83d\udcdd",
+            "title": "BEST Writing Assessment \u2014 Tuesday",
             "body": "4th graders take the Florida BEST Writing Assessment on Tuesday, March 31. 120-minute computer-based test. Ensure good sleep and breakfast."
           },
           {
-            "icon": "🍎",
+            "icon": "\ud83c\udf4e",
             "title": "Teacher Appreciation Week",
             "body": "March 30 - April 3! Themed days: Mon-High Fives, Tue-Letters, Wed-Dress Like Teacher/Jokes, Thu-Treats, Fri-Gifts."
           },
           {
-            "icon": "🏆",
+            "icon": "\ud83c\udfc6",
             "title": "School of Excellence Recognition",
             "body": "Lake Whitney has been recognized as a 2024-25 School of Excellence by the Florida Department of Education!"
           },
           {
-            "icon": "🚌",
+            "icon": "\ud83d\ude8c",
             "title": "Upcoming: 2nd Grade Field Trip",
             "body": "Green Meadows Petting Farm on April 17. Permission slip details coming soon."
           },
           {
-            "icon": "🌟",
-            "title": "DEF Gala — April 18",
+            "icon": "\ud83c\udf1f",
+            "title": "DEF Gala \u2014 April 18",
             "body": "15th Annual Silent Auction & Gala at West Orange Country Club. Mardi Gras Masquerade theme. Tickets $50/person."
           }
         ]
@@ -575,13 +668,13 @@
     },
     {
       "weekOf": "2026-03-23",
-      "weekLabel": "March 23 – 27, 2026",
+      "weekLabel": "March 23 \u2013 27, 2026",
       "lastUpdated": "2026-03-16T18:00:00Z",
       "actionItems": [
         {
           "id": 1,
           "title": "Prepare Bronson for BEST Writing Assessment",
-          "description": "State test on Tuesday, March 31 — 120-minute computer-based exam. Ensure good sleep, healthy breakfast, and no electronics the night before. Practice persuasive writing this week.",
+          "description": "State test on Tuesday, March 31 \u2014 120-minute computer-based exam. Ensure good sleep, healthy breakfast, and no electronics the night before. Practice persuasive writing this week.",
           "dueDate": "2026-03-31",
           "urgent": true,
           "kidId": "bronson",
@@ -618,7 +711,7 @@
         },
         {
           "id": 3,
-          "title": "Rain Gear Needed Wed–Fri",
+          "title": "Rain Gear Needed Wed\u2013Fri",
           "description": "Afternoon and morning showers expected Wednesday through Friday (34-44% chance). Pack rain jackets and umbrellas for school drop-off and pickup.",
           "dueDate": null,
           "urgent": false,
@@ -660,13 +753,13 @@
         {
           "date": "2026-03-23",
           "title": "Begin 4th Grading Period",
-          "description": "School resumes after Spring Break — final nine weeks of the school year",
+          "description": "School resumes after Spring Break \u2014 final nine weeks of the school year",
           "type": "school",
           "kidId": null
         },
         {
           "date": "2026-03-31",
-          "title": "Bronson — BEST Writing Assessment",
+          "title": "Bronson \u2014 BEST Writing Assessment",
           "description": "4th Grade State Test, 120-min computer-based, no electronics allowed. Good sleep and healthy breakfast essential.",
           "type": "test",
           "kidId": "bronson"
@@ -691,14 +784,14 @@
         },
         {
           "date": "2026-04-24",
-          "title": "No School — Teacher Professional Day",
+          "title": "No School \u2014 Teacher Professional Day",
           "description": "OCPS Teacher Professional Day. Students have the day off. Teachers participate in professional development.",
           "type": "holiday",
           "kidId": null
         },
         {
           "date": "2026-05-25",
-          "title": "No School — Memorial Day",
+          "title": "No School \u2014 Memorial Day",
           "description": "Memorial Day Holiday. Schools and District Offices closed.",
           "type": "holiday",
           "kidId": null
@@ -713,8 +806,15 @@
         {
           "date": "2026-05-28",
           "endDate": "2026-05-29",
-          "title": "Post Planning — Staff Only",
+          "title": "Post Planning \u2014 Staff Only",
           "description": "Post-planning days for teachers and staff. No students.",
+          "type": "school",
+          "kidId": null
+        },
+        {
+          "date": "2026-03-25",
+          "title": "Early Release Day \u2014 Modified Schedule",
+          "description": "Early release day with modified schedule. Both Bronson and Kaia's classes affected.",
           "type": "school",
           "kidId": null
         }
@@ -812,7 +912,7 @@
           "low": 61,
           "condition": "Sunny",
           "icon": "sun",
-          "dressSuggestion": "Light, breathable clothing — shorts and t-shirt weather. Don't forget sunscreen!"
+          "dressSuggestion": "Light, breathable clothing \u2014 shorts and t-shirt weather. Don't forget sunscreen!"
         },
         {
           "day": "Tuesday",
@@ -848,44 +948,163 @@
           "low": 58,
           "condition": "AM Showers",
           "icon": "cloud-rain",
-          "dressSuggestion": "Morning rain likely — bring umbrella for drop-off. Should clear up by afternoon."
+          "dressSuggestion": "Morning rain likely \u2014 bring umbrella for drop-off. Should clear up by afternoon."
         }
       ],
       "teacherComms": [
         {
           "kidId": "bronson",
           "teacher": "Ms. Cuccinello",
+          "teacherEmail": "Jeneen.Cuccinello@ocps.net",
           "messages": [
             {
-              "date": "2026-03-09",
-              "subject": "Week of March 9-13 Newsletter & BEST Writing Prep",
-              "summary": "Last newsletter before Spring Break covered the week of March 9-13. Key highlights: All work was due Thursday March 13 — check Canvas and Skyward for any missing assignments. Field Day was held March 12 (wear class shirt, bring water bottle, towel, change of clothes). Spring Break runs March 14-22. School resumes March 23 with the 4th Grading Period. The BEST Writing Assessment is March 31 (120-min computer-based state test)."
+              "date": "2026-03-08",
+              "subject": "Weekly",
+              "summary": "Thank you to field trip chaperones! Newsletter PDF attached for March 9-13 week. Please share any photos from the St. Augustine trip.",
+              "fullBody": "Thank you to all the chaperones that helped make our trip a memorable one! Again, I am so sorry we were late. I hope your kiddos had a fabulous time!\n\nChaperones, if you have pictures to share, please email them to me or send to the yearbook link.\n\nThank you!\n\nJeneen Cuccinello\nFourth Grade Teacher\nLake Whitney Elementary School\n407-877-8888",
+              "attachments": [
+                {
+                  "filename": "March 9-13.pdf",
+                  "type": "application/pdf",
+                  "description": "Weekly classroom newsletter",
+                  "extractedContent": "Week of: March 9-13, 2026\n\nUpcoming Events:\n\u2022 Monday \u2014 PE\n\u2022 Tuesday \u2014 MUSIC, Reading test, PTO Spirit Night\n\u2022 Wednesday \u2014 PE, Early Release Day, Math and Science Tests\n\u2022 Thursday \u2014 Field Day 10:00-11:25\n\u2022 Friday \u2014 Spring Break Begins!\n\nField Day:\n\u2022 Wear Class shirt, clothes that can get wet\n\u2022 Tennis shoes \u2014 NO crocs\n\u2022 Bring a water bottle\n\u2022 Please bring: Plastic bag for wet clothes, Towel, Change of clothes (including underclothes), Dry socks and shoes\n\nReminders:\n\u2022 Please check Canvas and Skyward for missing work\n\u2022 ALL work is due Thursday\n\u2022 March 14-22 \u2014 Spring Break\n\u2022 March 23 \u2014 Begin 4th Grading Period\n\u2022 March 31 \u2014 4th grade BEST Writing Assessment"
+                },
+                {
+                  "filename": "image001.jpg",
+                  "type": "image/jpeg",
+                  "description": "Embedded image"
+                }
+              ]
             },
             {
-              "date": "2026-03-11",
-              "subject": "BEST Writing Assessment Preparation",
-              "summary": "Reminder about the 4th Grade BEST Writing Assessment on Tuesday, March 31. This is a 120-minute computer-based state test. Students should get good sleep, eat a healthy breakfast, and avoid electronics the night before. No personal electronics allowed during testing."
+              "date": "2026-03-08",
+              "subject": "Writing Test",
+              "summary": "Information about the BEST Writing Assessment. PDF attached with official OCPS letter about the March 31 state test.",
+              "fullBody": "Please read the attached information about BEST Writing.\n\nJeneen Cuccinello\nFourth Grade Teacher\nLake Whitney Elementary School\n407-877-8888",
+              "attachments": [
+                {
+                  "filename": "BEST Writing 4th.pdf",
+                  "type": "application/pdf",
+                  "description": "Official OCPS letter about BEST Writing Assessment",
+                  "extractedContent": "March 4, 2026\n\nDear Parent/Guardian,\n\nYour student will take the computer-based Grade 4 Benchmarks for Excellent Student Thinking (B.E.S.T.) Writing assessment on Tuesday, March 31, 2026. The B.E.S.T. Writing assessment is administered in one 120-minute session, and students may work up to half of a typical school day.\n\nYou or your student can review the computer-based sample items and certain released tests at home at https://flfast.org/families.html.\n\nKey policies:\n\u2022 Electronic Devices \u2014 Students are not allowed to have any electronic devices, including cell phones, smart glasses, and smartwatches, at any time during testing or during breaks, even if the devices are turned off.\n\u2022 Testing Rules Acknowledgment \u2014 Students click a box to acknowledge testing rules before beginning.\n\u2022 Discussing Test Content \u2014 Students may not share details about test items after testing (no texting, emailing, or posting to social media). They may talk about their testing experience with parents/families.\n\u2022 Working Independently \u2014 Students must do their own work and protect answers from being seen.\n\u2022 Leaving Campus \u2014 If a student leaves before completing a session, they cannot return to that session.\n\u2022 Extra Time \u2014 Students still working at end of allotted time will be provided extra time.\n\nIf you have questions, contact Eileen Warder at (407)877-8888 ext. 3534224.\nFor more info: https://flfast.org/fsa.html\n\nSincerely,\nDr. Crabb"
+                }
+              ]
+            },
+            {
+              "date": "2026-03-06",
+              "subject": "Running Late / Arrival Updates",
+              "summary": "Field trip bus running late \u2014 multiple updates sent to parents about arrival time.",
+              "fullBody": "Hi Parents!\n   We had an amazing day! We are running late due to a change in drivers. It looks like we may be about 30 minutes late. I will send another message when we are about 30 minutes from the school.\nThank you for your understanding!\n\n[Follow-up at 6:38 PM]: We are about 40 minutes out!",
+              "attachments": []
+            },
+            {
+              "date": "2026-03-05",
+              "subject": "Field Day",
+              "summary": "Field Day details for March 12. ADDitions volunteer sign-up required to attend on campus.",
+              "fullBody": "Dear Parents,\nField Day will take place on March 12, 2026, and will look a little different this year. During their scheduled special area times, students will rotate through a variety of activity stations.\n\nIf you would like to attend on campus that day, you will need to be an ADDitions volunteer and sign up to assist at one of the stations. Please see the sign up opportunities in Parent Square.\n\nIf you have any questions, please feel free to reach out. Thank you for your support \u2014 we appreciate it!\n\nCoach Goodwin\nTracy Goodwin\nPE Teacher\nLake Whitney Elementary",
+              "attachments": []
+            },
+            {
+              "date": "2026-03-04",
+              "subject": "FW: Field Day flyer",
+              "summary": "Reminder: Must be ADDitions approved and sign up to volunteer at a station to attend Field Day. No observers this year.",
+              "fullBody": "Just a reminder that if you would like to attend Field Day you will have to sign up to volunteer at a station AND be ADDitions approved. There will not be any \"observers\" this year.\n\nLake Whitney Elementary\n407-877-8888\nhttps://lakewhitneyes.ocps.net/",
+              "attachments": [
+                {
+                  "filename": "Field day Flyer 26.jpg",
+                  "type": "image/jpeg",
+                  "description": "Field Day event flyer with schedule and details"
+                }
+              ]
+            },
+            {
+              "date": "2026-03-01",
+              "subject": "Weekly and St. Augustine Information/Reminders",
+              "summary": "Field trip to St. Augustine this week! Newsletter and trip info PDFs attached.",
+              "fullBody": "Hope you've had a great weekend!\n\nFIELD TRIP THIS WEEK!\n\nJeneen Cuccinello\nFourth Grade Teacher\nLake Whitney Elementary School\n407-877-8888",
+              "attachments": [
+                {
+                  "filename": "Week of March 2-6.pdf",
+                  "type": "application/pdf",
+                  "description": "Weekly classroom newsletter for March 2-6"
+                },
+                {
+                  "filename": "St Aug 2026 trip day info (002).pdf",
+                  "type": "application/pdf",
+                  "description": "St. Augustine field trip day information and reminders"
+                },
+                {
+                  "filename": "image001.jpg",
+                  "type": "image/jpeg",
+                  "description": "Embedded image"
+                }
+              ]
             }
           ]
         },
         {
           "kidId": "kaia",
           "teacher": "Ms. Smith",
+          "teacherEmail": "Adrienne.Smith@ocps.net",
           "messages": [
             {
               "date": "2026-03-08",
-              "subject": "Week of March 9-13 Newsletter",
-              "summary": "Last newsletter before Spring Break. Phonics focus: Diphthongs (ou, ow, oi, oy, au, aw). ELA: Assessing similes, idioms, alliteration, rhyme schemes & themes in poems; context clues and word relationships. Math: Compare Numbers Using Place Value. Science: Human body parts and basic functions. Social Studies: Native American Cultures quiz. Assessments scheduled throughout the week. Homework: Math pages 467-468 (Mon), 469-470 (Tue), Performance Task pages 475-476 (Wed). Wednesdays are School Spirit days."
+              "subject": "Weekly",
+              "summary": "Happy Sunday Funday! Numeracy dress-up week ahead with assessments all week. Newsletter and class photo attached.",
+              "fullBody": "Happy Sunday Funday!\nEnjoy a restful day as we head into a strongly assessed \"Numeracy\" dress up week:\n\n\u2022 Favorite Number/Marvelous Math Monday: Foundational Phonics \u2013 Diphthongs ou, ow, oi, oy, au, aw\n\u2022 Pattern Power Tuesday: Native American Culture and Science Quizzes\n\u2022 Wacky Fraction Wednesday: Math Quiz and Cold Read Comprehension Test \u2013 Learning Checks will be sent home Tuesday for question review.\n\u2022 Crazy Hair/Outfit Field Day Thursday: Math and Science Finals\n\nI have time to help students wrap up Quarter 3 work this week. If your child has anything missing, please let me know and we can work together to get it completed.\n\nHave a wonderful evening!\nMs. Smith",
+              "attachments": [
+                {
+                  "filename": "26-3-8 Newsletter.pptx",
+                  "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                  "description": "Weekly classroom newsletter (PowerPoint)",
+                  "extractedContent": "March 9-13, 2026\n\nPhonics Focus: Concept of Diphthong \u2014 ou, ow, oi, oy, au, aw\n\nOur Learning:\n\u2022 ELA: Assessing similes, idioms, alliteration in text, rhyme schemes & themes in poems. Identify and use context clues, word relationships, reference materials, and/or background knowledge to determine meaning of unknown words.\n\u2022 Math: Compare Numbers Using Place Value.\n\u2022 Science: Identify human body parts and their basic functions for living.\n\u2022 Social Studies: Review to Assess How Can We Learn About Native American Cultures? Quiz\n\nAssessments:\n\u2022 Monday: Foundational Assessment\n\u2022 Tuesday: S.S. & Science Quizzes\n\u2022 Wednesday: Math Quiz and Cold Read Comprehension Test\n\u2022 Thursday: Math and Science Finals\n\nDaily Schedule & Homework:\n\u2022 Monday \u2014 PE. Math HW: Sent home Performance Task pgs. 475-476\n\u2022 Tuesday \u2014 PE. Math HW: Sent home Reteaching pgs. 467-468\n\u2022 Wednesday \u2014 PE Early Release. Math HW: Sent home Reteaching pgs. 469-470\n\u2022 Thursday \u2014 Field Day! 1:55-2:40pm\n\u2022 Friday \u2014 Begin Student Holiday FriYay / Teacher Workday. Spring Break!\n\nWednesdays are also School Spirit days!\n\nImportant Dates:\n\u2022 3/11 SAC/PTO\n\u2022 3/12 Field Day! 1:55-2:40pm\n\u2022 3/13-22 Spring Break!\n\u2022 3/21 World Down Syndrome Day\n\u2022 3/30-April 3rd PTO Teacher Appreciation Week"
+                },
+                {
+                  "filename": "20260305_132403.jpg",
+                  "type": "image/jpeg",
+                  "description": "Class photo"
+                }
+              ]
             },
             {
               "date": "2026-03-08",
-              "subject": "Blooket Review Games Shared",
-              "summary": "Ms. Smith shared Blooket review links for students to practice at home: Math (Numbers to 1000), Science (Human Body Parts), and Social Studies review game via TCI on OCPS Launchpad."
+              "subject": "Blookets and Social Studies Review Game",
+              "summary": "Review games for kids to play over Spring Break \u2014 3 Blookets and 1 Social Studies game.",
+              "fullBody": "Good afternoon!\n\nHere are some Blookets and a Social Studies Review Game for the kids to play over the break if they'd like!\n\nMath:\nhttps://play.blooket.com/play?hwId=69adadded03413c503a4d263\n\nScience:\nhttps://play.blooket.com/play?hwId=69adaefa142ea32f5e141bb0\nhttps://play.blooket.com/play?hwId=69adaf6d597488fadb09b367\n\nSocial Studies:\nhttps://www.educaplay.com/game/21568573-native_american_cultures.html\n\nMs. Smith",
+              "attachments": []
             },
             {
-              "date": "2026-03-21",
-              "subject": "Spring Break Weekly — March 23-27 Newsletter",
-              "summary": "Students averaged 98% on science test and 90% on word study test before break. This week: Phonics focus is Soft 'c' /s/ (_ce). Daily Math HW pages 153-162 (Add/Subtract with Numbers to 1,000). Potential Word Study Quiz Friday. Money Madness Open Book Test Friday. Media Center Thursday — send in library books. Show and tell / tech time Monday. After school support available Friday until 4pm. Field trip to Green Meadows Petting Farm planned for 4/17."
+              "date": "2026-03-08",
+              "subject": "Field Day Info and schedule",
+              "summary": "Field Day details \u2014 2nd grade time slot is 1:55-2:40 PM. Volunteers only, no observers.",
+              "fullBody": "Dear Parents,\nField Day will take place on March 12, 2026, and will look a little different this year. During their scheduled special area times, students will rotate through a variety of activity stations.\n\nIf you would like to attend on campus that day, you will need to be an ADDitions volunteer and sign up to assist at one of the stations. Please see the sign up opportunities in Parent Square.\n\nIf you have any questions, please feel free to reach out. Thank you for your support\u2014we appreciate it!\n\n\ud83d\udd50 1:55 PM - 2:40 PM\n\nCoach Goodwin\nTracy Goodwin\nPE Teacher\nLake Whitney Elementary",
+              "attachments": []
+            },
+            {
+              "date": "2026-03-07",
+              "subject": "field day reminder",
+              "summary": "Field Day will be different this year \u2014 volunteers only at stations, no walk-around observers. Sign up required.",
+              "fullBody": "Hello,\nField Day will be different this year. Instead of a timeslot with multiple grade levels we will be going with only 2nd grade during a switched special area time. In the years past parents have been able to walk around and watch their child, but this year will be volunteers only. What that means is that if you want to attend field day you will have to be ADDitions approved and sign up for one of her volunteer stations. You will be staying at the station the whole time instead of rotating with the class. Flyer attached where you can sign up.\n\nMs. Smith",
+              "attachments": [
+                {
+                  "filename": "Field day Flyer 26.jpg",
+                  "type": "image/jpeg",
+                  "description": "Field Day event flyer with volunteer sign-up info"
+                }
+              ]
+            },
+            {
+              "date": "2026-03-04",
+              "subject": "FW: Field Day flyer",
+              "summary": "Reminder: Must be ADDitions approved and sign up to volunteer. No observers this year.",
+              "fullBody": "Just a reminder that if you would like to attend Field Day you will have to sign up to volunteer at a station AND be ADDitions approved. There will not be any \"observers\" this year.\n\nLake Whitney Elementary\n407-877-8888\nhttps://lakewhitneyes.ocps.net/",
+              "attachments": [
+                {
+                  "filename": "Field day Flyer 26.jpg",
+                  "type": "image/jpeg",
+                  "description": "Field Day event flyer"
+                }
+              ]
             }
           ]
         }
@@ -898,7 +1117,7 @@
           "date": "2026-03-12",
           "subject": "Wishing You a Safe and Restful Spring Break",
           "from": "Superintendent Dr. Maria Vazquez",
-          "summary": "Thank you for the important role you play each day in supporting your child's education. As we begin spring break, I want to wish you and your family a safe, happy, and relaxing week. When students return to school on Monday, March 23, we will begin the final nine weeks of the school year — an exciting time filled with important learning experiences, milestones, and celebrations.",
+          "summary": "Thank you for the important role you play each day in supporting your child's education. As we begin spring break, I want to wish you and your family a safe, happy, and relaxing week. When students return to school on Monday, March 23, we will begin the final nine weeks of the school year \u2014 an exciting time filled with important learning experiences, milestones, and celebrations.",
           "priority": "high",
           "category": "announcement",
           "link": {
@@ -926,7 +1145,7 @@
           "source": "Lake Whitney Elementary",
           "sourceType": "school",
           "date": "2026-03-03",
-          "subject": "15th Annual DEF Silent Auction & Gala — April 18",
+          "subject": "15th Annual DEF Silent Auction & Gala \u2014 April 18",
           "from": "Danette Havard, Dolphin Education Fund",
           "summary": "The 15th Annual DEF Silent Auction & Gala is Saturday, April 18 from 6-10 PM at the West Orange Country Club. Theme: Mardi Gras Masquerade. Tickets are $50/person (includes dinner, 2 drink tickets, and auction access). All funds go to the Dolphin Education Fund for classroom supplies, arts programs, PE equipment, and more. Purchase tickets at tinyurl.com/DEF-Gala.",
           "priority": "normal",
@@ -941,7 +1160,7 @@
           "source": "OCPS District",
           "sourceType": "district",
           "date": "2026-03-04",
-          "subject": "Give Education Day — Take the $1 Pledge",
+          "subject": "Give Education Day \u2014 Take the $1 Pledge",
           "from": "Foundation for Orange County Public Schools",
           "summary": "The Foundation for OCPS is asking families to take the $1 Pledge at the Give Education Day website. Funds support literacy enrichment, STEM and arts access, college and career readiness, scholarships, and professional development for teachers.",
           "priority": "normal",
@@ -956,7 +1175,7 @@
           "source": "OCPS District",
           "sourceType": "district",
           "date": "2026-03-02",
-          "subject": "Mondays with Maria — Weekly Superintendent Update",
+          "subject": "Mondays with Maria \u2014 Weekly Superintendent Update",
           "from": "Superintendent Dr. Maria Vazquez",
           "summary": "This week's Mondays with Maria featured a visit to Colonial High School with new Deputy Superintendent Jose Martinez, who previously served as the school's principal. Colonial High students shared what they love most about their campus. Available as a video and podcast.",
           "priority": "low",
@@ -971,7 +1190,7 @@
           "source": "Lake Whitney Elementary",
           "sourceType": "school",
           "date": "2026-03-01",
-          "subject": "Dolphin Digest — Week of March 2, 2026",
+          "subject": "Dolphin Digest \u2014 Week of March 2, 2026",
           "from": "Lake Whitney Principal",
           "summary": "The principal's weekly update highlighted an incredibly busy and rewarding week including All-County Music performances and neon dance activities. Students continue to shine in everything they do. The newsletter also covered upcoming events and school community updates.",
           "priority": "normal",
@@ -986,7 +1205,7 @@
           "source": "Lake Whitney Elementary",
           "sourceType": "school",
           "date": "2026-02-27",
-          "subject": "Yearbook Price Increase — Order Before March 1",
+          "subject": "Yearbook Price Increase \u2014 Order Before March 1",
           "from": "Danette Havard, Administration",
           "summary": "Yearbook prices increased after March 1, 2026. Families were encouraged to order before the deadline to get the lower price. Yearbooks capture all the memories from this school year.",
           "priority": "normal",
@@ -1001,7 +1220,7 @@
           "source": "OCPS District",
           "sourceType": "district",
           "date": "2026-02-27",
-          "subject": "INFORM: OCPS — District 4 News: Black History Month 2026",
+          "subject": "INFORM: OCPS \u2014 District 4 News: Black History Month 2026",
           "from": "OCPS District 4 Communications",
           "summary": "The District 4 newsletter covered Black History Month recognition events and second semester updates across Orange County Public Schools. The newsletter highlighted community celebrations and student achievements throughout the district.",
           "priority": "low",
@@ -1019,13 +1238,13 @@
             {
               "subject": "Writing",
               "title": "BEST Writing Practice Essay",
-              "description": "Practice persuasive writing prompt — 45 minutes timed. Prepare for the March 31 state assessment.",
+              "description": "Practice persuasive writing prompt \u2014 45 minutes timed. Prepare for the March 31 state assessment.",
               "dueDate": "2026-03-25",
               "status": "pending"
             },
             {
               "subject": "Reading",
-              "title": "Reading Log — 20 min/night",
+              "title": "Reading Log \u2014 20 min/night",
               "description": "Read independently and log pages in reading journal. Check Canvas and Skyward for any missing assignments from Q3.",
               "dueDate": "2026-03-27",
               "status": "pending",
@@ -1054,14 +1273,14 @@
             },
             {
               "subject": "Math",
-              "title": "Daily Math HW — Pages 153-162",
+              "title": "Daily Math HW \u2014 Pages 153-162",
               "description": "Mon: Lesson 11-1 pgs 153-154. Tue: Lesson 11-2 pgs 155-156. Wed: Lesson 11-3 pgs 157-158. Thu: Lesson 11-5 pgs 161-162. Add/Subtract with Numbers to 1,000 using place-value strategies.",
               "dueDate": "2026-03-27",
               "status": "pending"
             },
             {
               "subject": "ELA",
-              "title": "Money Madness — Open Book Test Friday",
+              "title": "Money Madness \u2014 Open Book Test Friday",
               "description": "Review Money Madness for Friday's open book test. Access from OCPS Launchpad > Dashboard > My Backpack Apps > McGrawHill > Grade 2 Wonders FL > Resources > Literature Collection > pgs 490-509.",
               "dueDate": "2026-03-27",
               "status": "pending"
@@ -1098,10 +1317,23 @@
             },
             {
               "subject": "Reading",
-              "title": "Reading Log — 15 min/night",
+              "title": "Reading Log \u2014 15 min/night",
               "description": "Read independently and have a parent sign the log",
               "dueDate": "2026-03-27",
               "status": "pending"
+            },
+            {
+              "subject": "Social Studies",
+              "title": "Social Studies Review Game \u2014 Native American Cultures",
+              "description": "Review game shared by Ms. Smith for studying Native American Cultures. Play on Educaplay.",
+              "dueDate": "2026-03-27",
+              "status": "pending",
+              "links": [
+                {
+                  "url": "https://www.educaplay.com/game/21568573-native_american_cultures.html",
+                  "label": "Play Review Game"
+                }
+              ]
             }
           ]
         }
@@ -1109,7 +1341,7 @@
       "importantLinks": [
         {
           "id": "canvas",
-          "title": "Canvas — Student Portal",
+          "title": "Canvas \u2014 Student Portal",
           "url": "https://ocps.instructure.com/",
           "description": "Assignments, grades, and course materials for both kids",
           "category": "Tool",
@@ -1120,9 +1352,9 @@
         },
         {
           "id": "skyward",
-          "title": "Skyward — Family Access",
+          "title": "Skyward \u2014 Family Access",
           "url": "https://parents.classlink.com/ocps",
-          "description": "OCPS Family Access via ClassLink — grade & attendance portal. Direct family login link coming soon.",
+          "description": "OCPS Family Access via ClassLink \u2014 grade & attendance portal. Direct family login link coming soon.",
           "category": "Tool",
           "source": "OCPS",
           "kid": null,
@@ -1143,7 +1375,7 @@
         },
         {
           "id": "mealviewer",
-          "title": "MealViewer — Lunch Menu",
+          "title": "MealViewer \u2014 Lunch Menu",
           "url": "https://schools.mealviewer.com/school/LakeWhitneyElementary",
           "description": "Full lunch menu for Lake Whitney Elementary",
           "category": "Tool",
@@ -1156,7 +1388,7 @@
           "id": "lake-whitney-website",
           "title": "Lake Whitney Elementary Website",
           "url": "https://lakewhitneyes.ocps.net/",
-          "description": "Official school website — news, calendar, staff directory",
+          "description": "Official school website \u2014 news, calendar, staff directory",
           "category": "School",
           "source": "School",
           "kid": null,
@@ -1164,7 +1396,7 @@
         },
         {
           "id": "ocps-mondays-with-maria",
-          "title": "Mondays with Maria — OCPS Superintendent Update",
+          "title": "Mondays with Maria \u2014 OCPS Superintendent Update",
           "url": "https://theslice.ocps.net/79467_1",
           "description": "Weekly video message transcript from Superintendent Dr. Maria Vazquez",
           "category": "District",
@@ -1176,7 +1408,7 @@
           "id": "parentsquare-dolphin-digest",
           "title": "Dolphin Digest Newsletter",
           "url": "https://www.parentsquare.com/feeds/74199872",
-          "description": "Principal Dr. Crabb's weekly newsletter — Week of March 9, 2026. Opens in Gmail.",
+          "description": "Principal Dr. Crabb's weekly newsletter \u2014 Week of March 9, 2026. Opens in Gmail.",
           "category": "Newsletter",
           "source": "Lake Whitney",
           "kid": null,
@@ -1184,7 +1416,7 @@
         },
         {
           "id": "parentsquare-def-gala",
-          "title": "DEF Silent Auction & Gala — April 18",
+          "title": "DEF Silent Auction & Gala \u2014 April 18",
           "url": "https://www.parentsquare.com/feeds/73981070",
           "description": "Dolphin Education Foundation Gala at West Orange Country Club. Tickets & auction info.",
           "category": "Event",
@@ -1201,27 +1433,27 @@
         "gmailUrl": "https://www.parentsquare.com/feeds/74199872",
         "highlights": [
           {
-            "icon": "🎉",
+            "icon": "\ud83c\udf89",
             "title": "Community Dance Recap",
-            "body": "Thank you for your wonderful support at our school dance on February 27 — it was a joy to see our community come together."
+            "body": "Thank you for your wonderful support at our school dance on February 27 \u2014 it was a joy to see our community come together."
           },
           {
-            "icon": "🏆",
+            "icon": "\ud83c\udfc6",
             "title": "Student Spotlight: Black History Month",
             "body": "Haven Bennett was awarded 1st place at the Black History Essay Contest for West Orange County, representing Lake Whitney!"
           },
           {
-            "icon": "📚",
+            "icon": "\ud83d\udcda",
             "title": "Book Fair Success",
             "body": "The Scholastic Book Fair was a huge success! Thank you to Mrs. Dudek and all the volunteers who made it possible."
           },
           {
-            "icon": "🏃",
-            "title": "Field Day — March 12",
+            "icon": "\ud83c\udfc3",
+            "title": "Field Day \u2014 March 12",
             "body": "Field Day is approaching! All guests must be ADDitions-approved volunteers to attend. Ensure your clearance is active and sign up for a volunteer shift."
           },
           {
-            "icon": "🌟",
+            "icon": "\ud83c\udf1f",
             "title": "School of Excellence",
             "body": "Lake Whitney has been recognized as a 2024-25 School of Excellence by the Florida Department of Education!"
           }

@@ -34,6 +34,7 @@ const SUBJECT_CARDS: Record<string, string> = {
   phonics: "dh-card-pink",
   ela: "dh-card-coral",
   general: "dh-card-cream",
+  "social studies": "dh-card-blue",
 };
 
 function buildKey(weekLabel: string, kidId: string, idx: number) {
