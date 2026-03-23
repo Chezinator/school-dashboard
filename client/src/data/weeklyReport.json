@@ -951,25 +951,21 @@
               "status": "pending"
             },
             {
-              "subject": "Math",
-              "title": "Blooket Review: Extend Thinking Numbers to 1000",
-              "description": "Complete the Blooket math review game shared by Ms. Cuccinello. Link in ParentSquare.",
-              "dueDate": "2026-03-26",
-              "status": "pending"
-            },
-            {
-              "subject": "Science",
-              "title": "Blooket Review: Human Body Parts",
-              "description": "Complete the Blooket science review game. Study human body parts and their functions.",
-              "dueDate": "2026-03-26",
-              "status": "pending"
-            },
-            {
               "subject": "Reading",
               "title": "Reading Log — 20 min/night",
-              "description": "Read independently and log pages in reading journal",
+              "description": "Read independently and log pages in reading journal. Check Canvas and Skyward for any missing assignments from Q3.",
               "dueDate": "2026-03-27",
-              "status": "pending"
+              "status": "pending",
+              "links": [
+                {
+                  "url": "https://ocps.instructure.com/",
+                  "label": "Canvas"
+                },
+                {
+                  "url": "https://parents.classlink.com/ocps",
+                  "label": "Skyward"
+                }
+              ]
             }
           ]
         },
@@ -979,25 +975,27 @@
             {
               "subject": "Phonics",
               "title": "Diphthongs Review: ou, ow, oi, oy, au, aw",
-              "description": "Practice diphthong sounds from the last unit before Spring Break. Review worksheet.",
+              "description": "Practice diphthong sounds from the last unit. Review worksheet sent home.",
               "dueDate": "2026-03-25",
               "status": "pending"
             },
             {
               "subject": "Math",
-              "title": "Blooket Review: Numbers to 1000",
-              "description": "Complete the Blooket math review game shared by Ms. Smith. Practice comparing numbers using place value.",
+              "title": "Blooket: Extend Thinking of Numbers to 1,000",
+              "description": "Complete the Blooket math homework game assigned by Ms. Smith. Practice extending thinking of numbers to 1,000.",
               "dueDate": "2026-03-26",
               "status": "pending",
-              "link": {
-                "url": "https://play.blooket.com/play?hwId=69adadded03413c503a4d263",
-                "label": "Play on Blooket"
-              }
+              "links": [
+                {
+                  "url": "https://play.blooket.com/play?hwId=69adadded03413c503a4d263",
+                  "label": "Play on Blooket"
+                }
+              ]
             },
             {
               "subject": "Science",
-              "title": "Blooket Review: Human Body Parts",
-              "description": "Complete the Blooket science review game. Study human body parts and basic functions.",
+              "title": "Blooket: Human Body Parts Review",
+              "description": "Complete both Blooket science review games assigned by Ms. Smith. Study human body parts and their basic functions.",
               "dueDate": "2026-03-26",
               "status": "pending",
               "links": [

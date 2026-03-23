@@ -77,7 +77,7 @@ function pollAndScroll(sectionId: string, maxAttempts = 40) {
 }
 
 function DashboardContent() {
-  const { meta, lastUpdatedFormatted, isLatest } = useWeek();
+  const { meta, lastUpdatedFormatted } = useWeek();
   const [activeTab, setActiveTab] = useState<TabId>("home");
   const [prevTab, setPrevTab] = useState<TabId>("home");
   const [datesView, setDatesView] = useState<"list" | "calendar">("list");
@@ -129,15 +129,6 @@ function DashboardContent() {
         {/* Week Switcher */}
         <div className="max-w-lg mx-auto w-full px-5 pt-4">
           <WeekSwitcher />
-          {!isLatest && (
-            <motion.div
-              initial={{ opacity: 0, y: -8 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mb-3 px-4 py-2.5 rounded-2xl dh-card-amber text-center"
-            >
-              <p className="text-sm font-medium">Viewing archived week</p>
-            </motion.div>
-          )}
         </div>
 
         {/* Tab content */}

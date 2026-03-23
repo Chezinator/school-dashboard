@@ -1,6 +1,6 @@
 /**
  * ImportantDates — List view of all dates from ALL weeks.
- * Color-blocked cards per event type. Past events dimmed.
+ * Color-blocked cards per event type.
  * Tests = coral, Events = amber, School = sage, Holidays = teal.
  */
 import { useMemo } from "react";
@@ -37,9 +37,6 @@ function getTypeLabel(type: string) {
 
 export default function ImportantDates() {
   const { allWeeks, kids } = useWeek();
-
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
 
   // Consolidate all importantDates from all weeks, deduplicate, sort by date
   const allDates = useMemo(() => {
@@ -81,8 +78,6 @@ export default function ImportantDates() {
       <div className="space-y-3">
         {allDates.map((item, idx) => {
           const kid = item.kidId ? kids.find((k) => k.id === item.kidId) : null;
-          const isPast = new Date(item.date + "T00:00:00") < today;
-
           return (
             <motion.div
               key={idx}
@@ -91,7 +86,7 @@ export default function ImportantDates() {
               viewport={{ once: true, margin: "-20px" }}
               transition={{ type: "spring", stiffness: 260, damping: 24, delay: idx * 0.05 }}
               whileHover={{ y: -2 }}
-              className={`dh-card ${getTypeCard(item.type)} ${isPast ? "opacity-55" : ""}`}
+              className={`dh-card ${getTypeCard(item.type)}`}
             >
               <div className="flex items-center gap-2 mb-1.5 flex-wrap">
                 <span className="text-[10px] font-bold uppercase tracking-wider opacity-60">
@@ -104,9 +99,6 @@ export default function ImportantDates() {
                   >
                     {kid.name}
                   </span>
-                )}
-                {isPast && (
-                  <span className="text-[10px] font-bold uppercase tracking-wider opacity-40 italic">Past</span>
                 )}
               </div>
               <h3 className="font-display text-sm font-semibold leading-snug mb-1">{item.title}</h3>

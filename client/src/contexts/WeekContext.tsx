@@ -1,6 +1,6 @@
 /**
  * WeekContext — Provides the active week's data to all dashboard components.
- * Supports multi-week archive with a week switcher.
+ * Supports multi-week navigation with a week switcher.
  */
 import { createContext, useContext, useState, useMemo, type ReactNode } from "react";
 import reportData from "@/data/weeklyReport.json";
