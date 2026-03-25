@@ -669,7 +669,7 @@
     {
       "weekOf": "2026-03-23",
       "weekLabel": "March 23 \u2013 27, 2026",
-      "lastUpdated": "2026-03-16T18:00:00Z",
+      "lastUpdated": "2026-03-25T18:00:00Z",
       "actionItems": [
         {
           "id": 1,
@@ -816,6 +816,35 @@
           "title": "Early Release Day \u2014 Modified Schedule",
           "description": "Early release day with modified schedule. Both Bronson and Kaia's classes affected.",
           "type": "school",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-07",
+          "title": "PTO Spirit Night Fundraiser",
+          "description": "PTO Spirit Night Fundraiser. Details TBD.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-08",
+          "title": "SAC/PTO Meeting \u2014 9:00/9:30 AM",
+          "description": "School Advisory Council and PTO meeting at 9:00/9:30 AM.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-09",
+          "title": "Arts Night",
+          "description": "Lake Whitney Arts Night.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-17",
+          "endDate": "2026-04-18",
+          "title": "School Play",
+          "description": "Lake Whitney School Play (April 17-18).",
+          "type": "event",
           "kidId": null
         }
       ],
@@ -1039,6 +1068,19 @@
                   "description": "Embedded image"
                 }
               ]
+            },
+            {
+              "date": "2026-03-23",
+              "subject": "Newsletter (March 23-27) + Items Needed",
+              "summary": "Welcome back from Spring Break! New 4th grading period begins. Wednesday March 25 is Early Release Day (modified schedule). Reminders: BEST Writing Assessment March 31. April events: PTO Spirit Night (Apr 7), SAC/PTO (Apr 8), Arts Night (Apr 9), School Play (Apr 17-18), Gala (Apr 18). Also sent Amazon wishlist for optional classroom room transformation donation.",
+              "attachments": [
+                {
+                  "filename": "March 23-27.pdf",
+                  "type": "application/pdf",
+                  "description": "Weekly classroom newsletter",
+                  "extractedContent": "Week of: March 23-27, 2026\n\nUpcoming Events:\n- Monday: PE, Begin 4th Grading Period\n- Tuesday: ART\n- Wednesday: PE, Early Release Day - Modified Schedule\n- Thursday: MUSIC\n- Friday: PE\n\nReminders:\nMARCH: 31 - 4th Grade BEST Writing Assessment\nAPRIL: 7 - PTO Spirit Night Fundraiser, 8 - SAC/PTO 9:00/9:30, 9 - Arts Night, 17-18 - School Play, 18 - GALA\n\nLearning: ELA (Mixed review of reading poetry and prose), Math Data (MA4DP11-13), Science (Heredity and Reproduction), Social Studies (Florida's Government)"
+                }
+              ]
             }
           ]
         },
@@ -1229,6 +1271,13 @@
             "label": "View OCPS News",
             "url": "https://theslice.ocps.net/"
           }
+        },
+        {
+          "date": "2026-03-24",
+          "source": "OCPS via ParentSquare",
+          "subject": "Coming Soon: New Online Digital Enrollment Platform",
+          "summary": "OCPS is launching a new online digital enrollment platform. No action required at this time.",
+          "actionRequired": false
         }
       ],
       "homework": [
@@ -1458,6 +1507,11 @@
             "body": "Lake Whitney has been recognized as a 2024-25 School of Excellence by the Florida Department of Education!"
           }
         ]
+      },
+      "midWeekCheck": {
+        "checkDate": "2026-03-25",
+        "checkType": "Wednesday Mid-Week",
+        "summary": "New newsletter from Ms. Cuccinello (March 23-27) and an Amazon wishlist request for classroom room transformation. No new emails from Ms. Smith. OCPS digest announced new digital enrollment platform (no action required)."
       }
     }
   ]
