@@ -1513,6 +1513,331 @@
         "checkType": "Wednesday Mid-Week",
         "summary": "New newsletter from Ms. Cuccinello (March 23-27) and an Amazon wishlist request for classroom room transformation. No new emails from Ms. Smith. OCPS digest announced new digital enrollment platform (no action required)."
       }
+    },
+    {
+      "weekOf": "2026-03-30",
+      "weekLabel": "March 30 - April 3, 2026",
+      "lastUpdated": "2026-03-29T22:07:23.173322Z",
+      "actionItems": [
+        {
+          "id": 1,
+          "title": "Prepare for BEST Writing Assessment",
+          "description": "This is a 120-minute Florida State Test. Ensure Bronson gets a good night's sleep Monday and a healthy breakfast Tuesday. No electronic devices are allowed at school.",
+          "dueDate": "2026-03-31",
+          "urgent": true,
+          "kidId": "bronson",
+          "category": "test"
+        },
+        {
+          "id": 2,
+          "title": "Check Report Card on Skyward",
+          "description": "The 3rd grading period report cards will be available on Skyward.",
+          "dueDate": "2026-04-02",
+          "urgent": false,
+          "kidId": "bronson",
+          "category": "reminder"
+        },
+        {
+          "id": 3,
+          "title": "Study for Data Math Test",
+          "description": "A data math test is scheduled for Friday.",
+          "dueDate": "2026-04-03",
+          "urgent": false,
+          "kidId": "bronson",
+          "category": "test"
+        },
+        {
+          "id": 4,
+          "title": "Study for Social Studies Quiz",
+          "description": "",
+          "dueDate": "2026-03-31",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "test"
+        },
+        {
+          "id": 5,
+          "title": "Study for Money Madness & History Final",
+          "description": "Vocabulary Quiz and History Final.",
+          "dueDate": "2026-04-02",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "test"
+        },
+        {
+          "id": 6,
+          "title": "Study for Phonics Quiz",
+          "description": "Quiz on Soft \"c\" /s/ and \"g\" /j/.",
+          "dueDate": "2026-04-03",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "test"
+        }
+      ],
+      "importantDates": [
+        {
+          "date": "2026-03-30",
+          "endDate": "2026-04-03",
+          "title": "Teacher Appreciation Week",
+          "description": "A week of celebrating our amazing teachers. See the PTO flyer for themed days.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-03-31",
+          "title": "Bronson: BEST Writing Assessment",
+          "description": "4th Grade Florida State Test (120 minutes, computer-based).",
+          "type": "test",
+          "kidId": "bronson"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "Early Release Day",
+          "description": "Modified schedule for all students.",
+          "type": "school",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-02",
+          "title": "Bronson: Report Cards on Skyward",
+          "description": "",
+          "type": "school",
+          "kidId": "bronson"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "Kaia: School Spirit FriYay",
+          "description": "Wear school colors and log your minutes in Beanstack.",
+          "type": "event",
+          "kidId": "kaia"
+        },
+        {
+          "date": "2026-04-07",
+          "title": "PTO Spirit Night Fundraiser",
+          "description": "Details to be announced.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-08",
+          "title": "SAC/PTO Meeting",
+          "description": "9:00 AM / 9:30 AM.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-09",
+          "title": "Arts Night",
+          "description": "",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-17",
+          "title": "Kaia: 2nd Grade Field Trip",
+          "description": "Green Meadows Petting Farm.",
+          "type": "event",
+          "kidId": "kaia"
+        },
+        {
+          "date": "2026-04-17",
+          "endDate": "2026-04-18",
+          "title": "School Play",
+          "description": "",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-18",
+          "title": "DEF Gala",
+          "description": "Dolphin Education Foundation Gala.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-24",
+          "title": "Student Holiday / Non-Work Day",
+          "description": "No school for students.",
+          "type": "holiday",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-27",
+          "endDate": "2026-05-01",
+          "title": "Color Out",
+          "description": "Details to follow.",
+          "type": "event",
+          "kidId": null
+        }
+      ],
+      "lunchMenu": [
+        {
+          "day": "Monday",
+          "date": "2026-03-30",
+          "entrees": [
+            "Breaded Chicken Nuggets",
+            "Deli Box"
+          ],
+          "sides": [
+            "Potatoes, Mashed",
+            "Peas & Carrots"
+          ],
+          "fruits": [
+            "Apple Cherry Juice",
+            "Apple Juice"
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "date": "2026-03-31",
+          "entrees": [
+            "Chicken Tinga Soft Tacos",
+            "Yogurt, Cheese, w/ Banana Bread Plate"
+          ],
+          "sides": [
+            "Seasoned Black Beans"
+          ],
+          "fruits": [
+            "Strawberry Cup"
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "date": "2026-04-01",
+          "entrees": [
+            "Grilled Cheese Sandwich",
+            "Buttermilk Pancakes w/ Turkey Sausage",
+            "Rotisserie Chicken and Cheese Sandwich"
+          ],
+          "sides": [
+            "Tater Tots",
+            "Coleslaw"
+          ],
+          "fruits": [
+            "Orange Wedges"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "date": "2026-04-02",
+          "entrees": [
+            "Mac and Cheese",
+            "PBJ Sandwich"
+          ],
+          "sides": [
+            "Fresh Steamed Broccoli",
+            "Italian Blend Vegetables"
+          ],
+          "fruits": [
+            "Apple Cherry Juice",
+            "Apple Juice"
+          ]
+        },
+        {
+          "day": "Friday",
+          "date": "2026-04-03",
+          "entrees": [
+            "Four Cheese Pizza Wedge",
+            "Bento Box w/ Pepperoni, Cheese, Marinara, & Bread"
+          ],
+          "sides": [
+            "Marinara Dipping Sauce Cup",
+            "Tropical Trio Juice Slushie",
+            "Berry Berry Blue Juice Slushie"
+          ],
+          "fruits": []
+        }
+      ],
+      "weather": [
+        {
+          "day": "Monday",
+          "date": "2026-03-30",
+          "high": 81,
+          "low": 65,
+          "condition": "Mostly Cloudy",
+          "icon": "cloud-sun",
+          "dressSuggestion": "Light layers. Comfortable for shorts and a light top."
+        },
+        {
+          "day": "Tuesday",
+          "date": "2026-03-31",
+          "high": 83,
+          "low": 65,
+          "condition": "Isolated Thunderstorms",
+          "icon": "cloud-bolt-sun",
+          "dressSuggestion": "Pack a light rain jacket. Warm but chance of a storm."
+        },
+        {
+          "day": "Wednesday",
+          "date": "2026-04-01",
+          "high": 84,
+          "low": 66,
+          "condition": "Mostly Cloudy",
+          "icon": "cloud-sun",
+          "dressSuggestion": "Warm day, light clothing."
+        },
+        {
+          "day": "Thursday",
+          "date": "2026-04-02",
+          "high": 86,
+          "low": 68,
+          "condition": "Partly Cloudy",
+          "icon": "sun",
+          "dressSuggestion": "Hot and sunny. Shorts and t-shirt weather."
+        },
+        {
+          "day": "Friday",
+          "date": "2026-04-03",
+          "high": 86,
+          "low": 68,
+          "condition": "Mostly Sunny",
+          "icon": "sun",
+          "dressSuggestion": "Hot and sunny. Shorts and t-shirt weather."
+        }
+      ],
+      "teacherComms": [
+        {
+          "kidId": "bronson",
+          "teacher": "Ms. Cuccinello",
+          "teacherEmail": "Jeneen.Cuccinello@ocps.net",
+          "messages": [
+            {
+              "date": "2026-03-29",
+              "subject": "Weekly Newsletter",
+              "summary": "Newsletter for March 30 - April 3. BEST Writing Test on Tuesday. Report cards on Thursday. Data Math Test on Friday.",
+              "attachments": [
+                {
+                  "filename": "March 30- April 3.pdf",
+                  "type": "application/pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kidId": "kaia",
+          "teacher": "Ms. Smith",
+          "teacherEmail": "Adrienne.Smith@ocps.net",
+          "messages": [
+            {
+              "date": "2026-03-29",
+              "subject": "Weekly Newsletter",
+              "summary": "Newsletter for March 30 - April 3. Three quizzes this week (Social Studies, Vocab/History, Phonics). Green Meadows Petting Farm field trip on April 17.",
+              "attachments": [
+                {
+                  "filename": "26-3-29 Newsletter.pptx",
+                  "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "schoolDistrictComms": [],
+      "homework": [],
+      "importantLinks": [],
+      "dolphinDigest": [],
+      "midWeekCheck": null
     }
   ]
 }
