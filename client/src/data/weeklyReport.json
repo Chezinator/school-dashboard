@@ -1884,6 +1884,346 @@
       "importantLinks": [],
       "dolphinDigest": [],
       "midWeekCheck": null
+    },
+    {
+      "weekOf": "2026-04-06",
+      "weekLabel": "April 6 - April 10, 2026",
+      "lastUpdated": "2026-04-05T22:05:27.527970Z",
+      "actionItems": [
+        {
+          "id": 1,
+          "title": "Field Trip Payment Due",
+          "description": "Payment for Kaia's Green Meadows Petting Farm field trip is due on Thursday, April 9.",
+          "dueDate": "2026-04-09",
+          "urgent": true,
+          "kidId": "kaia",
+          "category": "deadline"
+        },
+        {
+          "id": 2,
+          "title": "Science & Foundational Quizzes",
+          "description": "Kaia has a Science Quiz and a Foundational Assessment Quiz.",
+          "dueDate": "2026-04-07",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "test"
+        },
+        {
+          "id": 3,
+          "title": "Cold Read Comp. Test",
+          "description": "Kaia has a Cold Read Comprehension Test.",
+          "dueDate": "2026-04-08",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "test"
+        },
+        {
+          "id": 4,
+          "title": "Math Quiz",
+          "description": "Kaia has a Math Quiz.",
+          "dueDate": "2026-04-09",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "test"
+        },
+        {
+          "id": 5,
+          "title": "Math & Science Final",
+          "description": "Kaia has her Math & Science Final exams.",
+          "dueDate": "2026-04-10",
+          "urgent": true,
+          "kidId": "kaia",
+          "category": "test"
+        },
+        {
+          "id": 6,
+          "title": "Check Skyward",
+          "description": "Check Skyward for Bronson's 3rd quarter report card.",
+          "dueDate": "2026-04-10",
+          "urgent": false,
+          "kidId": "bronson",
+          "category": "admin"
+        }
+      ],
+      "importantDates": [
+        {
+          "date": "2026-04-07",
+          "title": "PTO Spirit Night",
+          "description": "PTO Spirit Night Fundraiser",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-08",
+          "title": "Early Release Day",
+          "description": "Modified Schedule - Early Release",
+          "type": "schedule",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-08",
+          "title": "SAC/PTO Meeting",
+          "description": "SAC/PTO Meeting at 9:00 AM / 9:30 AM",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-09",
+          "title": "Arts Night",
+          "description": "School-wide Arts Night",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-17",
+          "title": "Field Trip: Green Meadows",
+          "description": "Kaia's 2nd Grade Field Trip to Green Meadows Petting Farm",
+          "type": "event",
+          "kidId": "kaia"
+        },
+        {
+          "date": "2026-04-17",
+          "endDate": "2026-04-18",
+          "title": "School Musical",
+          "description": "School Play / Musical",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-18",
+          "title": "DEF Masquerade Gala",
+          "description": "15th Annual DEF Masquerade Silent Auction Gala (Adults Only). 6-10 PM at West Orange Country Club.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-24",
+          "title": "Student Holiday",
+          "description": "Non-Work Day / No School",
+          "type": "holiday",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-27",
+          "endDate": "2026-05-01",
+          "title": "Color Out",
+          "description": "Color Out Week",
+          "type": "event",
+          "kidId": null
+        }
+      ],
+      "lunchMenu": [
+        {
+          "day": "Monday",
+          "date": "2026-04-06",
+          "entrees": [
+            "Chicken Corn Dog",
+            "Rotisserie Chicken and Cheese Sandwich"
+          ],
+          "sides": [
+            "Carrot Dippers with Ranch Dressing",
+            "Farmland Treats Veg Juice"
+          ],
+          "fruits": [
+            "Strawberry Cup"
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "date": "2026-04-07",
+          "entrees": [
+            "Jerk Seasoned Drumstick",
+            "Yogurt & Cheese Cool Pack",
+            "Chicken, Wings, 3 each"
+          ],
+          "sides": [
+            "Sweet Plantain Slices",
+            "Golden Sun Splash Vegetable Juice"
+          ],
+          "fruits": [
+            "Applesauce, Strawberry 4.5 oz"
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "date": "2026-04-08",
+          "entrees": [
+            "Hamburger",
+            "Cheeseburger",
+            "Impossible Burger",
+            "PBJ Sandwich Box"
+          ],
+          "sides": [
+            "Vegetarian Baked Beans",
+            "24 Hour Zesty Pickles"
+          ],
+          "fruits": [
+            "Fresh Tangerine",
+            "Mixed Berry Fruit Cup"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "date": "2026-04-09",
+          "entrees": [
+            "Tangerine Chicken",
+            "Popcorn Chicken Salad"
+          ],
+          "sides": [
+            "Fresh Steamed Broccoli",
+            "Steamed Corn"
+          ],
+          "fruits": [
+            "Apple Juice",
+            "Fruit Juice"
+          ]
+        },
+        {
+          "day": "Friday",
+          "date": "2026-04-10",
+          "entrees": [
+            "Stuffed Cheesy Breadstick",
+            "Turkey & American Croissant"
+          ],
+          "sides": [
+            "Marinara Dipping Sauce Cup",
+            "Garden Side Salad"
+          ],
+          "fruits": [
+            "Red Delicious Apple"
+          ]
+        }
+      ],
+      "weather": [
+        {
+          "day": "Monday",
+          "date": "2026-04-06",
+          "high": 82,
+          "low": 65,
+          "condition": "PM Thunderstorms",
+          "icon": "cloud-showers-heavy",
+          "dressSuggestion": "Shorts and t-shirt. Bring an umbrella and rain jacket for afternoon storms."
+        },
+        {
+          "day": "Tuesday",
+          "date": "2026-04-07",
+          "high": 71,
+          "low": 65,
+          "condition": "AM Showers",
+          "icon": "cloud-rain",
+          "dressSuggestion": "Pants and long sleeves. Bring a rain jacket for morning showers."
+        },
+        {
+          "day": "Wednesday",
+          "date": "2026-04-08",
+          "high": 72,
+          "low": 65,
+          "condition": "Showers",
+          "icon": "cloud-rain",
+          "dressSuggestion": "Pants and long sleeves. Rain gear needed."
+        },
+        {
+          "day": "Thursday",
+          "date": "2026-04-09",
+          "high": 73,
+          "low": 66,
+          "condition": "Showers",
+          "icon": "cloud-rain",
+          "dressSuggestion": "Pants and long sleeves. Rain gear needed."
+        },
+        {
+          "day": "Friday",
+          "date": "2026-04-10",
+          "high": 78,
+          "low": 66,
+          "condition": "Scattered Thunderstorms",
+          "icon": "cloud-showers-heavy",
+          "dressSuggestion": "Shorts and a light jacket. Umbrella recommended."
+        }
+      ],
+      "teacherComms": [
+        {
+          "kidId": "bronson",
+          "teacher": "Ms. Cuccinello",
+          "teacherEmail": "Jeneen.Cuccinello@ocps.net",
+          "messages": [
+            {
+              "date": "2026-04-05",
+              "subject": "Newsletter",
+              "summary": "Newsletter for April 6-10. Check Skyward for report cards.",
+              "attachments": [
+                {
+                  "filename": "April 6-10.pdf",
+                  "type": "application/pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kidId": "kaia",
+          "teacher": "Ms. Smith",
+          "teacherEmail": "Adrienne.Smith@ocps.net",
+          "messages": [
+            {
+              "date": "2026-04-04",
+              "subject": "Happy Easter Weekly",
+              "summary": "Newsletter for April 6-10. Field trip payment due Thursday. Heavy assessment week (4 quizzes/tests).",
+              "attachments": [
+                {
+                  "filename": "26-4-4 Newsletter.pptx",
+                  "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "schoolDistrictComms": [],
+      "homework": [
+        {
+          "kidId": "kaia",
+          "subject": "Math",
+          "description": "Lesson 11-12 pgs. 175-176",
+          "assignedDate": "2026-04-06",
+          "dueDate": "2026-04-07"
+        },
+        {
+          "kidId": "kaia",
+          "subject": "Math",
+          "description": "Lesson 11-6 pgs. 163-164",
+          "assignedDate": "2026-04-07",
+          "dueDate": "2026-04-08"
+        },
+        {
+          "kidId": "kaia",
+          "subject": "Math",
+          "description": "Sent Home Reteaching pgs. 533-534",
+          "assignedDate": "2026-04-08",
+          "dueDate": "2026-04-09"
+        },
+        {
+          "kidId": "kaia",
+          "subject": "Math",
+          "description": "Sent Home Reteaching pgs. 535-536",
+          "assignedDate": "2026-04-09",
+          "dueDate": "2026-04-10"
+        },
+        {
+          "kidId": "kaia",
+          "subject": "Reading",
+          "description": "Log minutes in Beanstack",
+          "assignedDate": "2026-04-10",
+          "dueDate": "2026-04-13"
+        }
+      ],
+      "importantLinks": [
+        {
+          "title": "DEF Masquerade Gala Tickets",
+          "url": "https://form-renderer-app.donorperfect.io/give/the-foundation-for-orange-county-public-schools-inc/dolphin-education-fund-at-lake-whitney-elementary",
+          "description": "Purchase tickets for the 15th Annual DEF Masquerade Silent Auction Gala on April 18."
+        }
+      ]
     }
   ]
 }
