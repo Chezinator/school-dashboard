@@ -26,228 +26,497 @@
   ],
   "weeks": [
     {
-      "weekOf": "2026-03-30",
-      "weekLabel": "March 30 \u2013 April 3, 2026",
-      "lastUpdated": "2026-04-01T22:03:37.452811Z",
+      "weekOf": "2026-04-06",
+      "weekLabel": "April 6 - April 10, 2026",
+      "lastUpdated": "2026-04-05T22:05:27.527970Z",
       "actionItems": [
         {
           "id": 1,
-          "title": "Bronson's BEST Writing Assessment \u2014 Tuesday",
-          "description": "4th Grade Florida State Test on Tuesday, March 31. 120-minute computer-based test. No electronic devices allowed. Ensure good sleep, healthy breakfast, and no electronics the night before. Do NOT schedule appointments.",
-          "dueDate": "2026-03-31",
+          "title": "Field Trip Payment Due",
+          "description": "Payment for Kaia's Green Meadows Petting Farm field trip is due on Thursday, April 9.",
+          "dueDate": "2026-04-09",
           "urgent": true,
-          "kidId": "bronson",
-          "category": "test-prep",
-          "links": [
-            {
-              "url": "https://ocps.instructure.com/",
-              "label": "Canvas"
-            }
-          ]
+          "kidId": "kaia",
+          "category": "deadline"
         },
         {
           "id": 2,
-          "title": "Kaia \u2014 Word Study Quiz Friday",
-          "description": "Potential Word Study Quiz on Friday on Soft 'c' /s/ (_ce pattern). Practice words: face, race, place, space, grace, trace. Review nightly.",
-          "dueDate": "2026-04-03",
-          "urgent": true,
+          "title": "Science & Foundational Quizzes",
+          "description": "Kaia has a Science Quiz and a Foundational Assessment Quiz.",
+          "dueDate": "2026-04-07",
+          "urgent": false,
           "kidId": "kaia",
-          "category": "test-prep"
+          "category": "test"
         },
         {
           "id": 3,
-          "title": "Teacher Appreciation Week \u2014 Daily Themes",
-          "description": "Show appreciation all week! Mon: High Fives, Tue: Letters/Notes, Wed: Dress Like Teacher/Jokes, Thu: Treats (fave snacks), Fri: Gifts. Ms. Cuccinello loves tulips, chocolate chip cookies, and Diet Coke.",
-          "dueDate": "2026-04-03",
+          "title": "Cold Read Comp. Test",
+          "description": "Kaia has a Cold Read Comprehension Test.",
+          "dueDate": "2026-04-08",
           "urgent": false,
-          "kidId": null,
-          "category": "event",
-          "links": [
-            {
-              "url": "https://m.signupgenius.com/#!/showSignUp/30E0E4EACA62FA4F94-63043178-mrs",
-              "label": "Sign Up"
-            },
-            {
-              "url": "https://lakewhitneyes.ocps.net/",
-              "label": "School Website"
-            }
-          ]
+          "kidId": "kaia",
+          "category": "test"
         },
         {
           "id": 4,
-          "title": "Kaia \u2014 Green Meadows Field Trip April 17",
-          "description": "2nd Grade field trip to Green Meadows Petting Farm on April 17. Mark your calendar and watch for permission slip details.",
-          "dueDate": "2026-04-17",
+          "title": "Math Quiz",
+          "description": "Kaia has a Math Quiz.",
+          "dueDate": "2026-04-09",
           "urgent": false,
           "kidId": "kaia",
-          "category": "event"
+          "category": "test"
         },
         {
           "id": 5,
-          "title": "Check Canvas & Skyward for Missing Work",
-          "description": "New 4th grading period has begun. Check Canvas and Skyward for any incomplete assignments from the previous grading period.",
-          "dueDate": "2026-04-03",
-          "urgent": false,
-          "kidId": "bronson",
-          "category": "reminder",
-          "links": [
-            {
-              "url": "https://ocps.instructure.com/",
-              "label": "Canvas"
-            },
-            {
-              "url": "https://parents.classlink.com/ocps",
-              "label": "Skyward"
-            }
-          ]
+          "title": "Math & Science Final",
+          "description": "Kaia has her Math & Science Final exams.",
+          "dueDate": "2026-04-10",
+          "urgent": true,
+          "kidId": "kaia",
+          "category": "test"
         },
         {
-          "id": 7,
-          "title": "Yearbook Ad Deadline",
-          "description": "Yearbook ads must be submitted by April 1. Check ParentSquare for the submission link.",
-          "dueDate": "2026-04-01",
-          "urgent": true,
-          "kidId": null,
-          "category": "deadline"
+          "id": 6,
+          "title": "Check Skyward",
+          "description": "Check Skyward for Bronson's 3rd quarter report card.",
+          "dueDate": "2026-04-10",
+          "urgent": false,
+          "kidId": "bronson",
+          "category": "admin"
         }
       ],
       "importantDates": [
         {
-          "date": "2026-03-31",
-          "title": "Bronson \u2014 BEST Writing Assessment",
-          "description": "4th Grade Florida State Test. 120-minute computer-based test. No electronic devices allowed. Ensure good sleep and healthy breakfast. Do NOT schedule appointments.",
-          "type": "test",
-          "kidId": "bronson"
-        },
-        {
-          "date": "2026-03-30",
-          "title": "Teacher Appreciation \u2014 High Fives Day",
-          "description": "Show appreciation by giving teachers and staff a HIGH FIVE! All week: Mon-High Fives, Tue-Letters, Wed-Dress Like Teacher/Jokes, Thu-Treats, Fri-Gifts.",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-03-31",
-          "title": "Teacher Appreciation \u2014 Letters Day",
-          "description": "Write kind notes or draw pictures for your teachers today.",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-01",
-          "title": "Teacher Appreciation \u2014 Dress Like Teacher / Jokes",
-          "description": "Dress like your teacher or tell them a joke!",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-02",
-          "title": "Teacher Appreciation \u2014 Treats Day",
-          "description": "Bring your teacher or a staff member their favorite snack or drink. Ms. Cuccinello loves: chocolate chip cookies, chips & salsa, Diet Coke, iced caramel latte with coconut milk.",
-          "type": "event",
-          "kidId": null,
-          "link": {
-            "url": "https://m.signupgenius.com/#!/showSignUp/30E0E4EACA62FA4F94-63043178-mrs",
-            "label": "Sign Up"
-          }
-        },
-        {
-          "date": "2026-04-03",
-          "title": "Teacher Appreciation \u2014 Gifts Day",
-          "description": "Bring your teacher a gift card or item off their Amazon wishlist. Ms. Cuccinello's favorites: tulips, chocolate chip cookies, chips & salsa.",
-          "type": "event",
-          "kidId": null,
-          "link": {
-            "url": "https://m.signupgenius.com/#!/showSignUp/30E0E4EACA62FA4F94-63043178-mrs",
-            "label": "Sign Up"
-          }
-        },
-        {
-          "date": "2026-04-03",
-          "title": "Kaia \u2014 Word Study Quiz (Soft 'c' /s/)",
-          "description": "Potential Word Study Quiz on Soft 'c' /s/ (_ce pattern). Practice words: face, race, place, space, grace, trace.",
-          "type": "test",
-          "kidId": "kaia"
-        },
-        {
-          "date": "2026-04-17",
-          "title": "Kaia \u2014 Green Meadows Field Trip",
-          "description": "2nd Grade field trip to Green Meadows Petting Farm. Watch for permission slip details.",
-          "type": "event",
-          "kidId": "kaia"
-        },
-        {
-          "date": "2026-04-18",
-          "title": "DEF Silent Auction & Gala",
-          "description": "15th Annual Gala at West Orange Country Club, 6\u201310 PM. Mardi Gras Masquerade theme. Tickets $50/person.",
-          "type": "event",
-          "kidId": null,
-          "link": {
-            "url": "https://www.parentsquare.com/feeds/73981070",
-            "label": "View Gala Details"
-          }
-        },
-        {
-          "date": "2026-04-24",
-          "title": "No School \u2014 Teacher Professional Day",
-          "description": "OCPS Teacher Professional Day. Students have the day off. Teachers participate in professional development.",
-          "type": "holiday",
-          "kidId": null
-        },
-        {
-          "date": "2026-05-25",
-          "title": "No School \u2014 Memorial Day",
-          "description": "Memorial Day Holiday. Schools and District Offices closed.",
-          "type": "holiday",
-          "kidId": null
-        },
-        {
-          "date": "2026-05-27",
-          "title": "Last Day of School",
-          "description": "End of Fourth Marking Period. Last day of the 2025-2026 school year for students.",
-          "type": "school",
-          "kidId": null
-        },
-        {
-          "date": "2026-05-28",
-          "endDate": "2026-05-29",
-          "title": "Post Planning \u2014 Staff Only",
-          "description": "Post-planning days for teachers and staff. No students.",
-          "type": "school",
-          "kidId": null
-        },
-        {
           "date": "2026-04-07",
-          "title": "PTO Spirit Night Fundraiser",
-          "description": "PTO Spirit Night Fundraiser event. Details from Ms. Cuccinello's March 23-27 newsletter.",
+          "title": "PTO Spirit Night",
+          "description": "PTO Spirit Night Fundraiser",
           "type": "event",
           "kidId": null
         },
         {
           "date": "2026-04-08",
-          "title": "SAC/PTO Meeting \u2014 9:00/9:30 AM",
-          "description": "School Advisory Council and PTO meeting at 9:00 AM / 9:30 AM. From Ms. Cuccinello's newsletter.",
+          "title": "Early Release Day",
+          "description": "Modified Schedule - Early Release",
+          "type": "schedule",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-08",
+          "title": "SAC/PTO Meeting",
+          "description": "SAC/PTO Meeting at 9:00 AM / 9:30 AM",
           "type": "event",
           "kidId": null
         },
         {
           "date": "2026-04-09",
-          "title": "ARTS Night",
-          "description": "School ARTS Night event. From Ms. Cuccinello's March 23-27 newsletter.",
+          "title": "Arts Night",
+          "description": "School-wide Arts Night",
           "type": "event",
           "kidId": null
         },
         {
           "date": "2026-04-17",
-          "title": "School Play \u2014 Day 1",
-          "description": "Lake Whitney Elementary School Play, Day 1 of 2. From Ms. Cuccinello's newsletter.",
+          "title": "Field Trip: Green Meadows",
+          "description": "Kaia's 2nd Grade Field Trip to Green Meadows Petting Farm",
+          "type": "event",
+          "kidId": "kaia"
+        },
+        {
+          "date": "2026-04-17",
+          "endDate": "2026-04-18",
+          "title": "School Musical",
+          "description": "School Play / Musical",
           "type": "event",
           "kidId": null
         },
         {
           "date": "2026-04-18",
-          "title": "School Play \u2014 Day 2",
-          "description": "Lake Whitney Elementary School Play, Day 2 of 2. From Ms. Cuccinello's newsletter.",
+          "title": "DEF Masquerade Gala",
+          "description": "15th Annual DEF Masquerade Silent Auction Gala (Adults Only). 6-10 PM at West Orange Country Club.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-24",
+          "title": "Student Holiday",
+          "description": "Non-Work Day / No School",
+          "type": "holiday",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-27",
+          "endDate": "2026-05-01",
+          "title": "Color Out",
+          "description": "Color Out Week",
+          "type": "event",
+          "kidId": null
+        }
+      ],
+      "lunchMenu": [
+        {
+          "day": "Monday",
+          "date": "2026-04-06",
+          "entrees": [
+            "Chicken Corn Dog",
+            "Rotisserie Chicken and Cheese Sandwich"
+          ],
+          "sides": [
+            "Carrot Dippers with Ranch Dressing",
+            "Farmland Treats Veg Juice"
+          ],
+          "fruits": [
+            "Strawberry Cup"
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "date": "2026-04-07",
+          "entrees": [
+            "Jerk Seasoned Drumstick",
+            "Yogurt & Cheese Cool Pack",
+            "Chicken, Wings, 3 each"
+          ],
+          "sides": [
+            "Sweet Plantain Slices",
+            "Golden Sun Splash Vegetable Juice"
+          ],
+          "fruits": [
+            "Applesauce, Strawberry 4.5 oz"
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "date": "2026-04-08",
+          "entrees": [
+            "Hamburger",
+            "Cheeseburger",
+            "Impossible Burger",
+            "PBJ Sandwich Box"
+          ],
+          "sides": [
+            "Vegetarian Baked Beans",
+            "24 Hour Zesty Pickles"
+          ],
+          "fruits": [
+            "Fresh Tangerine",
+            "Mixed Berry Fruit Cup"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "date": "2026-04-09",
+          "entrees": [
+            "Tangerine Chicken",
+            "Popcorn Chicken Salad"
+          ],
+          "sides": [
+            "Fresh Steamed Broccoli",
+            "Steamed Corn"
+          ],
+          "fruits": [
+            "Apple Juice",
+            "Fruit Juice"
+          ]
+        },
+        {
+          "day": "Friday",
+          "date": "2026-04-10",
+          "entrees": [
+            "Stuffed Cheesy Breadstick",
+            "Turkey & American Croissant"
+          ],
+          "sides": [
+            "Marinara Dipping Sauce Cup",
+            "Garden Side Salad"
+          ],
+          "fruits": [
+            "Red Delicious Apple"
+          ]
+        }
+      ],
+      "weather": [
+        {
+          "day": "Monday",
+          "date": "2026-04-06",
+          "high": 82,
+          "low": 65,
+          "condition": "PM Thunderstorms",
+          "icon": "cloud-showers-heavy",
+          "dressSuggestion": "Shorts and t-shirt. Bring an umbrella and rain jacket for afternoon storms."
+        },
+        {
+          "day": "Tuesday",
+          "date": "2026-04-07",
+          "high": 71,
+          "low": 65,
+          "condition": "AM Showers",
+          "icon": "cloud-rain",
+          "dressSuggestion": "Pants and long sleeves. Bring a rain jacket for morning showers."
+        },
+        {
+          "day": "Wednesday",
+          "date": "2026-04-08",
+          "high": 72,
+          "low": 65,
+          "condition": "Showers",
+          "icon": "cloud-rain",
+          "dressSuggestion": "Pants and long sleeves. Rain gear needed."
+        },
+        {
+          "day": "Thursday",
+          "date": "2026-04-09",
+          "high": 73,
+          "low": 66,
+          "condition": "Showers",
+          "icon": "cloud-rain",
+          "dressSuggestion": "Pants and long sleeves. Rain gear needed."
+        },
+        {
+          "day": "Friday",
+          "date": "2026-04-10",
+          "high": 78,
+          "low": 66,
+          "condition": "Scattered Thunderstorms",
+          "icon": "cloud-showers-heavy",
+          "dressSuggestion": "Shorts and a light jacket. Umbrella recommended."
+        }
+      ],
+      "teacherComms": [
+        {
+          "kidId": "bronson",
+          "teacher": "Ms. Cuccinello",
+          "teacherEmail": "Jeneen.Cuccinello@ocps.net",
+          "messages": [
+            {
+              "date": "2026-04-05",
+              "subject": "Newsletter",
+              "summary": "Newsletter for April 6-10. Check Skyward for report cards.",
+              "attachments": [
+                {
+                  "filename": "April 6-10.pdf",
+                  "type": "application/pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kidId": "kaia",
+          "teacher": "Ms. Smith",
+          "teacherEmail": "Adrienne.Smith@ocps.net",
+          "messages": [
+            {
+              "date": "2026-04-04",
+              "subject": "Happy Easter Weekly",
+              "summary": "Newsletter for April 6-10. Field trip payment due Thursday. Heavy assessment week (4 quizzes/tests).",
+              "attachments": [
+                {
+                  "filename": "26-4-4 Newsletter.pptx",
+                  "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "schoolDistrictComms": [],
+      "homework": [
+        {
+          "kidId": "kaia",
+          "subject": "Math",
+          "description": "Lesson 11-12 pgs. 175-176",
+          "assignedDate": "2026-04-06",
+          "dueDate": "2026-04-07"
+        },
+        {
+          "kidId": "kaia",
+          "subject": "Math",
+          "description": "Lesson 11-6 pgs. 163-164",
+          "assignedDate": "2026-04-07",
+          "dueDate": "2026-04-08"
+        },
+        {
+          "kidId": "kaia",
+          "subject": "Math",
+          "description": "Sent Home Reteaching pgs. 533-534",
+          "assignedDate": "2026-04-08",
+          "dueDate": "2026-04-09"
+        },
+        {
+          "kidId": "kaia",
+          "subject": "Math",
+          "description": "Sent Home Reteaching pgs. 535-536",
+          "assignedDate": "2026-04-09",
+          "dueDate": "2026-04-10"
+        },
+        {
+          "kidId": "kaia",
+          "subject": "Reading",
+          "description": "Log minutes in Beanstack",
+          "assignedDate": "2026-04-10",
+          "dueDate": "2026-04-13"
+        }
+      ],
+      "importantLinks": [
+        {
+          "title": "DEF Masquerade Gala Tickets",
+          "url": "https://form-renderer-app.donorperfect.io/give/the-foundation-for-orange-county-public-schools-inc/dolphin-education-fund-at-lake-whitney-elementary",
+          "description": "Purchase tickets for the 15th Annual DEF Masquerade Silent Auction Gala on April 18."
+        }
+      ]
+    },
+    {
+      "weekOf": "2026-03-30",
+      "weekLabel": "March 30 - April 3, 2026",
+      "lastUpdated": "2026-03-29T22:07:23.173322Z",
+      "actionItems": [
+        {
+          "id": 1,
+          "title": "Prepare for BEST Writing Assessment",
+          "description": "This is a 120-minute Florida State Test. Ensure Bronson gets a good night's sleep Monday and a healthy breakfast Tuesday. No electronic devices are allowed at school.",
+          "dueDate": "2026-03-31",
+          "urgent": true,
+          "kidId": "bronson",
+          "category": "test"
+        },
+        {
+          "id": 2,
+          "title": "Check Report Card on Skyward",
+          "description": "The 3rd grading period report cards will be available on Skyward.",
+          "dueDate": "2026-04-02",
+          "urgent": false,
+          "kidId": "bronson",
+          "category": "reminder"
+        },
+        {
+          "id": 3,
+          "title": "Study for Data Math Test",
+          "description": "A data math test is scheduled for Friday.",
+          "dueDate": "2026-04-03",
+          "urgent": false,
+          "kidId": "bronson",
+          "category": "test"
+        },
+        {
+          "id": 4,
+          "title": "Study for Social Studies Quiz",
+          "description": "",
+          "dueDate": "2026-03-31",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "test"
+        },
+        {
+          "id": 5,
+          "title": "Study for Money Madness & History Final",
+          "description": "Vocabulary Quiz and History Final.",
+          "dueDate": "2026-04-02",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "test"
+        },
+        {
+          "id": 6,
+          "title": "Study for Phonics Quiz",
+          "description": "Quiz on Soft \"c\" /s/ and \"g\" /j/.",
+          "dueDate": "2026-04-03",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "test"
+        }
+      ],
+      "importantDates": [
+        {
+          "date": "2026-03-30",
+          "endDate": "2026-04-03",
+          "title": "Teacher Appreciation Week",
+          "description": "A week of celebrating our amazing teachers. See the PTO flyer for themed days.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-03-31",
+          "title": "Bronson: BEST Writing Assessment",
+          "description": "4th Grade Florida State Test (120 minutes, computer-based).",
+          "type": "test",
+          "kidId": "bronson"
+        },
+        {
+          "date": "2026-04-01",
+          "title": "Early Release Day",
+          "description": "Modified schedule for all students.",
+          "type": "school",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-02",
+          "title": "Bronson: Report Cards on Skyward",
+          "description": "",
+          "type": "school",
+          "kidId": "bronson"
+        },
+        {
+          "date": "2026-04-03",
+          "title": "Kaia: School Spirit FriYay",
+          "description": "Wear school colors and log your minutes in Beanstack.",
+          "type": "event",
+          "kidId": "kaia"
+        },
+        {
+          "date": "2026-04-07",
+          "title": "PTO Spirit Night Fundraiser",
+          "description": "Details to be announced.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-08",
+          "title": "SAC/PTO Meeting",
+          "description": "9:00 AM / 9:30 AM.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-09",
+          "title": "Arts Night",
+          "description": "",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-17",
+          "title": "Kaia: 2nd Grade Field Trip",
+          "description": "Green Meadows Petting Farm.",
+          "type": "event",
+          "kidId": "kaia"
+        },
+        {
+          "date": "2026-04-17",
+          "endDate": "2026-04-18",
+          "title": "School Play",
+          "description": "",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-18",
+          "title": "DEF Gala",
+          "description": "Dolphin Education Foundation Gala.",
+          "type": "event",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-24",
+          "title": "Student Holiday / Non-Work Day",
+          "description": "No school for students.",
+          "type": "holiday",
+          "kidId": null
+        },
+        {
+          "date": "2026-04-27",
+          "endDate": "2026-05-01",
+          "title": "Color Out",
+          "description": "Details to follow.",
           "type": "event",
           "kidId": null
         }
@@ -261,7 +530,7 @@
             "Deli Box"
           ],
           "sides": [
-            "Mashed Potatoes",
+            "Potatoes, Mashed",
             "Peas & Carrots"
           ],
           "fruits": [
@@ -288,7 +557,8 @@
           "date": "2026-04-01",
           "entrees": [
             "Grilled Cheese Sandwich",
-            "Rotisserie Chicken and Cheese Sandwich (Note: Buttermilk Pancakes w/ Turkey Sausage also listed - may be a special breakfast-for-lunch item)"
+            "Buttermilk Pancakes w/ Turkey Sausage",
+            "Rotisserie Chicken and Cheese Sandwich"
           ],
           "sides": [
             "Tater Tots",
@@ -303,11 +573,10 @@
           "date": "2026-04-02",
           "entrees": [
             "Mac and Cheese",
-            "PBJ Sandwich Box"
+            "PBJ Sandwich"
           ],
           "sides": [
             "Fresh Steamed Broccoli",
-            "Steamed Broccoli",
             "Italian Blend Vegetables"
           ],
           "fruits": [
@@ -323,59 +592,58 @@
             "Bento Box w/ Pepperoni, Cheese, Marinara, & Bread"
           ],
           "sides": [
-            "Marinara Dipping Sauce Cup"
-          ],
-          "fruits": [
+            "Marinara Dipping Sauce Cup",
             "Tropical Trio Juice Slushie",
             "Berry Berry Blue Juice Slushie"
-          ]
+          ],
+          "fruits": []
         }
       ],
       "weather": [
         {
           "day": "Monday",
           "date": "2026-03-30",
-          "high": 78,
-          "low": 62,
-          "condition": "Partly Cloudy",
+          "high": 81,
+          "low": 65,
+          "condition": "Mostly Cloudy",
           "icon": "cloud-sun",
-          "dressSuggestion": "Light layers recommended. Comfortable for shorts or light pants."
+          "dressSuggestion": "Light layers. Comfortable for shorts and a light top."
         },
         {
           "day": "Tuesday",
           "date": "2026-03-31",
-          "high": 80,
-          "low": 62,
-          "condition": "Partly Cloudy",
-          "icon": "cloud-sun",
-          "dressSuggestion": "Light layers. Partly Cloudy. Comfortable for shorts and a light top."
+          "high": 83,
+          "low": 65,
+          "condition": "Isolated Thunderstorms",
+          "icon": "cloud-bolt-sun",
+          "dressSuggestion": "Pack a light rain jacket. Warm but chance of a storm."
         },
         {
           "day": "Wednesday",
           "date": "2026-04-01",
-          "high": 82,
-          "low": 63,
-          "condition": "Partly Cloudy",
+          "high": 84,
+          "low": 66,
+          "condition": "Mostly Cloudy",
           "icon": "cloud-sun",
-          "dressSuggestion": "Light layers. Partly Cloudy. Comfortable for shorts and a light top."
+          "dressSuggestion": "Warm day, light clothing."
         },
         {
           "day": "Thursday",
           "date": "2026-04-02",
-          "high": 84,
-          "low": 64,
+          "high": 86,
+          "low": 68,
           "condition": "Partly Cloudy",
-          "icon": "cloud-sun",
-          "dressSuggestion": "Light layers. Partly Cloudy. Comfortable for shorts and a light top."
+          "icon": "sun",
+          "dressSuggestion": "Hot and sunny. Shorts and t-shirt weather."
         },
         {
           "day": "Friday",
           "date": "2026-04-03",
-          "high": 84,
-          "low": 65,
-          "condition": "PM Showers",
-          "icon": "cloud-rain",
-          "dressSuggestion": "Light layers. PM Showers. Comfortable for shorts and a light top. Pack a rain jacket or umbrella."
+          "high": 86,
+          "low": 68,
+          "condition": "Mostly Sunny",
+          "icon": "sun",
+          "dressSuggestion": "Hot and sunny. Shorts and t-shirt weather."
         }
       ],
       "teacherComms": [
@@ -385,36 +653,13 @@
           "teacherEmail": "Jeneen.Cuccinello@ocps.net",
           "messages": [
             {
-              "date": "2026-03-22",
-              "subject": "Newsletter",
-              "summary": "Welcome back from Spring Break! New nine weeks starting strong. Newsletter PDF attached with weekly schedule, subjects, and upcoming events.",
-              "fullBody": "Hope you all had a great Spring Break! It's a new nine weeks and we are going to start strong- now that we are all rested!\n\nI'm looking forward to making this last 9 weeks amazing!\n\nJeneen Cuccinello\nFourth Grade Teacher\nLake Whitney Elementary School\n407-877-8888",
+              "date": "2026-03-29",
+              "subject": "Weekly Newsletter",
+              "summary": "Newsletter for March 30 - April 3. BEST Writing Test on Tuesday. Report cards on Thursday. Data Math Test on Friday.",
               "attachments": [
                 {
-                  "filename": "March 23-27.pdf",
-                  "type": "application/pdf",
-                  "description": "Weekly classroom newsletter",
-                  "extractedContent": "Week of: March 23-27, 2026\n\nUpcoming Events:\n\u2022 Monday \u2014 PE, Begin 4th grading period\n\u2022 Tuesday \u2014 ART\n  - ELA: Mixed Review of Reading Poetry and Prose and Reading Informational Text / Writing\n  - Math: Data \u2014 MA.4.DP.1.1: Collect and represent numerical data, including fractional values, using tables, stem-and-leaf plots or line plots. MA.4.DP.1.2: Determine the mode, median or range. MA.4.DP.1.3: Solve real-world problems involving numerical data.\n\u2022 Wednesday \u2014 PE, Early Release Day - Modified Schedule\n  - Science: Heredity and Reproduction \u2014 SC.4.L.16.1 Identify processes of sexual reproduction in flowering plants. SC.4.L.16.2 Explain inherited vs environmental characteristics. SC.4.L.16.3 Recognize animal behaviors shaped by heredity and learning. SC.4.L.16.4 Compare/contrast life cycles of Florida plants and animals.\n\u2022 Thursday \u2014 MUSIC\n\u2022 Friday \u2014 PE\n\u2022 Social Studies: Florida's Government\n\nReminders:\n\u2022 It's a new 9 weeks \u2014 Start Strong!\n\u2022 MARCH 31 \u2014 4th grade BEST Writing Assessment\n\u2022 APRIL 7 \u2014 PTO Spirit Night Fundraiser\n\u2022 APRIL 8 \u2014 SAC/PTO 9:00/9:30\n\u2022 APRIL 9 \u2014 ARTS Night\n\u2022 APRIL 17-18 \u2014 School Play\n\u2022 APRIL 18 \u2014 GALA"
-                },
-                {
-                  "filename": "image001.jpg",
-                  "type": "image/jpeg",
-                  "description": "Motivational image"
-                },
-                {
-                  "filename": "image002.jpg",
-                  "type": "image/jpeg",
-                  "description": "Motivational image"
-                },
-                {
-                  "filename": "image003.jpg",
-                  "type": "image/jpeg",
-                  "description": "Motivational image"
-                },
-                {
-                  "filename": "image004.jpg",
-                  "type": "image/jpeg",
-                  "description": "Motivational image"
+                  "filename": "March 30- April 3.pdf",
+                  "type": "application/pdf"
                 }
               ]
             }
@@ -426,291 +671,24 @@
           "teacherEmail": "Adrienne.Smith@ocps.net",
           "messages": [
             {
-              "date": "2026-03-20",
-              "subject": "Spring Break Weekly",
-              "summary": "Students averaged 98% on science test and 90% on word study quiz! Newsletter attached with March 23-27 schedule, daily math HW, and upcoming events.",
-              "fullBody": "I hope everyone is enjoying an excellent spring break! Attached is the newsletter and pic of last week\u2764\ufe0f Speaking of last week\u2026the students averaged a 98% on their science test and a 90% on their word study quiz! Way to go class!\n\nHave a wonderful rest of your break!\n\nMs. Smith\nAdrienne.Smith@ocps.net",
+              "date": "2026-03-29",
+              "subject": "Weekly Newsletter",
+              "summary": "Newsletter for March 30 - April 3. Three quizzes this week (Social Studies, Vocab/History, Phonics). Green Meadows Petting Farm field trip on April 17.",
               "attachments": [
                 {
-                  "filename": "26-3-22 Newsletter.pptx",
-                  "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                  "description": "Weekly classroom newsletter (PowerPoint)",
-                  "extractedContent": "March 23-27, 2026\n\nPhonics Focus: Soft \"c\" /s/ (_ce)\n\nOur Learning:\n\u2022 ELA: Use clues to figure out word meanings, explain author's purpose, determine central idea and relevant details, retell Money Madness.\n\u2022 Math: Add/Subtract w/Numbers to 1,000 using many place-value strategies.\n\u2022 Science: Hereditary and Reproduction\n\u2022 Social Studies: How Do Families Learn About Their Past? And Responsibilities\n\nAssessments:\n\u2022 Friday: Potential Word Study Quiz on Soft \"c\" /s/ (_ce) and Money Madness Open Book Test\n\nDaily Schedule & Homework:\n\u2022 Monday \u2014 Art. Math HW: Lesson 11-1 pgs. 153-154\n\u2022 Tuesday \u2014 Music. Math HW: Lesson 11-2 pgs. 155-156\n\u2022 Wednesday \u2014 PE Early Release. Math HW: Lesson 11-3 pgs. 157-158\n\u2022 Thursday \u2014 PE/Media. Math HW: Lesson 11-5 pgs. 161-162\n\u2022 Friday \u2014 PE. School Spirit FriYay & log your minutes in Beanstack!\n\nWednesdays are also School Spirit days!\n\nImportant Dates:\n\u2022 3/13-22 Spring Break!\n\u2022 3/21 World Down Syndrome Day\n\u2022 3/30 - April 3rd PTO Teacher Appreciation Week\n\u2022 4/17 2nd grade field trip to Green Meadows Petting Farm"
-                },
-                {
-                  "filename": "20260312_144140.jpg",
-                  "type": "image/jpeg",
-                  "description": "Class photo from last week"
+                  "filename": "26-3-29 Newsletter.pptx",
+                  "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
                 }
               ]
             }
           ]
         }
       ],
-      "homework": [
-        {
-          "kidId": "bronson",
-          "assignments": [
-            {
-              "subject": "Writing",
-              "title": "BEST Writing Practice",
-              "description": "Practice persuasive writing in preparation for Tuesday's state assessment. Review your thesis, supporting details, and conclusion structure.",
-              "dueDate": "2026-03-31",
-              "status": "pending"
-            },
-            {
-              "subject": "Reading",
-              "title": "Nightly Reading Log \u2014 20 min/night",
-              "description": "Read independently for 20 minutes each night and have a parent sign the reading log.",
-              "dueDate": "2026-04-03",
-              "status": "pending"
-            },
-            {
-              "subject": "General",
-              "title": "Check Canvas & Skyward for Missing Work",
-              "description": "Per Ms. Cuccinello: check Canvas and Skyward for any missing or incomplete assignments from Q3 as the 4th grading period begins.",
-              "dueDate": "2026-04-03",
-              "status": "pending",
-              "links": [
-                {
-                  "url": "https://ocps.instructure.com/",
-                  "label": "Canvas"
-                },
-                {
-                  "url": "https://parents.classlink.com/ocps",
-                  "label": "Skyward"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "kidId": "kaia",
-          "assignments": [
-            {
-              "subject": "Reading",
-              "title": "Nightly Reading Log \u2014 15 min/night",
-              "description": "Read independently for 15 minutes each night and have a parent sign the reading log.",
-              "dueDate": "2026-04-03",
-              "status": "pending"
-            },
-            {
-              "subject": "Phonics",
-              "title": "Word Study \u2014 Soft 'c' /s/ Pattern (_ce)",
-              "description": "Practice Soft 'c' /s/ words using the _ce pattern (e.g., face, race, place, space). Quiz may be on Friday.",
-              "dueDate": "2026-04-03",
-              "status": "pending"
-            },
-            {
-              "subject": "Math",
-              "title": "Money Madness \u2014 Open Book Review",
-              "description": "Review the Money Madness book for any follow-up comprehension or math questions. Have the book available for reference.",
-              "dueDate": "2026-04-03",
-              "status": "pending"
-            },
-            {
-              "subject": "Math",
-              "title": "Blooket: Extend Thinking of Numbers to 1,000",
-              "description": "Complete the Blooket math homework game assigned by Ms. Smith. Practice extending thinking of numbers to 1,000.",
-              "dueDate": "2026-04-03",
-              "status": "pending",
-              "links": [
-                {
-                  "url": "https://play.blooket.com/play?hwId=69adadded03413c503a4d263",
-                  "label": "Play on Blooket"
-                }
-              ]
-            },
-            {
-              "subject": "Science",
-              "title": "Blooket: Human Body Parts Review",
-              "description": "Complete both Blooket science review games assigned by Ms. Smith. Study human body parts and their basic functions.",
-              "dueDate": "2026-04-03",
-              "status": "pending",
-              "links": [
-                {
-                  "url": "https://play.blooket.com/play?hwId=69adaefa142ea32f5e141bb0",
-                  "label": "Blooket: Identifying Body Parts"
-                },
-                {
-                  "url": "https://play.blooket.com/play?hwId=69adaf6d597488fadb09b367",
-                  "label": "Blooket: Body Part Functions"
-                }
-              ]
-            },
-            {
-              "subject": "Social Studies",
-              "title": "Social Studies Review Game \u2014 Native American Cultures",
-              "description": "Review game shared by Ms. Smith for studying Native American Cultures. Play on Educaplay.",
-              "dueDate": "2026-04-03",
-              "status": "pending",
-              "links": [
-                {
-                  "url": "https://www.educaplay.com/game/21568573-native_american_cultures.html",
-                  "label": "Play Review Game"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "importantLinks": [
-        {
-          "id": "canvas",
-          "title": "Canvas \u2014 Student Portal",
-          "url": "https://ocps.instructure.com/",
-          "description": "Assignments, grades, and course materials for both kids",
-          "category": "Tool",
-          "source": "OCPS",
-          "kid": null,
-          "pinned": true,
-          "gmailUrl": null
-        },
-        {
-          "id": "skyward",
-          "title": "Skyward \u2014 Family Access",
-          "url": "https://parents.classlink.com/ocps",
-          "description": "OCPS Family Access via ClassLink \u2014 grade & attendance portal. Direct family login link coming soon.",
-          "category": "Tool",
-          "source": "OCPS",
-          "kid": null,
-          "pinned": true,
-          "gmailUrl": null,
-          "earmarked": true
-        },
-        {
-          "id": "parentsquare",
-          "title": "ParentSquare",
-          "url": "https://www.parentsquare.com/",
-          "description": "School communications, announcements, and messaging",
-          "category": "Tool",
-          "source": "Lake Whitney",
-          "kid": null,
-          "pinned": true,
-          "gmailUrl": null
-        },
-        {
-          "id": "mealviewer",
-          "title": "MealViewer \u2014 Lunch Menu",
-          "url": "https://schools.mealviewer.com/school/LakeWhitneyElementary",
-          "description": "Full lunch menu for Lake Whitney Elementary",
-          "category": "Tool",
-          "source": "Lake Whitney",
-          "kid": null,
-          "pinned": true,
-          "gmailUrl": null
-        },
-        {
-          "id": "lake-whitney-website",
-          "title": "Lake Whitney Elementary Website",
-          "url": "https://lakewhitneyes.ocps.net/",
-          "description": "Official school website \u2014 news, calendar, staff directory",
-          "category": "School",
-          "source": "School",
-          "kid": null,
-          "gmailUrl": null
-        },
-        {
-          "id": "ocps-mondays-with-maria",
-          "title": "Mondays with Maria \u2014 OCPS Superintendent Update",
-          "url": "https://theslice.ocps.net/79467_1",
-          "description": "Weekly video message transcript from Superintendent Dr. Maria Vazquez",
-          "category": "District",
-          "source": "OCPS District",
-          "kid": null,
-          "gmailUrl": null
-        },
-        {
-          "id": "parentsquare-dolphin-digest",
-          "title": "Dolphin Digest Newsletter",
-          "url": "https://www.parentsquare.com/feeds/74199872",
-          "description": "Principal Dr. Crabb's weekly newsletter \u2014 Week of March 9, 2026. Opens in Gmail.",
-          "category": "Newsletter",
-          "source": "Lake Whitney",
-          "kid": null,
-          "gmailUrl": null
-        },
-        {
-          "id": "parentsquare-def-gala",
-          "title": "DEF Silent Auction & Gala \u2014 April 18",
-          "url": "https://www.parentsquare.com/feeds/73981070",
-          "description": "Dolphin Education Foundation Gala at West Orange Country Club. Tickets & auction info.",
-          "category": "Event",
-          "source": "Lake Whitney",
-          "kid": null,
-          "gmailUrl": null
-        }
-      ],
-      "dolphinDigest": {
-        "weekLabel": "Week of March 30, 2026",
-        "postedDate": "Sunday, March 29, 2026",
-        "postedBy": "Dr. Crabb, Principal",
-        "gmailUrl": "https://www.parentsquare.com/feeds/74199872",
-        "highlights": [
-          {
-            "icon": "\ud83d\udcdd",
-            "title": "BEST Writing Assessment \u2014 Tuesday",
-            "body": "4th graders take the Florida BEST Writing Assessment on Tuesday, March 31. 120-minute computer-based test. Ensure good sleep and breakfast."
-          },
-          {
-            "icon": "\ud83c\udf4e",
-            "title": "Teacher Appreciation Week",
-            "body": "March 30 - April 3! Themed days: Mon-High Fives, Tue-Letters, Wed-Dress Like Teacher/Jokes, Thu-Treats, Fri-Gifts."
-          },
-          {
-            "icon": "\ud83c\udfc6",
-            "title": "School of Excellence Recognition",
-            "body": "Lake Whitney has been recognized as a 2024-25 School of Excellence by the Florida Department of Education!"
-          },
-          {
-            "icon": "\ud83d\ude8c",
-            "title": "Upcoming: 2nd Grade Field Trip",
-            "body": "Green Meadows Petting Farm on April 17. Permission slip details coming soon."
-          },
-          {
-            "icon": "\ud83c\udf1f",
-            "title": "DEF Gala \u2014 April 18",
-            "body": "15th Annual Silent Auction & Gala at West Orange Country Club. Mardi Gras Masquerade theme. Tickets $50/person."
-          }
-        ]
-      },
-      "midWeekCheck": {
-        "checkedAt": "2026-04-01T22:00:00Z",
-        "newItems": [
-          {
-            "source": "ParentSquare (Danette Havard)",
-            "date": "2026-03-31",
-            "title": "Yearbook Ads Due April 1",
-            "description": "Yearbook ads must be submitted by April 1. Check ParentSquare for the submission link.",
-            "urgent": true,
-            "actionRequired": true
-          },
-          {
-            "source": "ParentSquare (Danette Havard)",
-            "date": "2026-03-30",
-            "title": "No Lunch Visitors on 3/31 or 4/2",
-            "description": "No lunch visitors are allowed on Tuesday March 31 (BEST Writing Test day) or Thursday April 2.",
-            "urgent": false,
-            "actionRequired": false
-          },
-          {
-            "source": "ParentSquare (Danette Havard)",
-            "date": "2026-03-30",
-            "title": "Lost & Found \u2014 Items Donated Friday 4/3",
-            "description": "Lost and Found is full. Items (jackets, water bottles, lunch boxes) are staged outside the front office. Anything not claimed by Friday April 3 will be donated.",
-            "urgent": true,
-            "actionRequired": true
-          },
-          {
-            "source": "Ms. Smith (Adrienne.Smith@ocps.net)",
-            "date": "2026-03-30",
-            "title": "DEF Masquerade Gala \u2014 Tickets & Class Competition",
-            "description": "15th Annual DEF Masquerade Silent Auction Gala on Saturday April 18, 6-10 PM at West Orange Country Club. Tickets: $50/person (includes dinner, 2 drink tickets, silent auction). Class competition: most ticket sales wins a pizza party! Online auction opens this Wednesday, closes Friday April 4 at 12 PM. Adults-only event. Ticket link: https://form-renderer-app.donorperfect.io/give/the-foundation-for-orange-county-public-schools-inc/dolphin-education-fund-at-lake-whitney-elementary",
-            "urgent": false,
-            "actionRequired": false
-          }
-        ]
-      }
+      "schoolDistrictComms": [],
+      "homework": [],
+      "importantLinks": [],
+      "dolphinDigest": [],
+      "midWeekCheck": null
     },
     {
       "weekOf": "2026-03-23",
@@ -1559,671 +1537,6 @@
         "checkType": "Wednesday Mid-Week",
         "summary": "New newsletter from Ms. Cuccinello (March 23-27) and an Amazon wishlist request for classroom room transformation. No new emails from Ms. Smith. OCPS digest announced new digital enrollment platform (no action required)."
       }
-    },
-    {
-      "weekOf": "2026-03-30",
-      "weekLabel": "March 30 - April 3, 2026",
-      "lastUpdated": "2026-03-29T22:07:23.173322Z",
-      "actionItems": [
-        {
-          "id": 1,
-          "title": "Prepare for BEST Writing Assessment",
-          "description": "This is a 120-minute Florida State Test. Ensure Bronson gets a good night's sleep Monday and a healthy breakfast Tuesday. No electronic devices are allowed at school.",
-          "dueDate": "2026-03-31",
-          "urgent": true,
-          "kidId": "bronson",
-          "category": "test"
-        },
-        {
-          "id": 2,
-          "title": "Check Report Card on Skyward",
-          "description": "The 3rd grading period report cards will be available on Skyward.",
-          "dueDate": "2026-04-02",
-          "urgent": false,
-          "kidId": "bronson",
-          "category": "reminder"
-        },
-        {
-          "id": 3,
-          "title": "Study for Data Math Test",
-          "description": "A data math test is scheduled for Friday.",
-          "dueDate": "2026-04-03",
-          "urgent": false,
-          "kidId": "bronson",
-          "category": "test"
-        },
-        {
-          "id": 4,
-          "title": "Study for Social Studies Quiz",
-          "description": "",
-          "dueDate": "2026-03-31",
-          "urgent": false,
-          "kidId": "kaia",
-          "category": "test"
-        },
-        {
-          "id": 5,
-          "title": "Study for Money Madness & History Final",
-          "description": "Vocabulary Quiz and History Final.",
-          "dueDate": "2026-04-02",
-          "urgent": false,
-          "kidId": "kaia",
-          "category": "test"
-        },
-        {
-          "id": 6,
-          "title": "Study for Phonics Quiz",
-          "description": "Quiz on Soft \"c\" /s/ and \"g\" /j/.",
-          "dueDate": "2026-04-03",
-          "urgent": false,
-          "kidId": "kaia",
-          "category": "test"
-        }
-      ],
-      "importantDates": [
-        {
-          "date": "2026-03-30",
-          "endDate": "2026-04-03",
-          "title": "Teacher Appreciation Week",
-          "description": "A week of celebrating our amazing teachers. See the PTO flyer for themed days.",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-03-31",
-          "title": "Bronson: BEST Writing Assessment",
-          "description": "4th Grade Florida State Test (120 minutes, computer-based).",
-          "type": "test",
-          "kidId": "bronson"
-        },
-        {
-          "date": "2026-04-01",
-          "title": "Early Release Day",
-          "description": "Modified schedule for all students.",
-          "type": "school",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-02",
-          "title": "Bronson: Report Cards on Skyward",
-          "description": "",
-          "type": "school",
-          "kidId": "bronson"
-        },
-        {
-          "date": "2026-04-03",
-          "title": "Kaia: School Spirit FriYay",
-          "description": "Wear school colors and log your minutes in Beanstack.",
-          "type": "event",
-          "kidId": "kaia"
-        },
-        {
-          "date": "2026-04-07",
-          "title": "PTO Spirit Night Fundraiser",
-          "description": "Details to be announced.",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-08",
-          "title": "SAC/PTO Meeting",
-          "description": "9:00 AM / 9:30 AM.",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-09",
-          "title": "Arts Night",
-          "description": "",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-17",
-          "title": "Kaia: 2nd Grade Field Trip",
-          "description": "Green Meadows Petting Farm.",
-          "type": "event",
-          "kidId": "kaia"
-        },
-        {
-          "date": "2026-04-17",
-          "endDate": "2026-04-18",
-          "title": "School Play",
-          "description": "",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-18",
-          "title": "DEF Gala",
-          "description": "Dolphin Education Foundation Gala.",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-24",
-          "title": "Student Holiday / Non-Work Day",
-          "description": "No school for students.",
-          "type": "holiday",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-27",
-          "endDate": "2026-05-01",
-          "title": "Color Out",
-          "description": "Details to follow.",
-          "type": "event",
-          "kidId": null
-        }
-      ],
-      "lunchMenu": [
-        {
-          "day": "Monday",
-          "date": "2026-03-30",
-          "entrees": [
-            "Breaded Chicken Nuggets",
-            "Deli Box"
-          ],
-          "sides": [
-            "Potatoes, Mashed",
-            "Peas & Carrots"
-          ],
-          "fruits": [
-            "Apple Cherry Juice",
-            "Apple Juice"
-          ]
-        },
-        {
-          "day": "Tuesday",
-          "date": "2026-03-31",
-          "entrees": [
-            "Chicken Tinga Soft Tacos",
-            "Yogurt, Cheese, w/ Banana Bread Plate"
-          ],
-          "sides": [
-            "Seasoned Black Beans"
-          ],
-          "fruits": [
-            "Strawberry Cup"
-          ]
-        },
-        {
-          "day": "Wednesday",
-          "date": "2026-04-01",
-          "entrees": [
-            "Grilled Cheese Sandwich",
-            "Buttermilk Pancakes w/ Turkey Sausage",
-            "Rotisserie Chicken and Cheese Sandwich"
-          ],
-          "sides": [
-            "Tater Tots",
-            "Coleslaw"
-          ],
-          "fruits": [
-            "Orange Wedges"
-          ]
-        },
-        {
-          "day": "Thursday",
-          "date": "2026-04-02",
-          "entrees": [
-            "Mac and Cheese",
-            "PBJ Sandwich"
-          ],
-          "sides": [
-            "Fresh Steamed Broccoli",
-            "Italian Blend Vegetables"
-          ],
-          "fruits": [
-            "Apple Cherry Juice",
-            "Apple Juice"
-          ]
-        },
-        {
-          "day": "Friday",
-          "date": "2026-04-03",
-          "entrees": [
-            "Four Cheese Pizza Wedge",
-            "Bento Box w/ Pepperoni, Cheese, Marinara, & Bread"
-          ],
-          "sides": [
-            "Marinara Dipping Sauce Cup",
-            "Tropical Trio Juice Slushie",
-            "Berry Berry Blue Juice Slushie"
-          ],
-          "fruits": []
-        }
-      ],
-      "weather": [
-        {
-          "day": "Monday",
-          "date": "2026-03-30",
-          "high": 81,
-          "low": 65,
-          "condition": "Mostly Cloudy",
-          "icon": "cloud-sun",
-          "dressSuggestion": "Light layers. Comfortable for shorts and a light top."
-        },
-        {
-          "day": "Tuesday",
-          "date": "2026-03-31",
-          "high": 83,
-          "low": 65,
-          "condition": "Isolated Thunderstorms",
-          "icon": "cloud-bolt-sun",
-          "dressSuggestion": "Pack a light rain jacket. Warm but chance of a storm."
-        },
-        {
-          "day": "Wednesday",
-          "date": "2026-04-01",
-          "high": 84,
-          "low": 66,
-          "condition": "Mostly Cloudy",
-          "icon": "cloud-sun",
-          "dressSuggestion": "Warm day, light clothing."
-        },
-        {
-          "day": "Thursday",
-          "date": "2026-04-02",
-          "high": 86,
-          "low": 68,
-          "condition": "Partly Cloudy",
-          "icon": "sun",
-          "dressSuggestion": "Hot and sunny. Shorts and t-shirt weather."
-        },
-        {
-          "day": "Friday",
-          "date": "2026-04-03",
-          "high": 86,
-          "low": 68,
-          "condition": "Mostly Sunny",
-          "icon": "sun",
-          "dressSuggestion": "Hot and sunny. Shorts and t-shirt weather."
-        }
-      ],
-      "teacherComms": [
-        {
-          "kidId": "bronson",
-          "teacher": "Ms. Cuccinello",
-          "teacherEmail": "Jeneen.Cuccinello@ocps.net",
-          "messages": [
-            {
-              "date": "2026-03-29",
-              "subject": "Weekly Newsletter",
-              "summary": "Newsletter for March 30 - April 3. BEST Writing Test on Tuesday. Report cards on Thursday. Data Math Test on Friday.",
-              "attachments": [
-                {
-                  "filename": "March 30- April 3.pdf",
-                  "type": "application/pdf"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "kidId": "kaia",
-          "teacher": "Ms. Smith",
-          "teacherEmail": "Adrienne.Smith@ocps.net",
-          "messages": [
-            {
-              "date": "2026-03-29",
-              "subject": "Weekly Newsletter",
-              "summary": "Newsletter for March 30 - April 3. Three quizzes this week (Social Studies, Vocab/History, Phonics). Green Meadows Petting Farm field trip on April 17.",
-              "attachments": [
-                {
-                  "filename": "26-3-29 Newsletter.pptx",
-                  "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "schoolDistrictComms": [],
-      "homework": [],
-      "importantLinks": [],
-      "dolphinDigest": [],
-      "midWeekCheck": null
-    },
-    {
-      "weekOf": "2026-04-06",
-      "weekLabel": "April 6 - April 10, 2026",
-      "lastUpdated": "2026-04-05T22:05:27.527970Z",
-      "actionItems": [
-        {
-          "id": 1,
-          "title": "Field Trip Payment Due",
-          "description": "Payment for Kaia's Green Meadows Petting Farm field trip is due on Thursday, April 9.",
-          "dueDate": "2026-04-09",
-          "urgent": true,
-          "kidId": "kaia",
-          "category": "deadline"
-        },
-        {
-          "id": 2,
-          "title": "Science & Foundational Quizzes",
-          "description": "Kaia has a Science Quiz and a Foundational Assessment Quiz.",
-          "dueDate": "2026-04-07",
-          "urgent": false,
-          "kidId": "kaia",
-          "category": "test"
-        },
-        {
-          "id": 3,
-          "title": "Cold Read Comp. Test",
-          "description": "Kaia has a Cold Read Comprehension Test.",
-          "dueDate": "2026-04-08",
-          "urgent": false,
-          "kidId": "kaia",
-          "category": "test"
-        },
-        {
-          "id": 4,
-          "title": "Math Quiz",
-          "description": "Kaia has a Math Quiz.",
-          "dueDate": "2026-04-09",
-          "urgent": false,
-          "kidId": "kaia",
-          "category": "test"
-        },
-        {
-          "id": 5,
-          "title": "Math & Science Final",
-          "description": "Kaia has her Math & Science Final exams.",
-          "dueDate": "2026-04-10",
-          "urgent": true,
-          "kidId": "kaia",
-          "category": "test"
-        },
-        {
-          "id": 6,
-          "title": "Check Skyward",
-          "description": "Check Skyward for Bronson's 3rd quarter report card.",
-          "dueDate": "2026-04-10",
-          "urgent": false,
-          "kidId": "bronson",
-          "category": "admin"
-        }
-      ],
-      "importantDates": [
-        {
-          "date": "2026-04-07",
-          "title": "PTO Spirit Night",
-          "description": "PTO Spirit Night Fundraiser",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-08",
-          "title": "Early Release Day",
-          "description": "Modified Schedule - Early Release",
-          "type": "schedule",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-08",
-          "title": "SAC/PTO Meeting",
-          "description": "SAC/PTO Meeting at 9:00 AM / 9:30 AM",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-09",
-          "title": "Arts Night",
-          "description": "School-wide Arts Night",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-17",
-          "title": "Field Trip: Green Meadows",
-          "description": "Kaia's 2nd Grade Field Trip to Green Meadows Petting Farm",
-          "type": "event",
-          "kidId": "kaia"
-        },
-        {
-          "date": "2026-04-17",
-          "endDate": "2026-04-18",
-          "title": "School Musical",
-          "description": "School Play / Musical",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-18",
-          "title": "DEF Masquerade Gala",
-          "description": "15th Annual DEF Masquerade Silent Auction Gala (Adults Only). 6-10 PM at West Orange Country Club.",
-          "type": "event",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-24",
-          "title": "Student Holiday",
-          "description": "Non-Work Day / No School",
-          "type": "holiday",
-          "kidId": null
-        },
-        {
-          "date": "2026-04-27",
-          "endDate": "2026-05-01",
-          "title": "Color Out",
-          "description": "Color Out Week",
-          "type": "event",
-          "kidId": null
-        }
-      ],
-      "lunchMenu": [
-        {
-          "day": "Monday",
-          "date": "2026-04-06",
-          "entrees": [
-            "Chicken Corn Dog",
-            "Rotisserie Chicken and Cheese Sandwich"
-          ],
-          "sides": [
-            "Carrot Dippers with Ranch Dressing",
-            "Farmland Treats Veg Juice"
-          ],
-          "fruits": [
-            "Strawberry Cup"
-          ]
-        },
-        {
-          "day": "Tuesday",
-          "date": "2026-04-07",
-          "entrees": [
-            "Jerk Seasoned Drumstick",
-            "Yogurt & Cheese Cool Pack",
-            "Chicken, Wings, 3 each"
-          ],
-          "sides": [
-            "Sweet Plantain Slices",
-            "Golden Sun Splash Vegetable Juice"
-          ],
-          "fruits": [
-            "Applesauce, Strawberry 4.5 oz"
-          ]
-        },
-        {
-          "day": "Wednesday",
-          "date": "2026-04-08",
-          "entrees": [
-            "Hamburger",
-            "Cheeseburger",
-            "Impossible Burger",
-            "PBJ Sandwich Box"
-          ],
-          "sides": [
-            "Vegetarian Baked Beans",
-            "24 Hour Zesty Pickles"
-          ],
-          "fruits": [
-            "Fresh Tangerine",
-            "Mixed Berry Fruit Cup"
-          ]
-        },
-        {
-          "day": "Thursday",
-          "date": "2026-04-09",
-          "entrees": [
-            "Tangerine Chicken",
-            "Popcorn Chicken Salad"
-          ],
-          "sides": [
-            "Fresh Steamed Broccoli",
-            "Steamed Corn"
-          ],
-          "fruits": [
-            "Apple Juice",
-            "Fruit Juice"
-          ]
-        },
-        {
-          "day": "Friday",
-          "date": "2026-04-10",
-          "entrees": [
-            "Stuffed Cheesy Breadstick",
-            "Turkey & American Croissant"
-          ],
-          "sides": [
-            "Marinara Dipping Sauce Cup",
-            "Garden Side Salad"
-          ],
-          "fruits": [
-            "Red Delicious Apple"
-          ]
-        }
-      ],
-      "weather": [
-        {
-          "day": "Monday",
-          "date": "2026-04-06",
-          "high": 82,
-          "low": 65,
-          "condition": "PM Thunderstorms",
-          "icon": "cloud-showers-heavy",
-          "dressSuggestion": "Shorts and t-shirt. Bring an umbrella and rain jacket for afternoon storms."
-        },
-        {
-          "day": "Tuesday",
-          "date": "2026-04-07",
-          "high": 71,
-          "low": 65,
-          "condition": "AM Showers",
-          "icon": "cloud-rain",
-          "dressSuggestion": "Pants and long sleeves. Bring a rain jacket for morning showers."
-        },
-        {
-          "day": "Wednesday",
-          "date": "2026-04-08",
-          "high": 72,
-          "low": 65,
-          "condition": "Showers",
-          "icon": "cloud-rain",
-          "dressSuggestion": "Pants and long sleeves. Rain gear needed."
-        },
-        {
-          "day": "Thursday",
-          "date": "2026-04-09",
-          "high": 73,
-          "low": 66,
-          "condition": "Showers",
-          "icon": "cloud-rain",
-          "dressSuggestion": "Pants and long sleeves. Rain gear needed."
-        },
-        {
-          "day": "Friday",
-          "date": "2026-04-10",
-          "high": 78,
-          "low": 66,
-          "condition": "Scattered Thunderstorms",
-          "icon": "cloud-showers-heavy",
-          "dressSuggestion": "Shorts and a light jacket. Umbrella recommended."
-        }
-      ],
-      "teacherComms": [
-        {
-          "kidId": "bronson",
-          "teacher": "Ms. Cuccinello",
-          "teacherEmail": "Jeneen.Cuccinello@ocps.net",
-          "messages": [
-            {
-              "date": "2026-04-05",
-              "subject": "Newsletter",
-              "summary": "Newsletter for April 6-10. Check Skyward for report cards.",
-              "attachments": [
-                {
-                  "filename": "April 6-10.pdf",
-                  "type": "application/pdf"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "kidId": "kaia",
-          "teacher": "Ms. Smith",
-          "teacherEmail": "Adrienne.Smith@ocps.net",
-          "messages": [
-            {
-              "date": "2026-04-04",
-              "subject": "Happy Easter Weekly",
-              "summary": "Newsletter for April 6-10. Field trip payment due Thursday. Heavy assessment week (4 quizzes/tests).",
-              "attachments": [
-                {
-                  "filename": "26-4-4 Newsletter.pptx",
-                  "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "schoolDistrictComms": [],
-      "homework": [
-        {
-          "kidId": "kaia",
-          "subject": "Math",
-          "description": "Lesson 11-12 pgs. 175-176",
-          "assignedDate": "2026-04-06",
-          "dueDate": "2026-04-07"
-        },
-        {
-          "kidId": "kaia",
-          "subject": "Math",
-          "description": "Lesson 11-6 pgs. 163-164",
-          "assignedDate": "2026-04-07",
-          "dueDate": "2026-04-08"
-        },
-        {
-          "kidId": "kaia",
-          "subject": "Math",
-          "description": "Sent Home Reteaching pgs. 533-534",
-          "assignedDate": "2026-04-08",
-          "dueDate": "2026-04-09"
-        },
-        {
-          "kidId": "kaia",
-          "subject": "Math",
-          "description": "Sent Home Reteaching pgs. 535-536",
-          "assignedDate": "2026-04-09",
-          "dueDate": "2026-04-10"
-        },
-        {
-          "kidId": "kaia",
-          "subject": "Reading",
-          "description": "Log minutes in Beanstack",
-          "assignedDate": "2026-04-10",
-          "dueDate": "2026-04-13"
-        }
-      ],
-      "importantLinks": [
-        {
-          "title": "DEF Masquerade Gala Tickets",
-          "url": "https://form-renderer-app.donorperfect.io/give/the-foundation-for-orange-county-public-schools-inc/dolphin-education-fund-at-lake-whitney-elementary",
-          "description": "Purchase tickets for the 15th Annual DEF Masquerade Silent Auction Gala on April 18."
-        }
-      ]
     }
   ]
 }
