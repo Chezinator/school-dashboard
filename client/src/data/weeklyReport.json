@@ -323,47 +323,131 @@
       "homework": [
         {
           "kidId": "kaia",
-          "subject": "Math",
-          "description": "Lesson 11-12 pgs. 175-176",
-          "assignedDate": "2026-04-06",
-          "dueDate": "2026-04-07"
-        },
-        {
-          "kidId": "kaia",
-          "subject": "Math",
-          "description": "Lesson 11-6 pgs. 163-164",
-          "assignedDate": "2026-04-07",
-          "dueDate": "2026-04-08"
-        },
-        {
-          "kidId": "kaia",
-          "subject": "Math",
-          "description": "Sent Home Reteaching pgs. 533-534",
-          "assignedDate": "2026-04-08",
-          "dueDate": "2026-04-09"
-        },
-        {
-          "kidId": "kaia",
-          "subject": "Math",
-          "description": "Sent Home Reteaching pgs. 535-536",
-          "assignedDate": "2026-04-09",
-          "dueDate": "2026-04-10"
-        },
-        {
-          "kidId": "kaia",
-          "subject": "Reading",
-          "description": "Log minutes in Beanstack",
-          "assignedDate": "2026-04-10",
-          "dueDate": "2026-04-13"
+          "assignments": [
+            {
+              "subject": "Math",
+              "title": "Lesson 11-12 pgs. 175-176",
+              "description": "Lesson 11-12 pgs. 175-176",
+              "dueDate": "2026-04-07",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Lesson 11-6 pgs. 163-164",
+              "description": "Lesson 11-6 pgs. 163-164",
+              "dueDate": "2026-04-08",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Sent Home Reteaching pgs. 533-534",
+              "description": "Sent Home Reteaching pgs. 533-534",
+              "dueDate": "2026-04-09",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Sent Home Reteaching pgs. 535-536",
+              "description": "Sent Home Reteaching pgs. 535-536",
+              "dueDate": "2026-04-10",
+              "status": "pending"
+            },
+            {
+              "subject": "Reading",
+              "title": "Log minutes in Beanstack",
+              "description": "Log minutes in Beanstack",
+              "dueDate": "2026-04-13",
+              "status": "pending"
+            }
+          ]
         }
       ],
       "importantLinks": [
+        {
+          "id": "canvas",
+          "title": "Canvas \u2014 Student Portal",
+          "url": "https://ocps.instructure.com/",
+          "description": "Assignments, grades, and course materials for both kids",
+          "category": "Tool",
+          "source": "OCPS",
+          "kid": null,
+          "pinned": true,
+          "gmailUrl": null
+        },
+        {
+          "id": "skyward",
+          "title": "Skyward \u2014 Family Access",
+          "url": "https://parents.classlink.com/ocps",
+          "description": "OCPS Family Access via ClassLink \u2014 grade & attendance portal. Direct family login link coming soon.",
+          "category": "Tool",
+          "source": "OCPS",
+          "kid": null,
+          "pinned": true,
+          "gmailUrl": null,
+          "earmarked": true
+        },
+        {
+          "id": "parentsquare",
+          "title": "ParentSquare",
+          "url": "https://www.parentsquare.com/",
+          "description": "School communications, announcements, and messaging",
+          "category": "Tool",
+          "source": "Lake Whitney",
+          "kid": null,
+          "pinned": true,
+          "gmailUrl": null
+        },
+        {
+          "id": "mealviewer",
+          "title": "MealViewer \u2014 Lunch Menu",
+          "url": "https://schools.mealviewer.com/school/LakeWhitneyElementary",
+          "description": "Full lunch menu for Lake Whitney Elementary",
+          "category": "Tool",
+          "source": "Lake Whitney",
+          "kid": null,
+          "pinned": true,
+          "gmailUrl": null
+        },
         {
           "title": "DEF Masquerade Gala Tickets",
           "url": "https://form-renderer-app.donorperfect.io/give/the-foundation-for-orange-county-public-schools-inc/dolphin-education-fund-at-lake-whitney-elementary",
           "description": "Purchase tickets for the 15th Annual DEF Masquerade Silent Auction Gala on April 18."
         }
-      ]
+      ],
+      "dolphinDigest": {
+        "weekLabel": "Week of April 6, 2026",
+        "postedDate": "Sunday, April 5, 2026",
+        "postedBy": "Dr. Crabb, Principal",
+        "gmailUrl": "https://www.parentsquare.com/",
+        "linkLabel": "View on ParentSquare",
+        "highlights": [
+          {
+            "icon": "\ud83d\udcc5",
+            "title": "Teacher Appreciation Week",
+            "body": "This week is Teacher Appreciation Week! Show your appreciation with high fives (Mon), kind notes (Tue), dress like your teacher (Wed), treats (Thu), and gifts (Fri)."
+          },
+          {
+            "icon": "\ud83c\udfad",
+            "title": "Arts Night \u2014 Thursday, April 9",
+            "body": "Join us for Arts Night this Thursday evening to celebrate student artwork and performances."
+          },
+          {
+            "icon": "\ud83d\udcc5",
+            "title": "Early Release \u2014 Wednesday, April 8",
+            "body": "Wednesday is an Early Release Day. Please plan pickup accordingly."
+          },
+          {
+            "icon": "\ud83c\udf1f",
+            "title": "Upcoming: School Musical",
+            "body": "The school play runs April 17-18. Mark your calendars for a great show!"
+          }
+        ]
+      },
+      "midWeekCheck": {
+        "checkDate": "2026-04-08",
+        "checkType": "Wednesday Mid-Week",
+        "summary": "Mid-week check scheduled for Wednesday April 8. Will update with any new teacher communications or school announcements."
+      }
     },
     {
       "weekOf": "2026-03-30",
@@ -686,9 +770,87 @@
       ],
       "schoolDistrictComms": [],
       "homework": [],
-      "importantLinks": [],
-      "dolphinDigest": [],
-      "midWeekCheck": null
+      "importantLinks": [
+        {
+          "id": "canvas",
+          "title": "Canvas \u2014 Student Portal",
+          "url": "https://ocps.instructure.com/",
+          "description": "Assignments, grades, and course materials for both kids",
+          "category": "Tool",
+          "source": "OCPS",
+          "kid": null,
+          "pinned": true,
+          "gmailUrl": null
+        },
+        {
+          "id": "skyward",
+          "title": "Skyward \u2014 Family Access",
+          "url": "https://parents.classlink.com/ocps",
+          "description": "OCPS Family Access via ClassLink \u2014 grade & attendance portal. Direct family login link coming soon.",
+          "category": "Tool",
+          "source": "OCPS",
+          "kid": null,
+          "pinned": true,
+          "gmailUrl": null,
+          "earmarked": true
+        },
+        {
+          "id": "parentsquare",
+          "title": "ParentSquare",
+          "url": "https://www.parentsquare.com/",
+          "description": "School communications, announcements, and messaging",
+          "category": "Tool",
+          "source": "Lake Whitney",
+          "kid": null,
+          "pinned": true,
+          "gmailUrl": null
+        },
+        {
+          "id": "mealviewer",
+          "title": "MealViewer \u2014 Lunch Menu",
+          "url": "https://schools.mealviewer.com/school/LakeWhitneyElementary",
+          "description": "Full lunch menu for Lake Whitney Elementary",
+          "category": "Tool",
+          "source": "Lake Whitney",
+          "kid": null,
+          "pinned": true,
+          "gmailUrl": null
+        }
+      ],
+      "dolphinDigest": {
+        "weekLabel": "Week of March 30, 2026",
+        "postedDate": "Sunday, March 29, 2026",
+        "postedBy": "Dr. Crabb, Principal",
+        "gmailUrl": "https://www.parentsquare.com/",
+        "linkLabel": "View on ParentSquare",
+        "highlights": [
+          {
+            "icon": "\u270f\ufe0f",
+            "title": "BEST Writing Assessment \u2014 Tuesday, March 31",
+            "body": "4th graders take the Florida BEST Writing state assessment on Tuesday. No electronics allowed. Ensure a good night's sleep Monday and a healthy breakfast Tuesday morning."
+          },
+          {
+            "icon": "\ud83d\udcc5",
+            "title": "Teacher Appreciation Week",
+            "body": "This week is Teacher Appreciation Week! High fives (Mon), kind notes (Tue), dress like your teacher (Wed), treats (Thu), gifts (Fri)."
+          },
+          {
+            "icon": "\ud83d\udcca",
+            "title": "Report Cards on Skyward",
+            "body": "3rd quarter report cards are now available on Skyward Family Access. Log in to review your child's progress."
+          },
+          {
+            "icon": "\ud83c\udfad",
+            "title": "Arts Night \u2014 April 9",
+            "body": "Arts Night is coming up on Thursday, April 9. Mark your calendars!"
+          }
+        ]
+      },
+      "midWeekCheck": {
+        "checkDate": "2026-04-01",
+        "checkType": "Wednesday Mid-Week",
+        "summary": "Yearbook ad deadline was TODAY (April 1). Lost & Found items will be donated by Friday April 3 \u2014 check for missing jackets/water bottles. No lunch visitors on Thursday April 2. DEF Masquerade Gala details: April 18, $50/person, West Orange Country Club. Online auction closes Friday April 4 at noon."
+      }
     },
     {
       "weekOf": "2026-03-23",
