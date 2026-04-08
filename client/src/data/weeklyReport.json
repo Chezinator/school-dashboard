@@ -28,12 +28,12 @@
     {
       "weekOf": "2026-04-06",
       "weekLabel": "April 6 - April 10, 2026",
-      "lastUpdated": "2026-04-05T22:05:27.527970Z",
+      "lastUpdated": "2026-04-08T22:07:35.591329Z",
       "actionItems": [
         {
           "id": 1,
           "title": "Field Trip Payment Due",
-          "description": "Payment for Kaia's Green Meadows Petting Farm field trip is due on Thursday, April 9.",
+          "description": "URGENT: Payment for Kaia's Green Meadows Petting Farm field trip is due TOMORROW (Thursday April 9). Ms. Smith sent a reminder today \u2014 the school needs to pay the bus company by Friday. Pay today if possible. Note: Sanchez was CC'd on the chaperone email but may have been added by mistake \u2014 confirm with Ms. Smith.",
           "dueDate": "2026-04-09",
           "urgent": true,
           "kidId": "kaia",
@@ -446,7 +446,7 @@
       "midWeekCheck": {
         "checkDate": "2026-04-08",
         "checkType": "Wednesday Mid-Week",
-        "summary": "Mid-week check scheduled for Wednesday April 8. Will update with any new teacher communications or school announcements."
+        "summary": "Ms. Smith sent an URGENT field trip payment reminder \u2014 Kaia's Green Meadows trip payment is due TOMORROW (Thursday April 9). Pay today if possible; the school needs to pay the bus company by Friday. Note: Sanchez was CC'd but may have been added by mistake (meant for Kaya's dad). ParentSquare April 7 digest: PTO Meeting recap, Arts Night reminder. OCPS April 6 digest: Mondays with Maria video posted. No new emails from Ms. Cuccinello."
       }
     },
     {
