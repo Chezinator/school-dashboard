@@ -26,6 +26,357 @@
   ],
   "weeks": [
     {
+      "weekOf": "2026-04-13",
+      "weekLabel": "April 13 - April 17, 2026",
+      "lastUpdated": "2026-04-12T22:08:22.985138Z",
+      "actionItems": [
+        {
+          "id": 1,
+          "title": "Kaia's Field Trip",
+          "description": "Green Meadows Petting Farm field trip is this Friday. Wear school spirit HOUSE shirts! (Sanchez confirmed he is NOT a chaperone).",
+          "dueDate": "2026-04-17",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "event"
+        },
+        {
+          "id": 2,
+          "title": "Math Test (Unit 13)",
+          "description": "Bronson has a Math Test on Unit 13 (Angles).",
+          "dueDate": "2026-04-17",
+          "urgent": true,
+          "kidId": "bronson",
+          "category": "test"
+        },
+        {
+          "id": 3,
+          "title": "Social Studies Quiz",
+          "description": "Kaia has a Social Studies Quiz.",
+          "dueDate": "2026-04-14",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "test"
+        },
+        {
+          "id": 4,
+          "title": "Grammar Quiz & Math Quick Check",
+          "description": "Kaia has a Grammar Quiz and a Math Quick Check.",
+          "dueDate": "2026-04-16",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "test"
+        },
+        {
+          "id": 5,
+          "title": "Biography Report",
+          "description": "Sign and return Bronson's Biography Report paper.",
+          "dueDate": "2026-04-17",
+          "urgent": false,
+          "kidId": "bronson",
+          "category": "homework"
+        }
+      ],
+      "importantDates": [
+        {
+          "date": "2026-04-15",
+          "title": "Early Release Day",
+          "description": "Modified schedule. School Spirit Day for Kaia.",
+          "type": "school"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "Green Meadows Field Trip",
+          "description": "Kaia's 2nd grade field trip to Green Meadows Petting Farm.",
+          "type": "school"
+        },
+        {
+          "date": "2026-04-17",
+          "title": "School Play (Evening)",
+          "description": "Beauty and the Beast Jr. at 6:30 PM.",
+          "type": "event"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "School Play (Morning)",
+          "description": "Beauty and the Beast Jr. at 11:00 AM.",
+          "type": "event"
+        },
+        {
+          "date": "2026-04-18",
+          "title": "DEF Masquerade Gala",
+          "description": "Adults-only gala at Stoneybrook Country Club.",
+          "type": "event"
+        }
+      ],
+      "lunchMenu": [
+        {
+          "day": "Monday",
+          "date": "2026-04-13",
+          "entrees": [
+            "Yogurt, Cheese, & Scooby Doo Graham Pack",
+            "Breaded Drumsticks"
+          ],
+          "sides": [
+            "Peas & Carrots",
+            "Carrot Dippers with Ranch Dressing"
+          ],
+          "fruits": [
+            "Fruit Juice",
+            "Apple Juice"
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "date": "2026-04-14",
+          "entrees": [
+            "Empanada, Chicken Enchilada",
+            "PBJ Sandwich Box"
+          ],
+          "sides": [
+            "Seasoned Black Beans",
+            "Salsa Dipping Cup"
+          ],
+          "fruits": [
+            "Diced Pear Cup"
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "date": "2026-04-15",
+          "entrees": [
+            "Chicken Sausage Patty, Scrambled Eggs and Croissan",
+            "Scrambled Eggs with Cheese & French Toast Platter",
+            "Yogurt, Cheese, w/ Banana Bread Plate"
+          ],
+          "sides": [
+            "Garlic Spinach",
+            "Farmland Treats Veg Juice"
+          ],
+          "fruits": [
+            "Fresh Tangerine"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "date": "2026-04-16",
+          "entrees": [
+            "Breaded Chicken Nuggets",
+            "Chef Salad w/Turkey, Egg & WG Cracker"
+          ],
+          "sides": [
+            "Emoji Fries",
+            "Garden Side Salad"
+          ],
+          "fruits": [
+            "Fruit Juice",
+            "Apple Juice"
+          ]
+        },
+        {
+          "day": "Friday",
+          "date": "2026-04-17",
+          "entrees": [
+            "Four Cheese Pizza Wedge",
+            "Turkey & American Wrap"
+          ],
+          "sides": [
+            "Marinara Dipping Sauce Cup",
+            "Italian Blend Vegetables"
+          ],
+          "fruits": [
+            "Strawberry Cup"
+          ]
+        }
+      ],
+      "weather": [
+        {
+          "day": "Monday",
+          "date": "2026-04-13",
+          "high": 85,
+          "low": 62,
+          "condition": "Partly Cloudy",
+          "icon": "cloud-sun",
+          "dressSuggestion": "Shorts and t-shirt. Warm and partly cloudy."
+        },
+        {
+          "day": "Tuesday",
+          "date": "2026-04-14",
+          "high": 86,
+          "low": 60,
+          "condition": "Partly Cloudy",
+          "icon": "cloud-sun",
+          "dressSuggestion": "Shorts and t-shirt. Warm and partly cloudy."
+        },
+        {
+          "day": "Wednesday",
+          "date": "2026-04-15",
+          "high": 85,
+          "low": 61,
+          "condition": "Sunny",
+          "icon": "sun",
+          "dressSuggestion": "Shorts and t-shirt. Sunny and warm."
+        },
+        {
+          "day": "Thursday",
+          "date": "2026-04-16",
+          "high": 87,
+          "low": 63,
+          "condition": "Partly Cloudy",
+          "icon": "cloud-sun",
+          "dressSuggestion": "Shorts and t-shirt. Warm and partly cloudy."
+        },
+        {
+          "day": "Friday",
+          "date": "2026-04-17",
+          "high": 90,
+          "low": 64,
+          "condition": "Sunny",
+          "icon": "sun",
+          "dressSuggestion": "Shorts and t-shirt. Very hot! Wear sunscreen and pack water for the field trip."
+        }
+      ],
+      "teacherComms": [
+        {
+          "kidId": "bronson",
+          "teacher": "Ms. Cuccinello",
+          "teacherEmail": "Jeneen.Cuccinello@ocps.net",
+          "messages": [
+            {
+              "date": "2026-04-12",
+              "subject": "Newsletter",
+              "summary": "Newsletter for April 13-17. Math test on Friday (Unit 13 Angles). School play on Friday and Saturday.",
+              "attachments": [
+                {
+                  "filename": "April 13-17.pdf",
+                  "type": "application/pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kidId": "kaia",
+          "teacher": "Ms. Smith",
+          "teacherEmail": "Adrienne.Smith@ocps.net",
+          "messages": [
+            {
+              "date": "2026-04-11",
+              "subject": "Newsletter",
+              "summary": "Newsletter for April 13-17. Field trip to Green Meadows on Friday. Social Studies quiz Tuesday, Grammar quiz Thursday.",
+              "attachments": [
+                {
+                  "filename": "26-4-11 Newsletter.pptx",
+                  "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "schoolDistrictComms": [
+        {
+          "date": "2026-04-10",
+          "sender": "LAKE WHITNEY ELEMENTARY",
+          "subject": "Lunchroom Helpers Needed",
+          "summary": "Volunteers needed to help students open lunches and keep the cafeteria organized."
+        },
+        {
+          "date": "2026-04-09",
+          "sender": "LAKE WHITNEY ELEMENTARY",
+          "subject": "Beauty and the Beast Jr",
+          "summary": "Tickets are $8.00 for the school play. Concession stand donations needed by April 15."
+        }
+      ],
+      "homework": [
+        {
+          "kidId": "kaia",
+          "assignments": [
+            {
+              "subject": "Math",
+              "title": "Performance Task pgs. 541-542",
+              "description": "Math HW - Performance Task pgs. 541-542",
+              "dueDate": "2026-04-14",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Lesson 13-1 pgs. 201-202",
+              "description": "Math HW - Lesson 13-1 pgs. 201-202",
+              "dueDate": "2026-04-15",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Lesson 13-2 pgs. 203-204",
+              "description": "Math HW - Lesson 13-2 pgs. 203-204",
+              "dueDate": "2026-04-16",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Lesson 13-3 pgs. 205-206",
+              "description": "Math HW - Lesson 13-3 pgs. 205-206",
+              "dueDate": "2026-04-17",
+              "status": "pending"
+            },
+            {
+              "subject": "Reading",
+              "title": "Log minutes in Beanstack",
+              "description": "Log reading minutes in Beanstack",
+              "dueDate": "2026-04-17",
+              "status": "pending"
+            }
+          ]
+        }
+      ],
+      "importantLinks": [
+        {
+          "title": "Skyward Family Access",
+          "url": "https://parents.classlink.com/ocps",
+          "icon": "graduation-cap",
+          "description": "Check grades and attendance"
+        },
+        {
+          "title": "ParentSquare",
+          "url": "https://www.parentsquare.com",
+          "icon": "message-square",
+          "description": "School communications"
+        },
+        {
+          "title": "MealViewer",
+          "url": "https://schools.mealviewer.com/school/LakeWhitneyElementary",
+          "icon": "utensils",
+          "description": "Lunch menus"
+        },
+        {
+          "title": "Lake Whitney Website",
+          "url": "https://lakewhitneyes.ocps.net/",
+          "icon": "globe",
+          "description": "Official school website"
+        },
+        {
+          "title": "School Play Tickets",
+          "url": "https://teachtix.com/lakewhitney/disneys-beauty-and-the-beast-jr",
+          "icon": "ticket",
+          "description": "Buy tickets for Beauty and the Beast Jr."
+        }
+      ],
+      "dolphinDigest": {
+        "publishedDate": "2026-04-10",
+        "volume": "April Edition",
+        "highlights": [
+          "Lunchroom Helpers Needed",
+          "Beauty and the Beast Jr. tickets on sale"
+        ],
+        "link": "https://www.parentsquare.com"
+      },
+      "midWeekCheck": {
+        "lastChecked": "2026-04-08T18:00:00Z",
+        "newItemsFound": true,
+        "summary": "Kaia's field trip payment due. PTO Meeting recap and Arts Night reminder."
+      }
+    },
+    {
       "weekOf": "2026-04-06",
       "weekLabel": "April 6 - April 10, 2026",
       "lastUpdated": "2026-04-08T22:07:35.591329Z",
