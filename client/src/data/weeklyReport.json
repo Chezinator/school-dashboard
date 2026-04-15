@@ -28,7 +28,7 @@
     {
       "weekOf": "2026-04-13",
       "weekLabel": "April 13 - April 17, 2026",
-      "lastUpdated": "2026-04-12T22:08:22.985138Z",
+      "lastUpdated": "2026-04-15T22:07:06.266463Z",
       "actionItems": [
         {
           "id": 1,
@@ -74,6 +74,15 @@
           "urgent": false,
           "kidId": "bronson",
           "category": "homework"
+        },
+        {
+          "id": 6,
+          "title": "Safety Patrol Application (Optional)",
+          "description": "Ms. Cuccinello sent a Safety Patrol application for 4th graders interested in being a patrol officer in 5th grade. If Bronson is interested, complete the Google Form.",
+          "dueDate": "2026-04-18",
+          "urgent": false,
+          "kidId": "bronson",
+          "category": "admin"
         }
       ],
       "importantDates": [
@@ -275,6 +284,30 @@
       ],
       "schoolDistrictComms": [
         {
+          "date": "2026-04-14",
+          "sender": "OCPS",
+          "subject": "Spring 2026 Stakeholder Survey",
+          "summary": "OCPS invites families to complete the Spring 2026 Stakeholder Survey. Only needs to be completed once per family."
+        },
+        {
+          "date": "2026-04-14",
+          "sender": "LAKE WHITNEY ELEMENTARY",
+          "subject": "Beauty and the Beast - Concession Donations",
+          "summary": "Donations for the Beauty and the Beast Jr. concession stand are needed by April 15 (TODAY). Check ParentSquare for the sign-up link."
+        },
+        {
+          "date": "2026-04-13",
+          "sender": "LAKE WHITNEY ELEMENTARY",
+          "subject": "LWE Annual Carnival Coming Soon",
+          "summary": "The LWE Annual Carnival is coming! Date and details to be announced. Watch for more information from the school."
+        },
+        {
+          "date": "2026-04-14",
+          "sender": "Ms. Cuccinello",
+          "subject": "Safety Patrol Application",
+          "summary": "Ms. Cuccinello sent a Safety Patrol application for 4th graders interested in being a patrol officer next year (5th grade). Application link: https://docs.google.com/forms/d/e/1FAIpQLSeK8_IxuX0m_Yd0wD3KSnf-jpmPOEoLQMnE1FgbKxAPDlqpkg/viewform"
+        },
+        {
           "date": "2026-04-10",
           "sender": "LAKE WHITNEY ELEMENTARY",
           "subject": "Lunchroom Helpers Needed",
@@ -371,9 +404,9 @@
         "link": "https://www.parentsquare.com"
       },
       "midWeekCheck": {
-        "lastChecked": "2026-04-08T18:00:00Z",
+        "lastChecked": "2026-04-15T22:07:06.266438Z",
         "newItemsFound": true,
-        "summary": "Kaia's field trip payment due. PTO Meeting recap and Arts Night reminder."
+        "summary": "Ms. Cuccinello sent a Safety Patrol application for Bronson. LWE Carnival announced for May. Beauty and the Beast concession donations needed by April 15."
       }
     },
     {
