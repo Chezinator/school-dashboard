@@ -4,7 +4,7 @@
     "familyName": "Stanfield",
     "schoolName": "Lake Whitney Elementary",
     "schoolAddress": "Windermere, FL 34786",
-    "lastUpdated": "2026-03-29T18:00:00Z"
+    "lastUpdated": "2026-04-19T22:17:19.776880Z"
   },
   "kids": [
     {
@@ -25,6 +25,325 @@
     }
   ],
   "weeks": [
+    {
+      "weekOf": "2026-04-20",
+      "weekLabel": "April 20 - April 24, 2026",
+      "lastUpdated": "2026-04-19T22:17:19.776832Z",
+      "actionItems": [
+        {
+          "id": 1,
+          "title": "2nd Grade In-House Field Trip",
+          "description": "Ms. Smith mentioned an in-house field trip for Monday, April 27th. Watch for more information coming this week.",
+          "dueDate": "2026-04-24",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "event"
+        },
+        {
+          "id": 2,
+          "title": "Grammar Quiz",
+          "description": "Kaia has a potential Grammar Quiz on Thursday (Turning Common Nouns into Proper Nouns).",
+          "dueDate": "2026-04-23",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "test"
+        },
+        {
+          "id": 3,
+          "title": "Log Reading Minutes",
+          "description": "Log Kaia's reading minutes in Beanstack.",
+          "dueDate": "2026-04-24",
+          "urgent": false,
+          "kidId": "kaia",
+          "category": "homework"
+        }
+      ],
+      "importantDates": [
+        {
+          "date": "2026-04-22",
+          "title": "Early Release Day",
+          "description": "Modified schedule. School Spirit Day for Kaia.",
+          "type": "school"
+        },
+        {
+          "date": "2026-04-24",
+          "title": "Student Holiday / Non-Work Day",
+          "description": "No school for students.",
+          "type": "school"
+        },
+        {
+          "date": "2026-04-25",
+          "title": "Top Talent LIVE 2026",
+          "description": "OCPS event at Dr. Phillips Center for the Performing Arts at 6:00 PM.",
+          "type": "event"
+        },
+        {
+          "date": "2026-04-27",
+          "title": "2nd Grade In-House Field Trip",
+          "description": "Kaia's 2nd grade in-house field trip (details TBD).",
+          "type": "school"
+        }
+      ],
+      "lunchMenu": [
+        {
+          "day": "Monday",
+          "date": "2026-04-20",
+          "entrees": [
+            "Meatball Pizza Sub",
+            "PBJ Sandwich Box"
+          ],
+          "sides": [
+            "Steamed Corn",
+            "Carrot Dippers with Ranch Dressing"
+          ],
+          "fruits": [
+            "Fruit Juice",
+            "Apple Juice",
+            "Orange Juice"
+          ]
+        },
+        {
+          "day": "Tuesday",
+          "date": "2026-04-21",
+          "entrees": [
+            "Tangerine Chicken",
+            "Hummus Cup Platter"
+          ],
+          "sides": [
+            "Mandarin Carrot Slaw",
+            "Tropical Trio Juice Slushie",
+            "Berry Berry Blue Juice Slushie"
+          ],
+          "fruits": [
+            "Strawberry Cup",
+            "Applesauce, Strawberry 4.5 oz"
+          ]
+        },
+        {
+          "day": "Wednesday",
+          "date": "2026-04-22",
+          "entrees": [
+            "Seasonal Shaped Nuggets",
+            "Egg, Cheese & Flatbread Box"
+          ],
+          "sides": [
+            "Vegetarian Baked Beans",
+            "Coleslaw"
+          ],
+          "fruits": [
+            "Fresh Apple Slices"
+          ]
+        },
+        {
+          "day": "Thursday",
+          "date": "2026-04-23",
+          "entrees": [
+            "Garlic French Bread Cheese Pizza",
+            "Turkey & American Sub"
+          ],
+          "sides": [
+            "Marinara Dipping Sauce Cup",
+            "Fresh Steamed Broccoli"
+          ],
+          "fruits": [
+            "Fruit Juice",
+            "Apple Juice",
+            "Orange Juice"
+          ]
+        },
+        {
+          "day": "Friday",
+          "date": "2026-04-24",
+          "entrees": [
+            "No Information Provided (No School)"
+          ],
+          "sides": [],
+          "fruits": []
+        }
+      ],
+      "weather": [
+        {
+          "day": "Monday",
+          "date": "2026-04-20",
+          "high": 81,
+          "low": 60,
+          "condition": "Partly Cloudy",
+          "icon": "cloud-sun",
+          "dressSuggestion": "Shorts and t-shirt. Comfortable."
+        },
+        {
+          "day": "Tuesday",
+          "date": "2026-04-21",
+          "high": 81,
+          "low": 60,
+          "condition": "Partly Sunny",
+          "icon": "cloud-sun",
+          "dressSuggestion": "Shorts and t-shirt. Comfortable."
+        },
+        {
+          "day": "Wednesday",
+          "date": "2026-04-22",
+          "high": 80,
+          "low": 61,
+          "condition": "Partly Cloudy",
+          "icon": "cloud-sun",
+          "dressSuggestion": "Shorts and t-shirt. Comfortable."
+        },
+        {
+          "day": "Thursday",
+          "date": "2026-04-23",
+          "high": 83,
+          "low": 62,
+          "condition": "Partly Sunny",
+          "icon": "cloud-sun",
+          "dressSuggestion": "Shorts and t-shirt. Comfortable."
+        },
+        {
+          "day": "Friday",
+          "date": "2026-04-24",
+          "high": 85,
+          "low": 65,
+          "condition": "Partly Cloudy",
+          "icon": "cloud-sun",
+          "dressSuggestion": "Shorts and t-shirt. Warm."
+        }
+      ],
+      "teacherComms": [
+        {
+          "kidId": "bronson",
+          "teacher": "Ms. Cuccinello",
+          "teacherEmail": "Jeneen.Cuccinello@ocps.net",
+          "messages": [
+            {
+              "date": "2026-04-17",
+              "subject": "FW: Parent Square Post For Noon Today",
+              "summary": "Reminder that the DEF Gala silent auction online bidding ends in 24 hours. (Event is already past).",
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "kidId": "kaia",
+          "teacher": "Ms. Smith",
+          "teacherEmail": "Adrienne.Smith@ocps.net",
+          "messages": [
+            {
+              "date": "2026-04-18",
+              "subject": "Field Trip Weekly!",
+              "summary": "Recap of the farm field trip. Announced an in-house field trip for next Monday, April 27th.",
+              "attachments": []
+            },
+            {
+              "date": "2026-04-16",
+              "subject": "SSYRA Jr, SSYRA + Orange Blossom + FTR Lists",
+              "summary": "The 2026-27 summer reading lists are out.",
+              "attachments": [
+                {
+                  "filename": "26-4-18 Newsletter.pptx",
+                  "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "schoolDistrictComms": [
+        {
+          "date": "2026-04-18",
+          "sender": "OCPS",
+          "subject": "Top Talent LIVE 2026",
+          "summary": "Get Ready! Top Talent LIVE 2026 is about to take the stage on April 25 at 6:00 PM at the Dr. Phillips Center for the Performing Arts."
+        },
+        {
+          "date": "2026-04-16",
+          "sender": "2nd Grade",
+          "subject": "2nd Grade PM3 Testing Notification",
+          "summary": "Notification regarding PM3 testing in May for 2nd Grade."
+        },
+        {
+          "date": "2026-04-16",
+          "sender": "4th Grade",
+          "subject": "4th Grade PM3 Testing Notification",
+          "summary": "Notification regarding PM3 testing in May for 4th Grade."
+        }
+      ],
+      "homework": [
+        {
+          "kidId": "kaia",
+          "assignments": [
+            {
+              "subject": "Math",
+              "title": "Lesson 13-5 pgs. 209-210",
+              "description": "Math HW",
+              "dueDate": "2026-04-20",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Lesson 13-6 pgs. 211-212",
+              "description": "Math HW",
+              "dueDate": "2026-04-21",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Find the Perimeter WS",
+              "description": "Math HW - Sent home worksheet",
+              "dueDate": "2026-04-22",
+              "status": "pending"
+            },
+            {
+              "subject": "Reading",
+              "title": "Log minutes in Beanstack",
+              "description": "Log reading minutes in Beanstack",
+              "dueDate": "2026-04-24",
+              "status": "pending"
+            }
+          ]
+        }
+      ],
+      "importantLinks": [
+        {
+          "title": "Skyward Family Access",
+          "url": "https://parents.classlink.com/ocps",
+          "icon": "graduation-cap",
+          "description": "Check grades and attendance"
+        },
+        {
+          "title": "ParentSquare",
+          "url": "https://www.parentsquare.com",
+          "icon": "message-square",
+          "description": "School communications"
+        },
+        {
+          "title": "MealViewer",
+          "url": "https://schools.mealviewer.com/school/LakeWhitneyElementary",
+          "icon": "utensils",
+          "description": "Lunch menus"
+        },
+        {
+          "title": "Lake Whitney Website",
+          "url": "https://lakewhitneyes.ocps.net/",
+          "icon": "globe",
+          "description": "Official school website"
+        },
+        {
+          "title": "School Play Tickets",
+          "url": "https://teachtix.com/lakewhitney/disneys-beauty-and-the-beast-jr",
+          "icon": "ticket",
+          "description": "Buy tickets for Beauty and the Beast Jr."
+        }
+      ],
+      "dolphinDigest": {
+        "publishedDate": "2026-04-10",
+        "volume": "April Edition",
+        "highlights": [
+          "Lunchroom Helpers Needed",
+          "Beauty and the Beast Jr. tickets on sale"
+        ],
+        "link": "https://www.parentsquare.com"
+      }
+    },
     {
       "weekOf": "2026-04-13",
       "weekLabel": "April 13 - April 17, 2026",
