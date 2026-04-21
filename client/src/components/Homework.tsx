@@ -132,7 +132,7 @@ export default function Homework() {
           {currentHomework?.assignments.map((assignment: Assignment, idx: number) => {
             const key = buildKey(week.weekLabel, activeKid, idx);
             const isDone = completed[key] ?? (assignment.status === "completed");
-            const cardStyle = SUBJECT_CARDS[assignment.subject.toLowerCase()] || "dh-card-cream";
+            const cardStyle = SUBJECT_CARDS[(assignment.subject || "").toLowerCase()] || "dh-card-cream";
             const allLinks: AssignmentLink[] = [
               ...(assignment.link ? [assignment.link] : []),
               ...(assignment.links ?? []),

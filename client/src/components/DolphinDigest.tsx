@@ -25,17 +25,27 @@ import {
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-interface DigestHighlight { icon: string; title: string; body: string; }
+// Highlights can be either a rich object or a plain string in older data schemas
+type DigestHighlight = { icon: string; title: string; body: string } | string;
 
 interface DolphinDigestData {
-  weekLabel: string; postedDate: string; postedBy: string;
-  gmailUrl: string; linkLabel?: string; highlights: DigestHighlight[];
+  // Old schema fields
+  weekLabel?: string;
+  postedDate?: string;
+  postedBy?: string;
+  gmailUrl?: string;
+  linkLabel?: string;
+  highlights: DigestHighlight[];
+  // New schema fields
+  publishedDate?: string;
+  volume?: string;
+  link?: string;
 }
 
 // Map emoji/keyword strings to Phosphor icons
 function HighlightIcon({ icon }: { icon: string }) {
   const props = { size: 18, weight: "duotone" as const, className: "shrink-0 mt-0.5 opacity-80" };
-  const lower = icon.toLowerCase();
+  const lower = (icon || "").toLowerCase();
   if (lower.includes("🎉") || lower.includes("party") || lower.includes("dance") || lower.includes("recap")) return <Confetti {...props} />;
   if (lower.includes("🏆") || lower.includes("trophy") || lower.includes("spotlight") || lower.includes("award")) return <Trophy {...props} />;
   if (lower.includes("📚") || lower.includes("book") || lower.includes("fair") || lower.includes("read")) return <Books {...props} />;
@@ -55,9 +65,18 @@ export default function DolphinDigest() {
 
   if (!digest) return null;
 
-  const visibleHighlights = expanded ? digest.highlights : digest.highlights.slice(0, 3);
+  const highlights = digest.highlights || [];
+  const visibleHighlights = expanded ? highlights : highlights.slice(0, 3);
+
+  // Support both old schema (gmailUrl + linkLabel) and new schema (link)
   const linkLabel = digest.linkLabel || "Read on ParentSquare";
-  const linkUrl = digest.gmailUrl;
+  const linkUrl = digest.gmailUrl || digest.link || "https://www.parentsquare.com";
+
+  // Support both old schema (weekLabel + postedBy) and new schema (volume + publishedDate)
+  const headerLine = [
+    digest.weekLabel || digest.volume,
+    digest.postedBy || digest.publishedDate,
+  ].filter(Boolean).join(" · ");
 
   return (
     <section>
@@ -78,31 +97,48 @@ export default function DolphinDigest() {
           <Fish size={20} weight="duotone" className="opacity-80" aria-hidden="true" />
           <h3 className="font-display text-base font-bold">Lake Whitney Dolphin Digest</h3>
         </div>
-        <p className="text-xs opacity-60 mb-4">{digest.weekLabel} · {digest.postedBy}</p>
+        {headerLine && (
+          <p className="text-xs opacity-60 mb-4">{headerLine}</p>
+        )}
 
         <div className="space-y-3 mb-4">
-          {visibleHighlights.map((highlight, i) => (
-            <div key={i} className="flex gap-2.5 items-start">
-              <HighlightIcon icon={highlight.icon} />
-              <div className="min-w-0">
-                <p className="text-sm font-semibold leading-snug mb-0.5">{highlight.title}</p>
-                <p className="text-xs opacity-75 leading-relaxed">{highlight.body}</p>
+          {visibleHighlights.map((highlight, i) => {
+            // Handle both string highlights (new schema) and object highlights (old schema)
+            if (typeof highlight === "string") {
+              return (
+                <div key={i} className="flex gap-2.5 items-start">
+                  <HighlightIcon icon={highlight} />
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold leading-snug mb-0.5">{highlight}</p>
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <div key={i} className="flex gap-2.5 items-start">
+                <HighlightIcon icon={highlight.icon || ""} />
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold leading-snug mb-0.5">{highlight.title}</p>
+                  {highlight.body && (
+                    <p className="text-xs opacity-75 leading-relaxed">{highlight.body}</p>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {digest.highlights.length > 3 && (
+        {highlights.length > 3 && (
           <button
             onClick={() => setExpanded(!expanded)}
             className="flex items-center gap-1.5 text-xs font-semibold opacity-60 hover:opacity-100 transition-opacity mb-4"
             aria-expanded={expanded}
-            aria-label={expanded ? "Show fewer highlights" : `Show ${digest.highlights.length - 3} more highlights`}
+            aria-label={expanded ? "Show fewer highlights" : `Show ${highlights.length - 3} more highlights`}
           >
             {expanded ? (
               <><CaretUp size={14} weight="bold" aria-hidden="true" /> Show Less</>
             ) : (
-              <><CaretDown size={14} weight="bold" aria-hidden="true" /> {digest.highlights.length - 3} More</>
+              <><CaretDown size={14} weight="bold" aria-hidden="true" /> {highlights.length - 3} More</>
             )}
           </button>
         )}
