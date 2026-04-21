@@ -14,10 +14,11 @@ const KID_CARD_STYLE: Record<string, string> = {
 };
 
 function AttachmentIcon({ type }: { type: string }) {
-  if (type.includes("pdf")) return <FilePdf size={16} weight="duotone" className="shrink-0" />;
-  if (type.includes("image")) return <FileImage size={16} weight="duotone" className="shrink-0" />;
-  if (type.includes("presentation") || type.includes("pptx")) return <FileDoc size={16} weight="duotone" className="shrink-0" />;
-  if (type.includes("doc")) return <FileDoc size={16} weight="duotone" className="shrink-0" />;
+  const t = type || "";
+  if (t.includes("pdf")) return <FilePdf size={16} weight="duotone" className="shrink-0" />;
+  if (t.includes("image")) return <FileImage size={16} weight="duotone" className="shrink-0" />;
+  if (t.includes("presentation") || t.includes("pptx")) return <FileDoc size={16} weight="duotone" className="shrink-0" />;
+  if (t.includes("doc")) return <FileDoc size={16} weight="duotone" className="shrink-0" />;
   return <File size={16} weight="duotone" className="shrink-0" />;
 }
 
@@ -40,7 +41,13 @@ function EmailCard({
   const attachments = msg.attachments || [];
   const hasAttachments = attachments.length > 0;
   const hasFullBody = msg.fullBody && msg.fullBody.length > 0;
-  const hasExtractedContent = attachments.some((a: any) => a.extractedContent);
+  
+  const formattedDate = msg.date 
+    ? new Date(msg.date + "T00:00:00").toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+      })
+    : "Recent";
 
   return (
     <motion.div
@@ -72,10 +79,7 @@ function EmailCard({
             </span>
           )}
           <span className="text-xs opacity-60 whitespace-nowrap">
-            {new Date(msg.date + "T00:00:00").toLocaleDateString("en-US", {
-              month: "short",
-              day: "numeric",
-            })}
+            {formattedDate}
           </span>
           <motion.div
             animate={{ rotate: expanded ? 180 : 0 }}
@@ -87,10 +91,10 @@ function EmailCard({
       </div>
 
       {/* Subject line */}
-      <p className="text-sm font-semibold opacity-90 mb-1.5">{msg.subject}</p>
+      <p className="text-sm font-semibold opacity-90 mb-1.5">{msg.subject || "No Subject"}</p>
 
       {/* Preview (summary) — always visible */}
-      <p className="text-sm leading-relaxed opacity-70 line-clamp-2">{msg.summary}</p>
+      <p className="text-sm leading-relaxed opacity-70 line-clamp-2">{msg.summary || "No preview available"}</p>
 
       {/* Expanded content */}
       <AnimatePresence>
@@ -131,7 +135,7 @@ function EmailCard({
                       <div key={aIdx} className="bg-black/5 dark:bg-white/5 rounded-lg p-2.5">
                         <div className="flex items-center gap-2 mb-1">
                           <AttachmentIcon type={att.type || ""} />
-                          <span className="text-sm font-medium truncate">{att.filename}</span>
+                          <span className="text-sm font-medium truncate">{att.filename || "file"}</span>
                           <span className="text-[10px] opacity-40 shrink-0 uppercase">
                             {att.type?.split("/").pop()?.replace("vnd.openxmlformats-officedocument.presentationml.presentation", "pptx") || "file"}
                           </span>
@@ -164,7 +168,7 @@ function EmailCard({
 
 export default function TeacherComms() {
   const { week, kids } = useWeek();
-  const comms = week.teacherComms;
+  const comms = week.teacherComms || [];
   if (!comms.length) return null;
 
   let animIdx = 0;
@@ -182,20 +186,22 @@ export default function TeacherComms() {
       </p>
 
       <div className="space-y-3">
-        {comms.map((comm, cIdx) => {
+        {comms.map((comm: any, cIdx: number) => {
           const kid = kids.find((k) => k.id === comm.kidId);
           const cardStyle = comm.kidId
             ? KID_CARD_STYLE[comm.kidId] || "dh-card-sage"
             : "dh-card-sage";
 
-          return comm.messages.map((msg: any, mIdx: number) => {
+          const messages = comm.messages || [];
+
+          return messages.map((msg: any, mIdx: number) => {
             animIdx++;
             return (
               <EmailCard
                 key={`${cIdx}-${mIdx}`}
                 msg={msg}
-                teacher={comm.teacher}
-                teacherEmail={(comm as any).teacherEmail}
+                teacher={comm.teacher || "Teacher"}
+                teacherEmail={comm.teacherEmail}
                 kid={kid}
                 cardStyle={cardStyle}
                 delay={animIdx * 0.04}

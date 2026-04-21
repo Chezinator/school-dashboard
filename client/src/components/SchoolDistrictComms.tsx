@@ -29,7 +29,24 @@ export default function SchoolDistrictComms() {
 
   if (!comms || !comms.length) return null;
 
-  const filtered = comms.filter((c) => filter === "all" || c.sourceType === filter);
+  // Handle both old schema (sourceType) and new schema (sender-based logic)
+  const filtered = comms.filter((c: any) => {
+    if (filter === "all") return true;
+    
+    // Old schema
+    if (c.sourceType) return c.sourceType === filter;
+    
+    // New schema logic based on sender
+    const sender = (c.sender || "").toLowerCase();
+    if (filter === "district") {
+      return sender.includes("ocps");
+    }
+    if (filter === "school") {
+      return !sender.includes("ocps");
+    }
+    return true;
+  });
+
   const displayed = showAll ? filtered : filtered.slice(0, 4);
   const hasMore = filtered.length > 4;
 
@@ -71,11 +88,16 @@ export default function SchoolDistrictComms() {
           transition={{ type: "spring", stiffness: 300, damping: 28 }}
           className="space-y-3"
         >
-          {displayed.map((comm, idx) => {
-            const cardStyle = CATEGORY_CARDS[comm.category] || "dh-card-cream";
+          {displayed.map((comm: any, idx) => {
+            const category = comm.category || "reminder";
+            const cardStyle = CATEGORY_CARDS[category] || "dh-card-cream";
+            const source = comm.source || comm.sender || "School";
+            const from = comm.from || comm.sender || "School Office";
+            const id = comm.id || `${comm.date}-${idx}`;
+
             return (
               <motion.div
-                key={comm.id}
+                key={id}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-20px" }}
@@ -85,23 +107,23 @@ export default function SchoolDistrictComms() {
               >
                 <div className="flex items-center gap-2 mb-1.5">
                   <span className="text-[10px] font-bold uppercase tracking-wider opacity-50">
-                    {comm.source}
+                    {source}
                   </span>
                   <span className="text-[10px] opacity-40">·</span>
                    <span className="text-[10px] opacity-50">Sent {formatDate(comm.date)}</span>
                 </div>
                 <h3 className="font-display text-sm font-semibold leading-snug mb-1">{comm.subject}</h3>
-                <p className="text-xs opacity-60 mb-2">From: {comm.from}</p>
+                <p className="text-xs opacity-60 mb-2">From: {from}</p>
                 <p className="text-sm leading-relaxed opacity-80">{comm.summary}</p>
-                {(comm as any).link && (
+                {comm.link && (
                   <a
-                    href={(comm as any).link.url}
+                    href={comm.link.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 mt-3 px-4 py-1.5 rounded-full text-xs font-semibold bg-black/15 hover:bg-black/25 transition-colors"
                   >
                     <ArrowSquareOut size={14} weight="bold" />
-                    {(comm as any).link.label}
+                    {comm.link.label || "View Details"}
                   </a>
                 )}
               </motion.div>
