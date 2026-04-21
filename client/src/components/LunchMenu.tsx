@@ -1,23 +1,71 @@
 /**
  * LunchMenu — Dayhaven mockup style:
  * Solid color-blocked card for the full menu. Day selector with pill dots.
+ * Auto-selects today's day on mount. Swipeable on touch devices.
  * No borders, no shadows — solid fills only.
  */
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import { CaretLeft, CaretRight, ForkKnife } from "@phosphor-icons/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useWeek } from "@/contexts/WeekContext";
 
+/** Returns the index of today's day in the menu array, or 0 if not found. */
+function getTodayIndex(menu: Array<{ date: string }>): number {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const todayStr = today.toISOString().slice(0, 10);
+  const idx = menu.findIndex((m) => m.date === todayStr);
+  if (idx !== -1) return idx;
+  // If today is not in the menu (weekend / different week), find the closest upcoming day
+  const future = menu.findIndex(
+    (m) => new Date(m.date + "T00:00:00") >= today
+  );
+  return future !== -1 ? future : 0;
+}
+
 export default function LunchMenu() {
   const { week } = useWeek();
   const menu = week.lunchMenu;
-  const [activeDay, setActiveDay] = useState(0);
+
+  const [activeDay, setActiveDay] = useState(() => getTodayIndex(menu));
   const [direction, setDirection] = useState(0);
 
-  const goNext = () => { setDirection(1); setActiveDay((p) => Math.min(p + 1, menu.length - 1)); };
-  const goPrev = () => { setDirection(-1); setActiveDay((p) => Math.max(p - 1, 0)); };
+  const goTo = useCallback((idx: number) => {
+    setDirection(idx > activeDay ? 1 : -1);
+    setActiveDay(idx);
+  }, [activeDay]);
+
+  const goNext = () => { if (activeDay < menu.length - 1) goTo(activeDay + 1); };
+  const goPrev = () => { if (activeDay > 0) goTo(activeDay - 1); };
+
+  // Touch/swipe state
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    const dy = e.changedTouches[0].clientY - touchStartY.current;
+    // Only trigger if horizontal swipe is dominant and exceeds threshold
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+      if (dx < 0) goNext();
+      else goPrev();
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
 
   const current = menu[activeDay];
+
+  // Determine if this day is today for the label
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const isToday = new Date(current.date + "T00:00:00").getTime() === today.getTime();
 
   return (
     <section>
@@ -26,7 +74,11 @@ export default function LunchMenu() {
         <h2 className="font-display text-xl text-foreground tracking-tight">Lunch Menu</h2>
       </div>
 
-      <div className="dh-card dh-card-coral">
+      <div
+        className="dh-card dh-card-coral"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         {/* Day selector */}
         <div className="flex items-center justify-between mb-4">
           <button
@@ -37,7 +89,9 @@ export default function LunchMenu() {
             <CaretLeft size={16} weight="bold" />
           </button>
           <div className="text-center">
-            <p className="font-display font-semibold text-sm">{current.day}</p>
+            <p className="font-display font-semibold text-sm">
+              {isToday ? "Today" : current.day}
+            </p>
             <p className="text-xs opacity-60">
               {new Date(current.date + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" })}
             </p>
@@ -56,7 +110,7 @@ export default function LunchMenu() {
           {menu.map((_, idx) => (
             <button
               key={idx}
-              onClick={() => { setDirection(idx > activeDay ? 1 : -1); setActiveDay(idx); }}
+              onClick={() => goTo(idx)}
               className={`h-2 rounded-full transition-all duration-300 ${
                 idx === activeDay ? "bg-black/30 w-5" : "bg-black/10 w-2 hover:bg-black/20"
               }`}

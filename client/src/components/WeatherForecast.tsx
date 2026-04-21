@@ -1,6 +1,7 @@
 /**
  * WeatherForecast — Amber card for the forecast.
  * Phosphor icons throughout. No borders, no shadows.
+ * Today's row is highlighted with a tinted pill background.
  */
 import { Sun, CloudSun, Cloud, CloudRain, TShirt, Thermometer } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
@@ -22,6 +23,10 @@ export default function WeatherForecast() {
   const { week } = useWeek();
   const weather = week.weather;
 
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const todayStr = today.toISOString().slice(0, 10);
+
   return (
     <section>
       <div className="flex items-center gap-2 mb-4">
@@ -40,26 +45,34 @@ export default function WeatherForecast() {
           Week of {week.weekLabel}
         </p>
 
-        <div className="space-y-3">
-          {weather.map((day, idx) => (
-            <div key={idx} className="flex items-center gap-3">
-              <span className="text-xs font-bold opacity-60 uppercase w-8 shrink-0">
-                {day.day.slice(0, 3)}
-              </span>
-              {getWeatherIcon(day.icon)}
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium leading-tight">{day.condition}</p>
-                <div className="flex items-center gap-1 mt-0.5">
-                  <TShirt size={12} weight="bold" className="opacity-50 shrink-0" />
-                  <p className="text-xs opacity-60 truncate">{day.dressSuggestion}</p>
+        <div className="space-y-1">
+          {weather.map((day, idx) => {
+            const isToday = day.date === todayStr;
+            return (
+              <div
+                key={idx}
+                className={`flex items-center gap-3 rounded-xl px-2 py-2 transition-colors ${
+                  isToday ? "bg-black/10 dark:bg-black/20" : ""
+                }`}
+              >
+                <span className={`text-xs font-bold uppercase w-8 shrink-0 ${isToday ? "opacity-90" : "opacity-60"}`}>
+                  {isToday ? "Today" : day.day.slice(0, 3)}
+                </span>
+                {getWeatherIcon(day.icon)}
+                <div className="flex-1 min-w-0">
+                  <p className={`text-sm font-medium leading-tight ${isToday ? "" : ""}`}>{day.condition}</p>
+                  <div className="flex items-center gap-1 mt-0.5">
+                    <TShirt size={12} weight="bold" className="opacity-50 shrink-0" />
+                    <p className="text-xs opacity-60 truncate">{day.dressSuggestion}</p>
+                  </div>
+                </div>
+                <div className="text-right shrink-0">
+                  <span className={`text-sm font-bold ${isToday ? "" : ""}`}>{day.high}°</span>
+                  <span className="text-xs opacity-50 ml-1">{day.low}°</span>
                 </div>
               </div>
-              <div className="text-right shrink-0">
-                <span className="text-sm font-bold">{day.high}°</span>
-                <span className="text-xs opacity-50 ml-1">{day.low}°</span>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </motion.div>
     </section>
