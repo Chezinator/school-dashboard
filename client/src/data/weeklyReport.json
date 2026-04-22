@@ -4,7 +4,7 @@
     "familyName": "Stanfield",
     "schoolName": "Lake Whitney Elementary",
     "schoolAddress": "Windermere, FL 34786",
-    "lastUpdated": "2026-04-19T22:17:19.776880Z"
+    "lastUpdated": "2026-04-22T22:07:53.588677Z"
   },
   "kids": [
     {
@@ -28,8 +28,17 @@
     {
       "weekOf": "2026-04-20",
       "weekLabel": "April 20 - April 24, 2026",
-      "lastUpdated": "2026-04-19T22:17:19.776832Z",
+      "lastUpdated": "2026-04-22T22:07:53.588675Z",
       "actionItems": [
+        {
+          "id": 4,
+          "title": "Sign Bronson's Permission Slip",
+          "description": "Ms. Cuccinello sent a permission slip for an in-house presentation. Must be signed and returned NO LATER than Monday, April 27. No cost, no schedule change.",
+          "dueDate": "2026-04-27",
+          "urgent": true,
+          "kidId": "bronson",
+          "category": "admin"
+        },
         {
           "id": 1,
           "title": "2nd Grade In-House Field Trip",
@@ -82,6 +91,12 @@
           "title": "2nd Grade In-House Field Trip",
           "description": "Kaia's 2nd grade in-house field trip (details TBD).",
           "type": "school"
+        },
+        {
+          "date": "2026-04-24",
+          "title": "Free Book Bash at Orlando Science Center",
+          "description": "New Worlds Reading 2026 Book Bash. Free admission, free kids' books, reading activities, crafts. 6\u20138 PM at Orlando Science Center, 777 E. Princeton St. RSVP at bookbash2026.eventbrite.com",
+          "type": "event"
         }
       ],
       "lunchMenu": [
@@ -219,6 +234,12 @@
               "subject": "FW: Parent Square Post For Noon Today",
               "summary": "Reminder that the DEF Gala silent auction online bidding ends in 24 hours. (Event is already past).",
               "attachments": []
+            },
+            {
+              "date": "2026-04-22",
+              "subject": "Permission slip",
+              "summary": "Reminder to sign and return Bronson's permission slip for an in-house presentation. Due NO LATER than Monday, April 27. No cost, no schedule change.",
+              "attachments": []
             }
           ]
         },
@@ -243,6 +264,12 @@
                   "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
                 }
               ]
+            },
+            {
+              "date": "2026-04-20",
+              "subject": "Perimeter Homework Clarification (ParentSquare Chat)",
+              "summary": "Ms. Smith clarified the perimeter tile-counting method: when tiles are on the OUTSIDE of a figure, omit the corners; when tiles are on the INSIDE, count all corners (double-count). Two methods in one lesson \u2014 the state tests both approaches.",
+              "attachments": []
             }
           ]
         }
@@ -265,6 +292,12 @@
           "sender": "4th Grade",
           "subject": "4th Grade PM3 Testing Notification",
           "summary": "Notification regarding PM3 testing in May for 4th Grade."
+        },
+        {
+          "date": "2026-04-22",
+          "sender": "OCPS",
+          "subject": "Save the Date: Free Family Fun Night April 24",
+          "summary": "New Worlds Reading 2026 Book Bash at the Orlando Science Center on Friday April 24, 6\u20138 PM. Free admission, free kids' books, crafts, story read-alouds. RSVP: bookbash2026.eventbrite.com"
         }
       ],
       "homework": [
@@ -342,6 +375,11 @@
           "Beauty and the Beast Jr. tickets on sale"
         ],
         "link": "https://www.parentsquare.com"
+      },
+      "midWeekCheck": {
+        "lastChecked": "2026-04-22T22:07:53.588648Z",
+        "newItemsFound": true,
+        "summary": "Ms. Cuccinello sent a permission slip for Bronson's in-house presentation (due Mon Apr 27). Ms. Smith clarified the perimeter tile-counting homework method via ParentSquare chat. OCPS announced a free Book Bash at Orlando Science Center on Fri Apr 24, 6-8 PM."
       }
     },
     {
