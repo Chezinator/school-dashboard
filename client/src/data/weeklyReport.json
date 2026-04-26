@@ -4,7 +4,7 @@
     "familyName": "Stanfield",
     "schoolName": "Lake Whitney Elementary",
     "schoolAddress": "Windermere, FL 34786",
-    "lastUpdated": "2026-04-22T22:07:53.588677Z"
+    "lastUpdated": "2026-04-26T22:16:57.211551Z"
   },
   "kids": [
     {
@@ -26,360 +26,337 @@
   ],
   "weeks": [
     {
-      "weekOf": "2026-04-20",
-      "weekLabel": "April 20 - April 24, 2026",
-      "lastUpdated": "2026-04-22T22:07:53.588675Z",
+      "weekOf": "2026-04-27",
+      "weekLabel": "April 27 - May 1, 2026",
+      "lastUpdated": "2026-04-26T22:16:57.211519Z",
       "actionItems": [
         {
-          "id": 4,
-          "title": "Sign Bronson's Permission Slip",
-          "description": "Ms. Cuccinello sent a permission slip for an in-house presentation. Must be signed and returned NO LATER than Monday, April 27. No cost, no schedule change.",
+          "id": 1,
+          "title": "Return Bird Presentation Permission Slip",
+          "description": "Signed permission slip for Bird Presentation in Media Center due Monday, April 27.",
           "dueDate": "2026-04-27",
           "urgent": true,
           "kidId": "bronson",
           "category": "admin"
         },
         {
-          "id": 1,
-          "title": "2nd Grade In-House Field Trip",
-          "description": "Ms. Smith mentioned an in-house field trip for Monday, April 27th. Watch for more information coming this week.",
-          "dueDate": "2026-04-24",
-          "urgent": false,
-          "kidId": "kaia",
-          "category": "event"
-        },
-        {
           "id": 2,
-          "title": "Grammar Quiz",
-          "description": "Kaia has a potential Grammar Quiz on Thursday (Turning Common Nouns into Proper Nouns).",
-          "dueDate": "2026-04-23",
-          "urgent": false,
+          "title": "Science Quiz",
+          "description": "Open Book/Notes Science Quiz",
+          "dueDate": "2026-04-28",
+          "urgent": true,
           "kidId": "kaia",
           "category": "test"
         },
         {
           "id": 3,
-          "title": "Log Reading Minutes",
-          "description": "Log Kaia's reading minutes in Beanstack.",
-          "dueDate": "2026-04-24",
-          "urgent": false,
+          "title": "Cold Read Comp. Test",
+          "description": "Comparing and contrasting two folktales. Learning Checks go home Wednesday for question format review.",
+          "dueDate": "2026-04-30",
+          "urgent": true,
           "kidId": "kaia",
-          "category": "homework"
+          "category": "test"
+        },
+        {
+          "id": 4,
+          "title": "Math Quiz",
+          "description": "Blooket: Describing Geometric Figures HW. Show work on paper before clicking answer choice.",
+          "dueDate": "2026-04-30",
+          "urgent": true,
+          "kidId": "kaia",
+          "category": "test"
+        },
+        {
+          "id": 5,
+          "title": "Math and Open Book/Notes Science Final",
+          "description": "Potential test in the p.m. May be postponed to Monday if students are fatigued.",
+          "dueDate": "2026-05-01",
+          "urgent": true,
+          "kidId": "kaia",
+          "category": "test"
         }
       ],
       "importantDates": [
         {
-          "date": "2026-04-22",
-          "title": "Early Release Day",
-          "description": "Modified schedule. School Spirit Day for Kaia.",
-          "type": "school"
-        },
-        {
-          "date": "2026-04-24",
-          "title": "Student Holiday / Non-Work Day",
-          "description": "No school for students.",
-          "type": "school"
-        },
-        {
-          "date": "2026-04-25",
-          "title": "Top Talent LIVE 2026",
-          "description": "OCPS event at Dr. Phillips Center for the Performing Arts at 6:00 PM.",
-          "type": "event"
+          "date": "2026-04-27",
+          "title": "Bird Presentation in Media Center",
+          "description": "Permission slip needed. Bronson's class.",
+          "type": "school",
+          "kidId": "bronson"
         },
         {
           "date": "2026-04-27",
-          "title": "2nd Grade In-House Field Trip",
-          "description": "Kaia's 2nd grade in-house field trip (details TBD).",
+          "title": "In-House Field Trip: Diamond Del\u2019s Gem Mining Experience",
+          "description": "Tentatively scheduled for 11 a.m. Approved volunteers welcome to watch.",
+          "type": "school",
+          "kidId": "kaia"
+        },
+        {
+          "date": "2026-04-29",
+          "title": "Potential Rescheduled In-House Field Trip",
+          "description": "Diamond Del\u2019s Gem Mining Experience, tentatively scheduled for 10 a.m. (if postponed from Monday).",
+          "type": "school",
+          "kidId": "kaia"
+        },
+        {
+          "date": "2026-05-01",
+          "title": "Spring Carnival",
+          "description": "",
           "type": "school"
         },
         {
-          "date": "2026-04-24",
-          "title": "Free Book Bash at Orlando Science Center",
-          "description": "New Worlds Reading 2026 Book Bash. Free admission, free kids' books, reading activities, crafts. 6\u20138 PM at Orlando Science Center, 777 E. Princeton St. RSVP at bookbash2026.eventbrite.com",
-          "type": "event"
+          "date": "2026-05-01",
+          "title": "FAST ELA a.m.",
+          "description": "Come rested and charged with a healthy breakfast and plenty of snack foods.",
+          "type": "test",
+          "kidId": "kaia"
+        },
+        {
+          "date": "2026-05-01",
+          "title": "Spring Carnival p.m.",
+          "description": "",
+          "type": "school"
+        },
+        {
+          "date": "2026-05-04",
+          "title": "FAST Testing ELA",
+          "description": "Bronson's class. Schedule change to specials and lunch.",
+          "type": "test",
+          "kidId": "bronson"
+        },
+        {
+          "date": "2026-05-06",
+          "title": "FAST Testing Math",
+          "description": "Bronson's class. Schedule change to specials and lunch.",
+          "type": "test",
+          "kidId": "bronson"
+        },
+        {
+          "date": "2026-05-08",
+          "title": "House Meet up",
+          "description": "",
+          "type": "school"
+        },
+        {
+          "date": "2026-05-10",
+          "title": "Mother\u2019s Day Celebration",
+          "description": "",
+          "type": "school"
+        },
+        {
+          "date": "2026-05-11",
+          "title": "SSYRA 15 books",
+          "description": "11:00-12:00",
+          "type": "school"
+        },
+        {
+          "date": "2026-05-11",
+          "title": "SSYRA 10-14 books",
+          "description": "1:00-2:00",
+          "type": "school"
+        },
+        {
+          "date": "2026-05-11",
+          "title": "FAST MATH",
+          "description": "",
+          "type": "test",
+          "kidId": "kaia"
+        },
+        {
+          "date": "2026-05-13",
+          "title": "PTO Brunch and Volunteer App.",
+          "description": "",
+          "type": "school"
+        },
+        {
+          "date": "2026-05-13",
+          "title": "Senior Reception",
+          "description": "2:30-3:30",
+          "type": "school"
+        },
+        {
+          "date": "2026-05-15",
+          "title": "AR Celebration 2nd-5th",
+          "description": "",
+          "type": "school"
+        },
+        {
+          "date": "2026-05-17",
+          "title": "Device collection starts",
+          "description": "Ends May 22",
+          "type": "school"
+        },
+        {
+          "date": "2026-05-18",
+          "title": "Color Out 1820-Kdg Orientation",
+          "description": "",
+          "type": "school"
         }
       ],
       "lunchMenu": [
         {
           "day": "Monday",
-          "date": "2026-04-20",
+          "date": "2026-04-27",
           "entrees": [
-            "Meatball Pizza Sub",
-            "PBJ Sandwich Box"
-          ],
-          "sides": [
-            "Steamed Corn",
-            "Carrot Dippers with Ranch Dressing"
-          ],
-          "fruits": [
-            "Fruit Juice",
-            "Apple Juice",
-            "Orange Juice"
+            "Lunch menu unavailable \u2014 check MealViewer directly"
           ]
         },
         {
           "day": "Tuesday",
-          "date": "2026-04-21",
+          "date": "2026-04-28",
           "entrees": [
-            "Tangerine Chicken",
-            "Hummus Cup Platter"
-          ],
-          "sides": [
-            "Mandarin Carrot Slaw",
-            "Tropical Trio Juice Slushie",
-            "Berry Berry Blue Juice Slushie"
-          ],
-          "fruits": [
-            "Strawberry Cup",
-            "Applesauce, Strawberry 4.5 oz"
+            "Lunch menu unavailable \u2014 check MealViewer directly"
           ]
         },
         {
           "day": "Wednesday",
-          "date": "2026-04-22",
+          "date": "2026-04-29",
           "entrees": [
-            "Seasonal Shaped Nuggets",
-            "Egg, Cheese & Flatbread Box"
-          ],
-          "sides": [
-            "Vegetarian Baked Beans",
-            "Coleslaw"
-          ],
-          "fruits": [
-            "Fresh Apple Slices"
+            "Lunch menu unavailable \u2014 check MealViewer directly"
           ]
         },
         {
           "day": "Thursday",
-          "date": "2026-04-23",
+          "date": "2026-04-30",
           "entrees": [
-            "Garlic French Bread Cheese Pizza",
-            "Turkey & American Sub"
-          ],
-          "sides": [
-            "Marinara Dipping Sauce Cup",
-            "Fresh Steamed Broccoli"
-          ],
-          "fruits": [
-            "Fruit Juice",
-            "Apple Juice",
-            "Orange Juice"
+            "Lunch menu unavailable \u2014 check MealViewer directly"
           ]
         },
         {
           "day": "Friday",
-          "date": "2026-04-24",
+          "date": "2026-05-01",
           "entrees": [
-            "No Information Provided (No School)"
-          ],
-          "sides": [],
-          "fruits": []
+            "Lunch menu unavailable \u2014 check MealViewer directly"
+          ]
         }
       ],
-      "weather": [
+      "weatherForecast": [
         {
           "day": "Monday",
-          "date": "2026-04-20",
-          "high": 81,
-          "low": 60,
-          "condition": "Partly Cloudy",
-          "icon": "cloud-sun",
-          "dressSuggestion": "Shorts and t-shirt. Comfortable."
+          "date": "2026-04-27",
+          "high": 84,
+          "low": 67,
+          "description": "Partly sunny, 30% Chance of Storms"
         },
         {
           "day": "Tuesday",
-          "date": "2026-04-21",
-          "high": 81,
-          "low": 60,
-          "condition": "Partly Sunny",
-          "icon": "cloud-sun",
-          "dressSuggestion": "Shorts and t-shirt. Comfortable."
+          "date": "2026-04-28",
+          "high": 86,
+          "low": 68,
+          "description": "Partly sunny"
         },
         {
           "day": "Wednesday",
-          "date": "2026-04-22",
-          "high": 80,
-          "low": 61,
-          "condition": "Partly Cloudy",
-          "icon": "cloud-sun",
-          "dressSuggestion": "Shorts and t-shirt. Comfortable."
+          "date": "2026-04-29",
+          "high": 87,
+          "low": 69,
+          "description": "Partly sunny"
         },
         {
           "day": "Thursday",
-          "date": "2026-04-23",
-          "high": 83,
-          "low": 62,
-          "condition": "Partly Sunny",
-          "icon": "cloud-sun",
-          "dressSuggestion": "Shorts and t-shirt. Comfortable."
+          "date": "2026-04-30",
+          "high": 89,
+          "low": 70,
+          "description": "Partly sunny"
         },
         {
           "day": "Friday",
-          "date": "2026-04-24",
-          "high": 85,
-          "low": 65,
-          "condition": "Partly Cloudy",
-          "icon": "cloud-sun",
-          "dressSuggestion": "Shorts and t-shirt. Warm."
+          "date": "2026-05-01",
+          "high": 90,
+          "low": 68,
+          "description": "Partly sunny, slight chance of rain"
         }
       ],
       "teacherComms": [
         {
           "kidId": "bronson",
           "teacher": "Ms. Cuccinello",
-          "teacherEmail": "Jeneen.Cuccinello@ocps.net",
           "messages": [
             {
-              "date": "2026-04-17",
-              "subject": "FW: Parent Square Post For Noon Today",
-              "summary": "Reminder that the DEF Gala silent auction online bidding ends in 24 hours. (Event is already past).",
+              "date": "2026-04-26",
+              "subject": "EDIT to Weekly",
+              "summary": "Correction to Bronson's special area schedule for the week: Mon/Tue/Thu: PE, Wed: Art, Fri: Music.",
               "attachments": []
             },
             {
-              "date": "2026-04-22",
-              "subject": "Permission slip",
-              "summary": "Reminder to sign and return Bronson's permission slip for an in-house presentation. Due NO LATER than Monday, April 27. No cost, no schedule change.",
-              "attachments": []
+              "date": "2026-04-23",
+              "subject": "Weekly (April 27-May 1.pdf attached)",
+              "summary": "Newsletter for the upcoming week. Includes learning objectives, upcoming events, and reminders.",
+              "attachments": [
+                "April 27- May 1.pdf"
+              ]
             }
-          ]
+          ],
+          "specials": {
+            "Monday": "PE",
+            "Tuesday": "PE",
+            "Wednesday": "Art",
+            "Thursday": "PE",
+            "Friday": "Music"
+          },
+          "learning": {
+            "ELA": "Mixed Review of Reading: Poetry and Prose and Reading informational Text",
+            "Math": "Review of previous skills",
+            "Writing": "Biography Report",
+            "Science": "BI 16: Heredity and Reproduction SC.4.L.16.1, SC.4.L.16.2, SC.4.L.16.3, SC.4.L.16.4"
+          }
         },
         {
           "kidId": "kaia",
           "teacher": "Ms. Smith",
-          "teacherEmail": "Adrienne.Smith@ocps.net",
           "messages": [
             {
-              "date": "2026-04-18",
-              "subject": "Field Trip Weekly!",
-              "summary": "Recap of the farm field trip. Announced an in-house field trip for next Monday, April 27th.",
-              "attachments": []
-            },
-            {
-              "date": "2026-04-16",
-              "subject": "SSYRA Jr, SSYRA + Orange Blossom + FTR Lists",
-              "summary": "The 2026-27 summer reading lists are out.",
+              "date": "2026-04-24",
+              "subject": "Weekly (26-4-27 Newsletter.pptx attached)",
+              "summary": "Newsletter for the upcoming week. Includes pics of Earth Day butterfly release, habitat research, highly assessed week info, and schedule for in-house field trip, quizzes, and FAST ELA.",
               "attachments": [
-                {
-                  "filename": "26-4-18 Newsletter.pptx",
-                  "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
-                }
+                "26-4-27 Newsletter.pptx"
               ]
-            },
-            {
-              "date": "2026-04-20",
-              "subject": "Perimeter Homework Clarification (ParentSquare Chat)",
-              "summary": "Ms. Smith clarified the perimeter tile-counting method: when tiles are on the OUTSIDE of a figure, omit the corners; when tiles are on the INSIDE, count all corners (double-count). Two methods in one lesson \u2014 the state tests both approaches.",
-              "attachments": []
             }
+          ],
+          "specials": {
+            "Monday": "P.E.",
+            "Tuesday": "Art",
+            "Wednesday": "Music",
+            "Thursday": "P.E.",
+            "Friday": "P.E./FAST"
+          },
+          "learning": {
+            "ELA": "Compare & contrast two texts on the same theme, Unknown Words, Retell, Perspective, Similes, Idioms, Alliteration",
+            "Math": "Review to assess 2-D Figures & Their Attributes, Perimeter, Symmetry",
+            "Social Studies": "Reviewing How Goods Are Made and Brought to Us vocab",
+            "Science": "Assessing Plants & Animals Basic Needs in their Habitats.",
+            "Health": "Warm Ups, FitMoves, Cool Downs"
+          },
+          "reminders": [
+            "Wednesdays are School Spirit Days",
+            "Log your Reading Minutes in Beanstack!",
+            "Math HW: Sent Home Reteaching pgs. 645-646",
+            "Math HW: Sent Home Pirate Perimeter ws",
+            "Math HW: Lesson 13-4 pgs. 207-208",
+            "Math HW: Sent Home Reteaching pgs. 647-648",
+            "School Spirit FriYay!"
           ]
         }
       ],
       "schoolDistrictComms": [
         {
-          "date": "2026-04-18",
+          "date": "2026-04-25",
           "sender": "OCPS",
-          "subject": "Top Talent LIVE 2026",
-          "summary": "Get Ready! Top Talent LIVE 2026 is about to take the stage on April 25 at 6:00 PM at the Dr. Phillips Center for the Performing Arts."
+          "subject": "Top Talent LIVE 2026 tonight at 6 p.m.",
+          "summary": "Reminder for Top Talent LIVE 2026. Online at 6 p.m. to watch student acts. Funds raised support arts enrichment for students experiencing poverty and homelessness."
         },
         {
-          "date": "2026-04-16",
-          "sender": "2nd Grade",
-          "subject": "2nd Grade PM3 Testing Notification",
-          "summary": "Notification regarding PM3 testing in May for 2nd Grade."
-        },
-        {
-          "date": "2026-04-16",
-          "sender": "4th Grade",
-          "subject": "4th Grade PM3 Testing Notification",
-          "summary": "Notification regarding PM3 testing in May for 4th Grade."
-        },
-        {
-          "date": "2026-04-22",
+          "date": "2026-04-25",
           "sender": "OCPS",
-          "subject": "Save the Date: Free Family Fun Night April 24",
-          "summary": "New Worlds Reading 2026 Book Bash at the Orlando Science Center on Friday April 24, 6\u20138 PM. Free admission, free kids' books, crafts, story read-alouds. RSVP: bookbash2026.eventbrite.com"
+          "subject": "Transportation registration",
+          "summary": "OCPS is asking families to complete the 2026\u20132027 School Bus Registration Form for all students eligible for transportation. Must register annually. Visit Transportation Services page and click 'Student Bus Registration'."
         }
       ],
-      "homework": [
-        {
-          "kidId": "kaia",
-          "assignments": [
-            {
-              "subject": "Math",
-              "title": "Lesson 13-5 pgs. 209-210",
-              "description": "Math HW",
-              "dueDate": "2026-04-20",
-              "status": "pending"
-            },
-            {
-              "subject": "Math",
-              "title": "Lesson 13-6 pgs. 211-212",
-              "description": "Math HW",
-              "dueDate": "2026-04-21",
-              "status": "pending"
-            },
-            {
-              "subject": "Math",
-              "title": "Find the Perimeter WS",
-              "description": "Math HW - Sent home worksheet",
-              "dueDate": "2026-04-22",
-              "status": "pending"
-            },
-            {
-              "subject": "Reading",
-              "title": "Log minutes in Beanstack",
-              "description": "Log reading minutes in Beanstack",
-              "dueDate": "2026-04-24",
-              "status": "pending"
-            }
-          ]
-        }
-      ],
-      "importantLinks": [
-        {
-          "title": "Skyward Family Access",
-          "url": "https://parents.classlink.com/ocps",
-          "icon": "graduation-cap",
-          "description": "Check grades and attendance"
-        },
-        {
-          "title": "ParentSquare",
-          "url": "https://www.parentsquare.com",
-          "icon": "message-square",
-          "description": "School communications"
-        },
-        {
-          "title": "MealViewer",
-          "url": "https://schools.mealviewer.com/school/LakeWhitneyElementary",
-          "icon": "utensils",
-          "description": "Lunch menus"
-        },
-        {
-          "title": "Lake Whitney Website",
-          "url": "https://lakewhitneyes.ocps.net/",
-          "icon": "globe",
-          "description": "Official school website"
-        },
-        {
-          "title": "School Play Tickets",
-          "url": "https://teachtix.com/lakewhitney/disneys-beauty-and-the-beast-jr",
-          "icon": "ticket",
-          "description": "Buy tickets for Beauty and the Beast Jr."
-        }
-      ],
-      "dolphinDigest": {
-        "publishedDate": "2026-04-10",
-        "volume": "April Edition",
-        "highlights": [
-          "Lunchroom Helpers Needed",
-          "Beauty and the Beast Jr. tickets on sale"
-        ],
-        "link": "https://www.parentsquare.com"
-      },
       "midWeekCheck": {
-        "lastChecked": "2026-04-22T22:07:53.588648Z",
-        "newItemsFound": true,
-        "summary": "Ms. Cuccinello sent a permission slip for Bronson's in-house presentation (due Mon Apr 27). Ms. Smith clarified the perimeter tile-counting homework method via ParentSquare chat. OCPS announced a free Book Bash at Orlando Science Center on Fri Apr 24, 6-8 PM."
+        "lastChecked": "",
+        "newItemsFound": false,
+        "summary": ""
       }
     },
     {
