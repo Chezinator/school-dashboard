@@ -198,35 +198,81 @@
           "day": "Monday",
           "date": "2026-04-27",
           "entrees": [
-            "Lunch menu unavailable \u2014 check MealViewer directly"
+            "Breaded Chicken Nuggets",
+            "Turkey & Cheese Deli Box w/ Graham Crackers",
+            "Breaded Drumsticks"
+          ],
+          "sides": [
+            "Potatoes, Mashed",
+            "Peas & Carrots"
+          ],
+          "fruits": [
+            "Fruit Juice",
+            "Apple Juice",
+            "Orange Juice",
+            "Assorted Milk"
           ]
         },
         {
           "day": "Tuesday",
           "date": "2026-04-28",
           "entrees": [
-            "Lunch menu unavailable \u2014 check MealViewer directly"
+            "Two Soft Turkey Tacos w/ Cheese",
+            "Yogurt, Cheese, w/ Banana Bread Plate"
+          ],
+          "sides": [
+            "Seasoned Black Beans",
+            "Salsa Dipping Cup"
+          ],
+          "fruits": [
+            "Strawberry Cup",
+            "Assorted Milk"
           ]
         },
         {
           "day": "Wednesday",
           "date": "2026-04-29",
           "entrees": [
-            "Lunch menu unavailable \u2014 check MealViewer directly"
+            "Grilled Cheese Sandwich",
+            "Rotisserie Chicken and Cheese Sandwich"
+          ],
+          "sides": [
+            "Tater Tots",
+            "Coleslaw"
+          ],
+          "fruits": [
+            "Assorted Milk"
           ]
         },
         {
           "day": "Thursday",
           "date": "2026-04-30",
           "entrees": [
-            "Lunch menu unavailable \u2014 check MealViewer directly"
+            "Mac and Cheese",
+            "Sandwich, PBJ 2.6 oz"
+          ],
+          "sides": [
+            "Fresh Steamed Broccoli",
+            "Italian Blend Vegetables"
+          ],
+          "fruits": [
+            "Apple Juice",
+            "Assorted Milk"
           ]
         },
         {
           "day": "Friday",
           "date": "2026-05-01",
           "entrees": [
-            "Lunch menu unavailable \u2014 check MealViewer directly"
+            "Four Cheese Pizza Wedge",
+            "Bento Box w/ Pepperoni, Cheese, Marinara, & Bread"
+          ],
+          "sides": [
+            "Marinara Dipping Sauce Cup",
+            "Tropical Trio Juice Slushie"
+          ],
+          "fruits": [
+            "Assorted Milk"
           ]
         }
       ],
@@ -357,7 +403,60 @@
         "lastChecked": "",
         "newItemsFound": false,
         "summary": ""
-      }
+      },
+      "homework": [
+        {
+          "kidId": "kaia",
+          "assignments": [
+            {
+              "subject": "Math",
+              "title": "Reteaching Pages 645\u2013646",
+              "description": "Math reteaching worksheet sent home. Review 2-D figures and their attributes.",
+              "dueDate": "2026-04-28",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Pirate Perimeter Worksheet",
+              "description": "Perimeter practice worksheet sent home.",
+              "dueDate": "2026-04-29",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Lesson 13-4 Pages 207\u2013208",
+              "description": "Math workbook pages 207\u2013208 (Lesson 13-4).",
+              "dueDate": "2026-04-29",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Reteaching Pages 647\u2013648",
+              "description": "Math reteaching worksheet sent home.",
+              "dueDate": "2026-04-30",
+              "status": "pending"
+            },
+            {
+              "subject": "Math",
+              "title": "Blooket: Describing Geometric Figures",
+              "description": "Online Blooket assignment reviewing geometric figures vocabulary.",
+              "dueDate": "2026-04-30",
+              "status": "pending"
+            },
+            {
+              "subject": "Reading",
+              "title": "Log Reading Minutes in Beanstack",
+              "description": "Record daily reading minutes in the Beanstack app.",
+              "dueDate": "2026-05-01",
+              "status": "pending"
+            }
+          ]
+        },
+        {
+          "kidId": "bronson",
+          "assignments": []
+        }
+      ]
     },
     {
       "weekOf": "2026-04-13",
