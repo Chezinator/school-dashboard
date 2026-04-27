@@ -43,7 +43,7 @@ function buildKey(weekLabel: string, kidId: string, idx: number) {
 
 export default function Homework() {
   const { week, kids } = useWeek();
-  const homework = week.homework;
+  const homework = (week as any).homework ?? [];
   const [activeKid, setActiveKid] = useState(kids[0].id);
   const [completed, setCompleted] = useState<Record<string, boolean>>({});
 
