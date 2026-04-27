@@ -3,6 +3,8 @@
  * Solid color-blocked card for the full menu. Day selector with pill dots.
  * Auto-selects today's day on mount. Swipeable on touch devices.
  * No borders, no shadows — solid fills only.
+ *
+ * Handles partial data: sides and fruits may be absent (e.g. when menu is unavailable).
  */
 import { useState, useRef, useCallback } from "react";
 import { CaretLeft, CaretRight, ForkKnife } from "@phosphor-icons/react";
@@ -61,6 +63,11 @@ export default function LunchMenu() {
   };
 
   const current = menu[activeDay];
+
+  // Normalise optional fields — may be absent when menu data is unavailable
+  const entrees: string[] = current.entrees ?? [];
+  const sides: string[] = (current as any).sides ?? [];
+  const fruits: string[] = (current as any).fruits ?? [];
 
   // Determine if this day is today for the label
   const today = new Date();
@@ -129,26 +136,36 @@ export default function LunchMenu() {
             transition={{ type: "spring", stiffness: 350, damping: 30, mass: 0.6 }}
             className="space-y-3"
           >
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-wider opacity-50 mb-1.5">Entrees</p>
-              {current.entrees.map((entree, idx) => (
-                <p key={idx} className="text-sm font-medium leading-relaxed">{entree}</p>
-              ))}
-            </div>
+            {entrees.length > 0 && (
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-wider opacity-50 mb-1.5">Entrees</p>
+                {entrees.map((entree, idx) => (
+                  <p key={idx} className="text-sm font-medium leading-relaxed">{entree}</p>
+                ))}
+              </div>
+            )}
 
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-wider opacity-50 mb-1.5">Sides</p>
-              {current.sides.map((side, idx) => (
-                <p key={idx} className="text-sm leading-relaxed">{side}</p>
-              ))}
-            </div>
+            {sides.length > 0 && (
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-wider opacity-50 mb-1.5">Sides</p>
+                {sides.map((side, idx) => (
+                  <p key={idx} className="text-sm leading-relaxed">{side}</p>
+                ))}
+              </div>
+            )}
 
-            <div>
-              <p className="text-[10px] font-bold uppercase tracking-wider opacity-50 mb-1.5">Fruit & Drinks</p>
-              {current.fruits.map((fruit, idx) => (
-                <p key={idx} className="text-sm leading-relaxed">{fruit}</p>
-              ))}
-            </div>
+            {fruits.length > 0 && (
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-wider opacity-50 mb-1.5">Fruit & Drinks</p>
+                {fruits.map((fruit, idx) => (
+                  <p key={idx} className="text-sm leading-relaxed">{fruit}</p>
+                ))}
+              </div>
+            )}
+
+            {entrees.length === 0 && sides.length === 0 && fruits.length === 0 && (
+              <p className="text-sm opacity-60 italic">Menu not available for this day.</p>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>

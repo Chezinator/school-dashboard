@@ -6,6 +6,10 @@
  *   - URL-based attachments open the URL directly in a new tab.
  *   - File attachments link to a Gmail search for the email thread (via teacherEmail + subject).
  *   - If no link can be constructed, the chip is shown but not interactive.
+ *
+ * Handles two attachment schemas:
+ *   Object: { filename, type, url?, description?, extractedContent? }
+ *   String: "filename.pdf"  (newer data format — just the filename as a plain string)
  */
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -26,6 +30,46 @@ const KID_CARD_STYLE: Record<string, string> = {
   bronson: "dh-card-teal",
   kaia: "dh-card-coral",
 };
+
+/** Normalise an attachment entry to a consistent object shape regardless of input format. */
+function normaliseAttachment(att: any): {
+  filename: string;
+  type: string;
+  url?: string;
+  description?: string;
+  extractedContent?: string;
+} {
+  if (typeof att === "string") {
+    // Plain string schema: just a filename
+    return { filename: att, type: guessTypeFromFilename(att) };
+  }
+  return {
+    filename: att.filename || att.name || "Attachment",
+    type: att.type || guessTypeFromFilename(att.filename || ""),
+    url: att.url || att.link || att.href,
+    description: att.description,
+    extractedContent: att.extractedContent,
+  };
+}
+
+/** Guess a MIME-like type string from a filename extension. */
+function guessTypeFromFilename(filename: string): string {
+  const ext = (filename || "").split(".").pop()?.toLowerCase() || "";
+  switch (ext) {
+    case "pdf":  return "application/pdf";
+    case "pptx":
+    case "ppt":  return "application/vnd.openxmlformats-officedocument.presentationml.presentation";
+    case "docx":
+    case "doc":  return "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+    case "xlsx":
+    case "xls":  return "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+    case "jpg":
+    case "jpeg": return "image/jpeg";
+    case "png":  return "image/png";
+    case "gif":  return "image/gif";
+    default:     return "application/octet-stream";
+  }
+}
 
 /** Returns a human-readable file extension label from a MIME type string. */
 function mimeToLabel(type: string): string {
@@ -66,7 +110,7 @@ function buildGmailSearchUrl(teacherEmail?: string, subject?: string): string {
 }
 
 interface AttachmentChipProps {
-  att: any;
+  att: ReturnType<typeof normaliseAttachment>;
   teacherEmail?: string;
   subject?: string;
   /** Prevent the chip click from bubbling up to the card expand toggle */
@@ -74,15 +118,14 @@ interface AttachmentChipProps {
 }
 
 function AttachmentChip({ att, teacherEmail, subject, stopPropagation }: AttachmentChipProps) {
-  const attUrl: string | undefined = att.url || att.link || att.href;
-  const isUrl = Boolean(attUrl);
+  const isUrl = Boolean(att.url);
 
-  // Determine the href: direct URL if available, else Gmail search, else nothing
+  // Determine the href: direct URL if available, else Gmail search
   const gmailUrl = buildGmailSearchUrl(teacherEmail, subject);
-  const href = attUrl || gmailUrl;
+  const href = att.url || gmailUrl;
   const hasLink = Boolean(href);
 
-  const label = mimeToLabel(att.type || "");
+  const label = mimeToLabel(att.type);
   const filename = att.filename || (isUrl ? "Open Link" : "Attachment");
 
   const chipBase =
@@ -94,7 +137,7 @@ function AttachmentChip({ att, teacherEmail, subject, stopPropagation }: Attachm
 
   const inner = (
     <>
-      <AttachmentIcon type={att.type || ""} isUrl={isUrl} />
+      <AttachmentIcon type={att.type} isUrl={isUrl} />
       <span className="truncate max-w-[180px]">{filename}</span>
       {!isUrl && (
         <span className="shrink-0 text-[10px] font-bold opacity-50 uppercase">{label}</span>
@@ -145,7 +188,9 @@ function EmailCard({
   delay: number;
 }) {
   const [expanded, setExpanded] = useState(false);
-  const attachments = msg.attachments || [];
+  // Normalise all attachments regardless of whether they're strings or objects
+  const rawAttachments: any[] = msg.attachments || [];
+  const attachments = rawAttachments.map(normaliseAttachment);
   const hasAttachments = attachments.length > 0;
   const hasFullBody = msg.fullBody && msg.fullBody.length > 0;
 
@@ -232,7 +277,7 @@ function EmailCard({
                     Attachments ({attachments.length})
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {attachments.map((att: any, aIdx: number) => (
+                    {attachments.map((att, aIdx) => (
                       <div key={aIdx} className="flex flex-col gap-1">
                         <AttachmentChip
                           att={att}
@@ -285,7 +330,7 @@ function EmailCard({
 
 export default function TeacherComms() {
   const { week, kids } = useWeek();
-  const comms = week.teacherComms || [];
+  const comms = (week as any).teacherComms || [];
   if (!comms.length) return null;
 
   let animIdx = 0;
@@ -302,12 +347,12 @@ export default function TeacherComms() {
 
       <div className="space-y-3">
         {comms.map((comm: any, cIdx: number) => {
-          const kid = kids.find((k) => k.id === comm.kidId);
+          const kid = kids.find((k: any) => k.id === comm.kidId);
           const cardStyle = comm.kidId
             ? KID_CARD_STYLE[comm.kidId] || "dh-card-sage"
             : "dh-card-sage";
 
-          const messages = comm.messages || [];
+          const messages: any[] = comm.messages || [];
 
           return messages.map((msg: any, mIdx: number) => {
             animIdx++;

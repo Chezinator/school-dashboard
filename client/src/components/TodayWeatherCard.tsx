@@ -2,6 +2,11 @@
  * TodayWeatherCard — Shows next 3 days of forecast.
  * Clickable to jump to full forecast in More tab.
  * Amber card. Phosphor icon.
+ *
+ * Handles two data schemas:
+ *   Old: { day, date, high, low, icon, condition, dressSuggestion }
+ *   New: { day, date, high, low, description }
+ * Also handles the key being either `weather` or `weatherForecast`.
  */
 import { Sun as SunIcon, CloudSun, Cloud, CloudRain } from "@phosphor-icons/react";
 import { useWeek } from "@/contexts/WeekContext";
@@ -12,9 +17,18 @@ interface Props {
   onNavigate?: () => void;
 }
 
-function getWeatherIcon(icon: string, size = 16) {
+/** Infer a weather icon key from either an explicit icon field or a description string. */
+function inferIcon(icon?: string, description?: string): string {
+  const src = (icon || description || "").toLowerCase();
+  if (src.includes("rain") || src.includes("storm") || src.includes("shower")) return "rain";
+  if (src.includes("cloud") && (src.includes("sun") || src.includes("partly"))) return "cloud-sun";
+  if (src.includes("cloud") || src.includes("overcast")) return "cloud";
+  return "sun";
+}
+
+function getWeatherIcon(iconKey: string, size = 16) {
   const props = { size, weight: "duotone" as const, className: "opacity-70 shrink-0" };
-  switch (icon) {
+  switch (iconKey) {
     case "sun":        return <SunIcon {...props} />;
     case "cloud-sun":  return <CloudSun {...props} />;
     case "cloud":      return <Cloud {...props} />;
@@ -26,7 +40,8 @@ function getWeatherIcon(icon: string, size = 16) {
 
 export default function TodayWeatherCard({ delay = 0, onNavigate }: Props) {
   const { week } = useWeek();
-  const weather = week.weather;
+  // Support both `weather` (old) and `weatherForecast` (new) key names
+  const weather: any[] = (week as any).weather ?? (week as any).weatherForecast ?? [];
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -40,8 +55,6 @@ export default function TodayWeatherCard({ delay = 0, onNavigate }: Props) {
     .slice(0, 3);
 
   if (!upcomingWeather.length) return null;
-
-  const todayW = upcomingWeather[0];
 
   return (
     <motion.button
@@ -60,14 +73,15 @@ export default function TodayWeatherCard({ delay = 0, onNavigate }: Props) {
       </div>
 
       <div className="space-y-2">
-        {upcomingWeather.map((w, i) => {
+        {upcomingWeather.map((w: any, i: number) => {
           const isToday = w.day === todayDayName;
+          const iconKey = inferIcon(w.icon, w.description);
           return (
             <div key={w.day} className="flex items-center gap-2">
               <span className="text-[10px] font-bold uppercase tracking-wider opacity-50 w-8 shrink-0">
-                {isToday ? "Now" : w.day.slice(0, 3)}
+                {isToday ? "Now" : (w.day || "").slice(0, 3)}
               </span>
-              {getWeatherIcon(w.icon)}
+              {getWeatherIcon(iconKey)}
               <span className={`text-sm font-semibold ${i === 0 ? "font-display text-base" : ""}`}>
                 {w.high}°
               </span>
