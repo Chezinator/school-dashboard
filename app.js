@@ -9,11 +9,46 @@ let currentWeekIndex = 0;
 // DATA LOADING
 // ============================================================================
 
+async function fetchMealViewerMenu() {
+  try {
+    const response = await fetch('https://schools.mealviewer.com/school/LakeWhitneyElementary');
+    if (!response.ok) throw new Error(`MealViewer fetch failed: ${response.status}`);
+    const html = await response.text();
+    
+    // Parse HTML to extract menu items
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    
+    // Look for menu containers
+    const menuItems = [];
+    const itemElements = doc.querySelectorAll('[class*="meal"], [class*="menu-item"], .item');
+    
+    itemElements.forEach(el => {
+      const text = el.textContent?.trim();
+      if (text && text.length > 0) {
+        menuItems.push(text);
+      }
+    });
+    
+    return menuItems.length > 0 ? menuItems : null;
+  } catch (err) {
+    console.warn('Could not fetch live MealViewer menu:', err.message);
+    return null;
+  }
+}
+
 async function loadData() {
   try {
-    const response = await fetch('./weeklyReport.json');
+    const response = await fetch('./weeklyReport_may4_8.json');
     if (!response.ok) throw new Error(`Failed to load data: ${response.status}`);
     appData = await response.json();
+    
+    // Try to fetch live lunch menu from MealViewer
+    const liveMenu = await fetchMealViewerMenu();
+    if (liveMenu && appData.weeks && appData.weeks[0]) {
+      appData.weeks[0].liveMenu = liveMenu;
+    }
+    
     render();
   } catch (err) {
     console.error('Error loading data:', err);
@@ -209,6 +244,22 @@ function renderCalendar(week) {
 // ============================================================================
 
 function renderLunch(week) {
+  // Prefer live menu from MealViewer if available
+  if (week.liveMenu && week.liveMenu.length > 0) {
+    return `
+      <div>
+        <div class="card">
+          <div class="card-title text-coral">📋 Live Lunch Menu</div>
+          <div class="card-subtitle">From MealViewer (Lake Whitney Elementary)</div>
+          <div style="font-size: 0.95rem; line-height: 1.8; padding: 0.5rem 0;">
+            ${week.liveMenu.map(item => `<div style="margin: 0.5rem 0; padding: 0.5rem; background: var(--color-bg); border-radius: 0.25rem;">${item}</div>`).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  
+  // Fallback to static menu from JSON
   const menu = week.lunchMenu || [];
   if (!menu.length) return '<div class="card"><p>No lunch menu available</p></div>';
   
