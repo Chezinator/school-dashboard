@@ -3,13 +3,17 @@
  * Amber accent for date-related items.
  * Supports optional `link` on each event for embedded action buttons.
  */
-import { CalendarDays, Star, BookOpen, PartyPopper, ExternalLink } from "lucide-react";
+import React, { useState } from "react";
+import { CalendarDays, Star, BookOpen, PartyPopper, ExternalLink, LayoutList, Calendar as CalendarIcon, LayoutPanelTop } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
+import CalendarGrid from "./CalendarGrid";
 
 interface EventLink {
   url: string;
   label: string;
 }
+
+type ViewType = "week" | "month" | "list";
 
 function formatDate(dateStr: string) {
   const d = new Date(dateStr + "T00:00:00");
@@ -57,80 +61,113 @@ function getTypeLabel(type: string) {
 
 export default function ImportantDates() {
   const { week, kids } = useWeek();
+  const [view, setView] = useState<ViewType>("month");
   const dates = week?.importantDates || [];
+
   if (!dates || dates.length === 0) return null;
 
   return (
-    <section>
-      <div className="flex items-center gap-2 mb-4">
-        <div className="w-8 h-8 rounded-lg bg-amber-light flex items-center justify-center">
-          <CalendarDays className="w-4 h-4 text-amber" />
+    <section className="space-y-6">
+      <div className="flex items-center justify-between mb-2">
+        <h2 className="font-display text-3xl text-foreground">Dates</h2>
+        
+        {/* View Switcher */}
+        <div className="flex bg-muted/50 p-1 rounded-xl border border-border/40">
+          <button
+            onClick={() => setView("week")}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+              view === "week" ? "bg-white shadow-sm text-foreground" : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            <LayoutPanelTop className="w-3.5 h-3.5" />
+            Week
+          </button>
+          <button
+            onClick={() => setView("month")}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+              view === "month" ? "bg-white shadow-sm text-foreground" : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            <CalendarIcon className="w-3.5 h-3.5" />
+            Month
+          </button>
+          <button
+            onClick={() => setView("list")}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+              view === "list" ? "bg-white shadow-sm text-foreground" : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            <LayoutList className="w-3.5 h-3.5" />
+            List
+          </button>
         </div>
-        <h2 className="font-display text-xl text-foreground">Important Dates</h2>
       </div>
 
-      <div className="space-y-3">
-        {dates.map((item, idx) => {
-          const label = getTypeLabel(item.type);
-          const kidName = item.kidId
-            ? kids.find((k) => k.id === item.kidId)?.name
-            : null;
-          const eventLink = (item as any).link as EventLink | undefined;
+      {view === "month" ? (
+        <CalendarGrid />
+      ) : (
+        <div className="space-y-3">
+          {dates.map((item, idx) => {
+            const label = getTypeLabel(item.type);
+            const kidName = item.kidId
+              ? kids.find((k) => k.id === item.kidId)?.name
+              : null;
+            const eventLink = (item as any).link as EventLink | undefined;
 
-          return (
-            <div
-              key={idx}
-              className="bg-white rounded-xl p-4 shadow-sm border border-border/50 card-date"
-            >
-              <div className="flex items-start gap-3">
-                <div className={`w-8 h-8 rounded-lg ${getTypeBg(item.type)} flex items-center justify-center shrink-0 mt-0.5`}>
-                  {getTypeIcon(item.type)}
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-center gap-2 flex-wrap mb-1">
-                    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${label.className}`}>
-                      {label.text}
-                    </span>
-                    {kidName && (
-                      <span
-                        className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium text-white"
-                        style={{
-                          backgroundColor: kids.find((k) => k.id === item.kidId)?.color || "#888",
-                        }}
-                      >
-                        {kidName}
+            return (
+              <div
+                key={idx}
+                className="bg-white rounded-xl p-4 shadow-sm border border-border/50 card-date"
+              >
+                <div className="flex items-start gap-3">
+                  <div className={`w-8 h-8 rounded-lg ${getTypeBg(item.type)} flex items-center justify-center shrink-0 mt-0.5`}>
+                    {getTypeIcon(item.type)}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2 flex-wrap mb-1">
+                      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${label.className}`}>
+                        {label.text}
                       </span>
+                      {kidName && (
+                        <span
+                          className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium text-white"
+                          style={{
+                            backgroundColor: kids.find((k) => k.id === item.kidId)?.color || "#888",
+                          }}
+                        >
+                          {kidName}
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="font-semibold text-foreground text-sm">{item.title}</h3>
+                    {(item as any).description && (
+                      <p className="text-muted-foreground text-xs mt-1">{(item as any).description}</p>
+                    )}
+                    <p className="text-xs text-amber font-medium mt-1.5">
+                      {formatDate(item.date)}
+                      {(item as any).endDate && ` — ${formatDate((item as any).endDate)}`}
+                    </p>
+                    {/* Embedded action link */}
+                    {eventLink && (
+                      <div className="mt-3 pt-3 border-t border-border/30">
+                        <a
+                          href={eventLink.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-xs font-medium transition-colors"
+                        >
+                          <ExternalLink className="w-3 h-3" />
+                          {eventLink.label}
+                        </a>
+                      </div>
                     )}
                   </div>
-                  <h3 className="font-semibold text-foreground text-sm">{item.title}</h3>
-                  {(item as any).description && (
-                    <p className="text-muted-foreground text-xs mt-1">{(item as any).description}</p>
-                  )}
-                  <p className="text-xs text-amber font-medium mt-1.5">
-                    {formatDate(item.date)}
-                    {(item as any).endDate && ` — ${formatDate((item as any).endDate)}`}
-                  </p>
-
-                  {/* Embedded action link */}
-                  {eventLink && (
-                    <div className="mt-3 pt-3 border-t border-border/30">
-                      <a
-                        href={eventLink.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-xs font-medium transition-colors"
-                      >
-                        <ExternalLink className="w-3 h-3" />
-                        {eventLink.label}
-                      </a>
-                    </div>
-                  )}
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      )}
     </section>
   );
 }

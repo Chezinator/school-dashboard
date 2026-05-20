@@ -114,37 +114,37 @@
         {
           "day": "Monday",
           "date": "2026-05-18",
-          "entrees": ["Mozzarella Cheese Stick", "WG Double Chocolate Muffin"],
-          "sides": ["Steamed Broccoli", "Carrot Dippers"],
-          "fruits": ["Apple Juice", "Fresh Fruit"]
+          "entrees": ["Chicken Tenders", "Turkey & Cheese Sandwich"],
+          "sides": ["Three Bean Salad", "Baby Carrots"],
+          "fruits": ["Diced Pears", "Fresh Fruit"]
         },
         {
           "day": "Tuesday",
           "date": "2026-05-19",
-          "entrees": ["Taco Tuesday 🌮", "Beef Tacos"],
-          "sides": ["Black Beans", "Corn"],
-          "fruits": ["Orange Wedges", "Fruit Juice"]
+          "entrees": ["Fritos Taco Nachos", "Ham & Cheese Sandwich"],
+          "sides": ["Lettuce, Salsa, Cheese", "Seasoned Corn"],
+          "fruits": ["Apple Slices", "Fruit Juice"]
         },
         {
           "day": "Wednesday",
           "date": "2026-05-20",
-          "entrees": ["Chicken Nuggets w/ Roll"],
-          "sides": ["Mashed Potatoes", "Green Beans"],
-          "fruits": ["Mixed Fruit", "Apple Slices"]
+          "entrees": ["Cereal Lunch", "Yogurt & Cheese Plate"],
+          "sides": ["Cereal Cup", "Vanilla Yogurt or Cheese Stick", "Baby Carrots"],
+          "fruits": ["Banana", "Fresh Fruit"]
         },
         {
           "day": "Thursday",
           "date": "2026-05-21",
-          "entrees": ["Pizza Lunch (Classroom)"],
-          "sides": ["Side Salad"],
-          "fruits": ["Fresh Fruit"]
+          "entrees": ["Wild Mike's Cheese Bites", "Turkey & Cheese Sandwich"],
+          "sides": ["Marinara Sauce", "Roasted Broccoli"],
+          "fruits": ["Dried Cranberries", "Fresh Fruit"]
         },
         {
           "day": "Friday",
           "date": "2026-05-22",
-          "entrees": ["Manager's Choice"],
-          "sides": ["Vegetable Medley"],
-          "fruits": ["Assorted Fruit"]
+          "entrees": ["Bistro Pizza", "Ham & Cheese Sandwich"],
+          "sides": ["Tossed Garden Salad", "Carrot Dippers"],
+          "fruits": ["Applesauce Cup", "Fresh Fruit"]
         }
       ],
       "weather": [
