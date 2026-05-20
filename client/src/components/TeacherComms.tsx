@@ -7,8 +7,8 @@ import { useWeek } from "@/contexts/WeekContext";
 
 export default function TeacherComms() {
   const { week, kids } = useWeek();
-  const comms = week.teacherComms;
-  if (!comms.length) return null;
+  const comms = week?.teacherComms || [];
+  if (!comms || comms.length === 0) return null;
 
   return (
     <section>

@@ -13,15 +13,15 @@ function formatDate(dateStr: string | null) {
 
 export default function ActionItems() {
   const { week, kids } = useWeek();
-  const items = week.actionItems;
+  const items = week?.actionItems || [];
 
   function getKidName(kidId: string | null) {
-    if (!kidId) return null;
+    if (!kidId || !kids) return null;
     const kid = kids.find((k) => k.id === kidId);
     return kid ? kid.name : null;
   }
 
-  if (!items.length) return null;
+  if (!items || items.length === 0) return null;
 
   return (
     <section>

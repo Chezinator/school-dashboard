@@ -65,8 +65,8 @@ function buildKey(weekLabel: string, kidId: string, idx: number) {
 
 export default function Homework() {
   const { week, kids } = useWeek();
-  const homework = week.homework;
-  const [activeKid, setActiveKid] = useState(kids[0].id);
+  const homework = week?.homework || [];
+  const [activeKid, setActiveKid] = useState(kids && kids.length > 0 ? kids[0].id : "");
 
   // Track completed state per assignment in localStorage
   const [completed, setCompleted] = useState<Record<string, boolean>>({});

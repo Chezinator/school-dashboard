@@ -32,7 +32,7 @@ function getTempColor(temp: number) {
 
 export default function WeatherForecast() {
   const { week } = useWeek();
-  const weather = week.weather;
+  const weather = week?.weather || [];
 
   return (
     <section>
@@ -53,14 +53,14 @@ export default function WeatherForecast() {
         <div className="absolute inset-0 bg-gradient-to-r from-white/60 to-transparent flex items-center px-5">
           <div>
             <p className="text-sm font-medium text-gray-700">Winter Garden, FL</p>
-            <p className="text-xs text-gray-500">Week of {week.weekLabel}</p>
+            <p className="text-xs text-gray-500">Week of {week?.weekLabel}</p>
           </div>
         </div>
       </div>
 
       {/* Daily forecast cards */}
       <div className="space-y-2">
-        {weather.map((day, idx) => (
+        {weather && weather.map((day, idx) => (
           <div
             key={idx}
             className="bg-white rounded-xl p-3.5 shadow-sm border border-border/50 transition-all hover:shadow-md"

@@ -57,8 +57,8 @@ function getTypeLabel(type: string) {
 
 export default function ImportantDates() {
   const { week, kids } = useWeek();
-  const dates = week.importantDates;
-  if (!dates.length) return null;
+  const dates = week?.importantDates || [];
+  if (!dates || dates.length === 0) return null;
 
   return (
     <section>

@@ -10,8 +10,10 @@ const LUNCH_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrS
 
 export default function LunchMenu() {
   const { week } = useWeek();
-  const menu = week.lunchMenu;
+  const menu = week?.lunchMenu || [];
   const [activeDay, setActiveDay] = useState(0);
+
+  if (!menu || menu.length === 0) return null;
 
   const goNext = () => setActiveDay((prev) => Math.min(prev + 1, menu.length - 1));
   const goPrev = () => setActiveDay((prev) => Math.max(prev - 1, 0));
@@ -38,9 +40,9 @@ export default function LunchMenu() {
             <ChevronLeft className="w-4 h-4" />
           </button>
           <div className="text-center">
-            <p className="font-semibold text-foreground text-sm">{current.day}</p>
+            <p className="font-semibold text-foreground text-sm">{current?.day}</p>
             <p className="text-xs text-muted-foreground">
-              {new Date(current.date + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" })}
+              {current?.date ? new Date(current.date + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" }) : ""}
             </p>
           </div>
           <button
@@ -67,58 +69,64 @@ export default function LunchMenu() {
 
         <div className="p-4 space-y-4">
           {/* Entrees */}
-          <div>
-            <div className="flex items-center gap-1.5 mb-2">
-              <ChefHat className="w-3.5 h-3.5 text-coral" />
-              <span className="text-xs font-semibold text-coral uppercase tracking-wide">Entrees</span>
+          {current?.entrees && (
+            <div>
+              <div className="flex items-center gap-1.5 mb-2">
+                <ChefHat className="w-3.5 h-3.5 text-coral" />
+                <span className="text-xs font-semibold text-coral uppercase tracking-wide">Entrees</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {current.entrees.map((entree, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-flex items-center px-3 py-1.5 rounded-lg bg-coral-light text-foreground text-sm font-medium"
+                  >
+                    {entree}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {current.entrees.map((entree, idx) => (
-                <span
-                  key={idx}
-                  className="inline-flex items-center px-3 py-1.5 rounded-lg bg-coral-light text-foreground text-sm font-medium"
-                >
-                  {entree}
-                </span>
-              ))}
-            </div>
-          </div>
+          )}
 
           {/* Sides */}
-          <div>
-            <div className="flex items-center gap-1.5 mb-2">
-              <Salad className="w-3.5 h-3.5 text-teal" />
-              <span className="text-xs font-semibold text-teal uppercase tracking-wide">Sides</span>
+          {current?.sides && (
+            <div>
+              <div className="flex items-center gap-1.5 mb-2">
+                <Salad className="w-3.5 h-3.5 text-teal" />
+                <span className="text-xs font-semibold text-teal uppercase tracking-wide">Sides</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {current.sides.map((side, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-flex items-center px-3 py-1.5 rounded-lg bg-teal-light text-foreground text-sm"
+                  >
+                    {side}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {current.sides.map((side, idx) => (
-                <span
-                  key={idx}
-                  className="inline-flex items-center px-3 py-1.5 rounded-lg bg-teal-light text-foreground text-sm"
-                >
-                  {side}
-                </span>
-              ))}
-            </div>
-          </div>
+          )}
 
           {/* Fruits */}
-          <div>
-            <div className="flex items-center gap-1.5 mb-2">
-              <Apple className="w-3.5 h-3.5 text-sage" />
-              <span className="text-xs font-semibold text-sage uppercase tracking-wide">Fruit & Drinks</span>
+          {current?.fruits && (
+            <div>
+              <div className="flex items-center gap-1.5 mb-2">
+                <Apple className="w-3.5 h-3.5 text-sage" />
+                <span className="text-xs font-semibold text-sage uppercase tracking-wide">Fruit & Drinks</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {current.fruits.map((fruit, idx) => (
+                  <span
+                    key={idx}
+                    className="inline-flex items-center px-3 py-1.5 rounded-lg bg-green-50 text-foreground text-sm"
+                  >
+                    {fruit}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {current.fruits.map((fruit, idx) => (
-                <span
-                  key={idx}
-                  className="inline-flex items-center px-3 py-1.5 rounded-lg bg-green-50 text-foreground text-sm"
-                >
-                  {fruit}
-                </span>
-              ))}
-            </div>
-          </div>
+          )}
         </div>
 
         {/* Decorative lunch image */}

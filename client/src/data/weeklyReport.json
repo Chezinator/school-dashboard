@@ -3,7 +3,7 @@
     "appName": "SchoolBase",
     "familyName": "Stanfield",
     "schoolName": "Lake Whitney Elementary",
-    "schoolAddress": "Windermere, FL 34787",
+    "schoolAddress": "Windermere, FL 34786",
     "lastUpdated": "2026-05-20T00:00:00Z"
   },
   "kids": [
@@ -68,108 +68,168 @@
       ],
       "importantDates": [
         {
-          "id": 1,
           "date": "2026-05-19",
           "title": "PTO Volunteer Appreciation",
           "description": "Windermere Brewing Co.",
+          "type": "event",
           "kidId": null
         },
         {
-          "id": 2,
           "date": "2026-05-20",
           "title": "5th Grade Car Parade",
           "description": "Celebrating the graduating 5th graders.",
+          "type": "school",
           "kidId": null
         },
         {
-          "id": 3,
           "date": "2026-05-21",
           "title": "EOY Celebration (Bronson)",
           "description": "9:30 AM \u2013 10:30 AM. Pizza lunch in classroom.",
+          "type": "event",
           "kidId": "bronson"
         },
         {
-          "id": 4,
           "date": "2026-05-22",
           "title": "Reach Rally",
           "description": "School-wide celebration.",
+          "type": "school",
           "kidId": null
         },
         {
-          "id": 5,
           "date": "2026-05-25",
           "title": "Memorial Day",
           "description": "No School.",
+          "type": "school",
           "kidId": null
         },
         {
-          "id": 6,
           "date": "2026-05-27",
           "title": "Last Day of School",
           "description": "Early release.",
+          "type": "school",
           "kidId": null
         }
       ],
-      "lunch": [
-        { "day": "Monday", "menu": "Mozzarella Cheese Stick, WG Double Chocolate Muffin" },
-        { "day": "Tuesday", "menu": "Taco Tuesday 🌮" },
-        { "day": "Wednesday", "menu": "Chicken Nuggets w/ Roll" },
-        { "day": "Thursday", "menu": "Pizza Lunch (Classroom)" },
-        { "day": "Friday", "menu": "Manager's Choice" }
+      "lunchMenu": [
+        {
+          "day": "Monday",
+          "date": "2026-05-18",
+          "entrees": ["Mozzarella Cheese Stick", "WG Double Chocolate Muffin"],
+          "sides": ["Steamed Broccoli", "Carrot Dippers"],
+          "fruits": ["Apple Juice", "Fresh Fruit"]
+        },
+        {
+          "day": "Tuesday",
+          "date": "2026-05-19",
+          "entrees": ["Taco Tuesday 🌮", "Beef Tacos"],
+          "sides": ["Black Beans", "Corn"],
+          "fruits": ["Orange Wedges", "Fruit Juice"]
+        },
+        {
+          "day": "Wednesday",
+          "date": "2026-05-20",
+          "entrees": ["Chicken Nuggets w/ Roll"],
+          "sides": ["Mashed Potatoes", "Green Beans"],
+          "fruits": ["Mixed Fruit", "Apple Slices"]
+        },
+        {
+          "day": "Thursday",
+          "date": "2026-05-21",
+          "entrees": ["Pizza Lunch (Classroom)"],
+          "sides": ["Side Salad"],
+          "fruits": ["Fresh Fruit"]
+        },
+        {
+          "day": "Friday",
+          "date": "2026-05-22",
+          "entrees": ["Manager's Choice"],
+          "sides": ["Vegetable Medley"],
+          "fruits": ["Assorted Fruit"]
+        }
       ],
       "weather": [
-        { "day": "Mon", "high": 87, "low": 72, "condition": "Sunny" },
-        { "day": "Tue", "high": 89, "low": 73, "condition": "Partly Cloudy" },
-        { "day": "Wed", "high": 85, "low": 71, "condition": "Chance of Rain" },
-        { "day": "Thu", "high": 86, "low": 72, "condition": "Cloudy" },
-        { "day": "Fri", "high": 88, "low": 74, "condition": "Sunny" }
+        { "day": "Monday", "date": "2026-05-18", "high": 87, "low": 72, "condition": "Sunny", "icon": "sun", "dressSuggestion": "Light summer clothes." },
+        { "day": "Tuesday", "date": "2026-05-19", "high": 89, "low": 73, "condition": "Partly Cloudy", "icon": "cloud-sun", "dressSuggestion": "Sunscreen and light layers." },
+        { "day": "Wednesday", "date": "2026-05-20", "high": 85, "low": 71, "condition": "Chance of Rain", "icon": "cloud-rain", "dressSuggestion": "Bring an umbrella for orientation." },
+        { "day": "Thursday", "date": "2026-05-21", "high": 86, "low": 72, "condition": "Cloudy", "icon": "cloud", "dressSuggestion": "Comfortable clothes for celebration." },
+        { "day": "Friday", "date": "2026-05-22", "high": 88, "low": 74, "condition": "Sunny", "icon": "sun", "dressSuggestion": "Summer gear for Reach Rally." }
       ],
       "teacherComms": [
         {
-          "id": 1,
-          "teacher": "Ms. Cuccinello",
           "kidId": "bronson",
-          "subject": "Week of May 18-22 Newsletter",
-          "content": "Finishing Novel Study on 'Holes'. Science Test BI17 on Wednesday. Device collection Thursday. EOY Celebration Thursday 9:30 AM.",
-          "date": "2026-05-17"
+          "teacher": "Ms. Cuccinello",
+          "messages": [
+            {
+              "date": "2026-05-17",
+              "subject": "Week of May 18-22 Newsletter",
+              "summary": "Finishing Novel Study on 'Holes'. Science Test BI17 on Wednesday. Device collection Thursday. EOY Celebration Thursday 9:30 AM."
+            }
+          ]
         },
         {
-          "id": 2,
-          "teacher": "Ms. Smith",
           "kidId": "kaia",
-          "subject": "Weekly Update",
-          "content": "End of year activities and skill reviews. Please return all library books.",
-          "date": "2026-05-17"
+          "teacher": "Ms. Smith",
+          "messages": [
+            {
+              "date": "2026-05-17",
+              "subject": "Weekly Update",
+              "summary": "End of year activities and skill reviews. Please return all library books."
+            }
+          ]
         }
       ],
       "homework": [
         {
-          "id": 1,
           "kidId": "bronson",
-          "subject": "Science",
-          "task": "Study for BI17 Interdependence Test",
-          "dueDate": "2026-05-20",
-          "completed": false
+          "assignments": [
+            {
+              "subject": "Science",
+              "title": "Study for BI17 Interdependence Test",
+              "description": "Review the study guide sent home last week.",
+              "dueDate": "2026-05-20",
+              "status": "pending"
+            },
+            {
+              "subject": "Reading",
+              "title": "Finish 'Holes' Novel Study",
+              "description": "Complete all remaining chapters and activities.",
+              "dueDate": "2026-05-22",
+              "status": "pending"
+            }
+          ]
+        }
+      ],
+      "importantLinks": [
+        {
+          "id": "parentsquare",
+          "title": "ParentSquare",
+          "url": "https://www.parentsquare.com/",
+          "description": "School communications, announcements, and messaging",
+          "category": "Tool",
+          "source": "Lake Whitney",
+          "kid": null,
+          "pinned": true
         },
         {
-          "id": 2,
-          "kidId": "bronson",
-          "subject": "Reading",
-          "task": "Finish 'Holes' Novel Study",
-          "dueDate": "2026-05-22",
-          "completed": false
+          "id": "mealviewer",
+          "title": "MealViewer \u2014 Lunch Menu",
+          "url": "https://schools.mealviewer.com/school/LakeWhitneyElementary",
+          "description": "Full lunch menu for Lake Whitney Elementary",
+          "category": "Tool",
+          "source": "Lake Whitney",
+          "kid": null,
+          "pinned": true
         }
       ],
       "dolphinDigest": {
-        "title": "Dolphin Digest - May 17",
-        "date": "2026-05-17",
+        "weekLabel": "Week of May 17, 2026",
+        "postedDate": "Sunday, May 17, 2026",
+        "postedBy": "Dr. Crabb, Principal",
         "highlights": [
-          "Kindergarten Orientation May 20",
-          "5th Grade Car Parade May 20",
-          "No Backpacks May 26-27",
-          "Device Collection all week"
-        ],
-        "link": "https://www.parentsquare.com/"
+          { "icon": "\ud83c\udf89", "title": "Kindergarten Orientation", "body": "Wednesday, May 20 from 2:45 PM \u2013 3:45 PM." },
+          { "icon": "\ud83d\ude97", "title": "5th Grade Car Parade", "body": "Celebrating the graduating 5th graders on Wednesday." },
+          { "icon": "\ud83c\udf92", "title": "No Backpacks", "body": "No backpacks allowed on May 26-27." }
+        ]
       }
     }
   ]

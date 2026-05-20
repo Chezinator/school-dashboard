@@ -36,7 +36,7 @@ export default function DolphinDigest() {
   const digest: DolphinDigestData | undefined = (week as any)?.dolphinDigest;
   const [expanded, setExpanded] = useState(false);
 
-  if (!digest) return null;
+  if (!digest || !digest.highlights) return null;
 
   const visibleHighlights = expanded ? digest.highlights : digest.highlights.slice(0, 3);
   const linkLabel = digest.linkLabel || "Read on ParentSquare";
