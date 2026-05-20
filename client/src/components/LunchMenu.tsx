@@ -11,7 +11,12 @@ const LUNCH_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrS
 export default function LunchMenu() {
   const { week } = useWeek();
   const menu = week?.lunchMenu || [];
-  const [activeDay, setActiveDay] = useState(0);
+  const [activeDay, setActiveDay] = useState(() => {
+    if (!menu || menu.length === 0) return 0;
+    const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
+    const todayIndex = menu.findIndex((d) => d.day === today);
+    return todayIndex !== -1 ? todayIndex : 0;
+  });
 
   if (!menu || menu.length === 0) return null;
 
@@ -19,6 +24,18 @@ export default function LunchMenu() {
   const goPrev = () => setActiveDay((prev) => Math.max(prev - 1, 0));
 
   const current = menu[activeDay];
+
+  // Swipe support
+  let touchStartX = 0;
+  const handleTouchStart = (e: React.TouchEvent) => (touchStartX = e.touches[0].clientX);
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) goNext();
+      else goPrev();
+    }
+  };
 
   return (
     <section>
@@ -29,7 +46,11 @@ export default function LunchMenu() {
         <h2 className="font-display text-xl text-foreground">Lunch Menu</h2>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-border/50 overflow-hidden">
+      <div 
+        className="bg-white rounded-2xl shadow-sm border border-border/50 overflow-hidden"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         {/* Day selector */}
         <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-amber-50 to-orange-50 border-b border-border/30">
           <button

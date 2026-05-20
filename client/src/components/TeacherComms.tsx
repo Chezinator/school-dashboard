@@ -50,6 +50,37 @@ export default function TeacherComms() {
                       <span className="text-xs font-semibold text-teal">{msg.subject}</span>
                     </div>
                     <p className="text-sm text-foreground leading-relaxed">{msg.summary}</p>
+                    
+                    {/* Attachments */}
+                    {msg.attachments && msg.attachments.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-3">
+                        {msg.attachments.map((at, atIdx) => {
+                          const isUrl = at.type === 'url';
+                          const link = isUrl ? at.url : msg.gmailUrl;
+                          
+                          if (!link) return (
+                            <span key={atIdx} className="inline-flex items-center px-2.5 py-1 rounded-full bg-gray-200/50 text-[10px] font-bold text-gray-600">
+                              {at.type === 'file' ? '📄' : '🔗'} {at.name}
+                            </span>
+                          );
+
+                          return (
+                            <a
+                              key={atIdx}
+                              href={link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center px-2.5 py-1 rounded-full bg-teal-light/50 hover:bg-teal-light transition-colors text-[10px] font-bold text-teal-dark no-underline border border-teal/10"
+                            >
+                              <span className="mr-1">{at.type === 'file' ? '📄' : '🔗'}</span>
+                              {at.name}
+                              <span className="ml-1 opacity-40">↗</span>
+                            </a>
+                          );
+                        })}
+                      </div>
+                    )}
+
                     <p className="text-xs text-muted-foreground mt-2">
                       {new Date(msg.date + "T00:00:00").toLocaleDateString("en-US", {
                         weekday: "long",

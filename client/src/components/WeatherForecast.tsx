@@ -60,12 +60,16 @@ export default function WeatherForecast() {
 
       {/* Daily forecast cards */}
       <div className="space-y-2">
-        {weather && weather.map((day, idx) => (
-          <div
-            key={idx}
-            className="bg-white rounded-xl p-3.5 shadow-sm border border-border/50 transition-all hover:shadow-md"
-          >
-            <div className="flex items-center gap-3">
+        {weather && weather.map((day, idx) => {
+          const isToday = day.date === new Date().toISOString().split('T')[0];
+          return (
+            <div
+              key={idx}
+              className={`bg-white rounded-xl p-3.5 shadow-sm border transition-all hover:shadow-md ${
+                isToday ? "border-amber/40 bg-amber-light/30 ring-1 ring-amber/10" : "border-border/50"
+              }`}
+            >
+              <div className="flex items-center gap-3">
               {/* Day & icon */}
               <div className="flex items-center gap-3 min-w-0 flex-1">
                 <div className="w-10 text-center shrink-0">
