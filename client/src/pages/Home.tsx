@@ -1,7 +1,7 @@
 /**
  * Home — Dayhaven Dashboard
  * Sunrise Command Center design with bottom nav bar (mobile-app style).
- * 4 tabs: Home | Dates | Comms | More
+ * 5 tabs: Home | Calendar | Lunch | Teacher Updates | Homework
  * Dark mode toggle in header.
  */
 import { useState } from "react";
@@ -23,8 +23,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 import {
   Home as HomeIcon,
   CalendarDays,
+  UtensilsCrossed,
   Mail,
-  MoreHorizontal,
+  BookOpen,
   Moon,
   Sun,
   RefreshCw,
@@ -33,10 +34,11 @@ import {
 
 // Tab definitions
 const TABS = [
-  { id: "home",  label: "Home",  icon: HomeIcon },
-  { id: "dates", label: "Dates", icon: CalendarDays },
-  { id: "comms", label: "Comms", icon: Mail },
-  { id: "more",  label: "More",  icon: MoreHorizontal },
+  { id: "home",     label: "Home",     icon: HomeIcon },
+  { id: "calendar", label: "Calendar", icon: CalendarDays },
+  { id: "lunch",    label: "Lunch",    icon: UtensilsCrossed },
+  { id: "teacher",  label: "Teacher",  icon: Mail },
+  { id: "homework", label: "Homework", icon: BookOpen },
 ] as const;
 
 type TabId = typeof TABS[number]["id"];
@@ -110,27 +112,33 @@ function DashboardContent() {
               </div>
             )}
 
-            {/* ── DATES TAB ── */}
-            {activeTab === "dates" && (
+            {/* ── CALENDAR TAB ── */}
+            {activeTab === "calendar" && (
               <div className="space-y-5 pt-2">
                 <ImportantDates />
                 <SchoolDistrictComms />
               </div>
             )}
 
-            {/* ── COMMS TAB ── */}
-            {activeTab === "comms" && (
+            {/* ── LUNCH TAB ── */}
+            {activeTab === "lunch" && (
+              <div className="space-y-5 pt-2">
+                <LunchMenu />
+                <WeatherForecast />
+              </div>
+            )}
+
+            {/* ── TEACHER TAB ── */}
+            {activeTab === "teacher" && (
               <div className="space-y-5 pt-2">
                 <TeacherComms />
                 <DolphinDigest />
               </div>
             )}
 
-            {/* ── MORE TAB ── */}
-            {activeTab === "more" && (
+            {/* ── HOMEWORK TAB ── */}
+            {activeTab === "homework" && (
               <div className="space-y-5 pt-2">
-                <LunchMenu />
-                <WeatherForecast />
                 <Homework />
                 <ImportantLinks />
               </div>
@@ -175,8 +183,8 @@ function DashboardContent() {
         </div>
       </nav>
 
-      {/* Footer — visible only on More tab to avoid clutter */}
-      {activeTab === "more" && (
+      {/* Footer — visible only on Homework tab to avoid clutter */}
+      {activeTab === "homework" && (
         <div className="max-w-2xl mx-auto w-full px-4 pb-32 text-center">
           <div className="border-t border-border/50 pt-4">
             <div className="flex items-center justify-center gap-2 mb-1">
