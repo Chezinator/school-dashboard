@@ -5,7 +5,7 @@
 import { Sun, CloudSun, Cloud, CloudRain, Thermometer, Shirt } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
 
-const WEATHER_BG = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/weather-bg-Wf8qWXHbDHfDCp3nX5GTqw.webp";
+
 
 function getWeatherIcon(icon: string) {
   switch (icon) {
@@ -43,19 +43,10 @@ export default function WeatherForecast() {
         <h2 className="font-display text-xl text-foreground">Weather Forecast</h2>
       </div>
 
-      {/* Decorative weather banner */}
-      <div className="relative rounded-2xl overflow-hidden mb-3 h-24 sm:h-28">
-        <img
-          src={WEATHER_BG}
-          alt="Florida sky watercolor"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/60 to-transparent flex items-center px-5">
-          <div>
-            <p className="text-sm font-medium text-gray-700">Winter Garden, FL</p>
-            <p className="text-xs text-gray-500">Week of {week?.weekLabel}</p>
-          </div>
-        </div>
+      {/* Weather location info */}
+      <div className="rounded-xl bg-blue-50 p-3.5 mb-3 border border-blue-100">
+        <p className="text-sm font-medium text-blue-900">Winter Garden, FL</p>
+        <p className="text-xs text-blue-700">Week of {week?.weekLabel}</p>
       </div>
 
       {/* Daily forecast cards */}

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { UtensilsCrossed, ChevronLeft, ChevronRight, Apple, Salad, ChefHat } from "lucide-react";
 import { useWeek } from "@/contexts/WeekContext";
 
-const LUNCH_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/119477265/dub7JCh9JrSoBwJsuGgFMH/lunch-illustration-cjPG4cxWrbbobaTeQPY39X.webp";
+
 
 export default function LunchMenu() {
   const { week } = useWeek();
@@ -150,16 +150,7 @@ export default function LunchMenu() {
           )}
         </div>
 
-        {/* Decorative lunch image */}
-        <div className="px-4 pb-4">
-          <div className="rounded-xl overflow-hidden h-28 sm:h-36">
-            <img
-              src={LUNCH_IMAGE}
-              alt="School lunch tray illustration"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-        </div>
+
       </div>
     </section>
   );
