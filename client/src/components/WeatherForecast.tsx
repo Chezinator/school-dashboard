@@ -96,7 +96,7 @@ export default function WeatherForecast() {
               </div>
             </div>
           </div>
-        ))}
+        );})}
       </div>
     </section>
   );
