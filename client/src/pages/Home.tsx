@@ -1,7 +1,7 @@
 /**
- * Home — SchoolBase Dashboard
+ * Home — Dayhaven Dashboard
  * Sunrise Command Center design with bottom nav bar (mobile-app style).
- * 5 tabs: Home | Dates | School | Homework | Links
+ * 4 tabs: Home | Dates | Comms | More
  * Dark mode toggle in header.
  */
 import { useState } from "react";
@@ -23,9 +23,8 @@ import { useTheme } from "@/contexts/ThemeContext";
 import {
   Home as HomeIcon,
   CalendarDays,
-  UtensilsCrossed,
-  BookOpen,
-  Link2,
+  Mail,
+  MoreHorizontal,
   Moon,
   Sun,
   RefreshCw,
@@ -34,11 +33,10 @@ import {
 
 // Tab definitions
 const TABS = [
-  { id: "home",     label: "Home",    icon: HomeIcon },
-  { id: "dates",    label: "Dates",   icon: CalendarDays },
-  { id: "school",   label: "School",  icon: UtensilsCrossed },
-  { id: "homework", label: "Homework",icon: BookOpen },
-  { id: "links",    label: "Links",   icon: Link2 },
+  { id: "home",  label: "Home",  icon: HomeIcon },
+  { id: "dates", label: "Dates", icon: CalendarDays },
+  { id: "comms", label: "Comms", icon: Mail },
+  { id: "more",  label: "More",  icon: MoreHorizontal },
 ] as const;
 
 type TabId = typeof TABS[number]["id"];
@@ -120,24 +118,20 @@ function DashboardContent() {
               </div>
             )}
 
-            {/* ── SCHOOL TAB ── */}
-            {activeTab === "school" && (
+            {/* ── COMMS TAB ── */}
+            {activeTab === "comms" && (
+              <div className="space-y-5 pt-2">
+                <TeacherComms />
+                <DolphinDigest />
+              </div>
+            )}
+
+            {/* ── MORE TAB ── */}
+            {activeTab === "more" && (
               <div className="space-y-5 pt-2">
                 <LunchMenu />
                 <WeatherForecast />
-              </div>
-            )}
-
-            {/* ── HOMEWORK TAB ── */}
-            {activeTab === "homework" && (
-              <div className="pt-2">
                 <Homework />
-              </div>
-            )}
-
-            {/* ── LINKS TAB ── */}
-            {activeTab === "links" && (
-              <div className="pt-2">
                 <ImportantLinks />
               </div>
             )}
@@ -181,8 +175,8 @@ function DashboardContent() {
         </div>
       </nav>
 
-      {/* Footer — visible only on Links tab to avoid clutter */}
-      {activeTab === "links" && (
+      {/* Footer — visible only on More tab to avoid clutter */}
+      {activeTab === "more" && (
         <div className="max-w-2xl mx-auto w-full px-4 pb-32 text-center">
           <div className="border-t border-border/50 pt-4">
             <div className="flex items-center justify-center gap-2 mb-1">
