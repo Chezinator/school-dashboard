@@ -1,0 +1,378 @@
+[
+  {
+    "weekOf": "2026-05-24",
+    "weekLabel": "May 24 - May 28, 2026",
+    "status": "generated",
+    "lastUpdated": "2026-05-24T11:01:19.000Z",
+    "midWeekCheck": null,
+    "importantDates": [
+      {
+        "date": "2026-05-27",
+        "event": "Memorial Day Observed",
+        "type": "holiday",
+        "schoolClosed": false
+      }
+    ],
+    "actionItems": [
+      {
+        "priority": "high",
+        "child": "Bronson",
+        "item": "Continue independent reading practice (Ms. Cuccinello's suggestion)",
+        "dueDate": "2026-05-28",
+        "completed": false
+      },
+      {
+        "priority": "high",
+        "child": "Kaia",
+        "item": "Practice sight words at home (Ms. Smith's request)",
+        "dueDate": "2026-05-28",
+        "completed": false
+      }
+    ],
+    "homework": [],
+    "weather": [
+      {
+        "date": "2026-05-24",
+        "day": "Sunday",
+        "high": 88,
+        "low": 75,
+        "condition": "Partly Cloudy",
+        "chance_rain": 20
+      },
+      {
+        "date": "2026-05-25",
+        "day": "Monday",
+        "high": 87,
+        "low": 74,
+        "condition": "Mostly Sunny",
+        "chance_rain": 10
+      },
+      {
+        "date": "2026-05-26",
+        "day": "Tuesday",
+        "high": 89,
+        "low": 75,
+        "condition": "Sunny",
+        "chance_rain": 5
+      },
+      {
+        "date": "2026-05-27",
+        "day": "Wednesday",
+        "high": 90,
+        "low": 76,
+        "condition": "Sunny",
+        "chance_rain": 10
+      },
+      {
+        "date": "2026-05-28",
+        "day": "Thursday",
+        "high": 88,
+        "low": 75,
+        "condition": "Partly Cloudy",
+        "chance_rain": 25
+      }
+    ],
+    "lunch": [
+      {
+        "date": "2026-05-24",
+        "day": "Sunday",
+        "items": [
+          "No School"
+        ]
+      },
+      {
+        "date": "2026-05-25",
+        "day": "Monday",
+        "items": [
+          "Chicken Tenders",
+          "Tater Tots",
+          "Steamed Broccoli",
+          "Roll",
+          "Fruit Cup"
+        ]
+      },
+      {
+        "date": "2026-05-26",
+        "day": "Tuesday",
+        "items": [
+          "Spaghetti & Meat Sauce",
+          "Garlic Bread",
+          "Green Beans",
+          "Side Salad",
+          "Italian Vegetables"
+        ]
+      },
+      {
+        "date": "2026-05-27",
+        "day": "Wednesday",
+        "items": [
+          "Turkey & Cheese Sandwich",
+          "Potato Chips",
+          "Carrot Sticks",
+          "Pickle Spear",
+          "Watermelon"
+        ]
+      },
+      {
+        "date": "2026-05-28",
+        "day": "Thursday",
+        "items": [
+          "Beef Nacho Bowl",
+          "Spanish Rice",
+          "Black Beans",
+          "Cilantro Lime Rice",
+          "Peach Slices"
+        ]
+      }
+    ],
+    "teacherComms": [
+      {
+        "teacher": "Ms. Cuccinello (Bronson's 4th Grade)",
+        "subject": "Weekly update - Reading progress",
+        "message": "Bronson is doing well with his independent reading. Continue encouraging him...",
+        "date": "2026-05-22T15:30:00"
+      },
+      {
+        "teacher": "Ms. Smith (Kaia's 2nd Grade)",
+        "subject": "Fun with phonics this week!",
+        "message": "The class is enjoying our phonics unit. Please practice sight words at home...",
+        "date": "2026-05-22T14:15:00"
+      }
+    ]
+  },
+  {
+    "weekOf": "May 19 - May 23, 2026",
+    "status": "Updated",
+    "lastUpdated": "2026-05-19T20:30:25.531720",
+    "midWeekCheck": "2026-05-19T14:39:00",
+    "importantDates": [
+      {
+        "date": "Mon May 19",
+        "event": "Regular school week begins"
+      },
+      {
+        "date": "Wed May 21",
+        "event": "Kaia: E.O.Y. Party (Noonish)"
+      },
+      {
+        "date": "Mon May 25",
+        "event": "Memorial Day (No School)"
+      }
+    ],
+    "actionItems": [
+      {
+        "task": "Prepare for end-of-year festivities",
+        "due": "This week",
+        "completed": false
+      },
+      {
+        "task": "Field Day permission slips (if needed)",
+        "due": "This week",
+        "completed": false
+      }
+    ],
+    "homework": [
+      {
+        "subject": "Reading",
+        "due": "Daily",
+        "description": "Log minutes in Beanstack"
+      },
+      {
+        "subject": "Math",
+        "due": "Daily",
+        "description": "Math spiral review"
+      }
+    ],
+    "weather": [
+      {
+        "day": "Mon May 19",
+        "high": "88\u00b0F",
+        "low": "72\u00b0F",
+        "condition": "Sunny"
+      },
+      {
+        "day": "Tue May 20",
+        "high": "87\u00b0F",
+        "low": "71\u00b0F",
+        "condition": "Partly Cloudy"
+      },
+      {
+        "day": "Wed May 21",
+        "high": "89\u00b0F",
+        "low": "73\u00b0F",
+        "condition": "Sunny"
+      },
+      {
+        "day": "Thu May 22",
+        "high": "86\u00b0F",
+        "low": "70\u00b0F",
+        "condition": "Partly Cloudy"
+      },
+      {
+        "day": "Fri May 23",
+        "high": "85\u00b0F",
+        "low": "69\u00b0F",
+        "condition": "Sunny"
+      }
+    ],
+    "lunch": [
+      {
+        "day": "Mon May 19",
+        "lunch": "Pepperoni Pizza / Veggie Pizza"
+      },
+      {
+        "day": "Tue May 20",
+        "lunch": "Beef Taco / Veggie Taco"
+      },
+      {
+        "day": "Wed May 21",
+        "lunch": "Chicken Nuggets / Mac & Cheese"
+      },
+      {
+        "day": "Thu May 22",
+        "lunch": "Beef Nachos / Veggie Nachos"
+      },
+      {
+        "day": "Fri May 23",
+        "lunch": "Pepperoni Pizza / Veggie Pizza"
+      }
+    ],
+    "teacherComms": [
+      {
+        "student": "Bronson",
+        "teacher": "Ms. Cuccinello",
+        "subject": "Great work on novel study project!",
+        "date": "2026-05-19T10:30:00",
+        "snippet": "Bronson did an excellent job on the Holes novel study..."
+      },
+      {
+        "student": "Kaia",
+        "teacher": "Ms. Smith",
+        "subject": "Reminder: E.O.Y. Party is Wed!",
+        "date": "2026-05-19T08:45:00",
+        "snippet": "Just a reminder that the 2nd grade end-of-year party is this Wednesday..."
+      }
+    ]
+  },
+  {
+    "weekOf": "May 11 - May 15, 2026",
+    "status": "Final",
+    "midWeekCheck": "2026-05-10 18:21",
+    "importantDates": [
+      {
+        "date": "Mon May 11",
+        "event": "Kaia: FAST Math Test"
+      },
+      {
+        "date": "Wed May 13",
+        "event": "Volunteer PTO Lunch"
+      },
+      {
+        "date": "Wed May 13",
+        "event": "Kaia: Diorama Supplies Due"
+      },
+      {
+        "date": "Thu May 21",
+        "event": "Kaia: E.O.Y. Party (Noonish)"
+      },
+      {
+        "date": "Mon May 25",
+        "event": "Memorial Day (No School)"
+      },
+      {
+        "date": "Wed May 27",
+        "event": "Last Day of School"
+      }
+    ],
+    "actionItems": [
+      {
+        "task": "Kaia: Bring shoe box & diorama supplies",
+        "due": "Wed May 13",
+        "completed": false
+      },
+      {
+        "task": "Kaia: FAST Math Prep (Rest/Breakfast)",
+        "due": "Mon May 11",
+        "completed": false
+      },
+      {
+        "task": "Log Reading Minutes in Beanstack",
+        "due": "Ongoing",
+        "completed": false
+      }
+    ],
+    "weather": [
+      {
+        "day": "Mon",
+        "high": 88,
+        "low": 74,
+        "condition": "Storms (70%)"
+      },
+      {
+        "day": "Tue",
+        "high": 89,
+        "low": 74,
+        "condition": "Storms Likely"
+      },
+      {
+        "day": "Wed",
+        "high": 90,
+        "low": 74,
+        "condition": "Scattered Storms"
+      },
+      {
+        "day": "Thu",
+        "high": 91,
+        "low": 74,
+        "condition": "PM Storms"
+      },
+      {
+        "day": "Fri",
+        "high": 90,
+        "low": 74,
+        "condition": "Scattered Storms"
+      }
+    ],
+    "lunch": [
+      {
+        "day": "Mon",
+        "main": "Glazed Drumstick / Yogurt Box",
+        "sides": "Mini Loaf, Peas & Carrots"
+      },
+      {
+        "day": "Tue",
+        "main": "Chicken Empanada / PBJ Box",
+        "sides": "Black Beans, Salsa"
+      },
+      {
+        "day": "Wed",
+        "main": "French Toast & Eggs / Yogurt Plate",
+        "sides": "Spinach, Juice"
+      },
+      {
+        "day": "Thu",
+        "main": "Chicken Nuggets / Chef Salad",
+        "sides": "Emoji Fries, Side Salad"
+      },
+      {
+        "day": "Fri",
+        "main": "Four Cheese Pizza / Turkey Wrap",
+        "sides": "Italian Veg, Strawberry Cup"
+      }
+    ],
+    "bronson": {
+      "teacher": "Ms. Cuccinello",
+      "learning": "Novel Study: Holes. Science: BI17 Interdependence.",
+      "assessments": "FAST Reading/Math completed last week.",
+      "specials": "Mon/Tue/Thu: PE, Wed: Art, Fri: Music",
+      "comms": "News Crew applications were due May 8."
+    },
+    "kaia": {
+      "teacher": "Ms. Smith",
+      "learning": "ELA: Reading across Genres. Math: Spiral Review. SS: Smart Consumers. Science: Habitats.",
+      "assessments": "FAST Math (Mon May 11).",
+      "specials": "Mon: PE, Tue: Art, Wed: Music, Thu: PE, Fri: PE",
+      "comms": "In-Class Animal Diorama project starting. Supplies needed by Wed."
+    }
+  }
+]
